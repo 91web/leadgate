@@ -5,11 +5,17 @@ import CoreDivisions from "./components/core-division";
 import { Container } from "@mui/material";
 import DreamGroup from "./components/dream-group";
 import  FeatureProject from "./components/feature-projects";
-import TestimonialHero from "./components/testmonial/page";
 import BuildingHero from "./components/building-hero";
-import TestBg from '../../assets/img/testimonial3.png';
+import TestimonialHero from "./components/avatar-hero";
+import TestBg1 from '../../assets/img/bg-testimonial1.jpg';
+import TestBg2 from '../../assets/img/bg-testimonial2.png';
 
-const AppGroup = () => {
+import { useMediaQuery } from '@mui/material';
+
+
+
+const AppGroup: React.FC = () => {
+  const isMobile = useMediaQuery('(max-width:600px)')
   return (
     <Box  sx={{backgroundColor:"#F9F5FF" }} >
       <div>
@@ -24,30 +30,30 @@ const AppGroup = () => {
       <DreamGroup/>
       </Container>
       </Box>
-      <Box  >
+      <Box >
       <Container>
       < FeatureProject/>
       </Container>
       </Box>
-      <Box>
+      <Box mb={2}>
         <BuildingHero/>
-        </Box>
-        <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'flex-end', // Aligns the cards to the right
-        alignItems: 'center', // Centers the cards vertically
-        width: '100%',
-        height: '100vh', // Full height of the viewport
-        backgroundImage: `url(${TestBg.src})`, // Set your background image URL here
-        backgroundSize: 'cover', // Cover the entire container with the background image
-        backgroundPosition: 'center', // Center the background image
-       // padding: 3, // Optional: Adjust padding for spacing
-      }}
-    >
+      </Box>
+    <Box
+        sx={{
+       backgroundImage: isMobile
+       ? `url(${TestBg1.src})` //  the mobile image
+       : `url(${TestBg2.src})`, // the desktop image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight:{xs:'50vh',md:'90vh'},
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+ 
       <TestimonialHero/>
-     </Box>
-  
+ 
+  </Box>
     </Box>
   );
 };
