@@ -1,29 +1,31 @@
 //Homepage Group Data
-import Line1 from "../../../../assets/svg/line-image1.svg";
-import Line2 from "../../../../assets/svg/line-image2.svg";
-import Line3 from "../../../../assets/svg/line-image3.svg";
-import Division1 from "../../../../assets/img/division1.png";
-import Division2 from "../../../../assets/img/division2.png";
-import Division3 from "../../../../assets/img/division3.png";
+import Line1 from "../../../../../assets/svg/line-image1.svg";
+import Line2 from "../../../../../assets/svg/line-image2.svg";
+import Line3 from "../../../../../assets/svg/line-image3.svg";
+import Division1 from "../../../../../assets/img/division1.png";
+import Division2 from "../../../../../assets/img/division2.png";
+import Division3 from "../../../../../assets/img/division3.png";
 
 
-//group slide images 
-import Slide1 from "../../../../assets/img/hero-slide1.png";
-import Slide2 from "../../../../assets/img/hero-slide1.png";
-import Slide3 from "../../../../assets/img/hero-slide1.png";
-import Slide4 from "../../../../assets/img/hero-slide1.png";
+//group slide images for central home page
+import Slide1 from "../../../../../assets/img/hero-slide1.png";
+import Slide2 from "../../../../../assets/img/hero-slide1.png";
+import Slide3 from "../../../../../assets/img/hero-slide1.png";
+import Slide4 from "../../../../../assets/img/hero-slide1.png";
 
 //feature Project Data
-import Feature1 from "../../../../assets/img/feature-project1.png";
-import Feature2 from "../../../../assets/img/feature-project2.png";
-import Feature3 from "../../../../assets/img/feature-project3.png";
-import Feature4 from "../../../../assets/img/feature-project4.png";
-import Feature5 from "../../../../assets/img/feature-project5.png";
-import Feature6 from "../../../../assets/img/feature-project6.png";
+import Feature1 from "../../../../../assets/img/feature-project1.png";
+import Feature2 from "../../../../../assets/img/feature-project2.png";
+import Feature3 from "../../../../../assets/img/feature-project3.png";
+import Feature4 from "../../../../../assets/img/feature-project4.png";
+import Feature5 from "../../../../../assets/img/feature-project5.png";
+import Feature6 from "../../../../../assets/img/feature-project6.png";
 
 //testimonial Data
-import TestAvatar1 from "../../../../assets/img/test-avatar1.png";
-import TestAvatar2 from "../../../../assets/img/test-avatar2.png";
+import TestAvatar1 from "../../../../../assets/img/test-avatar1.png";
+import TestAvatar2 from "../../../../../assets/img/test-avatar2.png";
+
+
 
 //Group Lead Gate 
 export interface SliderType {

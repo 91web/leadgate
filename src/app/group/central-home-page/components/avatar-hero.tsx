@@ -8,8 +8,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import {TestimonialData, TestimonialType} from './static-data/data';
-import TestBg3 from '../../../assets/svg/bg-testimonial3.svg';
+import {TestimonialData, TestimonialType} from '../components/static-data/data';
+import TestBg3 from '../../../../assets/svg/bg-testimonial3.svg';
 import Image from 'next/image';
 
 

@@ -46,7 +46,7 @@ const overlayFadeOut = keyframes`
   }
 `;
 
-const HeroSlider = () => {
+const EstateSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   React.useEffect(() => {
@@ -181,4 +181,4 @@ const HeroSlider = () => {
   );
 };
 
-export default HeroSlider;
+export default EstateSlider;

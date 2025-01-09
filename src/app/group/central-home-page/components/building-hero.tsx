@@ -1,6 +1,6 @@
 import React from "react";
 import {Box,Typography, Button} from "@mui/material";
-import TestHero1 from "../../../assets/img/testimonial1.png";
+import TestHero1 from "../../../../assets/img/testimonial1.png";
    
    
    

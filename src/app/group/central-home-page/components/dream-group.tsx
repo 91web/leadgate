@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import Grid2 from "@mui/material/Grid2"; // Import Grid2 (experimental)
-import DreamBg from "../../../assets/img/dream-group.png";
-import Line1 from "../../../assets/svg/line-dream.svg";
+import DreamBg from "../../../../assets/img/dream-group.png";
+import Line1 from "../../../../assets/svg/line-dream.svg";
 
 const HeaderGroup = () => {
   return (
