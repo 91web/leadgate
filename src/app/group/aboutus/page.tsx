@@ -14,11 +14,10 @@ const AppGroup = () => {
   <Box>
   <SlideHero/>
 </Box>
-
 <Container>
 <CoreValue/>
 </Container>
-<Box sx={{ justifyContent: 'center', mt: 5 ,bgcolor:'#f5f5f5'}}> 
+<Box sx={{ justifyContent: 'center' ,bgcolor:'#f5f5f5'}}> 
 <Container>
   <FeatureEvents/>
   </Container>

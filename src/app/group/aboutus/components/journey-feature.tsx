@@ -7,9 +7,9 @@ import {JourneyData , JourneyType} from "./static-data/data";
 
 const JourneyFeatures: JourneyType [] = JourneyData;
  
-const Divisions = () => {
+const  JourneyEvents= () => {
   return (
-    <Box sx={{mt:'50px'}}>
+    <Box sx={{mt:{xs:'none',md:'50px'}}}>
       {/* Cards Section */}
       <Grid2 container spacing={4} direction="column" alignItems="center">
         {JourneyFeatures.map((feature, index) => (
@@ -82,4 +82,4 @@ const Divisions = () => {
   );
 };
 
-export default Divisions;
+export default JourneyEvents;

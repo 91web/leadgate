@@ -33,7 +33,7 @@ const SlideHero = () => {
             fontWeight: 'regular',
             fontFamily: 'lora',
             color: '#344054',
-            fontSize: { xs: '34px', md: '40px' },
+            fontSize: { xs: '32px', md: '40px' },
             width: { xs: '100%', md: '58%' },
           }}
         >
@@ -84,7 +84,7 @@ const SlideHero = () => {
       </Swiper>
       </Box>
 
-      <Box sx={{ justifyContent: 'center', mt: 4 ,bgcolor:'#f5f5f5'}}> 
+      <Box sx={{ justifyContent: 'center' , mt:2  ,bgcolor:'#f5f5f5'}}> 
                 <Typography 
                 variant="h4"
                 gutterBottom
@@ -108,7 +108,7 @@ const SlideHero = () => {
 
             }}
             >
-            <Grid2 container spacing={4} justifyContent="center">
+            <Grid2 container spacing={4} justifyContent="center" my={2}>
                 <Grid2 size="auto">
                 <Box textAlign={'center'}>
                     <Typography
@@ -117,8 +117,8 @@ const SlideHero = () => {
                     sx={{
                         fontWeight: 'medium',
                         fontFamily: 'lora',
-                        color: '#344054',
-                        fontSize: { xs: '25px', md: '30px' },
+                        color: '#1D2939',
+                        fontSize: { xs: '25px', md: '28px' },
                     }}
                     >
                     30+
@@ -129,7 +129,7 @@ const SlideHero = () => {
                     sx={{
                         fontWeight: 'regular',
                         fontFamily: 'inter',
-                        color: '#344054',
+                        color: '#1D2939',
                         fontSize: { xs: '10px', md: '16px' },
                     }}
                     >
@@ -145,8 +145,8 @@ const SlideHero = () => {
                     sx={{
                         fontWeight: 'medium',
                         fontFamily: 'lora',
-                        color: '#344054',
-                        fontSize: { xs: '28px', md: '30px' },
+                        color: '#1D2939',
+                        fontSize: { xs: '25px', md: '28px' },
                     }}
                     >
                     10+
@@ -173,8 +173,8 @@ const SlideHero = () => {
                     sx={{
                         fontWeight: 'medium',
                         fontFamily: 'lora',
-                        color: '#344054',
-                        fontSize: { xs: '25px', md: '30px' },
+                        color: '#1D2939',
+                        fontSize: { xs: '25px', md: '28px' },
                     }}
                     >
                     15+

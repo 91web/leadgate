@@ -1,153 +1,225 @@
-"use client";
-import React from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+'use client'
+
+import React, { useState } from 'react';
+import { Box, Typography, Container } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { styled } from '@mui/material/styles';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {ValueData, ValueType} from '../components/static-data/data';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { ValueData, ValueType } from '../components/static-data/data';
 
-// Array of core values imported from static data
-const ValueInfo: ValueType[] = ValueData;
+const StyledSwiper = styled(Swiper)(({ theme }) => ({
+  width: '100%',
+  position: 'relative',
+  '& .swiper-pagination': {
+    position: 'static',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    marginTop: theme.spacing(2),
+  },
+  '& .swiper-pagination-bullet': {
+    width: '6px',
+    height: '6px',
+    backgroundColor: '#D1D5DB',
+    opacity: 1,
+  },
+  '& .swiper-pagination-bullet-active': {
+    backgroundColor: '#6B7280',
+  },
+}));
 
-const CoreValue = () => {
+const NavigationButton = styled(Box)(({ theme }) => ({
+  width: '24px',
+  height: '24px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  cursor: 'pointer',
+  backgroundColor: '#F2F4F7',  
+  borderRadius: '50%', 
+  border: 'none',
+  '& svg': {
+    fontSize: '24px',
+    color: theme.palette.text.secondary,
+  },
+  '&.swiper-button-disabled': {
+    opacity: 0.5,
+    cursor: 'not-allowed',
+  },
+  '&::after': {
+    display: 'none',
+  },
+}));
+
+const coreValues: ValueType[] = ValueData;
+
+  export default function CoreValue() {
+    const [activeIndex, setActiveIndex] = useState<number>(0);
+  
   return (
-    <Box sx={{ height: '50vh', padding: 5 }}>
-      {/* Title Section */}
-      <Box
+    <Container maxWidth="lg" sx={{ mb: 2 }}>
+      <Typography
+        variant="h2"
+        align="center"
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
+          mt: 5,
+          fontSize: { xs: '22px', md: '24px' },
+          fontWeight: 'medium',
+          fontFamily: 'lora',
         }}
       >
-        <Typography
-          variant="h4"
-          gutterBottom
-          sx={{
-            fontWeight: 'medium',
-            fontFamily: 'lora',
-            color: '#344054',
-            fontSize: { xs: '24px', md: '26px' },
-            width: { xs: '100%', md: '58%' },
-          }}
-        >
-          Core Values
-        </Typography>
-      </Box>
+        Our Core Values
+      </Typography>
 
-      {/* Swiper Section */}
-      <Box mt={4} position="relative">
-        {/* Left Arrow */}
-        <IconButton
-          className="swiper-button-prev"
-          sx={{
-            position: 'absolute',
-            left: -50,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 10,
-            fontSize: '10px',
-            color: '#344054',
+      <Box sx={{ position: 'relative' }}>
+        <StyledSwiper
+          modules={[Autoplay, Navigation]}
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            900: {
+              slidesPerView: 2,
+            },
           }}
-        >
-          <NavigateBeforeIcon />
-        </IconButton>
-
-        {/* Right Arrow */}
-        <IconButton
-          className="swiper-button-next"
-          sx={{
-            position: 'absolute',
-            right: -40,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            zIndex: 10,
-            fontSize: '10px',
-            color: '#344054',
-          }}
-        >
-          <NavigateNextIcon />
-        </IconButton>
-
-        <Swiper
-          modules={[Pagination, Navigation, Autoplay]}
-          spaceBetween={16}
-          slidesPerView={2}
-          loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          pagination={{
-            clickable: true,
-            renderBullet: (index, className) =>
-              `<span class="${className}" style="height: 8px; width: 8px; background-color: #AE883B; border-radius: 50%; display: inline-block; margin-right: 4px;"></span>`,
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
           }}
           navigation={{
-            nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
           }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            600: { slidesPerView: 2 },
-          }}
+          loop={true}
+          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}  // Set activeIndex based on active slide
         >
-          {ValueInfo.map((info, index) => (
-            <SwiperSlide key={index}>
+          {coreValues.map((value) => (
+            <SwiperSlide key={value.id}>
               <Box
                 sx={{
-                  minWidth: 200,
-                  padding: 2,
-                  border: '1px solid rgba(0, 0, 0, 0.12)',
-                  borderRadius: '12px',
-                  textAlign: 'left',
-                  backgroundColor: '#fff',
-                  position: 'relative',
+                  p: { xs: 1, md: 10 },
+                  backgroundColor: 'background.paper',
                 }}
               >
-                {/* Card Content */}
-                <Typography
-                  sx={{
-                    fontFamily: 'Inter',
-                    fontSize: '20px',
-                    fontWeight: 'medium',
-                  }}
-                >
-                  {info.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: 'Inter',
-                    fontSize: '16px',
-                    fontWeight: 'regular',
-                  }}
-                >
-                  {info.descriptions}
-                </Typography>
-
-                {/* Navigation Dots */}
                 <Box
-                  className="swiper-pagination"
                   sx={{
-                    position: 'absolute',
-                    bottom: 8,
-                    left: 8,
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    gap: '4px',
+                    gap: 2,
+                    mb: 2,
                   }}
-                />
+                >
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontSize: { xs: '18px', md: '20px' },
+                      fontWeight: 'medium',
+                      color: '#344054',
+                    }}
+                  >
+                    {value.id}.
+                  </Typography>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      fontSize: { xs: '18px', md: '20px' },
+                      fontWeight: 'medium',
+                      fontFamily: 'inter',
+                      color: '#344054',
+                    }}
+                  >
+                    {value.title}
+                  </Typography>
+                </Box>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: 'text.secondary',
+                    lineHeight: 1.7,
+                    ml: 6,
+                  }}
+                >
+                  {value.descriptions}
+
+                  {/* Custom Pagination for each Slide */}
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'left',
+                      mt: 2,
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        gap: 1,
+                        justifyContent: 'left',
+                      }}
+                    >
+                      {coreValues.map((_, idx) => (
+                        <Box
+                          key={idx}
+                          sx={{
+                            width: '6px',
+                            height: '6px',
+                            backgroundColor: activeIndex === idx ? '#6B7280' : '#D1D5DB',
+                            borderRadius: '50%',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.3s ease',
+                          }}
+                          onClick={() => setActiveIndex(idx)}  // Set active index when clicked
+                        />
+                      ))}
+                    </Box>
+                  </Box>
+                </Typography>
               </Box>
             </SwiperSlide>
           ))}
-        </Swiper>
-      </Box>
-    </Box>
-  );
-};
+        </StyledSwiper>
 
-export default CoreValue;
+        <Box
+          sx={{
+            justifyContent: 'center',
+            mt: 2,
+            display: { xs: 'none', md: 'flex' },
+            gap: 2,
+          }}
+        >
+          <NavigationButton className="swiper-button-prev">
+            <ChevronLeftIcon />
+          </NavigationButton>
+          <NavigationButton className="swiper-button-next">
+            <ChevronRightIcon />
+          </NavigationButton>
+        </Box>
+
+        {/* Mobile Navigation Buttons */}
+        <Box
+          sx={{
+            justifyContent: 'center',
+            display: { xs: 'flex', md: 'none' },
+            gap: 2,
+            position: 'absolute',
+            left: '50%',
+          }}
+        >
+          {/* Previous Button */}
+          <NavigationButton className="swiper-button-prev">
+            <ChevronRightIcon sx={{ transform: 'rotate(360deg)' }} />
+          </NavigationButton>
+
+          {/* Next Button */}
+          <NavigationButton className="swiper-button-next">
+            <ChevronLeftIcon sx={{ transform: 'rotate(360deg)' }} />
+          </NavigationButton>
+        </Box>
+      </Box>
+    </Container>
+  );
+}

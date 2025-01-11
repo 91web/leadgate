@@ -4,15 +4,14 @@ import JourneyFeatures from './journey-feature';
 
 const FeatureEvents = () => {
   return (
-    <Box sx={{ mt:{ xs:'none', md: 15 } }}>
+    <Box >
       {/* Section Header */}
    
       {/* Responsive Grid Section */}
       <Grid2 container spacing={4} sx={{ justifyContent: "space-between" }}>
         {/* Left Box - Header */}
         <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 5 } }}>
-   
-        <Box sx={{width:{ xs: '100%', md: '70%' }, textAlign:{ xs: 'center', md: 'left' } , mt: 20}}>
+        <Box sx={{width:{ xs: '100%', md: '70%' }, textAlign:{ xs: 'center', md: 'left' } , mt:{ xs: 2, md: 20 } }}>
         <Typography
           variant="h4"
           sx={{
@@ -36,11 +35,30 @@ const FeatureEvents = () => {
         </Typography>
       </Box>
       </Grid2>
-
-
+      <Grid2 size={{ xs: 12, md: 6 }} sx={{ my: { xs: 2, md: 5 } }}>
+      <Box  sx={{
+            maxHeight: '60vh',
+            overflowY: 'scroll',
+            '&::-webkit-scrollbar': {
+              width: '8px', // Set the width of the scrollbar
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#6B7280', // Set the color of the thumb
+              borderRadius: '10px', // Make the thumb rounded
+              border: '2px solid #F3F4F6', // Optional: Adds a border to the thumb
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: '#F3F4F6', // Set the color of the track
+              borderRadius: '10px', // Optional: Rounded corners for the track
+            },
+            '&::-webkit-scrollbar-button': {
+              display: 'none', // Optional: Hide the buttons (up/down arrows) on the scrollbar
+            },
+            
+          }}>
         {/* Right Box - Divisions */}
-        <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 3 } }}>
           <JourneyFeatures />
+        </Box>
         </Grid2>
       </Grid2>
     </Box>

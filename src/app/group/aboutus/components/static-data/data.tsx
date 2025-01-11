@@ -77,28 +77,28 @@ export interface AboutHeroType {
   }
   
   export const ValueData: ValueType [] = [
-    {  id:"1",
-        title: "01 Our Mission",
+    {  id:"01",
+        title: "Our Mission",
         descriptions: "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
     
     },
-    {  id:"2",
-        title: "02 Our Vision", 
+    {  id:"02",
+        title: "Our Vision", 
         descriptions: "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
     
      },
-     {  id:"3",
-        title: "03 Our Vision", 
+     {  id:"03",
+        title: "Our Vision", 
         descriptions: "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
     
      },
-     {  id:"4",
-        title: "04 Our Vision", 
+     {  id:"04",
+        title: "Our Vision", 
         descriptions: "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
     
      },
-     {  id:"5",
-        title: "05 Our Vision", 
+     {  id:"05",
+        title: "Our Vision", 
         descriptions: "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
     
      },
