@@ -9,6 +9,13 @@ import AboutHero5 from '../../../../../assets/img/aboutus-slide5.png';
 import AboutHero6 from '../../../../../assets/img/aboutus-slide6.png';
 import AboutHero7 from '../../../../../assets/img/aboutus-slide6.png';
 import AboutHero8 from '../../../../../assets/img/aboutus-slide6.png';
+
+
+
+// Journey Page Data image
+import JourneyFeature1 from '../../../../../assets/img/division1.png';
+
+
 //Group Lead Gate 
 export interface AboutHeroType {
     id:string,
@@ -97,3 +104,52 @@ export interface AboutHeroType {
      },
     
     ]
+
+
+
+    
+
+//Group Lead Gate 
+export interface JourneyType {
+  id:string,
+  date: string,
+  image:string, 
+  alt: string,
+  description:string,
+}
+
+export const JourneyData: JourneyType [] = [
+
+{
+  id:"1",
+  date: "2020 - 2021",
+  image: JourneyFeature1.src, 
+  alt: "Journey Feature 1",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+},
+{
+  id:"2",
+  date: "2021 - 2022",
+  image: JourneyFeature1.src, 
+  alt: "Journey Feature 2",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+},
+{
+  id:"3",
+  date: "2022 - 2023",
+  image: JourneyFeature1.src, 
+  alt: "Journey Feature 3",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+},
+{
+  id:"4",
+  date: "2022 - 2023",
+  image: JourneyFeature1.src, 
+  alt: "Journey Feature 4",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+},
+];

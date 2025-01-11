@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Container} from '@mui/material';
 import SlideHero from './components/slide-hero';
 import CoreValue from './components/core-value';
+import FeatureEvents from './components/feature';
+import BuildingHero from '../central-home-page/components/building-hero';
 
 const AppGroup = () => {
   return (
@@ -12,10 +14,19 @@ const AppGroup = () => {
   <Box>
   <SlideHero/>
 </Box>
+
 <Container>
 <CoreValue/>
 </Container>
-    </Box>
+<Box sx={{ justifyContent: 'center', mt: 5 ,bgcolor:'#f5f5f5'}}> 
+<Container>
+  <FeatureEvents/>
+  </Container>
+</Box>
+<Box>
+  <BuildingHero/>
+</Box>
+</Box>
     
   )
 }
