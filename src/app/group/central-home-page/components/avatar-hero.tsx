@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Box, Typography,  IconButton, Card, CardHeader,  CardContent,  Avatar, Grid2,useMediaQuery} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';

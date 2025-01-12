@@ -2,7 +2,7 @@
 import Box from "@mui/material/Box";
 // import { useRouter } from "next/navigation";
 
-const AboutLayout = ({
+const PortifolioLayout = ({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
@@ -16,4 +16,4 @@ const AboutLayout = ({
   );
 };
 
-export default AboutLayout;
+export default PortifolioLayout;

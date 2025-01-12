@@ -27,42 +27,42 @@ export interface AboutHeroType {
   export const AboutHero: AboutHeroType [] = [
     {  id:"1",
       src: AboutHero1.src,
-      alt: "About Hero 1",
+      alt: "About Event 1",
 
     },
     {  id:"2",
       src: AboutHero2.src,
-      alt: "About Hero 2",
+      alt: "About  Event  2",
 
     },
     {  id:"3",
       src: AboutHero3.src,
-      alt: "About Hero 3",
+      alt: "About  Event  3",
    
     },
     {  id:"4",
       src: AboutHero4.src,
-      alt: "About Hero 4",
+      alt: "About  Event  4",
 
     },
     {  id:"5",
       src: AboutHero5.src,
-      alt: "About Hero 5",
+      alt: "About  Event  5",
 
     },
     {  id:"6",
       src: AboutHero6.src,
-      alt: "About Hero 6",
+      alt: "About  Event  6",
    
     },
     {  id:"7",
       src: AboutHero7.src,
-      alt: "About Hero 7",  
+      alt: "About Event 7",  
 
     },
     {  id:"8",
       src: AboutHero8.src,
-      alt: "About Hero 8",  
+      alt: "About Event 8",  
 
     },
   ]

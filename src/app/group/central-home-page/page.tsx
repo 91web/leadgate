@@ -1,6 +1,6 @@
 "use client";
 import Box from "@mui/material/Box";
-import HeroSlider from "./components/home.section-hero";
+import HeroSlider from "./components/slide-home";
 import CoreDivisions from "./components/core-division";
 import { Container } from "@mui/material";
 import DreamGroup from "./components/dream-group";
@@ -45,7 +45,7 @@ const CentralHomePage: React.FC = () => {
        : `url(${TestBg2.src})`, // the desktop image
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight:{xs:'50vh',md:'90vh'},
+          minHeight:{xs:'50vh',md:'100vh'},
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

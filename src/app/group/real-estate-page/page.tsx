@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import EstateSlider from './components/home.section-hero';
+import EstateSlider from './components/slide-real';
 import { Box } from '@mui/material';
 
 const RealEstateHome = () => {

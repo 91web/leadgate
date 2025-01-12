@@ -8,7 +8,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { AboutHero, AboutHeroType } from '../components/static-data/data';
+import { AboutHero, AboutHeroType } from './static-data/data';
 
 // Array of images for the cards from static data importesd
 const images: AboutHeroType[] = AboutHero;

@@ -1,7 +1,8 @@
+"use client";
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography} from "@mui/material";
 import { keyframes } from "@mui/system";
-import {SliderData, SliderType} from "../components/static-data/data";
+import {SliderData, SliderType} from "./static-data/data";
 
 const images:SliderType [] = SliderData ;
 
@@ -46,7 +47,7 @@ const overlayFadeOut = keyframes`
   }
 `;
 
-const HeroSlider = () => {
+const NewsSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   React.useEffect(() => {
@@ -115,37 +116,42 @@ const HeroSlider = () => {
         </Box>
       ))}
 
-      {/* Content (Typography & Button) */}
+      {/* Content (Typography ) */}
       <Box
         sx={{
           position: "absolute",
-         // bottom: "10%",
-          top: "30%",
-          left: "10%",
+          top: "50%", // Center vertically
+          left: "50%", // Center horizontally
+          transform: "translate(-50%, -50%)", // Adjust for centering
+          textAlign: "center", // Center-align text
           color: "#fff", // Make the content text color white
           opacity: 1, // Full opacity for the content
           animation: `${slideIn} 1s ease`, // Apply slide-in animation to content
         }}
       >
-        <Typography variant="h4" sx={{ mb: 2 , fontSize:{xs:'36px', md:'40px'}, fontFamily:'lora', fontWeight:'regular'}}>
-          {images[currentSlide].title}
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 , fontSize:'17px', fontFamily:'inter', fontWeight:'regular', color:"#D0D5DD"}}>
-          {images[currentSlide].description}
-        </Typography>
-        <Button
-          variant="contained"
+        <Typography
+          variant="h4"
           sx={{
-            backgroundColor: "#AE883B",
-            color: "#fff",
-            "&:hover": {
-              backgroundColor: "darkgoldenrod",
-            
-            },  textTransform:'none',
+            mb: 2,
+            fontSize: { xs: "36px", md: "40px" },
+            fontFamily: "lora",
+            fontWeight: "regular",
           }}
         >
-          {images[currentSlide].buttonText}
-        </Button>
+          {images[currentSlide].title}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            mb: 2,
+            fontSize: "17px",
+            fontFamily: "inter",
+            fontWeight: "regular",
+            color: "#D0D5DD",
+          }}
+        >
+          {images[currentSlide].description}
+        </Typography>
       </Box>
 
       {/* Slide indicators */}
@@ -181,4 +187,4 @@ const HeroSlider = () => {
   );
 };
 
-export default HeroSlider;
+export default NewsSlider;
