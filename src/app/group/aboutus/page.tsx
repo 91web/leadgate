@@ -5,7 +5,7 @@ import CoreValue from './components/core-value';
 import FeatureEvents from './components/feature';
 import BuildingHero from '../central-home-page/components/building-hero';
 
-const AppGroup = () => {
+const AboutUs = () => {
   return (
     <Box>
     <div>
@@ -30,4 +30,4 @@ const AppGroup = () => {
   )
 }
 
-export default AppGroup
+export default AboutUs

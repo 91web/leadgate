@@ -29,7 +29,7 @@ const HeaderGroup = () => {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-          Know all about us
+            Become a Partner
         </Typography>
         <Box
           component="img"
@@ -53,13 +53,13 @@ const HeaderGroup = () => {
           fontSize:{xs:'24px', md:'26px'},
         }}
       >
-        Our Dream is to Build Dreams, Elevate Health, and Create a Lasting Value
+        Why you Should Join us, and Partner with Us
       </Typography>
     </Grid2>
   );
 };
 
-const DreamGroup = () => {
+const PartnerCard = () => {
   return (
     <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Grid2
@@ -116,7 +116,7 @@ const DreamGroup = () => {
                 },
               }}
             >
-              Learn more
+              Become Our Partner
             </Button>
           </Box>
         </Grid2>
@@ -141,77 +141,8 @@ const DreamGroup = () => {
             />
 
             {/* Statistics */}
-            <Grid2 container spacing={4}>
-            <Grid2 size={4}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
-                    textAlign: "center",
-                  }}
-                >
-                  30+
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#6D6D6D",
-                    textAlign: "left",
-                    fontSize:'12px',
-                  }}
-                >
-                  Real Estate Properties
-                </Typography>
-              </Grid2>
-              <Grid2 size={4}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
-                    textAlign: "center",
-                  }}
-                >
-                  10+
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#6D6D6D",
-                    fontSize:'12px',
-                    textAlign: "center",
-                  }}
-                >
-                  Construction Sites
-                </Typography>
-              </Grid2>
-              <Grid2 size={4}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
-                    textAlign: "center",
-                  }}
-                >
-                  15+
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#6D6D6D",
-                    fontSize:'12px',
-                    textAlign: "center",
-                  }}
-                >
-                  Project Managers
-                </Typography>
-              </Grid2>
-            </Grid2>
+          
+    
           </Box>
         </Grid2>
       </Grid2>
@@ -219,4 +150,4 @@ const DreamGroup = () => {
   );
 };
 
-export default DreamGroup;
+export default PartnerCard;

@@ -3,7 +3,8 @@ import { Box, Button, Container } from '@mui/material'
 import NewsSlider from './components/slide-news';
 import ArticleCard from './components/article-card';
 import NewsletterSubscription from './components/subscribe-news';
-const AppGroup = () => {
+
+const NewsPage = () => {
   return (
   <Box>
       <div>
@@ -61,4 +62,4 @@ const AppGroup = () => {
   )
 }
 
-export default AppGroup
+export default NewsPage;
