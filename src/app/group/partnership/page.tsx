@@ -54,6 +54,7 @@ const PartnerShipPage = () => {
         padding: "2rem", 
         display: "flex",
         mb: 5, 
+        height:'150px',
         justifyContent: "space-between",
         alignItems: "center",
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)", 

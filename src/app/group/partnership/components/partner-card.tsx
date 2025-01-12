@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
-import Grid2 from "@mui/material/Grid2"; // Import Grid2 (experimental)
+import Grid2 from "@mui/material/Grid2"; 
+import Link from 'next/link';
 import DreamBg from "../../../../assets/img/dream-group.png";
 import Line1 from "../../../../assets/svg/line-dream.svg";
 
@@ -49,8 +50,8 @@ const HeaderGroup = () => {
           fontWeight: 600,
           color: "#1D2939",
           lineHeight: 1.4,
-          textAlign:'left',
-          fontSize:{xs:'24px', md:'26px'},
+          textAlign: 'left',
+          fontSize: { xs: '24px', md: '26px' },
         }}
       >
         Why you Should Join us, and Partner with Us
@@ -60,6 +61,8 @@ const HeaderGroup = () => {
 };
 
 const PartnerCard = () => {
+  const partnerSlug = "Partner-single-page";
+
   return (
     <Box sx={{ py: { xs: 4, md: 6 } }}>
       <Grid2
@@ -69,7 +72,7 @@ const PartnerCard = () => {
         direction={{ xs: "column-reverse", md: "row" }}
       >
         {/* Left Section */}
-        <Grid2 size={{xs:12, md:6}}>
+        <Grid2 size={{ xs: 12, md: 6 }}>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <HeaderGroup />
           </Box>
@@ -82,8 +85,8 @@ const PartnerCard = () => {
               color: "#6D6D6D",
               lineHeight: 1.8,
               mb: 3,
-              fontSize:'16px',
-              textAlign:'left',
+              fontSize: '16px',
+              textAlign: 'left',
             }}
           >
             Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
@@ -100,29 +103,31 @@ const PartnerCard = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent:"flex-start",
+              justifyContent: "flex-start",
             }}
           >
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#AE883B",
-                color: "#fff",
-                textTransform: "none",
-                fontWeight: 600,
-                py: 1.5,
-                "&:hover": {
-                  backgroundColor: "#965F2A",
-                },
-              }}
-            >
-              Become Our Partner
-            </Button>
+            <Link href={`/group/partnership/${partnerSlug}`} passHref>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#AE883B",
+                  color: "#fff",
+                  textTransform: "none",
+                  fontWeight: 600,
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#965F2A",
+                  },
+                }}
+              >
+                Become Our Partner
+              </Button>
+            </Link>
           </Box>
         </Grid2>
 
         {/* Right Section */}
-        <Grid2 size={{xs:12, md:6}}>
+        <Grid2 size={{ xs: 12, md: 6 }}>
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <HeaderGroup />
           </Box>
@@ -136,13 +141,9 @@ const PartnerCard = () => {
                 width: "100%",
                 height: "auto",
                 borderRadius: "8px",
-                mb:2,
+                mb: 2,
               }}
             />
-
-            {/* Statistics */}
-          
-    
           </Box>
         </Grid2>
       </Grid2>
