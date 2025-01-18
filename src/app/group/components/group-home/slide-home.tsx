@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { keyframes } from "@mui/system";
-import {SliderData, SliderType} from "./static-data/data";
+import { SliderData, SliderType } from "../static-data/data";
 
-const images:SliderType [] = SliderData ;
+const images: SliderType[] = SliderData;
 
 const slideIn = keyframes`
   from {
@@ -78,9 +79,10 @@ const HeroSlider = () => {
             width: "100%",
             height: "100%",
             opacity: index === currentSlide ? 1 : 0,
-            animation: index === currentSlide
-              ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
-              : "none",
+            animation:
+              index === currentSlide
+                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
+                : "none",
           }}
         >
           <Box
@@ -97,7 +99,7 @@ const HeroSlider = () => {
               opacity: 1, // Ensure image is always visible
             }}
           />
-          
+
           {/* Overlay */}
           <Box
             sx={{
@@ -107,9 +109,10 @@ const HeroSlider = () => {
               width: "100%",
               height: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark overlay
-              animation: index === currentSlide
-                ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
-                : "none",
+              animation:
+                index === currentSlide
+                  ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
+                  : "none",
             }}
           />
         </Box>
@@ -119,7 +122,7 @@ const HeroSlider = () => {
       <Box
         sx={{
           position: "absolute",
-         // bottom: "10%",
+          // bottom: "10%",
           top: "30%",
           left: "10%",
           color: "#fff", // Make the content text color white
@@ -127,10 +130,27 @@ const HeroSlider = () => {
           animation: `${slideIn} 1s ease`, // Apply slide-in animation to content
         }}
       >
-        <Typography variant="h4" sx={{ mb: 2 , fontSize:{xs:'36px', md:'40px'}, fontFamily:'lora', fontWeight:'regular'}}>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 2,
+            fontSize: { xs: "36px", md: "40px" },
+            fontFamily: "lora",
+            fontWeight: "regular",
+          }}
+        >
           {images[currentSlide].title}
         </Typography>
-        <Typography variant="body1" sx={{ mb: 2 , fontSize:'17px', fontFamily:'inter', fontWeight:'regular', color:"#D0D5DD"}}>
+        <Typography
+          variant="body1"
+          sx={{
+            mb: 2,
+            fontSize: "17px",
+            fontFamily: "inter",
+            fontWeight: "regular",
+            color: "#D0D5DD",
+          }}
+        >
           {images[currentSlide].description}
         </Typography>
         <Button
@@ -140,8 +160,8 @@ const HeroSlider = () => {
             color: "#fff",
             "&:hover": {
               backgroundColor: "darkgoldenrod",
-            
-            },  textTransform:'none',
+            },
+            textTransform: "none",
           }}
         >
           {images[currentSlide].buttonText}
@@ -154,12 +174,12 @@ const HeroSlider = () => {
           position: "absolute",
           top: { xs: "none", md: "40%" },
           bottom: { xs: "5%", md: "none" },
-          right:{ xs: "40%", md: "10%" },
+          right: { xs: "40%", md: "10%" },
           display: "flex",
           flexDirection: { xs: "row", sm: "column" },
           gap: 1,
-          alignContent:'center',
-          alignItems:"center"
+          alignContent: "center",
+          alignItems: "center",
         }}
       >
         {images.map((_, index) => (

@@ -1,13 +1,18 @@
 import React from "react";
-import { Box, Typography, Button, Card, CardMedia, CardContent } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  Card,
+  CardMedia,
+  CardContent,
+} from "@mui/material";
 import Grid2 from "@mui/material/Grid2";
 import Image from "next/image";
-import {HomePageData, HomePageType} from "./static-data/data";
+import { HomePageData, HomePageType } from "../static-data/data";
 
+const divisions: HomePageType[] = HomePageData;
 
-
-const divisions: HomePageType [] = HomePageData;
- 
 const Divisions = () => {
   return (
     <Box sx={{}}>
@@ -74,9 +79,9 @@ const Divisions = () => {
                   variant="h6"
                   sx={{
                     fontFamily: "inter",
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                     mb: 1,
-                    fontSize:'20px',
+                    fontSize: "20px",
                     color: "text.primary",
                     textAlign: "left", // Align title to the left
                   }}
@@ -99,8 +104,8 @@ const Divisions = () => {
                   variant="text"
                   sx={{
                     color: "#AE883B",
-                    fontFamily:'inter',
-                    fontWeight: 'medium',
+                    fontFamily: "inter",
+                    fontWeight: "medium",
                     fontSize: "16px",
                     textTransform: "none",
                     "&:hover": { textDecoration: "none" },

@@ -1,15 +1,13 @@
 import React from "react";
 import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import Grid2 from "@mui/material/Grid2";
-import {JourneyData , JourneyType} from "./static-data/data";
+import { JourneyData, JourneyType } from "./static-data/data";
 
+const JourneyFeatures: JourneyType[] = JourneyData;
 
-
-const JourneyFeatures: JourneyType [] = JourneyData;
- 
-const  JourneyEvents= () => {
+const JourneyEvents = () => {
   return (
-    <Box sx={{mt:{xs:'none',md:'50px'}}}>
+    <Box sx={{ mt: { xs: "none", md: "50px" } }}>
       {/* Cards Section */}
       <Grid2 container spacing={4} direction="column" alignItems="center">
         {JourneyFeatures.map((feature, index) => (
@@ -25,11 +23,11 @@ const  JourneyEvents= () => {
             >
               <Box
                 sx={{
-                  display: "flex", 
-                  flexDirection: "row", 
-                  alignItems: "center", 
-                  justifyContent: "flex-start", 
-                  width: "100%", 
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                  width: "100%",
                 }}
               >
                 {/* Image Section */}
@@ -52,9 +50,9 @@ const  JourneyEvents= () => {
                   variant="h6"
                   sx={{
                     fontFamily: "inter",
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                     mb: 1,
-                    fontSize:'20px',
+                    fontSize: "20px",
                     color: "text.primary",
                     textAlign: "left", // Align title to the left
                   }}

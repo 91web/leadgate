@@ -1,16 +1,13 @@
-// import Image from "next/image";
-"use client"
+"use client";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function Home() {
+export default function RootPage() {
   const router = useRouter();
 
   useEffect(() => {
-    return () => {
-      router.push("/group");
-    };
+    router.push("/group");
   }, [router]);
 
   return (

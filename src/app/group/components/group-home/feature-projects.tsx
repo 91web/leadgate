@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Typography, Grid2, Card, Button } from "@mui/material";
-import {ProjectData, ProjectType} from "./static-data/data";
+import { ProjectData, ProjectType } from "../static-data/data";
 
 // Sample images with content for overlays
-const projects:ProjectType[] = ProjectData;
- 
+const projects: ProjectType[] = ProjectData;
 
 const FeatureProjects = () => {
   return (
@@ -95,9 +94,9 @@ const FeatureProjects = () => {
                   sx={{
                     fontFamily: "lora",
                     fontWeight: "regular",
-                    mb: '1px',
-                    fontSize:'16px',
-                    color:'color.primary',
+                    mb: "1px",
+                    fontSize: "16px",
+                    color: "color.primary",
                     textAlign: "center",
                   }}
                 >
@@ -108,8 +107,8 @@ const FeatureProjects = () => {
                   sx={{
                     fontFamily: "Inter",
                     fontWeight: "Bold",
-                    fontSize:'24px',
-                    mb: '1px',
+                    fontSize: "24px",
+                    mb: "1px",
                     textAlign: "center",
                   }}
                 >
@@ -118,9 +117,9 @@ const FeatureProjects = () => {
                 <Button
                   sx={{
                     color: "#AE883B",
-                    fontFamily:'inter',
-                    fontWeight: 'bold',
-                    opacity:'10px',
+                    fontFamily: "inter",
+                    fontWeight: "bold",
+                    opacity: "10px",
                     textAlign: "center",
                     fontSize: "18px",
                     textTransform: "none",

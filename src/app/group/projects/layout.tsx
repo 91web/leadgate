@@ -2,7 +2,7 @@
 import Box from "@mui/material/Box";
 // import { useRouter } from "next/navigation";
 
-const PortifolioLayout = ({
+const ProjectsLayout = ({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
@@ -16,4 +16,4 @@ const PortifolioLayout = ({
   );
 };
 
-export default PortifolioLayout;
+export default ProjectsLayout;

@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
-import Grid2 from "@mui/material/Grid2"; 
-import Link from 'next/link';
+import Grid2 from "@mui/material/Grid2";
+import Link from "next/link";
 import DreamBg from "../../../../assets/img/dream-group.png";
 import Line1 from "../../../../assets/svg/line-dream.svg";
+import Image from "next/image";
 
 const HeaderGroup = () => {
   return (
@@ -30,7 +31,7 @@ const HeaderGroup = () => {
             textAlign: { xs: "center", md: "left" },
           }}
         >
-            Become a Partner
+          Become a Partner
         </Typography>
         <Box
           component="img"
@@ -50,8 +51,8 @@ const HeaderGroup = () => {
           fontWeight: 600,
           color: "#1D2939",
           lineHeight: 1.4,
-          textAlign: 'left',
-          fontSize: { xs: '24px', md: '26px' },
+          textAlign: "left",
+          fontSize: { xs: "24px", md: "26px" },
         }}
       >
         Why you Should Join us, and Partner with Us
@@ -73,56 +74,58 @@ const PartnerCard = () => {
       >
         {/* Left Section */}
         <Grid2 size={{ xs: 12, md: 6 }}>
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <HeaderGroup />
-          </Box>
+          <Box width={{ xs: "100%", md: "80%" }}>
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <HeaderGroup />
+            </Box>
 
-          {/* Description and Button */}
-          <Typography
-            variant="body1"
-            sx={{
-              fontFamily: "Lora",
-              color: "#6D6D6D",
-              lineHeight: 1.8,
-              mb: 3,
-              fontSize: '16px',
-              textAlign: 'left',
-            }}
-          >
-            Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-            blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet
-            consectetur. Viverra magna habitant blandit lectus integer pulvinar
-            dui est.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-            blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet
-            consectetur. Viverra magna habitant blandit lectus integer pulvinar
-            dui est.
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "flex-start",
-            }}
-          >
-            <Link href={`/group/partnership/${partnerSlug}`} passHref>
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#AE883B",
-                  color: "#fff",
-                  textTransform: "none",
-                  fontWeight: 600,
-                  py: 1.5,
-                  "&:hover": {
-                    backgroundColor: "#965F2A",
-                  },
-                }}
-              >
-                Become Our Partner
-              </Button>
-            </Link>
+            {/* Description and Button */}
+            <Typography
+              variant="body1"
+              sx={{
+                fontFamily: "Lora",
+                color: "#6D6D6D",
+                lineHeight: 1.8,
+                mb: 3,
+                fontSize: "16px",
+                textAlign: "left",
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
+              blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit
+              amet consectetur. Viverra magna habitant blandit lectus integer
+              pulvinar dui est.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
+              blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit
+              amet consectetur. Viverra magna habitant blandit lectus integer
+              pulvinar dui est.
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "flex-start",
+              }}
+            >
+              <Link href={`/group/partners/${partnerSlug}`} passHref>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#AE883B",
+                    color: "#fff",
+                    textTransform: "none",
+                    fontWeight: 600,
+                    py: 1.5,
+                    "&:hover": {
+                      backgroundColor: "#965F2A",
+                    },
+                  }}
+                >
+                  Become Our Partner
+                </Button>
+              </Link>
+            </Box>
           </Box>
         </Grid2>
 
@@ -133,7 +136,13 @@ const PartnerCard = () => {
           </Box>
           <Box>
             {/* Image */}
-            <Box
+            <Image
+              src={DreamBg.src}
+              alt={"Group Image"}
+              height={458}
+              width={452}
+            />
+            {/* <Box
               component="img"
               src={DreamBg.src}
               alt="Group Image"
@@ -143,7 +152,7 @@ const PartnerCard = () => {
                 borderRadius: "8px",
                 mb: 2,
               }}
-            />
+            /> */}
           </Box>
         </Grid2>
       </Grid2>
