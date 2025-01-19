@@ -17,7 +17,7 @@ export interface SliderType {
     src:string, 
     title: string,
     description:string
-    buttonText:string,
+    buttonText:string[],
     bulletPoint:string[]
   
   }
@@ -27,7 +27,7 @@ export interface SliderType {
       src: Slide1.src, 
       title: "Our Valued Partner",
        description: "lorem  pufdbdjvk dvndkjvdsv nbbsvb\j .",
-        buttonText: "See Property",
+        buttonText: ["See Property",],
         bulletPoint:["Lorem ipsum dolor sit amet consectetur.", "Pellentesque habitant morbi tristique senectus.", "Praesent commodo cursus magna, vel scelerisque nisl"]
 
     },
@@ -37,14 +37,14 @@ export interface SliderType {
       src: Slide2.src,
       title: "Our Valued Partner",
        description: "Lorem ipsum dolor sit amet consectetur.", 
-       buttonText: "Discover More" ,
+       buttonText: ["Become Our Parner" , "Book Now"],
        bulletPoint:["Lorem ipsum dolor sit amet consectetur.", "Pellentesque habitant morbi"]
     },
     {  id:"3",
       src: Slide3.src,
       title: "Our Valued Partner",
       description: "Pellentesque habitant morbi tristique senectus.",
-      buttonText: "Explore Now",
+      buttonText: ["Explore Now", "Book Now"],
       bulletPoint:["Lorem ipsum dolor sit amet consectetur.", "Pellentesque habitant morbi tristique senectus.", "Praesent commodo cursus magna, vel scelerisque nisl"]
     }
       ,
@@ -52,7 +52,7 @@ export interface SliderType {
       src: Slide4.src, 
       title: "Our Valued Partner",
       description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-       buttonText: "Join Us" ,
+       buttonText:["Join Us" ] ,
       bulletPoint:["Lorem ipsum dolor sit amet consectetur.", "Pellentesque habitant morbi tristique senectus."]
       },
   ];

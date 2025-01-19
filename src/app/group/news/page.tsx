@@ -7,14 +7,11 @@ import NewsletterSubscription from './components/subscribe-news';
 const NewsPage = () => {
   return (
   <Box>
-      <div>
-        <h1>App LeadGate Group</h1>
-      </div>
       <Box>
         <NewsSlider/>
       </Box>
     <Box>
-      <Container>
+      <Container maxWidth="lg">
       <ArticleCard/>
       </Container>
       <Box
@@ -50,10 +47,7 @@ const NewsPage = () => {
 
             </Box>
             <Box>
-  
             <NewsletterSubscription/>
-      
-         
             </Box>
     </Box>
   </Box>

@@ -30,7 +30,7 @@ const AppGroup = () => {
           <FeatureProject />
         </Container>
       </Box>
-      <Box mb={2}>
+      <Box >
         <BuildingHero />
       </Box>
       <Box

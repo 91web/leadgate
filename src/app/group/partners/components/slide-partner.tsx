@@ -122,7 +122,7 @@ const SlidePartner = () => {
         sx={{
           position: "absolute",
          // bottom: "10%",
-          top: "30%",
+          top: "20%",
           left: "10%",
           color: "#fff", // Make the content text color white
           opacity: 1, // Full opacity for the content
@@ -147,19 +147,29 @@ const SlidePartner = () => {
           ))}
     </List>
         </Box>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "#AE883B",
-            color: "#fff",
-            "&:hover": {
-              backgroundColor: "darkgoldenrod",
-            
-            },  textTransform:'none',
-          }}
-        >
-          {images[currentSlide].buttonText}
-        </Button>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 ,}}>
+          {images[currentSlide].buttonText.map((button, index) => (
+            <Button
+              key={index}
+              variant={index === 1 ? "outlined" : "contained"}
+              sx={{
+          backgroundColor: index === 1 ? "transparent" : "#AE883B",
+          color: "#fff",
+          borderColor: index === 1 ? "#fff" : "transparent",
+          "&:hover": {
+            backgroundColor: index === 1 ? "rgba(255, 255, 255, 0.1)" : "darkgoldenrod",
+            borderColor: index === 1 ? "#fff" : "transparent",
+          },
+          textTransform: 'none',
+           width: index === 1 ? '100px' : '200px',
+    
+              }}
+            >
+              {button}
+            </Button>
+          ))}
+        </Box>
       </Box>
 
       {/* Slide indicators */}

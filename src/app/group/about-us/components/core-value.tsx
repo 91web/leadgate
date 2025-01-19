@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -72,6 +71,7 @@ export default function CoreValue() {
           fontSize: { xs: "22px", md: "24px" },
           fontWeight: "medium",
           fontFamily: "lora",
+          color:'#344054'
         }}
       >
         Our Core Values
@@ -102,7 +102,7 @@ export default function CoreValue() {
             <SwiperSlide key={value.id}>
               <Box
                 sx={{
-                  p: { xs: 1, md: 10 },
+                  p: { xs: 1, md: 5 },
                   backgroundColor: "background.paper",
                 }}
               >

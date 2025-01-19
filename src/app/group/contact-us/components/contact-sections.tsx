@@ -35,12 +35,12 @@ export default function ContactSection() {
         }}
       >
         <Typography
-          component="h1"
+          component="span"
           variant="h2"
           sx={{
             color: 'white',
             fontWeight: 400,
-            fontSize:{xs:'22px', md:'26px'},
+            fontSize:{xs:'22px', md:'28px'},
             mb: 2,
           }}
         >

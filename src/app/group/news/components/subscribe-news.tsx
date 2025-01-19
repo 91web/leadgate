@@ -41,9 +41,10 @@ const NewsletterSubscription = () => {
           fontFamily: "Inter, sans-serif",
           color: "#A0AEC0", // Light gray text
           mb: 4, // Margin bottom
+      
         }}
       >
-        Get weekly updates about our product on your email, no spam guaranteed we promise ✌️
+       Get weekly update about our product on your email, no spam <br/> guaranteed we promise ✌️
       </Typography>
 
       {/* Subscription Form */}

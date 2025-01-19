@@ -12,7 +12,7 @@ const CoreDivisions = () => {
         {/* Left Box - Header */}
         <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 5 } }}>
    
-        <Box sx={{width:{ xs: '100%', md: '70%' }, textAlign:{ xs: 'center', md: 'left' } }}>
+        <Box sx={{width:{ xs: '100%', md: '70%' },mt:10, textAlign:{ xs: 'center', md: 'left' } }}>
         <Typography
           variant="h4"
           sx={{
