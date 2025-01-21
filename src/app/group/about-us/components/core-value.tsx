@@ -136,6 +136,7 @@ export default function CoreValue() {
                     {value.title}
                   </Typography>
                 </Box>
+                <Box>
                 <Typography
                   variant="body1"
                   sx={{
@@ -148,7 +149,7 @@ export default function CoreValue() {
                   }}
                 >
                   {value.descriptions}
-
+                </Typography>
                   {/* Custom Pagination for each Slide */}
                   <Box
                     sx={{
@@ -181,7 +182,7 @@ export default function CoreValue() {
                       ))}
                     </Box>
                   </Box>
-                </Typography>
+                </Box>
               </Box>
             </SwiperSlide>
           ))}

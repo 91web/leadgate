@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material';
-import NewsHero1 from "../../../../assets/img/news-cover.png";
+import NewsHero1 from "../../../../assets/img/news-page1.png";
 
 export default function NewsCover() {
   return (
@@ -38,7 +38,7 @@ export default function NewsCover() {
           variant="h2"
           sx={{
             color: '#fff',
-            fontFamily: "'Lora'",
+            fontFamily:'lora',
             fontWeight: 'medium',
             fontSize:{xs:'22px', md:'34px'},
             mb: 2,
@@ -50,7 +50,7 @@ export default function NewsCover() {
           variant="h6"
           sx={{
             color: 'white',
-            fontFamily: "'Inter'",
+            fontFamily:'inter',
             fontSize:{xs:'14px', md:'16px'},
             fontWeight: 'regular',
           }}

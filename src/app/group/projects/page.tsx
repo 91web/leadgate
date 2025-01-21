@@ -58,12 +58,12 @@ const ProjectsPage: React.FC = () => {
               }}
             >
               Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-              <Box></Box> volutpat nulla at.
+              <br/> volutpat nulla at.
               Porttitor pellentesque diam urna aliquet in ut.
             </Typography>
             </Box>
         </Box>
-        <Container >
+        <Container  >
           <ServiceCard />
         </Container>
         <Box
@@ -133,13 +133,13 @@ const ProjectsPage: React.FC = () => {
               }}
             >
               Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-              <Box></Box> volutpat nulla at.
+              <br/> volutpat nulla at.
               Porttitor pellentesque diam urna aliquet in ut.
             </Typography>
             </Box>
         </Box>
 
-          <Container>
+          <Container maxWidth="lg">
             <ProjectCard />
           </Container>
         </Box>

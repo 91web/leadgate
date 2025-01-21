@@ -93,8 +93,8 @@ const PartnerCard = () => {
              Lorem ipsum dolor sit amet consectetur.
               Viverra magna habitant blandit lectus integer pulvinar dui est. 
              blandit lectus integer pulvinar dui est.
-              <Box mb={4}></Box>
-              <Box></Box>
+             <br/>
+             <br/>
               Lorem ipsum dolor sit amet consectetur. 
             Viverra magna habitant blandit lectus integer pulvinar dui est. 
              blandit lectus integer pulvinar dui est. 

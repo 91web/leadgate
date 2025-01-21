@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material';
-import ProjectHero1 from "../../../../assets/img/feature-project1.png";
+import ProjectHero1 from "../../../../assets/img/project-cover.png";
 
 export default function ProjectCover() {
   return (
