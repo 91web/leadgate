@@ -10,7 +10,7 @@ const PartnerCard = () => {
   const partnerSlug = "Partner-single-page";
 
   return (
-    <Box sx={{ py: { xs: 4, md: 6 } }}>
+    <Box sx={{ py: { xs: 4, md: 10 } }}>
       <Grid2
         container
         spacing={4}
@@ -41,6 +41,7 @@ const PartnerCard = () => {
                       fontFamily: "Inter",
                       fontSize: "16px",
                       color: "#AE883B",
+                      fontWeight:'regular',
                       textAlign: { xs: "center", md: "left" },
                     }}
                   >
@@ -61,7 +62,7 @@ const PartnerCard = () => {
                   variant="h4"
                   sx={{
                     fontFamily: "Lora",
-                    fontWeight: 600,
+                    fontWeight: "medium",
                     color: "#1D2939",
                     lineHeight: 1.4,
                     textAlign: "left",
@@ -83,18 +84,23 @@ const PartnerCard = () => {
                 mb: 3,
                 fontSize: "16px",
                 textAlign: "left",
+                fontWeight:'regular',
               }}
             >
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit
-              amet consectetur. Viverra magna habitant blandit lectus integer
-              pulvinar dui est.
+            Lorem ipsum dolor sit amet consectetur. 
+            Viverra magna habitant blandit lectus integer pulvinar dui est. 
+             blandit lectus integer pulvinar dui est. 
+             Lorem ipsum dolor sit amet consectetur.
+              Viverra magna habitant blandit lectus integer pulvinar dui est. 
+             blandit lectus integer pulvinar dui est.
+              <Box mb={4}></Box>
               <Box></Box>
-              <Box></Box>
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit
-              amet consectetur. Viverra magna habitant blandit lectus integer
-              pulvinar dui est.
+              Lorem ipsum dolor sit amet consectetur. 
+            Viverra magna habitant blandit lectus integer pulvinar dui est. 
+             blandit lectus integer pulvinar dui est. 
+             Lorem ipsum dolor sit amet consectetur.
+              Viverra magna habitant blandit lectus integer pulvinar dui est. 
+             blandit lectus integer pulvinar dui est.
             </Typography>
             <Box
               sx={{
@@ -104,20 +110,24 @@ const PartnerCard = () => {
             >
               <Link href={`/group/partners/${partnerSlug}`} passHref>
                 <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#AE883B",
-                    color: "#fff",
-                    textTransform: "none",
-                    fontWeight: 600,
-                    py: 1.5,
-                    "&:hover": {
-                      backgroundColor: "#965F2A",
-                    },
-                  }}
-                >
-                  Become Our Partner
-                </Button>
+                              variant="contained"
+                              sx={{
+                                backgroundColor: "#AE883B",
+                                color: "#ffffff",
+                                py: 1,
+                                px: 3,
+                                fontFamily: "'Inter'",
+                                fontWeight: "medium",
+                                fontSize:{xs:'14px', md:'17px'},
+                                textTransform: "none",
+                                "&:hover": {
+                                  backgroundColor: "#965F2A",
+                                },
+                              }}
+                            >
+                              Become our Partner
+                            </Button>
+
               </Link>
             </Box>
           </Box>
@@ -146,6 +156,7 @@ const PartnerCard = () => {
                     fontFamily: "Inter",
                     fontSize: "16px",
                     color: "#AE883B",
+                    fontWeight: "regular",
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
@@ -166,11 +177,11 @@ const PartnerCard = () => {
                 variant="h4"
                 sx={{
                   fontFamily: "Lora",
-                  fontWeight: 600,
+                  fontWeight: 'medium',
                   color: "#1D2939",
                   lineHeight: 1.4,
                   textAlign: "left",
-                  fontSize: { xs: "24px", md: "26px" },
+                  fontSize: { xs: "24px", md: "28px" },
                 }}
               >
                 Why you Should Join us, and Partner with Us

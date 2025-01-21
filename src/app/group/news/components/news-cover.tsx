@@ -1,7 +1,7 @@
-import { Box, Container, Typography } from '@mui/material'
-import ContactHero1 from "../../../../assets/img/contactus-hero1.png"
+import { Box, Container, Typography } from '@mui/material';
+import NewsHero1 from "../../../../assets/img/news-cover.png";
 
-export default function ContactSection() {
+export default function NewsCover() {
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ export default function ContactSection() {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: 1,
         },
-        backgroundImage: `url(${ContactHero1.src})`,
+        backgroundImage: `url(${NewsHero1.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -35,17 +35,16 @@ export default function ContactSection() {
         }}
       >
         <Typography
-          component="h1"
           variant="h2"
           sx={{
             color: '#fff',
             fontFamily: "'Lora'",
             fontWeight: 'medium',
-            fontSize:{xs:'22px', md:'30px'},
+            fontSize:{xs:'22px', md:'34px'},
             mb: 2,
           }}
         >
-          Contact us
+         Latest News
         </Typography>
         <Typography
           variant="h6"
@@ -56,7 +55,7 @@ export default function ContactSection() {
             fontWeight: 'regular',
           }}
         >
-          We love to hear from you. Please leave us a message.
+     Lorem ipsum dolor, Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor. Lorem ipsum dolor, Lorem ipsum dolor Lorem.
         </Typography>
       </Container>
     </Box>

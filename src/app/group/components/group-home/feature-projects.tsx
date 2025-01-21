@@ -27,7 +27,7 @@ const FeatureProjects = () => {
           sx={{
             fontFamily: "Lora",
             fontWeight: "medium",
-            color: "#000",
+            color: "#1D2939",
             fontSize: { xs: "24px", md: "28px" },
           }}
         >
@@ -52,6 +52,7 @@ const FeatureProjects = () => {
             >
               {/* Image */}
               <Card
+              elevation={0}
                 sx={{
                   borderRadius: "8px",
                   overflow: "hidden",

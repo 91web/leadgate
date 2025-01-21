@@ -55,7 +55,7 @@ const PartnerShipPage = () => {
               height: "150px",
               justifyContent: "space-between",
               alignItems: "center",
-              boxShadow: { xs: "none", md: "0px 4px 10px rgba(0, 0, 0, 0.1)" },
+             // boxShadow: { xs: "none", md: "0px 4px 10px rgba(0, 0, 0, 0.1)" },
               flexDirection: { xs: "column", md: "row" },
               textAlign: { xs: "center", md: "left" },
             }}
@@ -64,13 +64,21 @@ const PartnerShipPage = () => {
             <Box sx={{ mb: { xs: 2, md: 0 } }}>
               <Typography
                 variant="h6"
-                sx={{ fontWeight: "bold", color: "#374151", width: "100%" }}
+                sx={{ fontWeight: "medium", 
+                  fontFamily: "'Lora'",
+                  fontSize:{xs:'24px', md:'30px'},
+                  color: "#344054", width: "100%" }}
               >
                 Interested in partnering with us
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#6B7280",}}
+                sx={{ 
+                  fontWeight: "medium",
+                  fontFamily: "'Lora'",
+                  color:'#667085',
+                  fontSize:{xs:'14px', md:'17px'},
+                }}
               >
                 Join over 100+ Partners
               </Typography>
@@ -84,7 +92,9 @@ const PartnerShipPage = () => {
                 color: "#ffffff",
                 py: 1,
                 px: 3,
-                fontWeight: "bold",
+                fontFamily: "'Inter'",
+                fontWeight: "medium",
+                fontSize:{xs:'14px', md:'17px'},
                 textTransform: "none",
                 "&:hover": {
                   backgroundColor: "#965F2A",

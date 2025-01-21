@@ -1,57 +1,69 @@
 "use client";
 import React from "react";
 import { Box, Button, Container, Typography } from "@mui/material";
-import SlideProject from "./components/slide-project";
+import ProjectCover from "./components/project-cover";
 import { useMediaQuery } from "@mui/material";
 import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
 import TestBg2 from "../../../assets/img/bg-testimonial2.png";
 import ServiceCard from "./components/service-card";
 import ProjectCard from "./components/project-card";
 import TestimonialHero from "../components/group-home/avatar-hero";
+
+
+
+
 const ProjectsPage: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <Box>
-        <SlideProject />
+        <ProjectCover />
       </Box>
       <Box>
         <Box
           sx={{
             textAlign: "center",
-            py: 4, // Add padding top and bottom
-            px: 2, // Add padding for smaller devices
-            maxWidth: "800px", // Restrict the width for centered alignment
-            margin: "0 auto", // Center the box horizontally
+          //  py: 4, // Add padding top and bottom
+         //   px: 2, // Add padding for smaller devices
+           // maxWidth: "800px", 
+           // margin: "0 auto", // Center the box horizontally
           }}
         >
           {/* Title */}
           <Typography
             variant="h4"
             sx={{
-              fontWeight: "bold",
-              fontFamily: "Lora, serif",
-              color: "#344054", // Adjust heading color
-              mb: 2, // Add margin-bottom for spacing
+              fontWeight: "medium",
+              fontFamily: "Lora",
+              color: "#344054", 
+              fontSize: { xs: "26px", md: "30px" },
+              mt: 10, // Add margin-bottom for spacing
+              pb:2
             }}
           >
             Our Services
           </Typography>
 
           {/* Description */}
-          <Typography
-            variant="body1"
-            sx={{
-              fontFamily: "Inter, sans-serif",
-              color: "#667085", // Adjust text color for description
-              lineHeight: 1.6, // Improve readability
-            }}
-          >
-            Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo volutpat
-            nulla at. Porttitor pellentesque diam urna aliquet in ut.
-          </Typography>
+            <Box>
+            <Typography
+              variant="body1"
+              sx={{
+              fontWeight: "regular",
+              fontFamily: "Lora",
+              color: "#344054",
+              textAlign: 'center',
+              fontSize: { xs: "14px", md: "17px" },
+              pb:2
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
+              <Box></Box> volutpat nulla at.
+              Porttitor pellentesque diam urna aliquet in ut.
+            </Typography>
+            </Box>
         </Box>
-        <Container>
+        <Container >
           <ServiceCard />
         </Container>
         <Box
@@ -76,31 +88,78 @@ const ProjectsPage: React.FC = () => {
               "&:hover": {
                 backgroundColor: "#8F6D25", // Darker gold on hover
               },
+              mb:2
             }}
           >
             Learn More
           </Button>
         </Box>
-        <Box bgcolor={"#F2F4F7"}>
+        <Box bgcolor={"#F2F4F7"} py={10}>
+        <Box
+          sx={{
+            textAlign: "center",
+          //  py: 4, // Add padding top and bottom
+         //   px: 2, // Add padding for smaller devices
+         // Add margin-bottom for spacing
+           // margin: "0 auto", // Center the box horizontally
+          }}
+        >
+  {/* Title */}
+  <Typography
+            variant="h4"
+            sx={{
+              fontWeight: "medium",
+              fontFamily: "Lora",
+              color: "#344054", 
+              fontSize: { xs: "26px", md: "30px" },
+          
+              pb:2
+            }}
+          >
+            Latest Project
+          </Typography>
+
+          {/* Description */}
+            <Box>
+            <Typography
+              variant="body1"
+              sx={{
+              fontWeight: "regular",
+              fontFamily: "Lora",
+              color: "#344054",
+              textAlign: 'center',
+              fontSize: { xs: "14px", md: "17px" },
+              pb:2
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
+              <Box></Box> volutpat nulla at.
+              Porttitor pellentesque diam urna aliquet in ut.
+            </Typography>
+            </Box>
+        </Box>
+
           <Container>
             <ProjectCard />
           </Container>
         </Box>
       </Box>
-      <Box
-        sx={{
-          backgroundImage: isMobile
-            ? `url(${TestBg1.src})` //  the mobile image
-            : `url(${TestBg2.src})`, // the desktop image
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: { xs: "50vh", md: "100vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+         <Box display={{xs:'none', md:'block'}} py={5} bgcolor={'#fff'}>
+         <Box
+           sx={{
+             backgroundImage: isMobile
+               ? `url(${TestBg1.src})` //  the mobile image
+               : `url(${TestBg2.src})`, // the desktop image
+             backgroundSize: "cover",
+             backgroundPosition: "center",
+             minHeight: { xs: "50vh", md: "100vh" },
+             display: "flex",
+             alignItems: "center",
+            justifyContent: "center",
+           }}
+         >
         <TestimonialHero />
+      </Box>
       </Box>
     </Box>
   );

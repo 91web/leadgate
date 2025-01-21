@@ -82,7 +82,7 @@ const Divisions = () => {
                     fontWeight: "bold",
                     mb: 1,
                     fontSize: "20px",
-                    color: "text.primary",
+                    color: "#344054",
                     textAlign: "left", // Align title to the left
                   }}
                 >
@@ -91,7 +91,7 @@ const Divisions = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#6D6D6D",
+                    color: "#475467",
                     fontSize: "14px",
                     lineHeight: "1.6",
                     mb: 2,

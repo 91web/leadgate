@@ -11,11 +11,11 @@ const AboutUs = () => {
       <Box>
         <SlideHero />
       </Box>
-      <Container>
+      <Container maxWidth="lg">
         <CoreValue />
       </Container>
       <Box sx={{ justifyContent: "center", bgcolor: "#f5f5f5" }}>
-        <Container>
+        <Container maxWidth="lg">
           <FeatureEvents />
         </Container>
       </Box>

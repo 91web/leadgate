@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Box, Typography} from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import { keyframes } from "@mui/system";
-import {SliderData, SliderType} from "./static-data/data";
+import { SliderData, SliderType } from "./static-data/data";
 
-const images:SliderType [] = SliderData ;
+const images: SliderType[] = SliderData;
 
 const slideIn = keyframes`
   from {
@@ -47,7 +47,7 @@ const overlayFadeOut = keyframes`
   }
 `;
 
-const NewsSlider = () => {
+const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   React.useEffect(() => {
@@ -79,9 +79,10 @@ const NewsSlider = () => {
             width: "100%",
             height: "100%",
             opacity: index === currentSlide ? 1 : 0,
-            animation: index === currentSlide
-              ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
-              : "none",
+            animation:
+              index === currentSlide
+                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
+                : "none",
           }}
         >
           <Box
@@ -98,7 +99,7 @@ const NewsSlider = () => {
               opacity: 1, // Ensure image is always visible
             }}
           />
-          
+
           {/* Overlay */}
           <Box
             sx={{
@@ -108,22 +109,22 @@ const NewsSlider = () => {
               width: "100%",
               height: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark overlay
-              animation: index === currentSlide
-                ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
-                : "none",
+              animation:
+                index === currentSlide
+                  ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
+                  : "none",
             }}
           />
         </Box>
       ))}
 
-      {/* Content (Typography ) */}
+      {/* Content (Typography & Button) */}
       <Box
         sx={{
           position: "absolute",
-          top: "50%", // Center vertically
-          left: "50%", // Center horizontally
-          transform: "translate(-50%, -50%)", // Adjust for centering
-          textAlign: "center", // Center-align text
+          // bottom: "10%",
+          top: "30%",
+          left: "10%",
           color: "#fff", // Make the content text color white
           opacity: 1, // Full opacity for the content
           animation: `${slideIn} 1s ease`, // Apply slide-in animation to content
@@ -152,6 +153,19 @@ const NewsSlider = () => {
         >
           {images[currentSlide].description}
         </Typography>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#AE883B",
+            color: "#fff",
+            "&:hover": {
+              backgroundColor: "darkgoldenrod",
+            },
+            textTransform: "none",
+          }}
+        >
+          {images[currentSlide].buttonText}
+        </Button>
       </Box>
 
       {/* Slide indicators */}
@@ -160,12 +174,12 @@ const NewsSlider = () => {
           position: "absolute",
           top: { xs: "none", md: "40%" },
           bottom: { xs: "5%", md: "none" },
-          right:{ xs: "40%", md: "10%" },
+          right: { xs: "40%", md: "10%" },
           display: "flex",
           flexDirection: { xs: "row", sm: "column" },
           gap: 1,
-          alignContent:'center',
-          alignItems:"center"
+          alignContent: "center",
+          alignItems: "center",
         }}
       >
         {images.map((_, index) => (
@@ -187,4 +201,4 @@ const NewsSlider = () => {
   );
 };
 
-export default NewsSlider;
+export default HeroSlider;

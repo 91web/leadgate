@@ -159,7 +159,7 @@ const TestimonialHero: React.FC = () => {
               color: "#AE883B",
               fontSize: "16px",
               textTransform: "none",
-              fontWeight: 600,
+              fontWeight: "medium",
               letterSpacing: "0.1em",
               //pt: 2,
               }}

@@ -71,7 +71,7 @@ export default function CoreValue() {
           fontSize: { xs: "22px", md: "24px" },
           fontWeight: "medium",
           fontFamily: "lora",
-          color:'#344054'
+          color:'#667085'
         }}
       >
         Our Core Values
@@ -139,9 +139,12 @@ export default function CoreValue() {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "text.secondary",
+                    color: "#667085",
                     lineHeight: 1.7,
+                    fontWeight: "regular",
+                    fontFamily: "inter",
                     ml: 6,
+                    fontSize: { xs: "14px", md: "16px" },
                   }}
                 >
                   {value.descriptions}

@@ -80,7 +80,7 @@ export default function PartnerGrid() {
                     }}
                   >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <Typography gutterBottom variant="h5" component="p" sx={{ color: 'white', fontSize: '18px', fontFamily: 'inter', fontWeight: 'medium' }}>
+                      <Typography gutterBottom variant="h5" sx={{ color: '#fff', fontSize: '18px', fontFamily: 'inter', fontWeight: 'medium' }}>
                         {partner.name}
                       </Typography>
                       <IconButton

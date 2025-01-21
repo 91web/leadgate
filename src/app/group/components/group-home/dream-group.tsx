@@ -26,6 +26,7 @@ const HeaderGroup = () => {
             fontFamily: "Inter",
             fontSize: "16px",
             color: "#AE883B",
+            fontWeight:'regular',
             textAlign: { xs: "center", md: "left" },
           }}
         >
@@ -46,11 +47,12 @@ const HeaderGroup = () => {
         variant="h4"
         sx={{
           fontFamily: "Lora",
-          fontWeight: 600,
+          fontWeight: 'medium',
           color: "#1D2939",
           lineHeight: 1.4,
           textAlign:'left',
           fontSize:{xs:'24px', md:'26px'},
+          width: { xs: '100%', md: '70%' }
         }}
       >
         Our Dream is to Build Dreams, Elevate Health, and Create a Lasting Value
@@ -79,9 +81,10 @@ const DreamGroup = () => {
             variant="body1"
             sx={{
               fontFamily: "Lora",
-              color: "#6D6D6D",
+              color: "#475467",
               lineHeight: 1.8,
               mb: 3,
+              fontWeight:'regular',
               fontSize:'16px',
               textAlign:'left',
             }}
@@ -109,8 +112,9 @@ const DreamGroup = () => {
                 backgroundColor: "#AE883B",
                 color: "#fff",
                 textTransform: "none",
-                fontWeight: 600,
-                py: 1.5,
+                fontWeight: 'medium',
+                fontSize:'16px',
+                py: 1,
                 "&:hover": {
                   backgroundColor: "#965F2A",
                 },
@@ -146,10 +150,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
+                    fontWeight: 'medium',
+                    color: "#1D2939",
+                    fontSize:'28px',
                     textAlign: "center",
+                    fontFamily: "'Lora'",
                   }}
                 >
                   30+
@@ -157,9 +162,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#6D6D6D",
-                    textAlign: "left",
+                    color: "#475467",
+                    textAlign: "center",
                     fontSize:'12px',
+                    fontFamily: "'Inter'",
+                    fontWeight:'medium'
                   }}
                 >
                   Real Estate Properties
@@ -169,10 +176,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
+                    fontWeight: 'medium',
+                    color: "#1D2939",
+                    fontSize:'30px',
                     textAlign: "center",
+                    fontFamily: "'Lora'",
                   }}
                 >
                   10+
@@ -180,9 +188,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#6D6D6D",
-                    fontSize:'12px',
+                    color: "#475467",
                     textAlign: "center",
+                    fontSize:'12px',
+                    fontFamily: "'Inter'",
+                    fontWeight:'medium'
                   }}
                 >
                   Construction Sites
@@ -192,10 +202,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontWeight: 600,
-                    color: "#000",
-                    fontSize:'12px',
+                    fontWeight: 'medium',
+                    color: "#1D2939",
+                    fontSize:'30px',
                     textAlign: "center",
+                    fontFamily: "'Lora'",
                   }}
                 >
                   15+
@@ -203,9 +214,11 @@ const DreamGroup = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#6D6D6D",
-                    fontSize:'12px',
+                    color: "#475467",
                     textAlign: "center",
+                    fontSize:'12px',
+                    fontFamily: "'Inter'",
+                    fontWeight:'medium'
                   }}
                 >
                   Project Managers

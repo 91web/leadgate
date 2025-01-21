@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Button, Container } from '@mui/material'
-import NewsSlider from './components/slide-news';
+import NewsCover from './components/news-cover';
 import ArticleCard from './components/article-card';
 import NewsletterSubscription from './components/subscribe-news';
 
@@ -8,9 +8,9 @@ const NewsPage = () => {
   return (
   <Box>
       <Box>
-        <NewsSlider/>
+        <NewsCover/>
       </Box>
-    <Box>
+    <Box bgcolor={"#fff"}>
       <Container maxWidth="lg">
       <ArticleCard/>
       </Container>
@@ -30,7 +30,7 @@ const NewsPage = () => {
                 fontFamily: "Inter, sans-serif",
                 fontWeight: "medium",
                 textTransform: "none",
-                mb: 5,
+                mb: 8,
                 borderRadius: "8px",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 "&:hover": {
@@ -45,8 +45,8 @@ const NewsPage = () => {
               Learn More Article
             </Button>
 
-            </Box>
-            <Box>
+          </Box>
+            <Box bgcolor={"#F2F4F7"}>
             <NewsletterSubscription/>
             </Box>
     </Box>

@@ -45,7 +45,7 @@ const HeaderGroup = () => (
       variant="h4"
       sx={{
         fontFamily: "Lora",
-        fontWeight: 600,
+        fontWeight: "medium",
         color: "#1D2939",
         lineHeight: 1.4,
         textAlign: { xs: "center", md: "left" },
@@ -153,7 +153,7 @@ const PartnerCard = () => (
                 backgroundColor: "#AE883B",
                 color: "#fff",
                 textTransform: "none",
-                fontWeight: 600,
+                fontWeight: "medium",
                 py: 1.5,
                 "&:hover": {
                   backgroundColor: "#965F2A",

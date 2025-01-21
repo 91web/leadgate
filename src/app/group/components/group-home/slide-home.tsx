@@ -135,7 +135,7 @@ const HeroSlider = () => {
           sx={{
             mb: 2,
             fontSize: { xs: "36px", md: "40px" },
-            fontFamily: "lora",
+            fontFamily: "'Lora'", // add Lora to the App
             fontWeight: "regular",
           }}
         >
@@ -146,7 +146,7 @@ const HeroSlider = () => {
           sx={{
             mb: 2,
             fontSize: "17px",
-            fontFamily: "inter",
+            fontFamily: "'Inter'", //add inter to the app
             fontWeight: "regular",
             color: "#D0D5DD",
           }}

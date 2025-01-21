@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 import Onament from "../../../../assets/svg/ornament.svg";
 
+
 const NewsletterSubscription = () => {
   return (
     <Box>
@@ -13,8 +14,8 @@ const NewsletterSubscription = () => {
     <Box
       sx={{
         background: {
-            xs: "linear-gradient(to bottom, #1D2939 70%, #ffffff 30%)", // Half navy, half white vertically on mobile
-            md: "#1A202C", // Full navy for larger screens
+            xs: "linear-gradient(to bottom, #1D2939 70%, #F2F4F7 30%)", // Half navy, half white vertically on mobile
+            md: "#1D2939", 
           },
         color: "#fff", 
         py: 6, 
@@ -26,8 +27,9 @@ const NewsletterSubscription = () => {
       <Typography
         variant="h5"
         sx={{
-          fontFamily: "Lora, serif",
-          fontWeight: "bold",
+          fontFamily: "Lora",
+          fontWeight: "medium",
+          fontSize:{xs:'24px', md:'30px'},
           mb: 2, // Margin bottom
         }}
       >
@@ -38,9 +40,12 @@ const NewsletterSubscription = () => {
       <Typography
         variant="body1"
         sx={{
-          fontFamily: "Inter, sans-serif",
-          color: "#A0AEC0", // Light gray text
+          fontFamily: "Inter,",
+          color: "#FAFAFA", // Light gray text
           mb: 4, // Margin bottom
+          fontWeight: "regular",
+          opacity:0.7,
+          fontSize:{xs:'15px', sm:'17px'},
       
         }}
       >

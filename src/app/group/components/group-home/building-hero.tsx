@@ -12,7 +12,7 @@ const BuildingHero = () => {
    {/* Hero Section */}
    <Box
    sx={{
-     height: "400px",
+     height: "426px",
      backgroundImage: `url(${TestHero1.src})`,
      backgroundSize: "cover",
      backgroundPosition: "center",
@@ -26,9 +26,12 @@ const BuildingHero = () => {
      p: 4,
    }}
  >
+
+
+  
    <Typography
      variant="h4"
-     sx={{ fontWeight: "bold", fontFamily: "Lora", mb: 2 , fontSize:{xs:'24px', md:'26px',maxWidth: "600px",}}}
+     sx={{ fontWeight: "medium", fontFamily: "Lora", mb: 2 , fontSize:{xs:'24px', md:'26px',maxWidth: "600px",}}}
    >
      We are passionate about building Dreams, Elevating Health and Creating
      Lasting Values
