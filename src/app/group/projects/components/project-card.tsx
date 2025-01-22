@@ -9,14 +9,15 @@ const projects:  ProjectType [] = ProjectData;
 
 const ProjectCards = () => {
   return (
-    <Box sx={{ flexGrow: 1, p: 2 }}>
+    <Box sx={{ py:{xs:0, md:2} }}>
       <Grid2 container spacing={2}>
         {projects.map((project, index) => (
           <Grid2 size={{xs: 12, sm:6, md:4}} key={index}>
             <Card
+            elevation={0}
               sx={{
                 height: "100%",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+              //  boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
                 borderRadius: "8px",
                 overflow: "hidden",
                 backgroundColor: "#fff",

@@ -1,12 +1,12 @@
-import { Box, Container, Typography } from '@mui/material'
-import ContactHero1 from "../../../../assets/img/contactus-hero1.png"
+import { Box, Container, Typography } from '@mui/material';
+import ProjectHero1 from "../../../../assets/img/project-cover.png";
 
-export default function ContactSection() {
+export default function ProjectCover() {
   return (
     <Box
       sx={{
         position: 'relative',
-        height: '65vh',
+       height: "650px",
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -21,7 +21,7 @@ export default function ContactSection() {
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: 1,
         },
-        backgroundImage: `url(${ContactHero1.src})`,
+        backgroundImage: `url(${ProjectHero1.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
@@ -35,25 +35,28 @@ export default function ContactSection() {
         }}
       >
         <Typography
-          component="h1"
-          variant="h2"
+        
+          variant="h4"
           sx={{
-            color: 'white',
-            fontWeight: 400,
-            fontSize:{xs:'22px', md:'26px'},
+            color: '#fff',
+            fontFamily: "'Lora'",
+            fontWeight: 'medium',
+            fontSize:{xs:'24px', md:'40px'},
             mb: 2,
           }}
         >
-          Contact us
+        Project
         </Typography>
         <Typography
           variant="h6"
           sx={{
-            color: 'white',
-            fontWeight: 300,
+            color: '#D0D5DD',
+            fontFamily: "'Inter'",
+            fontSize:{xs:'14px', md:'16px'},
+            fontWeight: 'regular',
           }}
         >
-          We love to hear from you. Please leave us a message.
+     Lorem ipsum dolor, Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor. Lorem ipsum dolor, Lorem ipsum dolor Lorem.
         </Typography>
       </Container>
     </Box>

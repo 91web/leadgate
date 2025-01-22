@@ -1,85 +1,102 @@
 "use client";
 import React from "react";
-import SliderPartner from "./components/slide-partner";
+import PartnerCover from "./components/partner-cover";
 import { Box, Button, Container, Typography } from "@mui/material";
-import Image from "next/image";
-import TrustPartner from "../../../assets/svg/trust-partner.svg";
+import TrustPartners from "./components/trust-partners";
 import PartnerGrid from "./components/partner-grid";
 import PartnerCard from "./components/partner-card";
 
 const PartnerShipPage = () => {
   return (
-    <Box>
+    <Box >
       <Box>
-        <SliderPartner />
+        <PartnerCover />
+      </Box>
+      <Box>
+        <TrustPartners />
       </Box>
       <Box
         sx={{
-          display: "flex",
-          //justifyContent: "flex-end",
-          alignItems: "center",
-          width: "100%",
-          bgcolor: "#FCF7EB",
+          bgcolor: {
+            xs: "#FCF7EB", // Mobile
+            md: "#F2F4F7", // Desktop
+          },
+          py: 4,
         }}
       >
-        <Image
-          src={TrustPartner}
-          alt="Trust Partner"
-          width={0}
-          height={150}
-          style={{
-            display: "block",
-            width: "100%", // Set width to 100%
-          }}
-        />
-      </Box>
-      <Box>
         <PartnerGrid />
       </Box>
       <Box>
-        <Container>
+        <Container maxWidth="lg">
           <PartnerCard />
         </Container>
       </Box>
-      <Box>
-        <Container>
+      <Box
+        sx={{
+          bgcolor: {
+            xs: "#FCF7EB", // Mobile
+            md: "transparent", // Desktop
+          },
+          height:{xs: "230px", md: "200px"},
+          mb: 0,
+        }}
+      >
+        <Container maxWidth="lg">
           <Box
             sx={{
-              backgroundColor: "#FCF7EB",
-              borderRadius: "12px",
-              padding: "2rem",
+              bgcolor: {
+                xs: "transparent",
+                md: "#FCF7EB",
+              },
+              borderRadius: 2,
+              p: 4,
               display: "flex",
               mb: 5,
               height: "150px",
               justifyContent: "space-between",
               alignItems: "center",
-              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+             // boxShadow: { xs: "none", md: "0px 4px 10px rgba(0, 0, 0, 0.1)" },
+              flexDirection: { xs: "column", md: "row" },
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             {/* Text Section */}
-            <Box>
+            <Box sx={{ mb: { xs: 2, md: 0 } }}>
               <Typography
                 variant="h6"
-                sx={{ fontWeight: "bold", color: "#374151" }}
+                sx={{ fontWeight: "medium", 
+                  fontFamily: "'Lora'",
+                  fontSize:{xs:'24px', md:'30px'},
+                  color: "#344054", width: "100%" }}
               >
                 Interested in partnering with us
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: "#6B7280", marginTop: "0.5rem" }}
+                sx={{ 
+                  fontWeight: "medium",
+                  fontFamily: "'Lora'",
+                  color:'#667085',
+                  fontSize:{xs:'14px', md:'17px'},
+                }}
               >
                 Join over 100+ Partners
               </Typography>
             </Box>
 
             {/* Button Section */}
+          
             <Button
               variant="contained"
               sx={{
                 backgroundColor: "#AE883B",
                 color: "#ffffff",
-                padding: "0.5rem 1.5rem",
-                fontWeight: "bold",
+                py: 1,
+                mb:{xs:2, md:2},
+                px: 3,
+                fontFamily: "'Inter'",
+                fontWeight: "medium",
+                fontSize:{xs:'14px', md:'17px'},
                 textTransform: "none",
                 "&:hover": {
                   backgroundColor: "#965F2A",

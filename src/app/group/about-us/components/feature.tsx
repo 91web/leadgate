@@ -4,7 +4,7 @@ import JourneyFeatures from "./journey-feature";
 
 const FeatureEvents = () => {
   return (
-    <Box>
+    <Box py={5}>
       {/* Section Header */}
 
       {/* Responsive Grid Section */}
@@ -19,20 +19,20 @@ const FeatureEvents = () => {
             }}
           >
             <Typography
-              variant="h4"
+              variant="h6"
               sx={{
                 fontFamily: "Lora",
                 fontWeight: "medium",
                 color: "#101828",
                 mb: 1,
-                fontSize: { xs: "24px", md: "26px" },
+                fontSize: { xs: "24px", md: "30px" },
               }}
             >
               The journey so Far
             </Typography>
             <Typography
               variant="body1"
-              sx={{ fontFamily: "Lora", color: "#6D6D6D", fontSize: "16px" }}
+              sx={{ fontFamily: "inter", color: "#475467", fontSize: "16px" , fontWeight:'regular'}}
             >
               Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant
               blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit

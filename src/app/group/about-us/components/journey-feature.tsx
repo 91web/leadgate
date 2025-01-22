@@ -13,9 +13,10 @@ const JourneyEvents = () => {
         {JourneyFeatures.map((feature, index) => (
           <Grid2 size={12} key={index}>
             <Card
+            elevation={0}
               sx={{
-                boxShadow: "none",
-                backgroundColor: "transparent",
+               // boxShadow: "none",
+               backgroundColor: "transparent",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -37,9 +38,9 @@ const JourneyEvents = () => {
                   image={feature.image}
                   alt={feature.alt}
                   sx={{
-                    borderRadius: "8px",
-                    mb: 2,
-                    width: "98%", // Takes the remaining width (98%)
+                  //  borderRadius: "8px",
+                   // mb: 2,
+                  //  width: "100%",
                   }}
                 />
               </Box>
@@ -51,9 +52,9 @@ const JourneyEvents = () => {
                   sx={{
                     fontFamily: "inter",
                     fontWeight: "bold",
-                    mb: 1,
-                    fontSize: "20px",
-                    color: "text.primary",
+                    py: 1,
+                    fontSize: { xs: "18px", md: "20px" },
+                    color: "#344054",
                     textAlign: "left", // Align title to the left
                   }}
                 >
@@ -63,9 +64,10 @@ const JourneyEvents = () => {
                   variant="body2"
                   sx={{
                     color: "#6D6D6D",
-                    fontSize: "14px",
+                    fontSize: { xs: "14px", md: "16px" },
                     lineHeight: "1.6",
                     mb: 2,
+                    fontFamily: "inter",
                     textAlign: "left", // Align description text to the left
                   }}
                 >

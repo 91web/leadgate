@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -63,15 +62,17 @@ export default function CoreValue() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <Container maxWidth="lg" sx={{ mb: 2 }}>
+    <Box my={'50px'}>
+    <Container maxWidth="lg">
       <Typography
         variant="h2"
         align="center"
         sx={{
-          mt: 5,
-          fontSize: { xs: "22px", md: "24px" },
+        //  mt: 2,
+          fontSize: { xs: "22px", md: "30px" },
           fontWeight: "medium",
           fontFamily: "lora",
+          color:'#667085'
         }}
       >
         Our Core Values
@@ -102,7 +103,7 @@ export default function CoreValue() {
             <SwiperSlide key={value.id}>
               <Box
                 sx={{
-                  p: { xs: 1, md: 10 },
+                  p: { xs: 1, md: 5 },
                   backgroundColor: "background.paper",
                 }}
               >
@@ -117,9 +118,10 @@ export default function CoreValue() {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontSize: { xs: "18px", md: "20px" },
+                      fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "medium",
                       color: "#344054",
+                      fontFamily:'inter'
                     }}
                   >
                     {value.id}.
@@ -136,16 +138,20 @@ export default function CoreValue() {
                     {value.title}
                   </Typography>
                 </Box>
+                <Box>
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "text.secondary",
+                    color: "#667085",
                     lineHeight: 1.7,
+                    fontWeight: "regular",
+                    fontFamily: "inter",
                     ml: 6,
+                    fontSize: { xs: "14px", md: "16px" },
                   }}
                 >
                   {value.descriptions}
-
+                </Typography>
                   {/* Custom Pagination for each Slide */}
                   <Box
                     sx={{
@@ -178,7 +184,7 @@ export default function CoreValue() {
                       ))}
                     </Box>
                   </Box>
-                </Typography>
+                </Box>
               </Box>
             </SwiperSlide>
           ))}
@@ -222,5 +228,6 @@ export default function CoreValue() {
         </Box>
       </Box>
     </Container>
+    </Box>
   );
 }

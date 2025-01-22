@@ -17,7 +17,7 @@ const AppGroup = () => {
   return (
     <Box sx={{ backgroundColor: "#F9F5FF" }}>
       <HeroSlider />
-      <Container>
+      <Container maxWidth="lg">
         <CoreDivisions />
       </Container>
       <Box sx={{ backgroundColor: "#fff" }}>
@@ -26,13 +26,14 @@ const AppGroup = () => {
         </Container>
       </Box>
       <Box>
-        <Container>
+      <Container maxWidth="lg">
           <FeatureProject />
         </Container>
       </Box>
-      <Box mb={2}>
+      <Box>
         <BuildingHero />
       </Box>
+      <Box py={5} bgcolor={'#fff'}>
       <Box
         sx={{
           backgroundImage: isMobile
@@ -43,10 +44,11 @@ const AppGroup = () => {
           minHeight: { xs: "50vh", md: "100vh" },
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
+         justifyContent: "center",
         }}
       >
         <TestimonialHero />
+      </Box>
       </Box>
     </Box>
   );

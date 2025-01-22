@@ -7,7 +7,7 @@ const projects: ProjectType[] = ProjectData;
 
 const FeatureProjects = () => {
   return (
-    <Box sx={{ py: { xs: 4, md: 6 } }}>
+    <Box sx={{ py: { xs: 4, md: 8 } }}>
       {/* Header Section */}
       <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography
@@ -23,12 +23,12 @@ const FeatureProjects = () => {
           Our Portfolio
         </Typography>
         <Typography
-          variant="h4"
+          variant="h6"
           sx={{
             fontFamily: "Lora",
             fontWeight: "medium",
-            color: "#000",
-            fontSize: { xs: "24px", md: "28px" },
+            color: "#1D2939",
+            fontSize: { xs: "24px", md: "30px" },
           }}
         >
           Featured Projects from all Divisions
@@ -52,6 +52,7 @@ const FeatureProjects = () => {
             >
               {/* Image */}
               <Card
+              elevation={0}
                 sx={{
                   borderRadius: "8px",
                   overflow: "hidden",

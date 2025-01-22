@@ -1,20 +1,17 @@
 import React from 'react'
 import { Box, Button, Container } from '@mui/material'
-import NewsSlider from './components/slide-news';
+import NewsCover from './components/news-cover';
 import ArticleCard from './components/article-card';
 import NewsletterSubscription from './components/subscribe-news';
 
 const NewsPage = () => {
   return (
   <Box>
-      <div>
-        <h1>App LeadGate Group</h1>
-      </div>
       <Box>
-        <NewsSlider/>
+        <NewsCover/>
       </Box>
-    <Box>
-      <Container>
+    <Box bgcolor={"#fff"}>
+      <Container maxWidth="lg">
       <ArticleCard/>
       </Container>
       <Box
@@ -30,10 +27,11 @@ const NewsPage = () => {
               sx={{
                 backgroundColor: "#AE883B", // Gold color
                 color: "#fff",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: "medium",
+                fontFamily: "Inter",
+                fontWeight: "regular",
                 textTransform: "none",
-                mb: 5,
+                mb: 8,
+                fontSize:'17px',
                 borderRadius: "8px",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 "&:hover": {
@@ -48,12 +46,10 @@ const NewsPage = () => {
               Learn More Article
             </Button>
 
-            </Box>
-            <Box>
-  
+          </Box>
+            <Box bgcolor={"#F2F4F7"} mt={2}>
             <NewsletterSubscription/>
-      
-         
+          
             </Box>
     </Box>
   </Box>

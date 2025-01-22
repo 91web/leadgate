@@ -1,8 +1,3 @@
-//group slide images for real portifolio estate page
-import Slide1 from "../../../../../assets/img/porfolio-page1.png";
-import Slide2 from "../../../../../assets/img/porfolio-page1.png";
-import Slide3 from "../../../../../assets/img/porfolio-page1.png";
-import Slide4 from "../../../../../assets/img/porfolio-page1.png";
 
 //images for service 
 import Service1 from "../../../../../assets/img/service1.png";
@@ -18,43 +13,6 @@ import Project5 from "../../../../../assets/img/service2.png";
 import Project6 from "../../../../../assets/img/service3.png";
 
 
-//datatype images for real estate page
-export interface SliderType {
-    id:string,
-    src:string, 
-    title: string,
-    description:string,
-  
-  }
-  
-  export const SliderData: SliderType [] = [
-    {  id:"1",
-      src: Slide1.src, 
-      title: "Projects",
-       description: "lorem  pufdbdjvk dvndkjvdsv nbbsvb\j lorem  pufdbdjvk dvndkjvdsv nbbsvb\j.",
-
-    },
-  
-    { 
-      id:"2",
-      src: Slide2.src,
-      title: "Projects",
-       description: "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.", 
-    },
-    {  id:"3",
-      src: Slide3.src,
-      title: "Projects",
-      description: "Pellentesque habitant morbi tristique senectus. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.",
-     }
-      ,
-    {  id:"4",
-      src: Slide4.src, 
-      title: "Projects",
-      description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.Lorem ipsum dolor sit amet consectetur. ",
-      },
-  ];
-  
-  
 
 //datatype images for services  estate page
 export interface ServiceType {
