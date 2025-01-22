@@ -8,7 +8,7 @@ export default function ContactForm() {
   return (
     <Container maxWidth="lg">
       {/* Contact Info Cards */}
-      <Box sx={{ my: 8 }}>
+      <Box sx={{ my: {xs:0,md:8}}}>
         <Grid2 container spacing={4}>
           <Grid2 size={{ xs: 12, md: 4 }}>
             <Box sx={{ p: 2, bgcolor: '#F2F4F7', borderRadius: 1, display: 'flex', flexDirection: 'column', height: '100%', }}>
@@ -100,7 +100,7 @@ export default function ContactForm() {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontFamily: 'lora', fontWeight: 'semibold', fontSize: '20px' }}
+              sx={{ fontFamily: 'lora', fontWeight: 'medium', fontSize: '24px' }}
             >
               Want to make further enquiries?
             </Typography>
@@ -110,7 +110,7 @@ export default function ContactForm() {
               sx={{
                 fontFamily: 'inter',
                 color: '#344054',
-                fontWeight: 'semibold',
+                fontWeight: 'regular',
                 fontSize: '16px'
               }}
             >

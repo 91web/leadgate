@@ -64,7 +64,7 @@ const HeroSlider = () => {
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "500px", // Adjust for desktop view
+        height: "650px", 
         backgroundColor: "#000", // Set background to black
         animation: `${fadeBackground} 6s ease`, // Apply fade effect to background
       }}
@@ -149,6 +149,7 @@ const HeroSlider = () => {
             fontFamily: "'Inter'", //add inter to the app
             fontWeight: "regular",
             color: "#D0D5DD",
+            lineHeight:'130%'
           }}
         >
           {images[currentSlide].description}

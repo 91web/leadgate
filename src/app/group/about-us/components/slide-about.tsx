@@ -34,6 +34,7 @@ const SlideHero = () => {
             fontFamily: 'lora',
             color: '#344054',
             pt:10,
+            px:1,
             fontSize: { xs: '32px', md: '40px' },
             width: { xs: '100%', md: '60%' },
           }}
@@ -94,7 +95,7 @@ const SlideHero = () => {
                     fontFamily: 'inter',
                     color: '#344054',
                     fontSize: { xs: '16px', md: '20px' },
-                    width: "100%",
+                   // width: "100%",
                     textAlign: 'center',
                     p:3,
                 }}>
@@ -109,91 +110,91 @@ const SlideHero = () => {
 
             }}
             >
-            <Grid2 container spacing={4} justifyContent="center" my={2}>
-                <Grid2 size="auto">
-                <Box textAlign={'center'}>
+            <Grid2 container spacing={6} justifyContent="center" my={2}>
+                <Grid2 size={4}>
+                <Box textAlign={'center'} width={{xs:'60px', md:'150px'}}>
                     <Typography
-                                    variant="h5"
-                                    sx={{
-                                      fontWeight: 'medium',
-                                      color: "#1D2939",
-                                      fontSize:'28px',
-                                      textAlign: "center",
-                                      fontFamily: "'Lora'",
-                                    }}
-                                  >
-                                    30+
-                                  </Typography>
-                                  <Typography
+                    variant="h4"
+              
+                    sx={{
+                      fontWeight: 'medium',
+                      color: "#1D2939",
+                      fontSize:{xs:'25px' , md:'30px'},
+                      textAlign: "center",
+                      fontFamily:'lora',
+                    }}
+                    >
+                    30+
+                    </Typography>
+                    <Typography
                                     variant="body2"
                                     sx={{
                                       color: "#475467",
                                       textAlign: "center",
-                                      fontSize:'12px',
+                                      fontSize:{xs:'10px' , md:'12px'},
                                       fontFamily: "'Inter'",
-                                      fontWeight:'medium'
+                                      fontWeight:'regular'
                                     }}
                                   >
-                                    Real Estate Properties
-                                  </Typography>
+                      Real Estate Properties
+                    </Typography>
                 </Box>
                 </Grid2>
-                <Grid2 size="auto">
-                <Box textAlign={'center'}>
+                <Grid2 size={4}>
+                <Box textAlign={'center'} width={{xs:'60px', md:'150px'}}>
                     <Typography
                     variant="h4"
-                    gutterBottom
+            
                     sx={{
                       fontWeight: 'medium',
                       color: "#1D2939",
-                      fontSize:'28px',
+                      fontSize:{xs:'25px' , md:'30px'},
                       textAlign: "center",
-                      fontFamily: "'Lora'",
+                      fontFamily:'lora',
                     }}
                     >
                     10+
                     </Typography>
                     <Typography
-                    variant="h4"
-                    gutterBottom
-                    sx={{
-                      color: "#475467",
-                      textAlign: "center",
-                      fontSize:'12px',
-                      fontFamily: "'Inter'",
-                      fontWeight:'medium'
-                    }}
-                    >
+                                    variant="body2"
+                                    sx={{
+                                      color: "#475467",
+                                      textAlign: "center",
+                                      fontSize:{xs:'10px' , md:'12px'},
+                                      fontFamily: "'Inter'",
+                                      fontWeight:'regular'
+                                    }}
+                                  >
                     Construction Sites
                     </Typography>
                 </Box>
                 </Grid2>
-                <Grid2 size="auto">
-                <Box textAlign={'center'}>
+                <Grid2 size={4}>
+                <Box textAlign={'center'} width={{xs:'60px', md:'150px'}}>
                     <Typography
                     variant="h4"
-                    gutterBottom
+             
                     sx={{
                       fontWeight: 'medium',
                       color: "#1D2939",
-                      fontSize:'28px',
+                      fontSize:{xs:'25px' , md:'30px'},
                       textAlign: "center",
-                      fontFamily: "'Lora'",
+                      fontFamily:'lora',
                     }}
                     >
                     15+
                     </Typography>
                     <Typography
-                    variant="h4"
-                    gutterBottom
-                    sx={{
-                      color: "#475467",
-                      textAlign: "center",
-                      fontSize:'12px',
-                      fontFamily: "'Inter'",
-                      fontWeight:'medium'
-                    }}
-                    >
+                                    variant="body2"
+                                    sx={{
+                                      color: "#475467",
+                                      textAlign: "center",
+                                      fontSize:{xs:'10px' , md:'12px'},
+                                      fontFamily: "'Inter'",
+                                      fontWeight:'regular',
+                                    
+                                    }}
+                                  >
                     Project Managers
                     </Typography>
                 </Box>

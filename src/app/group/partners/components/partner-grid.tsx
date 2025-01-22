@@ -6,8 +6,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { PartnerData, PartnerType } from "./static-data/data";
 import { Box, Button, Container, IconButton, Grid2 } from '@mui/material';
-import SlideshowOutlinedIcon from '@mui/icons-material/SlideshowOutlined';
-import PausePresentationOutlinedIcon from '@mui/icons-material/PausePresentationOutlined';
+import Play1 from "../../../../assets/img/play1.png";
+import Play2 from "../../../../assets/img/play2.png";
+import Image from 'next/image';
 
 export default function PartnerGrid() {
   const partners: PartnerType[] = PartnerData;
@@ -15,7 +16,7 @@ export default function PartnerGrid() {
 
   return (
     <Box>
-      <Container maxWidth="lg" sx={{ textAlign: "center", py: 8 }}>
+      <Container maxWidth="lg" sx={{ textAlign: "center", py:{xs:2,md:5} }}>
         <Typography
           variant="h2"
           sx={{
@@ -71,36 +72,27 @@ export default function PartnerGrid() {
                     image={partner.image}
                     alt={partner.name}
                   />
-                  <CardContent
+                    <CardContent
                     sx={{
                       position: 'absolute',
                       bottom: 0,
                       width: '100%',
-                     // backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0))', // Darker at the bottom
                     }}
-                  >
+                    >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Typography gutterBottom variant="h5" sx={{ color: '#fff', fontSize: '18px', fontFamily: 'inter', fontWeight: 'medium' }}>
-                        {partner.name}
+                      {partner.name}
                       </Typography>
-                      <IconButton
-                        sx={{
-                          color: "white",
-                         // bgcolor: "rgba(255,255,255,0.1)",
-                          "&:hover": {
-                            bgcolor: "rgba(255,255,255,0.2)",
-                          },
+                        <IconButton
+                        onClick={() => {
+                        setActiveVideo(activeVideo === Number(partner.id) ? null : Number(partner.id));
                         }}
-                        onClick={() =>
-                          setActiveVideo(
-                            activeVideo === Number(partner.id) ? null : Number(partner.id)
-                          )
-                        }
-                      >
-                        {activeVideo === Number(partner.id) ? <PausePresentationOutlinedIcon /> : <SlideshowOutlinedIcon />}
-                      </IconButton>
+                        >
+                        {activeVideo === Number(partner.id) ? <Image src={Play2.src} alt='Pause' height={50} width={50} style={{borderRadius:10}} priority /> : <Image src={Play1.src} alt='Play' height={50} width={50} priority style={{borderRadius:10}} /> }
+                        </IconButton>
                     </Box>
-                  </CardContent>
+                    </CardContent>
                 </Card>
               </Grid2>
             ))}

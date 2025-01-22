@@ -6,7 +6,7 @@ export default function ProjectCover() {
     <Box
       sx={{
         position: 'relative',
-        height: '65vh',
+       height: "650px",
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -35,13 +35,13 @@ export default function ProjectCover() {
         }}
       >
         <Typography
-          component="h1"
-          variant="h2"
+        
+          variant="h4"
           sx={{
             color: '#fff',
             fontFamily: "'Lora'",
             fontWeight: 'medium',
-            fontSize:{xs:'22px', md:'34px'},
+            fontSize:{xs:'24px', md:'40px'},
             mb: 2,
           }}
         >
@@ -50,7 +50,7 @@ export default function ProjectCover() {
         <Typography
           variant="h6"
           sx={{
-            color: 'white',
+            color: '#D0D5DD',
             fontFamily: "'Inter'",
             fontSize:{xs:'14px', md:'16px'},
             fontWeight: 'regular',

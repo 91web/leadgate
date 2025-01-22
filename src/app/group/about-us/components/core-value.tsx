@@ -62,13 +62,14 @@ export default function CoreValue() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <Container maxWidth="lg" sx={{ mb: 2 }}>
+    <Box my={'50px'}>
+    <Container maxWidth="lg">
       <Typography
         variant="h2"
         align="center"
         sx={{
-          mt: 5,
-          fontSize: { xs: "22px", md: "24px" },
+        //  mt: 2,
+          fontSize: { xs: "22px", md: "30px" },
           fontWeight: "medium",
           fontFamily: "lora",
           color:'#667085'
@@ -117,9 +118,10 @@ export default function CoreValue() {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontSize: { xs: "18px", md: "20px" },
+                      fontSize: { xs: "12px", md: "16px" },
                       fontWeight: "medium",
                       color: "#344054",
+                      fontFamily:'inter'
                     }}
                   >
                     {value.id}.
@@ -226,5 +228,6 @@ export default function CoreValue() {
         </Box>
       </Box>
     </Container>
+    </Box>
   );
 }

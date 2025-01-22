@@ -30,15 +30,15 @@ const BuildingHero = () => {
 
   
    <Typography
-     variant="h4"
-     sx={{ fontWeight: "medium", fontFamily: "Lora", mb: 2 , fontSize:{xs:'24px', md:'26px',maxWidth: "600px",}}}
+     variant="h6"
+     sx={{ fontWeight: "medium", fontFamily: "Lora", mb: 2 , fontSize:{xs:'24px', md:'30px',maxWidth: "600px",}}}
    >
      We are passionate about building Dreams, Elevating Health and Creating
      Lasting Values
    </Typography>
    <Typography
      variant="body1"
-     sx={{ fontSize: "16px", maxWidth: "600px", mb: 3, color:'#ada6a6' }}
+     sx={{ fontSize: "16px", maxWidth: "600px", mb: 3,fontWeight: "regular", color:'#ada6a6' }}
    >
      Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit
      lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui

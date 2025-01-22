@@ -1,8 +1,5 @@
 import { Box, Container, Grid2, Typography, TextField, Checkbox, Button, FormControlLabel, Select, MenuItem, InputAdornment } from '@mui/material';
-import { Phone } from '@mui/icons-material';
 import ContactHero2 from "../../../assets/img/contactus-hero3.png";
-import MarkunreadIcon from '@mui/icons-material/Markunread';
-import FmdGoodIcon from '@mui/icons-material/FmdGood';
 
 export default function ContactForm() {
   return (
@@ -34,7 +31,7 @@ export default function ContactForm() {
             <Typography
               variant="h4"
               gutterBottom
-              sx={{ fontFamily: 'lora', fontWeight: 'semibold', fontSize: '20px' }}
+              sx={{ fontFamily: 'lora', fontWeight: 'medium', fontSize: '24px' }}
             >
               Want to make further enquiries?
             </Typography>
@@ -44,7 +41,7 @@ export default function ContactForm() {
               sx={{
                 fontFamily: 'inter',
                 color: '#344054',
-                fontWeight: 'semibold',
+                fontWeight: 'regular',
                 fontSize: '16px'
               }}
             >

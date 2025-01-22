@@ -52,7 +52,7 @@ const JourneyEvents = () => {
                   sx={{
                     fontFamily: "inter",
                     fontWeight: "bold",
-                    mb: 1,
+                    py: 1,
                     fontSize: { xs: "18px", md: "20px" },
                     color: "#344054",
                     textAlign: "left", // Align title to the left
@@ -67,6 +67,7 @@ const JourneyEvents = () => {
                     fontSize: { xs: "14px", md: "16px" },
                     lineHeight: "1.6",
                     mb: 2,
+                    fontFamily: "inter",
                     textAlign: "left", // Align description text to the left
                   }}
                 >

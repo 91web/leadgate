@@ -27,10 +27,11 @@ const NewsPage = () => {
               sx={{
                 backgroundColor: "#AE883B", // Gold color
                 color: "#fff",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: "medium",
+                fontFamily: "Inter",
+                fontWeight: "regular",
                 textTransform: "none",
                 mb: 8,
+                fontSize:'17px',
                 borderRadius: "8px",
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 "&:hover": {
@@ -46,8 +47,9 @@ const NewsPage = () => {
             </Button>
 
           </Box>
-            <Box bgcolor={"#F2F4F7"}>
+            <Box bgcolor={"#F2F4F7"} mt={2}>
             <NewsletterSubscription/>
+          
             </Box>
     </Box>
   </Box>

@@ -9,7 +9,7 @@ const services:  ServiceType [] = ServiceData;
 
 const ServiceCards = () => {
   return (
-    <Box sx={{ flexGrow: 1, p: 4 }}>
+    <Box sx={{py: 4 }}>
       <Grid2 container spacing={2}>
         {services.map((service, index) => (
           <Grid2 size={{xs: 12, sm:6, md:4}} key={index}>
@@ -40,7 +40,8 @@ const ServiceCards = () => {
                      mb: 1, 
                      color: "#344054",
                       fontSize:{xs:'18px', md:'20px'},
-                        fontFamily:'inter'}}
+                        fontFamily:'inter'
+                      }}
                         >
 
                   {service.title}
@@ -50,8 +51,10 @@ const ServiceCards = () => {
                   sx={{
                     color: "#475467",
                     mb: 2,
+                    fontWeight: "regular", 
                     fontSize:{xs:'14px', md:'16px'},
                     lineHeight: 1.6,
+                    fontFamily:'inter'
                   }}
                 >
                   {service.description}
@@ -61,8 +64,9 @@ const ServiceCards = () => {
                   sx={{
                     color: "#AE883B",
                     fontWeight: "medium",
+                    fontFamily:'inter',
                     textTransform: "none",
-                    fontSize:{xs:'12px', md:'14px'},
+                    fontSize:{xs:'12px', md:'17px'},
                     "&:hover": { textDecoration: "none" },
                   }}
                   endIcon={<span>&rarr;</span>}

@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
-import ContactSection from "./components/contact-sections";
+import ContactSection from "./components/contact-cover";
 import { Box } from "@mui/material";
 import ContactForm from "./components/contact-form";
 import ContactMap from "../../../assets/img/contactus-map1.png";
+import Divider from "@mui/material/Divider";
 import Image from "next/image";
 
 const ContactUsPage = () => {
@@ -12,10 +13,12 @@ const ContactUsPage = () => {
       <Box>
         <ContactSection />
       </Box>
-      <Box my={5}>
+     <Box my={{xs:5,md:8}}>
         <ContactForm />
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 4, mb: 4 }}>
+    
+    <Divider/>
+      <Box sx={{ display: "flex", justifyContent: "center", m:{xs:2 ,md:8} }}>
   <Image
     src={ContactMap}
     alt="Contact Us Map"

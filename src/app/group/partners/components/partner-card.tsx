@@ -10,7 +10,7 @@ const PartnerCard = () => {
   const partnerSlug = "Partner-single-page";
 
   return (
-    <Box sx={{ py: { xs: 4, md: 10 } }}>
+    <Box sx={{ py: { xs: 4, md: 10 }, }}>
       <Grid2
         container
         spacing={4}
@@ -18,7 +18,7 @@ const PartnerCard = () => {
         direction={{ xs: "column-reverse", md: "row" }}
       >
         {/* Left Section */}
-        <Grid2 size={{ xs: 12, md: 6 }}>
+        <Grid2 size={{ xs: 12, md: 8 }}>
           <Box width={{ xs: "100%", md: "80%" }}>
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               <Grid2
@@ -66,7 +66,7 @@ const PartnerCard = () => {
                     color: "#1D2939",
                     lineHeight: 1.4,
                     textAlign: "left",
-                    fontSize: { xs: "24px", md: "26px" },
+                    fontSize: { xs: "24px", md: "30px" },
                   }}
                 >
                   Why you Should Join us, and Partner with Us
@@ -78,7 +78,7 @@ const PartnerCard = () => {
             <Typography
               variant="body1"
               sx={{
-                fontFamily: "Lora",
+                fontFamily: "inter",
                 color: "#6D6D6D",
                 lineHeight: 1.8,
                 mb: 3,
@@ -134,7 +134,7 @@ const PartnerCard = () => {
         </Grid2>
 
         {/* Right Section */}
-        <Grid2 size={{ xs: 12, md: 6 }}>
+        <Grid2 size={{ xs: 12, md: 4 }}>
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <Grid2
               container
@@ -192,7 +192,7 @@ const PartnerCard = () => {
             <Image
               src={DreamBg.src}
               alt={"Group Image"}
-              height={458}
+              height={490}
               width={452}
               style={{ borderRadius: "8px", width: "100%", height: "auto" }}
             />

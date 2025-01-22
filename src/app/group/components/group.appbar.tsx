@@ -12,7 +12,7 @@ import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Image from "next/image";
-import LGroupLogo from "@/assets/img/Leadgate Group Logo.png";
+import LGroupLogo from "@/assets/img/group-logo.png";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
@@ -53,7 +53,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           <Toolbar sx={{ py: { md: 1 }, px: { xs: 0 } }}>
             <Box pt={1}>
               <Image
-                height={40}
+                height={70}
                 src={LGroupLogo}
                 alt={"LeadGate Group Logo"}
                 priority={true}

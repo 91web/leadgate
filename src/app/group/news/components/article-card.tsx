@@ -76,7 +76,8 @@ const ProjectCards = () => {
                     color: "#AE883B",
                     fontWeight: "medium",
                     textTransform: "none",
-                    fontSize:{xs:'12px', md:'14px'},
+                    fontFamily: "'Inter'",
+                    fontSize:{xs:'12px', md:'17px'},
                     "&:hover": { textDecoration: "none" },
                   }}
                   endIcon={<span>&rarr;</span>}

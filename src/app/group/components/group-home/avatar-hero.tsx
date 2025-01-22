@@ -223,7 +223,7 @@ const TestimonialHero: React.FC = () => {
               borderRadius: "12px",
               boxShadow: "none",
               border: "1px solid rgba(0, 0, 0, 0.12)",
-              height: "250px",
+              height:{xs:'300px', md:'200px'},
               backgroundColor: "#fff",
               }}
               >

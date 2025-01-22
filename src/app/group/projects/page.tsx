@@ -35,10 +35,10 @@ const ProjectsPage: React.FC = () => {
             sx={{
               fontWeight: "medium",
               fontFamily: "Lora",
-              color: "#344054", 
+              color: "#1D2939", 
               fontSize: { xs: "26px", md: "30px" },
-              mt: 10, // Add margin-bottom for spacing
-              pb:2
+              mt:{xs:5, md:10},
+              p:2
             }}
           >
             Our Services
@@ -50,11 +50,11 @@ const ProjectsPage: React.FC = () => {
               variant="body1"
               sx={{
               fontWeight: "regular",
-              fontFamily: "Lora",
+              fontFamily: "inter",
               color: "#344054",
               textAlign: 'center',
               fontSize: { xs: "14px", md: "17px" },
-              pb:2
+              p:2
               }}
             >
               Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
@@ -77,18 +77,19 @@ const ProjectsPage: React.FC = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: "#A37E2C", // Gold color
+              backgroundColor: "#AE883B", // Gold color
               color: "#fff", // White text
-              fontFamily: "Inter, sans-serif", // Font family
-              fontWeight: "bold",
+              fontFamily: "Inter", // Font family
+              fontWeight: "medium",
               textTransform: "none", // Prevent uppercase transformation
               padding: "10px 20px", // Padding for better size
               borderRadius: "8px", // Rounded corners
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow
+              fontSize: "17px",
+             // boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow
               "&:hover": {
                 backgroundColor: "#8F6D25", // Darker gold on hover
               },
-              mb:2
+            //  mb:2
             }}
           >
             Learn More
@@ -110,10 +111,10 @@ const ProjectsPage: React.FC = () => {
             sx={{
               fontWeight: "medium",
               fontFamily: "Lora",
-              color: "#344054", 
+              color: "#1D2939", 
               fontSize: { xs: "26px", md: "30px" },
-          
-              pb:2
+             // mt:{xs:2, md:10},
+              p:2
             }}
           >
             Latest Project
@@ -129,7 +130,7 @@ const ProjectsPage: React.FC = () => {
               color: "#344054",
               textAlign: 'center',
               fontSize: { xs: "14px", md: "17px" },
-              pb:2
+              p:2
               }}
             >
               Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
@@ -144,7 +145,7 @@ const ProjectsPage: React.FC = () => {
           </Container>
         </Box>
       </Box>
-         <Box display={{xs:'none', md:'block'}} py={5} bgcolor={'#fff'}>
+         <Box py={5} bgcolor={'#fff'}>
          <Box
            sx={{
              backgroundImage: isMobile

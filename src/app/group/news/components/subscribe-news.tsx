@@ -9,7 +9,7 @@ import Onament from "../../../../assets/svg/ornament.svg";
 
 const NewsletterSubscription = () => {
   return (
-    <Box>
+    <Box height={450}>
     <Container>
     <Box
       sx={{
@@ -98,7 +98,7 @@ const NewsletterSubscription = () => {
           sx={{
             backgroundColor: "#AE883B", 
             color: "#fff", 
-            fontFamily: "Inter, sans-serif",
+            fontFamily: "Inter",
             fontWeight: "regular",
             textTransform: "none", 
             borderRadius: 2, 
@@ -118,25 +118,26 @@ const NewsletterSubscription = () => {
     </Box>
     </Container>
     <Box
-  sx={{
-    display: { xs: "none", md: "flex" }, 
-    justifyContent: "flex-end",
-    alignItems: "flex-end", 
-    right: 0, 
-    bottom: 0, 
-    width: "100%", 
-  }}
->
-  <Image 
-    src={Onament} 
-    alt="Ornament" 
-    width={100} 
-    height={100} 
-    style={{
-      display: "block",
-    }}
-  />
-</Box>
+      sx={{
+      display: { xs: "none", md: "flex" },
+      justifyContent: "flex-end",
+      alignItems: "flex-end",
+      position: "absolute", // Position it absolutely
+      right: 0,
+      bottom: 0,
+      width: "100%",
+      }}
+    >
+      <Image 
+      src={Onament} 
+      alt="Ornament" 
+      width={100} 
+      height={100} 
+      style={{
+        display: "block",
+      }}
+      />
+    </Box>
     </Box>
   );
 };

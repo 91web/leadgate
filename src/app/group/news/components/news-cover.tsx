@@ -1,12 +1,12 @@
 import { Box, Container, Typography } from '@mui/material';
-import NewsHero1 from "../../../../assets/img/news-page1.png";
+import NewsHero1 from "../../../../assets/img/news-cover.png";
 
 export default function NewsCover() {
   return (
     <Box
       sx={{
         position: 'relative',
-        height: '65vh',
+       height: "650px",
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -40,7 +40,7 @@ export default function NewsCover() {
             color: '#fff',
             fontFamily:'lora',
             fontWeight: 'medium',
-            fontSize:{xs:'22px', md:'34px'},
+            fontSize:{xs:'26px', md:'40px'},
             mb: 2,
           }}
         >
@@ -49,7 +49,7 @@ export default function NewsCover() {
         <Typography
           variant="h6"
           sx={{
-            color: 'white',
+            color: '#D0D5DD',
             fontFamily:'inter',
             fontSize:{xs:'14px', md:'16px'},
             fontWeight: 'regular',

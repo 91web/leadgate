@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import SliderPartner from "./components/slide-partner";
+import PartnerCover from "./components/partner-cover";
 import { Box, Button, Container, Typography } from "@mui/material";
 import TrustPartners from "./components/trust-partners";
 import PartnerGrid from "./components/partner-grid";
@@ -8,9 +8,9 @@ import PartnerCard from "./components/partner-card";
 
 const PartnerShipPage = () => {
   return (
-    <Box>
+    <Box >
       <Box>
-        <SliderPartner />
+        <PartnerCover />
       </Box>
       <Box>
         <TrustPartners />
@@ -37,7 +37,7 @@ const PartnerShipPage = () => {
             xs: "#FCF7EB", // Mobile
             md: "transparent", // Desktop
           },
-          height: "200px",
+          height:{xs: "230px", md: "200px"},
           mb: 0,
         }}
       >
@@ -85,12 +85,14 @@ const PartnerShipPage = () => {
             </Box>
 
             {/* Button Section */}
+          
             <Button
               variant="contained"
               sx={{
                 backgroundColor: "#AE883B",
                 color: "#ffffff",
                 py: 1,
+                mb:{xs:2, md:2},
                 px: 3,
                 fontFamily: "'Inter'",
                 fontWeight: "medium",

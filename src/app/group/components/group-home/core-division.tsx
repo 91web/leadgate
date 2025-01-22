@@ -4,7 +4,8 @@ import Divisions from './division';
 
 const CoreDivisions = () => {
   return (
-    <Box sx={{ mt:{ xs:'none', md: 5 } }}>
+    <Box  >
+    <Box sx={{ my:{ xs:'none', md: 5 ,}}}>
       {/* Section Header */}
    
       {/* Responsive Grid Section */}
@@ -12,7 +13,7 @@ const CoreDivisions = () => {
         {/* Left Box - Header */}
         <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 5 } }}>
    
-        <Box sx={{width:{ xs: '100%', md: '70%' },mt:10, textAlign:{ xs: 'center', md: 'left' } }}>
+        <Box sx={{width:{ xs: '100%', md: '90%' }, textAlign:{ xs: 'center', md: 'left' } }}>
         <Typography
           variant="h4"
           sx={{
@@ -20,13 +21,13 @@ const CoreDivisions = () => {
             fontWeight: "medium",
             color: "#101828",
             mb: 1,
-            fontSize:{ xs:'24px', md: '26px' }
+            fontSize:{ xs:'24px', md: '30px' }
           }}
         >
           Our Core Divisions at{" "}
           <Typography
             component="span"
-            sx={{ color: "#AE883B", fontWeight:"medium", fontSize: '26px', fontFamily:"lora" }}
+            sx={{ color: "#AE883B", fontWeight:"medium", fontSize:{ xs:'24px', md: '30px' },lineHeight:"120%", fontFamily:"lora" }}
           >
             Leadgate Group
           </Typography>
@@ -71,6 +72,7 @@ const CoreDivisions = () => {
           </Box>
         </Grid2>
       </Grid2>
+    </Box>
     </Box>
   );
 };

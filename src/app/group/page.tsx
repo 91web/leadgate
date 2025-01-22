@@ -33,7 +33,7 @@ const AppGroup = () => {
       <Box>
         <BuildingHero />
       </Box>
-      <Box display={{xs:'none', md:'block'}} py={5} bgcolor={'#fff'}>
+      <Box py={5} bgcolor={'#fff'}>
       <Box
         sx={{
           backgroundImage: isMobile

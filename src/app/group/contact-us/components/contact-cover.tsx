@@ -1,12 +1,12 @@
 import { Box, Container, Typography } from '@mui/material'
-import ContactHero1 from "../../../../assets/img/contactus-hero1.png"
+import ContactHero1 from "../../../../assets/img/contact-cover.png"
 
 export default function ContactSection() {
   return (
     <Box
       sx={{
         position: 'relative',
-        height: '65vh',
+       height: "650px",
         width: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -35,13 +35,13 @@ export default function ContactSection() {
         }}
       >
         <Typography
-          component="h1"
+        
           variant="h2"
           sx={{
             color: '#fff',
             fontFamily: "'Lora'",
             fontWeight: 'medium',
-            fontSize:{xs:'22px', md:'30px'},
+            fontSize:{xs:'22px', md:'40px'},
             mb: 2,
           }}
         >

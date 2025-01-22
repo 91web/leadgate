@@ -7,7 +7,7 @@ import { Box,CardMedia, Stack, Typography, } from '@mui/material';
 const TrustPartners = () => {
     return (
         <Box sx={{ width: '100%', bgcolor: '#FCF7EB', textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ color: '#344054', fontSize: '14px', fontWeight: 'bold', pt: 3, }}>
+            <Typography variant="h4" sx={{ color: '#344054', fontSize: '14px', fontWeight: 'bold', pt:{xs:3, md: 8,} }}>
                 Partners that trust us
             </Typography>
     <Box p={2}>
