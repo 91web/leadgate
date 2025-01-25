@@ -1,5 +1,8 @@
 import React from 'react';
-import { Box, Typography, Grid2, Container } from '@mui/material'
+import Box from '@mui/material/Box'
+import Typography from "@mui/material/Typography";
+import Grid2 from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
 import { MaterialData, MaterialType } from '../components/static-data/data';
 
 

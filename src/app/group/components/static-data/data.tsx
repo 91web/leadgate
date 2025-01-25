@@ -24,7 +24,7 @@ import Feature6 from "../../../../assets/img/feature-project6.png";
 import TestAvatar1 from "../../../../assets/img/test-avatar1.png";
 import TestAvatar2 from "../../../../assets/img/test-avatar2.png";
 
-import GroupLogoWhite from "../../../../assets/img/Leadgate Group White.png";
+import GroupLogoWhite from "../../../../assets/img/group-logo2.png";
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
 import { StaticImageData } from "next/image";
 import { OverridableComponent } from "@mui/material/OverridableComponent";

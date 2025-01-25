@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import  Box from '@mui/material/Box';
+import Typography from "@mui/material/Typography";
 import Image from 'next/image';
 import AboutTelescope from '../../../assets/svg/about-telescope.svg';
 import AboutVector from '../../../assets/svg/about-vector.svg';
 import AboutSensor from '../../../assets/svg/about-sensor.svg';
 import AboutLine from '../../../assets/svg/about-line.svg';
-import { Grid2 } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
 
 const AboutGrid = () => {
   return (

@@ -1,7 +1,12 @@
 "use client";
 
 import React from "react";
-import { Box, Typography, TextField, Button, InputAdornment, Container } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import InputAdornment from "@mui/material/InputAdornment";
+import Container from "@mui/material/Container";
 import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 import Onament from "../../../../assets/svg/ornament.svg";

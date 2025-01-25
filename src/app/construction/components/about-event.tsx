@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import { Box, Container, Grid2 } from '@mui/material';
+import  Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import  Grid2 from "@mui/material/Grid2";
 import Construction1 from '../../../assets/img/construction-hero1.png';
 import AboutGrid from './about-grid';
 

@@ -30,21 +30,23 @@ export interface SliderType {
       id:"2",
       src: Slide2.src,
        title: "Building dreams, elevating health", 
-       description: "Lorem ipsum dolor sit amet consectetur.", 
-       buttonText: "Discover More" 
+       description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est.
+        Eget consectetur habitant felis egestas molestie amet cras dignissim.`, 
+       buttonText: "Get a Quatation" 
     },
     {  id:"3",
       src: Slide3.src,
-       title: "Innovating for a better future",
+       title: "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
       description: "Pellentesque habitant morbi tristique senectus.",
     buttonText: "Get a Quotations",
     }
       ,
     {  id:"4",
       src: Slide4.src, 
-      title: "Empowering communities worldwide",
-      description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-       buttonText: "Join Us" ,
+      title: "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
+      description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est.
+      Eget consectetur habitant felis egestas molestie amet cras dignissim.`, 
+       buttonText: "Get a Quatation"
       },
   ];
   

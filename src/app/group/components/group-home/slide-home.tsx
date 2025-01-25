@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
 import { keyframes } from "@mui/system";
 import { SliderData, SliderType } from "../static-data/data";
 
@@ -64,7 +67,7 @@ const HeroSlider = () => {
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "650px", 
+        height: "650px",
         backgroundColor: "#000", // Set background to black
         animation: `${fadeBackground} 6s ease`, // Apply fade effect to background
       }}
@@ -149,7 +152,7 @@ const HeroSlider = () => {
             fontFamily: "'Inter'", //add inter to the app
             fontWeight: "regular",
             color: "#D0D5DD",
-            lineHeight:'130%'
+            lineHeight: "130%",
           }}
         >
           {images[currentSlide].description}

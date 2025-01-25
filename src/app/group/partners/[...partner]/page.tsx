@@ -1,5 +1,9 @@
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+
 import Grid2 from "@mui/material/Grid2";
 import DreamBg from "../../../../assets/img/partner-hero4.png";
 import Line1 from "../../../../assets/svg/line-dream.svg";
@@ -67,7 +71,7 @@ const PartnerCard = () => (
         alignItems="center"
         direction={{ xs: "column-reverse", md: "row" }}
       >
-        <Grid2 size={{xs:12, md:6}}>
+        <Grid2 size={{ xs: 12, md: 6 }}>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <HeaderGroup />
           </Box>
@@ -178,7 +182,7 @@ const PartnerCard = () => (
           />
         </Grid2>
 
-        <Grid2 size={{xs:12, md:6}}>
+        <Grid2 size={{ xs: 12, md: 6 }}>
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <HeaderGroup />
           </Box>

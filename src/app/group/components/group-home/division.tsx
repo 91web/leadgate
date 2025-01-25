@@ -1,12 +1,11 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Button,
-  Card,
-  CardMedia,
-  CardContent,
-} from "@mui/material";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
 import Grid2 from "@mui/material/Grid2";
 import Image from "next/image";
 import { HomePageData, HomePageType } from "../static-data/data";

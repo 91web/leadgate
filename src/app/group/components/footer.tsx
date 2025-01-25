@@ -33,7 +33,7 @@ export const LAppFooter: FC<LAppFooterProps> = (props) => {
                                 src={footer.logo.src}
                                 alt={footer.title || ""}
                                 width={145}
-                                height={35}
+                                height={60}
                               />
                             </Box>
                           </Box>

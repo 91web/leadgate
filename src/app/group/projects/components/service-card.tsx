@@ -1,80 +1,141 @@
-"use client";
 import React from "react";
-import { Grid2, Box, Card, CardMedia, CardContent, Typography, Button } from "@mui/material";
-import { ServiceType, ServiceData } from "./static-data/data";
+import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid2 from "@mui/material/Grid2";
 
+import { ProjectData, ProjectType } from "./static-data/data";
 
+// Sample images with content for overlays
+const projects: ProjectType[] = ProjectData;
 
-const services:  ServiceType [] = ServiceData;
-
-const ServiceCards = () => {
+const FeatureProjects = () => {
   return (
-    <Box sx={{py: 4 }}>
-      <Grid2 container spacing={2}>
-        {services.map((service, index) => (
-          <Grid2 size={{xs: 12, sm:6, md:4}} key={index}>
-            <Card
-              elevation={0}
+    <Box sx={{ py: { xs: 4, md: 8 } }}>
+      {/* Header Section */}
+      <Box sx={{ textAlign: "center", mb: 4 }}>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            fontFamily: "Inter",
+            fontSize: "16px",
+            color: "#AE883B",
+            fontWeight: "regular",
+            mb: 1,
+          }}
+        >
+          Our Portfolio
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: "Lora",
+            fontWeight: "medium",
+            color: "#1D2939",
+            fontSize: { xs: "24px", md: "30px" },
+          }}
+        >
+          Featured Projects from all Divisions
+        </Typography>
+      </Box>
+
+      {/* Projects Grid */}
+      <Grid2 container spacing={4}>
+        {projects.map((project, index) => (
+          <Grid2 size={{ xs: 12, md: 6 }} key={index}>
+            <Box
               sx={{
-                height: "100%",
-                //boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-                borderRadius: "8px",
+                position: "relative",
                 overflow: "hidden",
-                backgroundColor: "#F2F4F7",
+                borderRadius: "8px",
+                "&:hover .overlay": {
+                  opacity: 1,
+                  transform: "translateY(0)",
+                },
               }}
             >
               {/* Image */}
-              <CardMedia
-                component="img"
-                height="200"
-                image={service.image}
-                alt={service.title}
-              />
+              <Card
+                elevation={0}
+                sx={{
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={project.image}
+                  alt={`Project ${index + 1}`}
+                  sx={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                  }}
+                />
+              </Card>
 
-              {/* Content */}
-              <CardContent>
+              {/* Overlay */}
+              <Box
+                className="overlay"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(0, 0, 0, 0.4)",
+                  color: "#fff",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  opacity: 0,
+                  transform: "translateY(100%)",
+                  transition: "opacity 0.3s ease, transform 0.3s ease",
+                }}
+              >
                 <Typography
                   variant="h6"
                   sx={{
-                     fontWeight: "bold", 
-                     mb: 1, 
-                     color: "#344054",
-                      fontSize:{xs:'18px', md:'20px'},
-                        fontFamily:'inter'
-                      }}
-                        >
-
-                  {service.title}
+                    fontFamily: "lora",
+                    fontWeight: "regular",
+                    mb: "1px",
+                    fontSize: "16px",
+                    color: "color.primary",
+                    textAlign: "center",
+                  }}
+                >
+                  {project.title}
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="subtitle1"
                   sx={{
-                    color: "#475467",
-                    mb: 2,
-                    fontWeight: "regular", 
-                    fontSize:{xs:'14px', md:'16px'},
-                    lineHeight: 1.6,
-                    fontFamily:'inter'
+                    fontFamily: "Inter",
+                    fontWeight: "Bold",
+                    fontSize: "24px",
+                    mb: "1px",
+                    textAlign: "center",
                   }}
                 >
-                  {service.description}
+                  {project.subtitle}
                 </Typography>
                 <Button
-                  variant="text"
                   sx={{
                     color: "#AE883B",
-                    fontWeight: "medium",
-                    fontFamily:'inter',
+                    fontFamily: "inter",
+                    fontWeight: "bold",
+                    opacity: "10px",
+                    textAlign: "center",
+                    fontSize: "18px",
                     textTransform: "none",
-                    fontSize:{xs:'12px', md:'17px'},
                     "&:hover": { textDecoration: "none" },
                   }}
-                  endIcon={<span>&rarr;</span>}
                 >
-                  {service.buttonText}
+                  {project.buttonText}
                 </Button>
-              </CardContent>
-            </Card>
+              </Box>
+            </Box>
           </Grid2>
         ))}
       </Grid2>
@@ -82,4 +143,4 @@ const ServiceCards = () => {
   );
 };
 
-export default ServiceCards;
+export default FeatureProjects;

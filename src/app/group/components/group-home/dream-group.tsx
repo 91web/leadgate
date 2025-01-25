@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Grid2 from "@mui/material/Grid2";
 import Link from "next/link";
 import DreamBg from "../../../../assets/img/dream-group.png";
@@ -10,7 +12,7 @@ const DreamGroup = () => {
   const partnerSlug = "Partner-single-page";
 
   return (
-    <Box sx={{ py: { xs: 4, md: 10 }, }}>
+    <Box sx={{ py: { xs: 4, md: 10 } }}>
       <Grid2
         container
         spacing={4}
@@ -41,11 +43,11 @@ const DreamGroup = () => {
                       fontFamily: "Inter",
                       fontSize: "16px",
                       color: "#AE883B",
-                      fontWeight:'regular',
+                      fontWeight: "regular",
                       textAlign: { xs: "center", md: "left" },
                     }}
                   >
-                Know all about us
+                    Know all about us
                   </Typography>
                   <Box
                     component="img"
@@ -69,7 +71,8 @@ const DreamGroup = () => {
                     fontSize: { xs: "24px", md: "30px" },
                   }}
                 >
-               Our Dream is to Build Dreams, Elevate Health, and Create a Lasting Value
+                  Our Dream is to Build Dreams, Elevate Health, and Create a
+                  Lasting Value
                 </Typography>
               </Grid2>
             </Box>
@@ -84,23 +87,21 @@ const DreamGroup = () => {
                 mb: 3,
                 fontSize: "16px",
                 textAlign: "left",
-                fontWeight:'regular',
+                fontWeight: "regular",
               }}
             >
-            Lorem ipsum dolor sit amet consectetur. 
-            Viverra magna habitant blandit lectus integer pulvinar dui est. 
-             blandit lectus integer pulvinar dui est. 
-             Lorem ipsum dolor sit amet consectetur.
-              Viverra magna habitant blandit lectus integer pulvinar dui est. 
-             blandit lectus integer pulvinar dui est.
-             <br/>
-             <br/>
-              Lorem ipsum dolor sit amet consectetur. 
-            Viverra magna habitant blandit lectus integer pulvinar dui est. 
-             blandit lectus integer pulvinar dui est. 
-             Lorem ipsum dolor sit amet consectetur.
-              Viverra magna habitant blandit lectus integer pulvinar dui est. 
-             blandit lectus integer pulvinar dui est.
+              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
+              blandit lectus integer pulvinar dui est. blandit lectus integer
+              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
+              magna habitant blandit lectus integer pulvinar dui est. blandit
+              lectus integer pulvinar dui est.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
+              blandit lectus integer pulvinar dui est. blandit lectus integer
+              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
+              magna habitant blandit lectus integer pulvinar dui est. blandit
+              lectus integer pulvinar dui est.
             </Typography>
             <Box
               sx={{
@@ -110,24 +111,23 @@ const DreamGroup = () => {
             >
               <Link href={`/group/partners/${partnerSlug}`} passHref>
                 <Button
-                              variant="contained"
-                              sx={{
-                                backgroundColor: "#AE883B",
-                                color: "#ffffff",
-                                py: 1,
-                                px: 3,
-                                fontFamily: "'Inter'",
-                                fontWeight: "medium",
-                                fontSize:{xs:'14px', md:'17px'},
-                                textTransform: "none",
-                                "&:hover": {
-                                  backgroundColor: "#965F2A",
-                                },
-                              }}
-                            >
-                              Learn More
-                            </Button>
-
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#AE883B",
+                    color: "#ffffff",
+                    py: 1,
+                    px: 3,
+                    fontFamily: "'Inter'",
+                    fontWeight: "medium",
+                    fontSize: { xs: "14px", md: "17px" },
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "#965F2A",
+                    },
+                  }}
+                >
+                  Learn More
+                </Button>
               </Link>
             </Box>
           </Box>
@@ -177,118 +177,118 @@ const DreamGroup = () => {
                 variant="h4"
                 sx={{
                   fontFamily: "Lora",
-                  fontWeight: 'medium',
+                  fontWeight: "medium",
                   color: "#1D2939",
                   lineHeight: 1.4,
                   textAlign: "left",
                   fontSize: { xs: "24px", md: "28px" },
                 }}
               >
-              Our Dream is to Build Dreams, Elevate Health, and Create a Lasting Value
+                Our Dream is to Build Dreams, Elevate Health, and Create a
+                Lasting Value
               </Typography>
             </Grid2>
           </Box>
           <Box>
             <Box sx={{ width: { xs: "100%", md: "auto" } }}>
-            <Image
-              src={DreamBg.src}
-              alt={"Group Image"}
-              height={490}
-              width={452}
-              style={{ borderRadius: "8px", width: "100%", height: "auto" }}
-            />
+              <Image
+                src={DreamBg.src}
+                alt={"Group Image"}
+                height={490}
+                width={452}
+                style={{ borderRadius: "8px", width: "100%", height: "auto" }}
+              />
             </Box>
-            <Box  textAlign={'center'} p={2}>
-            {/* Statistics */}
-            <Grid2 container spacing={2}>
-            <Grid2 size={4}>
-            <Box textAlign={'center'} width={{xs:'60px', md:'150px'}} >
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 'medium',
-                    color: "#1D2939",
-                    fontSize:'20px',
-                    textAlign: "center",
-                    fontFamily: "'Lora'",
-                  }}
-                >
-                  30+
-                </Typography>
-                <Typography
-                  variant="body2"
-                    sx={{
-                    color: "#475467",
-                    textAlign: "center",
-                    fontSize:'10px',
-                    fontFamily: "'Inter'",
-                    fontWeight:'medium'
-                  }}
-                >
-                  Real Estate Properties
-                </Typography>
-                </Box>
+            <Box textAlign={"center"} p={2}>
+              {/* Statistics */}
+              <Grid2 container spacing={2}>
+                <Grid2 size={4}>
+                  <Box textAlign={"center"} width={{ xs: "60px", md: "150px" }}>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: "medium",
+                        color: "#1D2939",
+                        fontSize: "20px",
+                        textAlign: "center",
+                        fontFamily: "'Lora'",
+                      }}
+                    >
+                      30+
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "#475467",
+                        textAlign: "center",
+                        fontSize: "10px",
+                        fontFamily: "'Inter'",
+                        fontWeight: "medium",
+                      }}
+                    >
+                      Real Estate Properties
+                    </Typography>
+                  </Box>
+                </Grid2>
+                <Grid2 size={4}>
+                  <Box textAlign={"center"} width={{ xs: "60px", md: "150px" }}>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: "medium",
+                        color: "#1D2939",
+                        fontSize: "20px",
+                        textAlign: "center",
+                        fontFamily: "'Lora'",
+                      }}
+                    >
+                      10+
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "#475467",
+                        textAlign: "center",
+                        fontSize: "10px",
+                        fontFamily: "'Inter'",
+                        fontWeight: "medium",
+                      }}
+                    >
+                      Construction Sites
+                    </Typography>
+                  </Box>
+                </Grid2>
+                <Grid2 size={4}>
+                  <Box textAlign={"center"} width={{ xs: "60px", md: "150px" }}>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: "medium",
+                        color: "#1D2939",
+                        fontSize: "20px",
+                        textAlign: "center",
+                        fontFamily: "'Lora'",
+                      }}
+                    >
+                      15+
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "#475467",
+                        textAlign: "center",
+                        fontSize: "10px",
+                        fontFamily: "'Inter'",
+                        fontWeight: "medium",
+                      }}
+                    >
+                      Project Managers
+                    </Typography>
+                  </Box>
+                </Grid2>
               </Grid2>
-              <Grid2 size={4}>
-                <Box textAlign={'center'} width={{xs:'60px', md:'150px'}}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 'medium',
-                    color: "#1D2939",
-                    fontSize:'20px',
-                    textAlign: "center",
-                    fontFamily: "'Lora'",
-                  }}
-                >
-                  10+
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#475467",
-                    textAlign: "center",
-                    fontSize:'10px',
-                    fontFamily: "'Inter'",
-                    fontWeight:'medium'
-                  }}
-                >
-                  Construction Sites
-                </Typography>
-                </Box>
-              </Grid2>
-              <Grid2 size={4}>
-                  <Box textAlign={'center'} width={{xs:'60px', md:'150px'}}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 'medium',
-                    color: "#1D2939",
-                    fontSize:'20px',
-                    textAlign: "center",
-                    fontFamily: "'Lora'",
-                  }}
-                >
-                  15+
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "#475467",
-                    textAlign: "center",
-                    fontSize:'10px',
-                    fontFamily: "'Inter'",
-                    fontWeight:'medium'
-                  }}
-                >
-                  Project Managers
-                </Typography>
-                </Box>
-              </Grid2>
-            </Grid2>
             </Box>
-
-        </Box>
+          </Box>
         </Grid2>
       </Grid2>
     </Box>

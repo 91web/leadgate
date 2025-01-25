@@ -1,5 +1,8 @@
 import React from 'react'
-import { Box, Button, Container } from '@mui/material'
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+
 import NewsCover from './components/news-cover';
 import ArticleCard from './components/article-card';
 import NewsletterSubscription from './components/subscribe-news';

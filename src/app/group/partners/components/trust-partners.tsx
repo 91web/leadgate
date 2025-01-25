@@ -2,7 +2,11 @@ import React from 'react';
 import Trust1 from '../../../../assets/img/trust-partner1.png';
 import Trust2 from '../../../../assets/img/trust-partner2.png';
 import Trust3 from '../../../../assets/img/trust-partner3.png';
-import { Box,CardMedia, Stack, Typography, } from '@mui/material';
+import Box from "@mui/material/Box";
+import CardMedia from "@mui/material/CardMedia";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 
 const TrustPartners = () => {
     return (
