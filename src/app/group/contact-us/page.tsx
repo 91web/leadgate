@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ContactSection from "./components/contact-cover";
-import Box  from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import ContactForm from "./components/contact-form";
 import ContactMap from "../../../assets/img/contactus-map1.png";
 import Divider from "@mui/material/Divider";

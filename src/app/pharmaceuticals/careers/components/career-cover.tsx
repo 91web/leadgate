@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
-import ProjectHero1 from "../../../../assets/img/project-cover.png";
+import CareerHero1 from "../../../../assets/img/career-cover.png";
 
-export default function ProjectCover() {
+export default function ContactSection() {
   return (
     <Box
       sx={{
@@ -24,7 +24,7 @@ export default function ProjectCover() {
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           zIndex: 1,
         },
-        backgroundImage: `url(${ProjectHero1.src})`,
+        backgroundImage: `url(${CareerHero1.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -38,19 +38,19 @@ export default function ProjectCover() {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h1"
           sx={{
             color: "#fff",
             fontFamily: "'Lora'",
             fontWeight: "medium",
-            fontSize: { xs: "24px", md: "40px" },
+            fontSize: { xs: "34px", md: "35px" },
             mb: 2,
           }}
         >
-          Project
+          We are excited to have you join us
         </Typography>
         <Typography
-          variant="h6"
+          variant="body2"
           sx={{
             color: "#D0D5DD",
             fontFamily: "'Inter'",
@@ -58,8 +58,7 @@ export default function ProjectCover() {
             fontWeight: "regular",
           }}
         >
-          Lorem ipsum dolor, Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-          dolor. Lorem ipsum dolor, Lorem ipsum dolor Lorem.
+          We love to hear from you. Please leave us a message.
         </Typography>
       </Container>
     </Box>

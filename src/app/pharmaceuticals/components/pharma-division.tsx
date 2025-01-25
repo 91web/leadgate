@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
-import Grid2 from "@mui/material/Grid2"; // Use this for the experimental Grid2 API
+import Grid2 from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { ServiceType, ServiceData } from "./static-data/data";
 
-const services: ServiceType[] = ServiceData;
+import { PharmaDivision, PharmaDivisionType } from "./static-data/data";
 
-const ServiceHero = () => {
+const services: PharmaDivisionType[] = PharmaDivision;
+
+const PharmaCards = () => {
   return (
     <Box sx={{ py: 4 }}>
       <Grid2 container spacing={2}>
@@ -20,11 +20,11 @@ const ServiceHero = () => {
             <Card
               elevation={0}
               sx={{
-                height: "100%",
+                height: "95%",
                 //boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
                 borderRadius: "8px",
                 overflow: "hidden",
-                backgroundColor: "#F2F4F7",
+                backgroundColor: "#fff",
               }}
             >
               {/* Image */}
@@ -55,29 +55,13 @@ const ServiceHero = () => {
                     color: "#475467",
                     mb: 2,
                     fontWeight: "regular",
-                    fontSize: { xs: "14px", md: "13px" },
+                    fontSize: { xs: "14px", md: "16px" },
                     lineHeight: 1.6,
                     fontFamily: "inter",
                   }}
                 >
                   {service.description}
                 </Typography>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    borderColor: "#6B8F24",
-                    color: "#6B8F24",
-                    fontWeight: "regular",
-                    fontFamily: "inter",
-                    lineHeight: 1.4,
-                    textTransform: "none",
-                    fontSize: { xs: "12px", md: "15px" },
-                    "&:hover": { textDecoration: "none" },
-                  }}
-                  endIcon={<span>&rarr;</span>}
-                >
-                  {service.buttonText}
-                </Button>
               </CardContent>
             </Card>
           </Grid2>
@@ -87,4 +71,4 @@ const ServiceHero = () => {
   );
 };
 
-export default ServiceHero;
+export default PharmaCards;

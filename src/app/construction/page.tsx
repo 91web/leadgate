@@ -8,10 +8,10 @@ import Trust2 from "../../assets/img/trust-construction2.png";
 import Trust3 from "../../assets/img/trust-construction3.png";
 import Trust4 from "../../assets/img/trust-construction2.png";
 import Trust5 from "../../assets/img/trust-construction1.png";
-import  Box from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Grid2  from "@mui/material/Grid2";
+import Grid2 from "@mui/material/Grid2";
 
 const AppConstruction = () => {
   return (

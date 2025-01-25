@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import  Box from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container  from "@mui/material/Container";
+import Container from "@mui/material/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { styled } from "@mui/material/styles";

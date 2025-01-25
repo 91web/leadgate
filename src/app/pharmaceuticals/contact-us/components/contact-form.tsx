@@ -200,7 +200,7 @@ export default function ContactForm() {
           </Grid2>
 
           <Grid2 size={{ xs: 12, md: 6 }}>
-            <Box sx={{ textAlign: "center", ml: 8 }}>
+            <Box sx={{ textAlign: "center", ml: { xs: 0, md: 8 } }}>
               <Typography
                 variant="h4"
                 gutterBottom

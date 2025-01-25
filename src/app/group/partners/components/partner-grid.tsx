@@ -1,18 +1,18 @@
-import * as React from 'react';
-import { useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import { useState } from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 import { PartnerData, PartnerType } from "./static-data/data";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Grid2 from '@mui/material/Grid2'; 
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
+import Grid2 from "@mui/material/Grid2";
 import Play1 from "../../../../assets/img/play1.png";
 import Play2 from "../../../../assets/img/play2.png";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function PartnerGrid() {
   const partners: PartnerType[] = PartnerData;
@@ -20,7 +20,10 @@ export default function PartnerGrid() {
 
   return (
     <Box>
-      <Container maxWidth="lg" sx={{ textAlign: "center", py:{xs:2,md:5} }}>
+      <Container
+        maxWidth="lg"
+        sx={{ textAlign: "center", py: { xs: 2, md: 5 } }}
+      >
         <Typography
           variant="h2"
           sx={{
@@ -55,7 +58,7 @@ export default function PartnerGrid() {
             container
             spacing={2}
             sx={{
-              justifyContent: 'center', // Center grid items horizontally
+              justifyContent: "center", // Center grid items horizontally
             }}
           >
             {partners.map((partner) => (
@@ -63,40 +66,79 @@ export default function PartnerGrid() {
                 key={partner.id}
                 size={{ xs: 12, sm: 6, md: 4 }}
                 sx={{
-                  display: 'flex',
-                  justifyContent: 'center', // Center individual cards
+                  display: "flex",
+                  justifyContent: "center", // Center individual cards
                 }}
               >
-                <Card 
-                elevation={0}
-                sx={{ maxWidth: 350, position: 'relative', borderRadius:5 }}>
+                <Card
+                  elevation={0}
+                  sx={{ maxWidth: 350, position: "relative", borderRadius: 5 }}
+                >
                   <CardMedia
                     component="img"
                     sx={{ height: "350", width: "100%" }} // Set image height and width
                     image={partner.image}
                     alt={partner.name}
                   />
-                    <CardContent
+                  <CardContent
                     sx={{
-                      position: 'absolute',
+                      position: "absolute",
                       bottom: 0,
-                      width: '100%',
-                      background: 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0))', // Darker at the bottom
+                      width: "100%",
+                      background:
+                        "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0))", // Darker at the bottom
                     }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
                     >
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <Typography gutterBottom variant="h5" sx={{ color: '#fff', fontSize: '18px', fontFamily: 'inter', fontWeight: 'medium' }}>
-                      {partner.name}
-                      </Typography>
-                        <IconButton
-                        onClick={() => {
-                        setActiveVideo(activeVideo === Number(partner.id) ? null : Number(partner.id));
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        sx={{
+                          color: "#fff",
+                          fontSize: "18px",
+                          fontFamily: "inter",
+                          fontWeight: "medium",
                         }}
-                        >
-                        {activeVideo === Number(partner.id) ? <Image src={Play2.src} alt='Pause' height={50} width={50} style={{borderRadius:10}} priority /> : <Image src={Play1.src} alt='Play' height={50} width={50} priority style={{borderRadius:10}} /> }
-                        </IconButton>
+                      >
+                        {partner.name}
+                      </Typography>
+                      <IconButton
+                        onClick={() => {
+                          setActiveVideo(
+                            activeVideo === Number(partner.id)
+                              ? null
+                              : Number(partner.id)
+                          );
+                        }}
+                      >
+                        {activeVideo === Number(partner.id) ? (
+                          <Image
+                            src={Play2.src}
+                            alt="Pause"
+                            height={50}
+                            width={50}
+                            style={{ borderRadius: 10 }}
+                            priority
+                          />
+                        ) : (
+                          <Image
+                            src={Play1.src}
+                            alt="Play"
+                            height={50}
+                            width={50}
+                            priority
+                            style={{ borderRadius: 10 }}
+                          />
+                        )}
+                      </IconButton>
                     </Box>
-                    </CardContent>
+                  </CardContent>
                 </Card>
               </Grid2>
             ))}

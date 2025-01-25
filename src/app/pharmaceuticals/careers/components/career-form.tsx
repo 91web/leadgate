@@ -9,11 +9,177 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
-import ContactHero2 from "../../../../assets/img/contactus-hero3.png";
+import { Phone } from "@mui/icons-material";
+import CareerHero2 from "../../../../assets/img/form-career-hero.png";
+import MarkunreadIcon from "@mui/icons-material/Markunread";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
 
-export default function ContactForm() {
+export default function CareerForm() {
   return (
     <Container maxWidth="lg">
+      {/* Contact Info Cards */}
+      <Box sx={{ my: { xs: 0, md: 9 } }}>
+        <Grid2 container spacing={4}>
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Box
+              sx={{
+                p: 2,
+                bgcolor: "#F2F4F7",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  mb: 2,
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  color="#344054"
+                  sx={{
+                    fontFamily: "inter",
+                    fontWeight: "bold",
+                    fontSize: { xs: "16px", md: "18px" },
+                  }}
+                >
+                  Send us a mail
+                </Typography>
+                <MarkunreadIcon color="primary" sx={{ color: "#344054" }} />
+              </Box>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+                mb={2}
+                fontSize="14px"
+                fontWeight="regular"
+              >
+                Speak to our friendly support staff
+              </Typography>
+              <Typography variant="body2" fontSize="14px" fontWeight="medium">
+                support@leadgategroup.com
+              </Typography>
+            </Box>
+          </Grid2>
+
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Box
+              sx={{
+                p: 2,
+                bgcolor: "#F2F4F7",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  mb: 2,
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  color="#344054"
+                  sx={{
+                    fontFamily: "inter",
+                    fontWeight: "bold",
+                    fontSize: { xs: "16px", md: "18px" },
+                  }}
+                >
+                  Visit us
+                </Typography>
+                <FmdGoodIcon color="primary" sx={{ color: "#344054" }} />
+              </Box>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+                mb={2}
+                fontSize="14px"
+                fontWeight="regular"
+              >
+                Visit our physical offices here.
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+                fontSize="14px"
+                fontWeight="medium"
+              >
+                Suite M206/ M207, Second Floor, Middle Block, Millennium
+                Builders&apos; Plaza, Plot 251 Herbert Macaulay Way, Central
+                Business District, Abuja, FCT, Nigeria
+              </Typography>
+            </Box>
+          </Grid2>
+
+          <Grid2 size={{ xs: 12, md: 4 }}>
+            <Box
+              sx={{
+                p: 2,
+                bgcolor: "#F2F4F7",
+                borderRadius: 1,
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  mb: 2,
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  color="#344054"
+                  sx={{
+                    fontFamily: "inter",
+                    fontWeight: "bold",
+                    fontSize: { xs: "16px", md: "18px" },
+                  }}
+                >
+                  Call us
+                </Typography>
+                <Phone color="primary" sx={{ color: "#344054" }} />
+              </Box>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+                mb={2}
+                fontSize="14px"
+                fontWeight="regular"
+              >
+                Mon - Fri from 8am - 5pm
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                gutterBottom
+                fontSize="14px"
+                fontWeight="medium"
+              >
+                +234 909 935 2438
+              </Typography>
+            </Box>
+          </Grid2>
+        </Grid2>
+      </Box>
+
       {/* Contact Form Section */}
       <Box mx={"5%"}>
         <Grid2 container spacing={4}>
@@ -21,7 +187,7 @@ export default function ContactForm() {
             <Box>
               <Box
                 component="img"
-                src={ContactHero2.src}
+                src={CareerHero2.src}
                 alt="Contact team"
                 sx={{
                   width: "100%",

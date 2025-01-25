@@ -15,8 +15,6 @@ import ContactHero2 from "../../../assets/img/contactus-hero3.png";
 export default function ContactForm() {
   return (
     <Container maxWidth="lg">
-    
-
       {/* Contact Form Section */}
       <Box mx={"5%"}>
         <Grid2 container spacing={8}>

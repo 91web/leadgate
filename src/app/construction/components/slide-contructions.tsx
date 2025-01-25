@@ -2,7 +2,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button  from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import { keyframes } from "@mui/system";
 import { SliderData, SliderType } from "./static-data/data";
 
@@ -139,7 +139,7 @@ const HeroSlider = () => {
             fontSize: { xs: "36px", md: "40px" },
             fontFamily: "lora",
             fontWeight: "regular",
-            width:{xs:"100%", md:"45%"},
+            width: { xs: "100%", md: "45%" },
           }}
         >
           {images[currentSlide].title}
@@ -152,7 +152,7 @@ const HeroSlider = () => {
             fontFamily: "inter",
             fontWeight: "regular",
             color: "#D0D5DD",
-            width:{xs:"100%", md:"40%"},
+            width: { xs: "100%", md: "40%" },
           }}
         >
           {images[currentSlide].description}

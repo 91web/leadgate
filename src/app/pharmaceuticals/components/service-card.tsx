@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 
-import { PharmaData, PharmaType } from "../conponents/static-data/data";
+import { PharmaData, PharmaType } from "./static-data/data";
 
 const ServiceCards: React.FC = () => {
   const services: PharmaType[] = PharmaData;
@@ -109,7 +109,7 @@ const ServiceCards: React.FC = () => {
                   sx={{
                     fontSize: "12px",
                     fontFamily: "Inter",
-                    p:1
+                    p: 1,
                   }}
                 >
                   {service.description}

@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import Grid2 from "@mui/material/Grid2"; 
+import Grid2 from "@mui/material/Grid2";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 
-import {InstagHero, InstagHeroType} from '../conponents/static-data/data';
+import { InstagHero, InstagHeroType } from "./static-data/data";
 
 const InstagramHero = () => {
   const cardData: InstagHeroType[] = InstagHero;
@@ -13,7 +13,7 @@ const InstagramHero = () => {
     <Box sx={{ py: { xs: 0, md: 2 } }}>
       <Grid2 container spacing={2}>
         {cardData.map((card, index) => (
-        <Grid2 size={{ xs:12, sm:6, md:3}} key={index}>
+          <Grid2 size={{ xs: 12, sm: 6, md: 3 }} key={index}>
             <Card
               elevation={0}
               sx={{

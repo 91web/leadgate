@@ -1,15 +1,15 @@
 "use client";
-import PharmaHero from "./conponents/cover-pharma";
+import PharmaHero from "./components/cover-pharma";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import ServiceCards from "./conponents/service-card";
-import PharmaCards from "./conponents/pharma-division";
-import InstagramHero from "./conponents/insta-hero";
-import SubscriptionPharma from "./conponents/subscribe-pharma";
+import ServiceCards from "./components/service-card";
+import PharmaCards from "./components/pharma-division";
+import InstagramHero from "./components/insta-hero";
+import SubscriptionPharma from "./components/subscribe-pharma";
 const AppPharmacy = () => {
   return (
     <Box>
@@ -113,7 +113,7 @@ const AppPharmacy = () => {
         </Box>
       </Box>
       <Box bgcolor={"#F2F4F7"}>
-        <Box pt={{sx:5, md:8}}>
+        <Box pt={{ sx: 5, md: 8 }}>
           <Typography
             variant="h6"
             sx={{

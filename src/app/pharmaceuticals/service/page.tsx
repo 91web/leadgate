@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import ServiceCover from "./components/service-cover";
 import ServiceHero from "./components/service-hero";
 import ServiceCard from "./components/service-card";
+import ServiceGrid from "./components/service-grid";
 
 const ServicePharma = () => {
   return (
@@ -18,10 +19,11 @@ const ServicePharma = () => {
             sx={{
               textAlign: { xs: "center", md: "left" },
               display: "block",
-              pt: { xs: 5, md: 10 },
+              pt: { xs: 7, md: 10 },
             }}
           >
             <Typography
+              variant="h2"
               sx={{
                 fontSize: { xs: "24px", sm: "30px" },
                 fontFamily: "lora",
@@ -32,13 +34,14 @@ const ServicePharma = () => {
               Our Services
             </Typography>
             <Typography
+              variant="body1"
               sx={{
                 fontSize: "16px",
                 fontFamily: "inter",
                 fontWeight: "regular",
                 color: "#475467",
                 px: { sx: 2, md: 0 },
-                mb: 2,
+                my: 2,
                 width: { sx: "100%", md: "45%" },
               }}
             >
@@ -54,6 +57,30 @@ const ServicePharma = () => {
             <ServiceCard />
           </Box>
         </Container>
+        <Box bgcolor={"#F2F4F7"} py={{ xs: 3, md: 6 }}>
+          <Container maxWidth="lg">
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
+              <Typography
+                variant="h2"
+                sx={{
+                  fontSize: { xs: "24px", md: "30px" },
+                  fontFamily: "lora",
+                  fontWeight: "medium",
+                  color: "#000000",
+                }}
+              >
+                Benefits
+              </Typography>
+            </Box>
+            <ServiceGrid />
+          </Container>
+        </Box>
       </Box>
     </Box>
   );
