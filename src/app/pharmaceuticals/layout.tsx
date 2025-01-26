@@ -140,8 +140,14 @@ const AppPharmacyLayout = ({
         handleNavClick={handleNavClick}
         drawerWidth={drawerWidth}
       />
-      <Box>{children}</Box>
-      <LAppFooter footerData={LPharmFooter} />
+      <Box
+        height={{ xs: "94vh", md: "92vh" }}
+        overflow={"auto"}
+        component={"main"}
+      >
+        {children}
+        <LAppFooter footerData={LPharmFooter} />
+      </Box>
     </Box>
   );
 };
