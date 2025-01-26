@@ -14,6 +14,183 @@ import InstagramHero3 from "../../../../assets/img/instagram-hero3.png";
 import InstagramHero4 from "../../../../assets/img/instagram-hero4.png";
 import InstagramHero5 from "../../../../assets/img/instagram-hero5.png";
 import InstagramHero6 from "../../../../assets/img/instagram-hero6.png";
+import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
+
+import PharmLogoWhite from "@/assets/img/Leadgate Pharmaceutical White.png";
+import { LFooterType } from "@/app/group/components/static-data/data";
+
+export type NavDataType = {
+  id: string;
+  name: string;
+  icon: unknown;
+  active: boolean;
+  url: string;
+  subNav?: NavDataType[];
+  openSub?: boolean;
+};
+
+export const LPharmNavData: NavDataType[] = [
+  {
+    id: "home",
+    name: "Home",
+    icon: null,
+    active: true,
+    url: "/",
+  },
+  {
+    id: "about-us",
+    name: "About Us",
+    icon: null,
+    active: false,
+    url: "/about-us",
+  },
+  {
+    id: "services",
+    name: "Our Services",
+    icon: null,
+    active: false,
+    url: "/service",
+  },
+  {
+    id: "careers",
+    name: "Careers",
+    icon: null,
+    active: false,
+    url: "/careers",
+  },
+  {
+    id: "contact-us",
+    name: "Contact Us",
+    icon: null,
+    active: false,
+    url: "/contact-us",
+  },
+];
+
+export const LPharmFooter: LFooterType[] = [
+  {
+    id: "logoSection",
+    logo: PharmLogoWhite,
+    logoUrl: "/pharmaceuticals",
+    description:
+      "Leadgate Pharmaceuticals, we are committed to improving health outcomes by ensuring access to high-quality pharmaceutical products.",
+  },
+  {
+    id: "quickLinks",
+    title: "Quick Navigation Links",
+    navs: [
+      {
+        id: "find-store",
+        name: "Find a Store",
+        icon: null,
+        active: false,
+        url: "#",
+      },
+      {
+        id: "contact-us",
+        name: "Contact Us",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/contact-us",
+      },
+    ],
+  },
+  {
+    id: "company",
+    title: "Company",
+    navs: [
+      {
+        id: "home",
+        name: "Home",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/home",
+      },
+      {
+        id: "about-us",
+        name: "About Us",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/about-us",
+      },
+      {
+        id: "service",
+        name: "Our services",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/service",
+      },
+      {
+        id: "career",
+        name: "Career",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/career",
+      },
+    ],
+  },
+  {
+    id: "legal",
+    title: "Legal",
+    navs: [
+      {
+        id: "terms",
+        name: "Terms",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/terms",
+      },
+      {
+        id: "privacyPolicy",
+        name: "Privacy Policy",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/privacy-policy",
+      },
+      {
+        id: "copyrite",
+        name: "Copyrite Notice",
+        icon: null,
+        active: false,
+        url: "/pharmaceuticals/copyrite",
+      },
+    ],
+  },
+  {
+    id: "socials",
+    title: "",
+    socials: [
+      {
+        id: "fb",
+        name: "Facebook",
+        icon: Facebook,
+        url: "",
+      },
+      {
+        id: "insta",
+        name: "Instagram",
+        icon: Instagram,
+        url: "",
+      },
+      {
+        id: "youtube",
+        name: "Youtube",
+        icon: YouTube,
+        url: "",
+      },
+      {
+        id: "x",
+        name: "X",
+        icon: X,
+        url: "",
+      },
+    ],
+    phone: "+234 909 935 2438",
+    email: "leadgatepharmaceuticals@gmail.com",
+    address:
+      "Suite M206/ M207, Second Floor, Middle Block, Millemenium Builders' Plaza, Plot 251 Herbert Macaulay Way, Central Business District, Abuja, FCT, Nigeria",
+  },
+];
 
 // datatype for pharma
 export interface PharmaType {

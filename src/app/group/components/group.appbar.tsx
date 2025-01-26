@@ -6,13 +6,13 @@ import {
   Fragment,
   SetStateAction,
   useState,
+  useEffect,
 } from "react";
 import { NavDataType } from "./static-data/data";
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
-import Image from "next/image";
-import LGroupLogo from "@/assets/img/group-logo.png";
+import Image, { StaticImageData } from "next/image";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
@@ -21,16 +21,23 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
+import { usePathname, useRouter } from "next/navigation";
+import Button from "@mui/material/Button";
+import ArrowOut from "@/assets/svg/arrow-square-out.svg";
 
 interface LGroupAppBarComponentProps {
   openDrawer: boolean;
   setOpenDrawer: Dispatch<SetStateAction<boolean>>;
   navState: NavDataType[];
   eleBar: number;
+  logo: StaticImageData;
 }
 export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
-  const { openDrawer, setOpenDrawer, navState } = props;
+  const { openDrawer, setOpenDrawer, navState, logo } = props;
+  const pathname = usePathname();
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [showHomeNav, setShowHomeNav] = useState(false);
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -38,6 +45,14 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    if (!pathname.split("/").includes("group")) {
+      setShowHomeNav(true);
+    } else {
+      setShowHomeNav(false);
+    }
+  }, [pathname]);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -49,16 +64,41 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           zIndex: (theme) => theme.zIndex.drawer + 1,
         }}
       >
+        {showHomeNav && (
+          <Box sx={{ bgcolor: "#101828" }}>
+            <Container maxWidth={"lg"}>
+              <Toolbar sx={{ bgcolor: "#101828", alignItems: "self-end" }}>
+                <Box flexGrow={1} />
+                <Box
+                  component={"a"}
+                  href="/group"
+                  display={"flex"}
+                  gap={1}
+                  pb={1}
+                >
+                  <Typography>Go to Leadgate Groups</Typography>
+                  <Image
+                    src={ArrowOut}
+                    alt={"arrow out"}
+                    style={{ margin: "2px 0px" }}
+                  />
+                </Box>
+              </Toolbar>
+            </Container>
+          </Box>
+        )}
         <Container maxWidth={"lg"}>
           <Toolbar sx={{ py: { md: 1 }, px: { xs: 0 } }}>
             <Box pt={1}>
               <Image
-                height={70}
-                src={LGroupLogo}
-                alt={"LeadGate Group Logo"}
+                height={60}
+                src={logo}
+                alt={"LeadGate Logo"}
                 priority={true}
                 style={{ cursor: "pointer" }}
-                onClick={() => (window.document.location.href = "/group")}
+                onClick={() => {
+                  router.push(`/${pathname.split("/")[1]}`);
+                }}
               />
             </Box>
             <Box flexGrow={1} />
@@ -68,7 +108,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
             >
               {navState &&
                 navState.map((page) => (
-                  <Fragment key={page.id}>
+                  <Box key={page.id} py={1.5}>
                     {page.subNav ? (
                       <>
                         <Link href={""} onClick={handleClick}>
@@ -80,7 +120,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                             lineHeight={1.2}
                             color={"#344054"}
                             fontWeight={page.active ? 600 : "normal"}
-                            fontSize={"0.9rem"}
+                            fontSize={"1rem"}
                             display={"flex"}
                             flexDirection={"row"}
                           >
@@ -163,25 +203,85 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                         </Menu>
                       </>
                     ) : (
-                      <Link key={page?.id} href={`/group${page.url}` as string}>
-                        <Typography
-                          sx={{
-                            mx: 2,
-                            textTransform: "capitalize",
-                          }}
-                          marginTop={"3px"}
-                          lineHeight={1.2}
-                          color={"#344054"}
-                          fontWeight={page.active ? 600 : "normal"}
-                          fontSize={"0.9rem"}
-                        >
-                          {page?.name}
-                        </Typography>
-                      </Link>
+                      <Fragment key={page?.id}>
+                        {pathname.split("/")[1] !== "group" &&
+                        page.name !== "Contact Us" ? (
+                          <Link
+                            href={
+                              `/${pathname.split("/")[1]}${page.url}` as string
+                            }
+                          >
+                            <Typography
+                              sx={{
+                                mx: 2,
+                                textTransform: "capitalize",
+                              }}
+                              marginTop={"3px"}
+                              lineHeight={1.2}
+                              color={"#344054"}
+                              fontWeight={page.active ? 600 : "normal"}
+                              fontSize={"1rem"}
+                            >
+                              {page?.name}
+                            </Typography>
+                          </Link>
+                        ) : pathname.split("/")[1] === "group" ? (
+                          <Link
+                            href={
+                              `/${pathname.split("/")[1]}${page.url}` as string
+                            }
+                          >
+                            <Typography
+                              sx={{
+                                mx: 2,
+                                textTransform: "capitalize",
+                              }}
+                              marginTop={"3px"}
+                              lineHeight={1.2}
+                              color={"#344054"}
+                              fontWeight={page.active ? 600 : "normal"}
+                              fontSize={"1rem"}
+                            >
+                              {page?.name}
+                            </Typography>
+                          </Link>
+                        ) : (
+                          <></>
+                        )}
+                      </Fragment>
                     )}
-                  </Fragment>
+                  </Box>
                 ))}
+              {showHomeNav && (
+                <Box display={{ xs: "none", md: "block" }}>
+                  <Button
+                    aria-label="contact us"
+                    sx={{
+                      borderRadius: "8px",
+                      textTransform: "capitalize",
+                      px: 4,
+                      py: 1.5,
+                      fontSize: "1rem",
+                      bgcolor: pathname.split("/").includes("pharmaceuticals")
+                        ? "#6B8F24"
+                        : "",
+                      color: "#ffff",
+                    }}
+                    variant="contained"
+                    onClick={() =>
+                      router.push(`/${pathname.split("/")[1]}/contact-us`)
+                    }
+                  >
+                    <>
+                      {pathname.split("/").includes("pharmaceuticals")
+                        ? "Contact Us"
+                        : "Get in touch"}
+                    </>
+                  </Button>
+                </Box>
+              )}
             </Box>
+
             <Box display={{ xs: "block", md: "none" }}>
               <IconButton
                 size="large"

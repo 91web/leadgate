@@ -21,6 +21,7 @@ import {
   YouTube,
 } from "@mui/icons-material";
 import Collapse from "@mui/material/Collapse";
+import { usePathname } from "next/navigation";
 
 interface LGroupDrawerComponentProps {
   setOpenDrawer: Dispatch<SetStateAction<boolean>>;
@@ -32,6 +33,7 @@ interface LGroupDrawerComponentProps {
 export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
   const { openDrawer, setOpenDrawer, navState, handleNavClick, drawerWidth } =
     props;
+  const pathname = usePathname();
   return (
     <Drawer
       anchor="right"
@@ -53,7 +55,13 @@ export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
         <List sx={{ pt: 2 }}>
           {navState.map((page, i) => (
             <Fragment key={page.id}>
-              <Link href={!page.subNav ? (`/group${page.url}` as string) : ""}>
+              <Link
+                href={
+                  !page.subNav
+                    ? (`/${pathname.split("/")[1]}${page.url}` as string)
+                    : ""
+                }
+              >
                 <ListItem
                   sx={{
                     "&:hover": { backgroundColor: "var(--app-gray-color)" },

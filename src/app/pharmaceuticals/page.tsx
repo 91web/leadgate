@@ -13,9 +13,6 @@ import SubscriptionPharma from "./components/subscribe-pharma";
 const AppPharmacy = () => {
   return (
     <Box>
-      <div>
-        <h1>App Pharmacy</h1>
-      </div>
       <Box>
         <PharmaHero />
       </Box>

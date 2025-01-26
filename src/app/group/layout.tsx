@@ -13,7 +13,7 @@ import { GroupAppBarComponent } from "./components/group.appbar";
 import { GroupDrawerComponent } from "./components/group.drawer";
 import Toolbar from "@mui/material/Toolbar";
 import { LAppFooter } from "./components/footer";
-// import { useRouter } from "next/navigation";
+import LGroupLogo from "@/assets/img/group-logo.png";
 
 const drawerWidth = 240;
 
@@ -143,6 +143,7 @@ const AppGroupLayout = ({
   return (
     <Box position={"relative"}>
       <GroupAppBarComponent
+        logo={LGroupLogo}
         openDrawer={openDrawer}
         setOpenDrawer={setOpenDrawer}
         navState={navState}
