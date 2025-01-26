@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
 import PartnerCover from "./components/partner-cover";
-import { Box, Button, Container, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 import TrustPartners from "./components/trust-partners";
 import PartnerGrid from "./components/partner-grid";
 import PartnerCard from "./components/partner-card";
 
 const PartnerShipPage = () => {
   return (
-    <Box >
+    <Box>
       <Box>
         <PartnerCover />
       </Box>
@@ -37,7 +40,7 @@ const PartnerShipPage = () => {
             xs: "#FCF7EB", // Mobile
             md: "transparent", // Desktop
           },
-          height:{xs: "230px", md: "200px"},
+          height: { xs: "230px", md: "200px" },
           mb: 0,
         }}
       >
@@ -55,7 +58,7 @@ const PartnerShipPage = () => {
               height: "150px",
               justifyContent: "space-between",
               alignItems: "center",
-             // boxShadow: { xs: "none", md: "0px 4px 10px rgba(0, 0, 0, 0.1)" },
+              // boxShadow: { xs: "none", md: "0px 4px 10px rgba(0, 0, 0, 0.1)" },
               flexDirection: { xs: "column", md: "row" },
               textAlign: { xs: "center", md: "left" },
             }}
@@ -64,20 +67,23 @@ const PartnerShipPage = () => {
             <Box sx={{ mb: { xs: 2, md: 0 } }}>
               <Typography
                 variant="h6"
-                sx={{ fontWeight: "medium", 
+                sx={{
+                  fontWeight: "medium",
                   fontFamily: "'Lora'",
-                  fontSize:{xs:'24px', md:'30px'},
-                  color: "#344054", width: "100%" }}
+                  fontSize: { xs: "24px", md: "30px" },
+                  color: "#344054",
+                  width: "100%",
+                }}
               >
                 Interested in partnering with us
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ 
+                sx={{
                   fontWeight: "medium",
                   fontFamily: "'Lora'",
-                  color:'#667085',
-                  fontSize:{xs:'14px', md:'17px'},
+                  color: "#667085",
+                  fontSize: { xs: "14px", md: "17px" },
                 }}
               >
                 Join over 100+ Partners
@@ -85,18 +91,18 @@ const PartnerShipPage = () => {
             </Box>
 
             {/* Button Section */}
-          
+
             <Button
               variant="contained"
               sx={{
                 backgroundColor: "#AE883B",
                 color: "#ffffff",
                 py: 1,
-                mb:{xs:2, md:2},
+                mb: { xs: 2, md: 2 },
                 px: 3,
                 fontFamily: "'Inter'",
                 fontWeight: "medium",
-                fontSize:{xs:'14px', md:'17px'},
+                fontSize: { xs: "14px", md: "17px" },
                 textTransform: "none",
                 "&:hover": {
                   backgroundColor: "#965F2A",

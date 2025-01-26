@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Typography, Container } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { styled } from "@mui/material/styles";
@@ -62,172 +64,172 @@ export default function CoreValue() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <Box my={'50px'}>
-    <Container maxWidth="lg">
-      <Typography
-        variant="h2"
-        align="center"
-        sx={{
-        //  mt: 2,
-          fontSize: { xs: "22px", md: "30px" },
-          fontWeight: "medium",
-          fontFamily: "lora",
-          color:'#667085'
-        }}
-      >
-        Our Core Values
-      </Typography>
-
-      <Box sx={{ position: "relative" }}>
-        <StyledSwiper
-          modules={[Autoplay, Navigation]}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            900: {
-              slidesPerView: 2,
-            },
+    <Box my={"50px"}>
+      <Container maxWidth="lg">
+        <Typography
+          variant="h2"
+          align="center"
+          sx={{
+            //  mt: 2,
+            fontSize: { xs: "22px", md: "30px" },
+            fontWeight: "medium",
+            fontFamily: "lora",
+            color: "#667085",
           }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-          }}
-          loop={true}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Set activeIndex based on active slide
         >
-          {coreValues.map((value) => (
-            <SwiperSlide key={value.id}>
-              <Box
-                sx={{
-                  p: { xs: 1, md: 5 },
-                  backgroundColor: "background.paper",
-                }}
-              >
+          Our Core Values
+        </Typography>
+
+        <Box sx={{ position: "relative" }}>
+          <StyledSwiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              900: {
+                slidesPerView: 2,
+              },
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            loop={true}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // Set activeIndex based on active slide
+          >
+            {coreValues.map((value) => (
+              <SwiperSlide key={value.id}>
                 <Box
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 2,
-                    mb: 2,
+                    p: { xs: 1, md: 5 },
+                    backgroundColor: "background.paper",
                   }}
                 >
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      fontSize: { xs: "12px", md: "16px" },
-                      fontWeight: "medium",
-                      color: "#344054",
-                      fontFamily:'inter'
-                    }}
-                  >
-                    {value.id}.
-                  </Typography>
-                  <Typography
-                    variant="h4"
-                    sx={{
-                      fontSize: { xs: "18px", md: "20px" },
-                      fontWeight: "medium",
-                      fontFamily: "inter",
-                      color: "#344054",
-                    }}
-                  >
-                    {value.title}
-                  </Typography>
-                </Box>
-                <Box>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "#667085",
-                    lineHeight: 1.7,
-                    fontWeight: "regular",
-                    fontFamily: "inter",
-                    ml: 6,
-                    fontSize: { xs: "14px", md: "16px" },
-                  }}
-                >
-                  {value.descriptions}
-                </Typography>
-                  {/* Custom Pagination for each Slide */}
                   <Box
                     sx={{
                       display: "flex",
-                      justifyContent: "left",
-                      mt: 2,
+                      alignItems: "center",
+                      gap: 2,
+                      mb: 2,
                     }}
                   >
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontSize: { xs: "12px", md: "16px" },
+                        fontWeight: "medium",
+                        color: "#344054",
+                        fontFamily: "inter",
+                      }}
+                    >
+                      {value.id}.
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{
+                        fontSize: { xs: "18px", md: "20px" },
+                        fontWeight: "medium",
+                        fontFamily: "inter",
+                        color: "#344054",
+                      }}
+                    >
+                      {value.title}
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: "#667085",
+                        lineHeight: 1.7,
+                        fontWeight: "regular",
+                        fontFamily: "inter",
+                        ml: 6,
+                        fontSize: { xs: "14px", md: "16px" },
+                      }}
+                    >
+                      {value.descriptions}
+                    </Typography>
+                    {/* Custom Pagination for each Slide */}
                     <Box
                       sx={{
                         display: "flex",
-                        gap: 1,
                         justifyContent: "left",
+                        mt: 2,
                       }}
                     >
-                      {coreValues.map((_, idx) => (
-                        <Box
-                          key={idx}
-                          sx={{
-                            width: "6px",
-                            height: "6px",
-                            backgroundColor:
-                              activeIndex === idx ? "#6B7280" : "#D1D5DB",
-                            borderRadius: "50%",
-                            cursor: "pointer",
-                            transition: "background-color 0.3s ease",
-                          }}
-                          onClick={() => setActiveIndex(idx)} // Set active index when clicked
-                        />
-                      ))}
+                      <Box
+                        sx={{
+                          display: "flex",
+                          gap: 1,
+                          justifyContent: "left",
+                        }}
+                      >
+                        {coreValues.map((_, idx) => (
+                          <Box
+                            key={idx}
+                            sx={{
+                              width: "6px",
+                              height: "6px",
+                              backgroundColor:
+                                activeIndex === idx ? "#6B7280" : "#D1D5DB",
+                              borderRadius: "50%",
+                              cursor: "pointer",
+                              transition: "background-color 0.3s ease",
+                            }}
+                            onClick={() => setActiveIndex(idx)} // Set active index when clicked
+                          />
+                        ))}
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
-              </Box>
-            </SwiperSlide>
-          ))}
-        </StyledSwiper>
+              </SwiperSlide>
+            ))}
+          </StyledSwiper>
 
-        <Box
-          sx={{
-            justifyContent: "center",
-            mt: 2,
-            display: { xs: "none", md: "flex" },
-            gap: 2,
-          }}
-        >
-          <NavigationButton className="swiper-button-prev">
-            <ChevronLeftIcon />
-          </NavigationButton>
-          <NavigationButton className="swiper-button-next">
-            <ChevronRightIcon />
-          </NavigationButton>
+          <Box
+            sx={{
+              justifyContent: "center",
+              mt: 2,
+              display: { xs: "none", md: "flex" },
+              gap: 2,
+            }}
+          >
+            <NavigationButton className="swiper-button-prev">
+              <ChevronLeftIcon />
+            </NavigationButton>
+            <NavigationButton className="swiper-button-next">
+              <ChevronRightIcon />
+            </NavigationButton>
+          </Box>
+
+          {/* Mobile Navigation Buttons */}
+          <Box
+            sx={{
+              justifyContent: "center",
+              display: { xs: "flex", md: "none" },
+              gap: 2,
+              position: "absolute",
+              left: "50%",
+            }}
+          >
+            {/* Previous Button */}
+            <NavigationButton className="swiper-button-prev">
+              <ChevronRightIcon sx={{ transform: "rotate(360deg)" }} />
+            </NavigationButton>
+
+            {/* Next Button */}
+            <NavigationButton className="swiper-button-next">
+              <ChevronLeftIcon sx={{ transform: "rotate(360deg)" }} />
+            </NavigationButton>
+          </Box>
         </Box>
-
-        {/* Mobile Navigation Buttons */}
-        <Box
-          sx={{
-            justifyContent: "center",
-            display: { xs: "flex", md: "none" },
-            gap: 2,
-            position: "absolute",
-            left: "50%",
-          }}
-        >
-          {/* Previous Button */}
-          <NavigationButton className="swiper-button-prev">
-            <ChevronRightIcon sx={{ transform: "rotate(360deg)" }} />
-          </NavigationButton>
-
-          {/* Next Button */}
-          <NavigationButton className="swiper-button-next">
-            <ChevronLeftIcon sx={{ transform: "rotate(360deg)" }} />
-          </NavigationButton>
-        </Box>
-      </Box>
-    </Container>
+      </Container>
     </Box>
   );
 }

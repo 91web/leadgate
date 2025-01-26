@@ -26,29 +26,29 @@ const AppGroup = () => {
         </Container>
       </Box>
       <Box>
-      <Container maxWidth="lg">
+        <Container maxWidth="lg">
           <FeatureProject />
         </Container>
       </Box>
       <Box>
         <BuildingHero />
       </Box>
-      <Box py={5} bgcolor={'#fff'}>
-      <Box
-        sx={{
-          backgroundImage: isMobile
-            ? `url(${TestBg1.src})` //  the mobile image
-            : `url(${TestBg2.src})`, // the desktop image
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: { xs: "50vh", md: "100vh" },
-          display: "flex",
-          alignItems: "center",
-         justifyContent: "center",
-        }}
-      >
-        <TestimonialHero />
-      </Box>
+      <Box py={5} bgcolor={"#fff"}>
+        <Box
+          sx={{
+            backgroundImage: isMobile
+              ? `url(${TestBg1.src})` //  the mobile image
+              : `url(${TestBg2.src})`, // the desktop image
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: { xs: "50vh", md: "100vh" },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <TestimonialHero />
+        </Box>
       </Box>
     </Box>
   );

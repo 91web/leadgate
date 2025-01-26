@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container } from "@mui/material";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import SlideHero from "./components/slide-about";
 import CoreValue from "./components/core-value";
 import FeatureEvents from "./components/feature";

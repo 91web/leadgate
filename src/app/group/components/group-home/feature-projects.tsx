@@ -1,5 +1,10 @@
 import React from "react";
-import { Box, Typography, Grid2, Card, Button } from "@mui/material";
+import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid2 from "@mui/material/Grid2";
+
 import { ProjectData, ProjectType } from "../static-data/data";
 
 // Sample images with content for overlays
@@ -52,7 +57,7 @@ const FeatureProjects = () => {
             >
               {/* Image */}
               <Card
-              elevation={0}
+                elevation={0}
                 sx={{
                   borderRadius: "8px",
                   overflow: "hidden",

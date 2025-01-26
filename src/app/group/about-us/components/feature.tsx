@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Typography, Grid2 } from "@mui/material"; // Use Grid2 for responsive design
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Grid2 from "@mui/material/Grid2";
 import JourneyFeatures from "./journey-feature";
 
 const FeatureEvents = () => {
@@ -32,7 +34,12 @@ const FeatureEvents = () => {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ fontFamily: "inter", color: "#475467", fontSize: "16px" , fontWeight:'regular'}}
+              sx={{
+                fontFamily: "inter",
+                color: "#475467",
+                fontSize: "16px",
+                fontWeight: "regular",
+              }}
             >
               Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant
               blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit

@@ -1,5 +1,9 @@
 import React from "react";
-import { Box, Typography, Card, CardMedia, CardContent } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Grid2";
 import { JourneyData, JourneyType } from "./static-data/data";
 
@@ -13,10 +17,10 @@ const JourneyEvents = () => {
         {JourneyFeatures.map((feature, index) => (
           <Grid2 size={12} key={index}>
             <Card
-            elevation={0}
+              elevation={0}
               sx={{
-               // boxShadow: "none",
-               backgroundColor: "transparent",
+                // boxShadow: "none",
+                backgroundColor: "transparent",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -37,11 +41,13 @@ const JourneyEvents = () => {
                   height="200"
                   image={feature.image}
                   alt={feature.alt}
-                  sx={{
-                  //  borderRadius: "8px",
-                   // mb: 2,
-                  //  width: "100%",
-                  }}
+                  sx={
+                    {
+                      //  borderRadius: "8px",
+                      // mb: 2,
+                      //  width: "100%",
+                    }
+                  }
                 />
               </Box>
 
