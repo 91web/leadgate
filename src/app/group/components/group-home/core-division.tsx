@@ -14,7 +14,7 @@ const CoreDivisions = () => {
         {/* Responsive Grid Section */}
         <Grid2 container spacing={4} sx={{ justifyContent: "space-between" }}>
           {/* Left Box - Header */}
-          <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 5 } }}>
+          <Grid2 size={{ xs: 12, md: 6 }} sx={{ pt: { xs: 2, md: 10 } }}>
             <Box
               sx={{
                 width: { xs: "100%", md: "90%" },
@@ -22,18 +22,19 @@ const CoreDivisions = () => {
               }}
             >
               <Typography
-                variant="h4"
+                variant="h2"
                 sx={{
                   fontFamily: "Lora",
                   fontWeight: "medium",
                   color: "#101828",
-                  mb: 1,
+                  //py: 5,
                   fontSize: { xs: "24px", md: "30px" },
                 }}
               >
                 Our Core Divisions at{" "}
+                </Typography>
                 <Typography
-                  component="span"
+                  variant="h2"
                   sx={{
                     color: "#AE883B",
                     fontWeight: "medium",
@@ -44,7 +45,7 @@ const CoreDivisions = () => {
                 >
                   Leadgate Group
                 </Typography>
-              </Typography>
+  
               <Typography
                 variant="body1"
                 sx={{
@@ -61,7 +62,7 @@ const CoreDivisions = () => {
           </Grid2>
 
           {/* Right Box - Divisions */}
-          <Grid2 size={{ xs: 12, md: 6 }} sx={{ mt: { xs: 2, md: 3 } }}>
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <Box
               sx={{
                 maxHeight: "70vh",
@@ -82,7 +83,7 @@ const CoreDivisions = () => {
                 "&::-webkit-scrollbar-button": {
                   display: "none", // Optional: Hide the buttons (up/down arrows) on the scrollbar
                 },
-                mb: 5,
+                mb: { xs: 5 },
               }}
             >
               <Divisions />

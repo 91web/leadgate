@@ -1,0 +1,177 @@
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import "../../themes/style.css";
+
+const buttons = [
+  { text: "Home", link: "/#" },
+  { text: "Shortlet", link: "/#" },
+  { text: "Interior", link: "/#" },
+  { text: "Furniture", link: "/#" },
+  { text: "Home", link: "/#" },
+];
+
+const AvatarButton = () => {
+  return (
+    <Box>
+      <Grid
+        container
+        spacing={2}
+        direction={{ xs: "column", md: "row" }}
+        justifyContent="space-between"
+      >
+        {/* Top Section with Background and AvatarGroup */}
+        <Grid item xs={12} md={6}>
+          <Box
+            sx={{
+              position: "relative",
+              width: "100%",
+              height: "450px",
+              backgroundImage: "url('/path-to-your-image.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <AvatarGroup
+              max={4}
+              sx={{
+                position: "absolute",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                // Mobile (default)
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                // Desktop (breakpoint adjustment)
+                "@media (min-width: 768px)": {
+                  top: "auto",
+                  left: "16px",
+                  bottom: "16px",
+                  transform: "none",
+                },
+              }}
+            >
+              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+              <Avatar
+                alt="Trevor Henderson"
+                src="/static/images/avatar/5.jpg"
+              />
+            </AvatarGroup>
+          </Box>
+        </Grid>
+
+        {/* Bottom Section with Numbers and Buttons */}
+        <Grid item xs={12} md={6}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", md: "flex-end" },
+              textAlign: { xs: "center", md: "right" },
+            }}
+          >
+            {/* Row with Numbers and Labels */}
+            <Box sx={{ display: "flex", gap: "2rem", mb: "2rem" }}>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fontFamily: "Lora",
+                  }}
+                >
+                  120+
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "17px",
+                    fontWeight: "regular",
+                    fontFamily: "Inter",
+                  }}
+                >
+                  Properties Available
+                </Typography>
+              </Box>
+              <Box>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fontFamily: "Lora",
+                  }}
+                >
+                  20+
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "17px",
+                    fontWeight: "regular",
+                    fontFamily: "Inter",
+                  }}
+                >
+                  Partners
+                </Typography>
+              </Box>
+            </Box>
+
+            {/* Buttons */}
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                display: "flex",
+                justifyContent: { xs: "center", md: "flex-end" },
+                flexWrap: "wrap",
+              }}
+            >
+              {buttons.map((button, index) => (
+                <Grid
+                  item
+                  xs={6} // 2 buttons per row on mobile
+                  md={4} // 3 buttons per row on desktop
+                  key={index}
+                  sx={{ display: "flex", justifyContent: "center" }}
+                >
+                  <Button
+                    variant="contained"
+                    sx={{
+                      color: "white",
+                      fontFamily: "Lora",
+                      fontSize: "16px",
+                      fontWeight: "medium",
+                      background: "#F8E6C0",
+                      textTransform: "none",
+                      borderRadius: "15px",
+                      width: "100%",
+                      maxWidth: "150px",
+                    }}
+                    href={button.link}
+                  >
+                    {button.text}
+                  </Button>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+
+export default AvatarButton;

@@ -51,7 +51,7 @@ const AboutGrid = () => {
                 />
                 <Typography
                   gutterBottom
-                  variant="h5"
+                  variant="h2"
                   sx={{
                     color: "#344054",
                     fontFamily: "'Inter'",
@@ -91,8 +91,7 @@ const AboutGrid = () => {
                   height={40}
                 />
                 <Typography
-                  gutterBottom
-                  variant="h5"
+                  variant="h2"
                   sx={{
                     color: "#344054",
                     fontFamily: "'Inter'",

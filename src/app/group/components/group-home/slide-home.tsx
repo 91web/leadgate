@@ -134,7 +134,7 @@ const HeroSlider = () => {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             mb: 2,
             fontSize: { xs: "36px", md: "40px" },

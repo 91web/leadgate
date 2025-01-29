@@ -47,7 +47,7 @@ const CardMaterial = () => {
                     {card.icon}
                     <Typography
                       gutterBottom
-                      variant="h5"
+                      variant="h2"
                       sx={{
                         color: "#344054",
                         fontFamily: "'Inter'",

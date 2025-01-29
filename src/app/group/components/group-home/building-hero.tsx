@@ -7,9 +7,9 @@ import TestHero1 from "../../../../assets/img/testimonial1.png";
 
 const BuildingHero = () => {
   return (
-    <Box>
+  <Box  sx={{ bgcolor: "#fff" }} >
       {/* Hero Section */}
-      <Box
+      <Box py={3}
         sx={{
           height: "426px",
           backgroundImage: `url(${TestHero1.src})`,
@@ -20,18 +20,18 @@ const BuildingHero = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          color: "white",
+          //color: "white",
           textAlign: "center",
-          p: 4,
         }}
       >
         <Typography
-          variant="h6"
+          variant="h2"
           sx={{
             fontWeight: "medium",
             fontFamily: "Lora",
             mb: 2,
             fontSize: { xs: "24px", md: "30px", maxWidth: "600px" },
+            color:'#fff'
           }}
         >
           We are passionate about building Dreams, Elevating Health and Creating
@@ -45,6 +45,7 @@ const BuildingHero = () => {
             mb: 3,
             fontWeight: "regular",
             color: "#ada6a6",
+            px:2
           }}
         >
           Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit

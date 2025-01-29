@@ -30,7 +30,7 @@ export default function ProjectCover() {
       }}
     >
       <Container
-        maxWidth="sm"
+        maxWidth="lg"
         sx={{
           position: "relative",
           zIndex: 2,
@@ -50,7 +50,7 @@ export default function ProjectCover() {
           Project
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           sx={{
             color: "#D0D5DD",
             fontFamily: "'Inter'",

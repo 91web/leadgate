@@ -41,7 +41,7 @@ const testimonials: TestimonialType[] = TestimonialData;
 
 const TestimonialHero: React.FC = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   const handleNext = () => {
     if (swiper) {
@@ -95,7 +95,7 @@ const TestimonialHero: React.FC = () => {
               <Grid2
                 size={{ xs: 12, md: 2 }}
                 sx={{
-                  display: { xs: "none", md: "block" },
+                  display: { xs: "none", lg: "block" },
                   // zIndex: 1,
                   // pl: 2,
                   //height: "100%",
@@ -148,7 +148,7 @@ const TestimonialHero: React.FC = () => {
               }}
             >
               {isMobile && (
-                <Box p={2}>
+                <Box px={5}>
                   <Box
                     sx={{
                       display: "flex",
@@ -194,7 +194,7 @@ const TestimonialHero: React.FC = () => {
                   <NavigationButtons />
                 </Box>
               )}
-              <Box width={{ xs: 300, md: 1500 }} p={2}>
+              <Box width={{ xs: 350,sm:500, md:900, lg: 1500 }} p={2}>
                 <Swiper
                   modules={[Navigation, Pagination, Autoplay]}
                   spaceBetween={24}
@@ -228,7 +228,7 @@ const TestimonialHero: React.FC = () => {
                             borderRadius: "12px",
                             boxShadow: "none",
                             border: "1px solid rgba(0, 0, 0, 0.12)",
-                            height: { xs: "300px", md: "200px" },
+                            height: { xs: "300px", md: "280px" },
                             backgroundColor: "#fff",
                           }}
                         >

@@ -1,0 +1,50 @@
+
+.header2{
+font-family: lora;
+font-size: 30px;
+font-weight:medium ;
+
+}
+.body2{
+color: #475467;
+font-family:inter ;
+font-weight:regular ;
+line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+#button-pharma{
+color: ;
+font-family: ;
+font-size: ;
+font-weight: ;
+line-height: ;
+
+}
+
+#button-contruction{
+color: ;
+font-family: ;
+font-size: ;
+font-weight: ;
+line-height: ;
+
+}
+.button-home{
+color: white;
+font-family:lora ;
+font-size: 16px;
+font-weight:medium ;
+line-height:24px ;
+background:#F8E6C0;
+text-transform: none;
+border-radius: 5px;
+}

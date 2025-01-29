@@ -48,7 +48,7 @@ export default function ContactForm() {
                 Want to make further enquiries?
               </Typography>
               <Typography
-                variant="h4"
+                variant="body2"
                 gutterBottom
                 sx={{
                   fontFamily: "inter",

@@ -45,7 +45,7 @@ const SlideHero = () => {
           Construction & Pharmaceuticals
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           gutterBottom
           sx={{
             fontWeight: "regular",

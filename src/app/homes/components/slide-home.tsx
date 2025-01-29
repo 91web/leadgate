@@ -65,9 +65,9 @@ const EstateSlider = () => {
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "500px", // Adjust for desktop view
+        height: "650px", // Adjust for desktop view
         backgroundColor: "#000", // Set background to black
-        animation: `${fadeBackground} 6s ease`, // Apply fade effect to background
+        animation: `${fadeBackground} 6s ease`, 
       }}
     >
       {images.map((image, index) => (
@@ -132,12 +132,13 @@ const EstateSlider = () => {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             mb: 2,
             fontSize: { xs: "36px", md: "40px" },
             fontFamily: "lora",
             fontWeight: "regular",
+            width: { xs: "100%", md: "75%" },
           }}
         >
           {images[currentSlide].title}

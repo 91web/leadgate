@@ -89,7 +89,7 @@ export default function WorkFeatures() {
                     />
                   </Box>
                   <Typography
-                    variant="h1"
+                    variant="h2"
                     sx={{
                       fontFamily: "inter",
                       color: "#344054",

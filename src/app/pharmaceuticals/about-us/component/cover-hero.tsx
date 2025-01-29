@@ -29,7 +29,7 @@ export default function CoverHero() {
       }}
     >
       <Container
-        maxWidth="sm"
+        maxWidth="lg"
         sx={{
           position: "relative",
           zIndex: 2,
@@ -49,7 +49,7 @@ export default function CoverHero() {
           Our Story
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           sx={{
             color: "#D0D5DD",
             fontFamily: "inter",

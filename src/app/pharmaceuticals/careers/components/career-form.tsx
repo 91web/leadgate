@@ -16,6 +16,7 @@ import FmdGoodIcon from "@mui/icons-material/FmdGood";
 
 export default function CareerForm() {
   return (
+    <Box py={{xs:5, md:10}}>
     <Container maxWidth="lg">
       {/* Contact Info Cards */}
       <Box sx={{ my: { xs: 0, md: 9 } }}>
@@ -225,7 +226,7 @@ export default function CareerForm() {
                 Our friendly team would love to hear from you.
               </Typography>
 
-              <Box component="form" sx={{}}>
+              <Box component="form" >
                 <Grid2 container spacing={2}>
                   <Grid2 size={{ xs: 12, md: 6 }}>
                     <Typography
@@ -376,5 +377,6 @@ export default function CareerForm() {
         </Grid2>
       </Box>
     </Container>
+    </Box>
   );
 }

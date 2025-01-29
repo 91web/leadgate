@@ -12,22 +12,22 @@ const DreamGroup = () => {
   const partnerSlug = "Partner-single-page";
 
   return (
-    <Box sx={{ py: { xs: 4, md: 10 } }}>
+    <Box>
       <Grid2
         container
-        spacing={4}
+        spacing={2}
         alignItems="center"
         direction={{ xs: "column-reverse", md: "row" }}
       >
         {/* Left Section */}
-        <Grid2 size={{ xs: 12, md: 8 }}>
+        <Grid2 size={{ xs: 12, md: 7 }}>
           <Box width={{ xs: "100%", md: "80%" }}>
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               <Grid2
                 container
                 direction={{ xs: "column", md: "row" }}
                 alignItems={{ xs: "flex-start", md: "center" }}
-                sx={{ mb: 4 }}
+                // sx={{ mb: 4 }}
               >
                 <Box
                   sx={{
@@ -134,8 +134,10 @@ const DreamGroup = () => {
         </Grid2>
 
         {/* Right Section */}
-        <Grid2 size={{ xs: 12, md: 4 }}>
-          <Box sx={{ display: { xs: "block", md: "none" } }}>
+        <Grid2 size={{ xs: 12, md: 5 }}>
+          <Box
+            sx={{ display: { xs: "block", md: "none" }, mt: { xs: 2, md: 0 } }}
+          >
             <Grid2
               container
               direction={{ xs: "column", md: "row" }}
@@ -194,9 +196,9 @@ const DreamGroup = () => {
               <Image
                 src={DreamBg.src}
                 alt={"Group Image"}
-                height={490}
+                height={250}
                 width={452}
-                style={{ borderRadius: "8px", width: "100%", height: "auto" }}
+                style={{ borderRadius: "8px", width: "100%", height: "100%" }}
               />
             </Box>
             <Box textAlign={"center"} p={2}>

@@ -14,7 +14,7 @@ const divisions: HomePageType[] = HomePageData;
 
 const Divisions = () => {
   return (
-    <Box sx={{}}>
+    <Box >
       {/* Cards Section */}
       <Grid2 container spacing={4} direction="column" alignItems="center">
         {divisions.map((division, index) => (
