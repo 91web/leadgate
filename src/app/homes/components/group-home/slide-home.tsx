@@ -101,7 +101,7 @@ const HeroSlider = () => {
             opacity: index === currentSlide ? 1 : 0,
             animation:
               index === currentSlide
-                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
+                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` 
                 : "none",
           }}
         >
@@ -116,7 +116,7 @@ const HeroSlider = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 1, // Ensure image is always visible
+              opacity: 1, 
             }}
           />
 
@@ -128,10 +128,10 @@ const HeroSlider = () => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark overlay
+              backgroundColor: "rgba(0, 0, 0, 0.5)", 
               animation:
                 index === currentSlide
-                  ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
+                  ? `${overlayFadeOut} 2s ease` 
                   : "none",
             }}
           />

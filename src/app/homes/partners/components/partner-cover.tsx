@@ -71,27 +71,14 @@ export default function PartnerSection() {
           Luxury Living in the Heart of Abuja
         </Typography>
       </Container>
-
-      <Box
-        sx={{
-          position: "fixed",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          // bgcolor: "#fff",
-          zIndex: 2,
-          py: 3,
-          mb: 10,
-         //  display: { xs: "none", md: "block" },
-        }}
-      >
         <Box
           sx={{
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            gap: 2,
-            justifyContent: "center",
-            alignItems: "center",
+            position: "absolute",
+            bottom: "-50px",
+            left: 0,
+            right: 0,
+            zIndex: 2,
+            py: 3,
           }}
         >
           <Container maxWidth="lg">
@@ -131,7 +118,6 @@ export default function PartnerSection() {
             </Box>
           </Container>
         </Box>
-      </Box>
     </Box>
   );
 }

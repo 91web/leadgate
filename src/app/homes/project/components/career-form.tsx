@@ -54,7 +54,6 @@ export default function CareerForm() {
                     sx={{
                       fontFamily: "Inter",
                       color: "#344054",
-                      lineHeight: 1.8,
                       mb: 1,
                       fontSize: "16px",
                       textAlign: "left",
@@ -138,7 +137,6 @@ export default function CareerForm() {
                     sx={{
                       fontFamily: "Inter",
                       color: "#344054",
-                      lineHeight: 1.8,
                       mb: 1,
                       fontSize: "16px",
                       textAlign: "left",

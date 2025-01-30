@@ -15,7 +15,6 @@ const CoreDivisions = () => {
   return (
     <Box>
       <Box sx={{ justifyContent: "center" ,py:2}}>
-        {/* Section Header */}
         <Box sx={{ mx: "2%" }}>
           <Box
             sx={{
@@ -96,8 +95,6 @@ const CoreDivisions = () => {
             </Grid2>
           </Box>
         </Box>
-
-        {/* Section Image steps */}
         <Box>
           <Grid2
             container
@@ -141,7 +138,6 @@ const CoreDivisions = () => {
           </Grid2>
         </Box>
       </Box>
-      {/* Responsive Grid Section */}
       <Box sx={{ py: { xs: 4, md: 8 } }}>
         <Box mx={"5%"}>
           <Grid2 container spacing={4} sx={{ justifyContent: "space-between" }}>

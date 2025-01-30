@@ -20,7 +20,6 @@ const AppHomes = () => {
       <Box>
         <EstateSlider />
       </Box>
-
       <Box py={3}>
         <Container maxWidth="lg">
           <PropertyCards />
@@ -30,14 +29,13 @@ const AppHomes = () => {
           <Container maxWidth="lg">
             <Box
               sx={{
-                backgroundImage: `url(${EventBg.src})`, // Correct syntax for backgroundImage
-                backgroundSize: "cover", // Ensures the image covers the entire Box
-                backgroundPosition: "center", // Centers the image
-                width: "100%", // Set width as needed
-                height: "500px", // Set height as needed
+                backgroundImage: `url(${EventBg.src})`, 
+                backgroundSize: "cover", 
+                backgroundPosition: "center", 
+                width: "100%", 
+                height: "500px", 
               }}
-            >
-         
+            > 
             </Box>
           </Container>
         </Box>
