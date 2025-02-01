@@ -45,6 +45,7 @@ export default function PartnerSection() {
           position: "relative",
           zIndex: 2,
           textAlign: "center",
+          mt: { xs: -4, md: -50 }, // Move it upward on small screens
         }}
       >
         <Typography
@@ -71,53 +72,54 @@ export default function PartnerSection() {
           Luxury Living in the Heart of Abuja
         </Typography>
       </Container>
-        <Box
-          sx={{
-            position: "absolute",
-            bottom: "-50px",
-            left: 0,
-            right: 0,
-            zIndex: 2,
-            py: 3,
-          }}
-        >
-          <Container maxWidth="lg">
-            <Box sx={{ flexGrow: 1, p: 2, bgcolor: "#FCF7EB" }}>
-              <Grid container spacing={2}>
-                {details.map((item, index) => (
-                  <Grid
-                    size={{ xs: 12, md: 2.4 }}
-                    key={index}
-                    sx={{ textAlign: "center", py: 2 }}
+
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "-50px",
+          left: 0,
+          right: 0,
+          zIndex: 2,
+          py: 3,
+        }}
+      >
+        <Container maxWidth="lg">
+          <Box sx={{ flexGrow: 1, p: 2, bgcolor: "#FCF7EB" }}>
+            <Grid container spacing={2}>
+              {details.map((item, index) => (
+                <Grid
+                  size={{ xs: 6, md: 2.4 }}
+                  key={index}
+                  sx={{ textAlign: "center", py: 1 }}
+                >
+                  <Typography
+                    variant="h3"
+                    sx={{
+                      color: "#7A7A7A",
+                      fontFamily: "medium",
+                      fontSize: "24px",
+                      fontWeight: "regular",
+                    }}
                   >
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        color: "#7A7A7A",
-                        fontFamily: "medium",
-                        fontSize: "24px",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      {item.value}
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "#000",
-                        fontFamily: "'Inter'",
-                        fontSize: "13px",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      {item.label}
-                    </Typography>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          </Container>
-        </Box>
+                    {item.value}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#000",
+                      fontFamily: "'Inter'",
+                      fontSize: "13px",
+                      fontWeight: "regular",
+                    }}
+                  >
+                    {item.label}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Container>
+      </Box>
     </Box>
   );
 }

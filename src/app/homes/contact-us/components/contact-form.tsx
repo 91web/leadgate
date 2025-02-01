@@ -14,8 +14,43 @@ import { Phone } from "@mui/icons-material";
 import ContactHero2 from "../../../../assets/img/contactus-hero3.png";
 import MarkunreadIcon from "@mui/icons-material/Markunread";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import { useState } from "react";
 
 export default function ContactForm() {
+    const [formDetails, setFormDetails] = useState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+      agree: false,
+    });
+  
+    const handleChange = (
+      event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    ) => {
+      const { name, value } = event.target;
+  
+      setFormDetails((prevDetails) => ({
+        ...prevDetails,
+        [name]: value,
+      }));
+    };
+  
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, checked } = event.target;
+  
+      setFormDetails((prevDetails) => ({
+        ...prevDetails,
+        [name]: checked,
+      }));
+    };
+  
+    const handleSubmit = () => {
+      console.log(formDetails);
+    };
   return (
     <Container maxWidth="lg">
       {/* Contact Info Cards */}
@@ -201,10 +236,11 @@ export default function ContactForm() {
           </Grid2>
 
           <Grid2 size={{ xs: 12, md: 7 }}>
-            <Box sx={{ textAlign: "center" }}>
+            <Box>
               <Typography
                 variant="h4"
                 gutterBottom
+                textAlign={"center"}
                 sx={{
                   fontFamily: "lora",
                   fontWeight: "medium",
@@ -216,6 +252,7 @@ export default function ContactForm() {
               <Typography
                 variant="h4"
                 gutterBottom
+                textAlign={"center"}
                 sx={{
                   fontFamily: "inter",
                   color: "#344054",
@@ -229,66 +266,94 @@ export default function ContactForm() {
               <Box component="form" sx={{ mt: 4 }}>
                 <Grid2 container spacing={2}>
                   <Grid2 size={{ xs: 12, md: 6 }}>
-                    <TextField
-                      fullWidth
-                      label="First name"
-                      placeholder="First name"
-                      variant="outlined"
-                    />
+                    <FormControl fullWidth>
+                      <FormLabel>First Name</FormLabel>
+                      <TextField
+                        name="firstName"
+                        onChange={handleChange}
+                        fullWidth
+                        placeholder="First name"
+                        variant="outlined"
+                      />
+                    </FormControl>
                   </Grid2>
                   <Grid2 size={{ xs: 12, md: 6 }}>
-                    <TextField
-                      fullWidth
-                      label="Last name"
-                      placeholder="Last name"
-                      variant="outlined"
-                    />
+                    <FormControl fullWidth>
+                      <FormLabel>Last Name</FormLabel>
+                      <TextField
+                        fullWidth
+                        name="lastName"
+                        onChange={handleChange}
+                        placeholder="Last name"
+                        variant="outlined"
+                      />
+                    </FormControl>
                   </Grid2>
                   <Grid2 size={{ xs: 12, md: 6 }}>
-                    <TextField
-                      fullWidth
-                      label="Email"
-                      placeholder="@gmail.com"
-                      variant="outlined"
-                      type="email"
-                    />
+                    <FormControl fullWidth>
+                      <FormLabel>Email</FormLabel>
+                      <TextField
+                        name="email"
+                        onChange={handleChange}
+                        fullWidth
+                        placeholder="@gmail.com"
+                        variant="outlined"
+                        type="email"
+                      />
+                    </FormControl>
                   </Grid2>
                   <Grid2 size={{ xs: 12, md: 6 }}>
-                    <TextField
-                      fullWidth
-                      label="Phone number"
-                      variant="outlined"
-                      slotProps={{
-                        input: {
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Select
-                                defaultValue="NG"
-                                variant="standard"
-                                sx={{ mr: 1 }}
-                              >
-                                <MenuItem value="NG">NG</MenuItem>
-                                <MenuItem value="US">US</MenuItem>
-                                <MenuItem value="UK">UK</MenuItem>
-                              </Select>
-                            </InputAdornment>
-                          ),
-                        },
-                      }}
-                    />
+                    <FormControl fullWidth>
+                      <FormLabel>Phone Number</FormLabel>
+                      <TextField
+                        fullWidth
+                        name="phone"
+                        onChange={handleChange}
+                        variant="outlined"
+                        slotProps={{
+                          input: {
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                <Select
+                                  defaultValue="NG"
+                                  variant="outlined"
+                                  sx={{
+                                    mr: 1,
+                                    "& fieldset": { border: "none" },
+                                  }}
+                                >
+                                  <MenuItem value="NG">NG</MenuItem>
+                                  <MenuItem value="US">US</MenuItem>
+                                  <MenuItem value="UK">UK</MenuItem>
+                                </Select>
+                              </InputAdornment>
+                            ),
+                          },
+                        }}
+                      />
+                    </FormControl>
                   </Grid2>
                   <Grid2 size={12}>
-                    <TextField
-                      fullWidth
-                      label="Message"
-                      multiline
-                      rows={4}
-                      variant="outlined"
-                    />
+                    <FormControl fullWidth>
+                      <FormLabel>Message</FormLabel>
+                      <TextField
+                        name="message"
+                        onChange={handleChange}
+                        fullWidth
+                        multiline
+                        rows={4}
+                        variant="outlined"
+                      />
+                    </FormControl>
                   </Grid2>
                   <Grid2 size={12} sx={{ textAlign: "left" }}>
                     <FormControlLabel
-                      control={<Checkbox />}
+                      control={
+                        <Checkbox
+                          name="agree"
+                          onChange={handleCheckboxChange}
+                        />
+                      }
                       label="You agree to our friendly privacy policy."
                     />
                   </Grid2>
@@ -297,6 +362,7 @@ export default function ContactForm() {
                       fullWidth
                       variant="contained"
                       size="large"
+                      onClick={handleSubmit}
                       sx={{
                         textTransform: "none",
                         bgcolor: "#AE883B",
@@ -315,3 +381,5 @@ export default function ContactForm() {
     </Container>
   );
 }
+
+

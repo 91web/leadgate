@@ -10,9 +10,42 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
 import CareerHero2 from "../../../assets/img/form-home-event.png";
-
+import { useState } from "react";
 
 export default function CareerForm() {
+  const [formDetails, setFormDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+    agree: false,
+  });
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target;
+
+    setFormDetails((prevDetails) => ({
+      ...prevDetails,
+      [name]: value,
+    }));
+  };
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = event.target;
+
+    setFormDetails((prevDetails) => ({
+      ...prevDetails,
+      [name]: checked,
+    }));
+  };
+
+  const handleSubmit = () => {
+    console.log(formDetails);
+  };
+
   return (
     <Box py={{ xs: 5, md: 10 }}>
       <Container maxWidth="lg">
@@ -64,8 +97,9 @@ export default function CareerForm() {
                         First Name
                       </Typography>
                       <TextField
+                        name="firstName"
+                        onChange={handleChange}
                         fullWidth
-                        label="First name"
                         placeholder="First name"
                         variant="outlined"
                       />
@@ -85,13 +119,14 @@ export default function CareerForm() {
                         Last Name
                       </Typography>
                       <TextField
+                        name="lastName"
+                        onChange={handleChange}
                         fullWidth
-                        label="Last name"
                         placeholder="Last name"
                         variant="outlined"
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                    <Grid2 size={{ xs: 12, md: 12 }}>
                       <Typography
                         sx={{
                           fontFamily: "inter",
@@ -107,13 +142,14 @@ export default function CareerForm() {
                       </Typography>
                       <TextField
                         fullWidth
-                        label="Email"
+                        name="email"
+                        onChange={handleChange}
                         placeholder="@gmail.com"
                         variant="outlined"
                         type="email"
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, md: 6 }}>
+                    <Grid2 size={{ xs: 12, md: 12 }}>
                       <Typography
                         sx={{
                           fontFamily: "inter",
@@ -129,7 +165,8 @@ export default function CareerForm() {
                       </Typography>
                       <TextField
                         fullWidth
-                        label="Phone number"
+                        name="phone"
+                        onChange={handleChange}
                         variant="outlined"
                         slotProps={{
                           input: {
@@ -137,8 +174,11 @@ export default function CareerForm() {
                               <InputAdornment position="start">
                                 <Select
                                   defaultValue="NG"
-                                  variant="standard"
-                                  sx={{ mr: 1 }}
+                                  variant="outlined"
+                                  sx={{
+                                    mr: 1,
+                                    "& fieldset": { border: "none" },
+                                  }}
                                 >
                                   <MenuItem value="NG">NG</MenuItem>
                                   <MenuItem value="US">US</MenuItem>
@@ -166,6 +206,8 @@ export default function CareerForm() {
                       </Typography>
                       <TextField
                         fullWidth
+                        name="message"
+                        onChange={handleChange}
                         multiline
                         rows={3}
                         variant="outlined"
@@ -173,13 +215,19 @@ export default function CareerForm() {
                     </Grid2>
                     <Grid2 size={12} sx={{ textAlign: "left" }}>
                       <FormControlLabel
-                        control={<Checkbox />}
+                        control={
+                          <Checkbox
+                            name="agree"
+                            onChange={handleCheckboxChange}
+                          />
+                        }
                         label="You agree to our friendly privacy policy."
                       />
                     </Grid2>
                     <Grid2 size={12}>
                       <Button
                         fullWidth
+                        onClick={handleSubmit}
                         variant="contained"
                         size="large"
                         sx={{

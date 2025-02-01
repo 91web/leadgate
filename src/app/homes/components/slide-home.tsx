@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { keyframes } from "@mui/system";
 import { SliderData, SliderType } from "./static-data/data";
+import { useRouter } from "next/navigation";
 
 const images: SliderType[] = SliderData;
 
@@ -50,6 +51,7 @@ const overlayFadeOut = keyframes`
 
 const EstateSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const router = useRouter();
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -67,7 +69,7 @@ const EstateSlider = () => {
         width: "100%",
         height: "650px", // Adjust for desktop view
         backgroundColor: "#000", // Set background to black
-        animation: `${fadeBackground} 6s ease`, 
+        animation: `${fadeBackground} 6s ease`,
       }}
     >
       {images.map((image, index) => (
@@ -164,6 +166,16 @@ const EstateSlider = () => {
               backgroundColor: "darkgoldenrod",
             },
             textTransform: "none",
+          }}
+          onClick={() => {
+            const buttonText = images[currentSlide].buttonText;
+            if (buttonText === "Join Us") {
+              router.push("/homes/partners");
+            } else if (buttonText === "Discover More") {
+              router.push("/homes/project");
+            } else {
+              router.push("/homes/project");
+            }
           }}
         >
           {images[currentSlide].buttonText}

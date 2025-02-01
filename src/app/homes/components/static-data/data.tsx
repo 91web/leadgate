@@ -13,7 +13,7 @@ import Property3 from "../../../../assets/img/property1.png";
 import { StaticImageData } from "next/image";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
-import GroupLogoWhite from "../../../../assets/img/LeadgateHomewhite.png";
+import GroupLogoWhite from "../../../../assets/img/constructionLogoWhite.png";
 
 //datatype images for home page
 export interface SliderType {
@@ -273,4 +273,28 @@ export const LGroupNavData: NavDataType[] = [
     url: "/partners",
   },
  
+];
+export const ConstructionNavData: NavDataType[] = [
+  {
+    id: "home",
+    name: "Home",
+    icon: null,
+    active: true,
+    url: "/",
+  },
+  {
+    id: "About Us",
+    name: "About Us",
+    icon: null,
+    active: false,
+    url: "#about",
+  },
+  {
+    id: "Our Services",
+    name: "Our Services",
+    icon: null,
+    active: false,
+    url: "/#services",
+  },
+  
 ];

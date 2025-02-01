@@ -8,7 +8,7 @@ import { MaterialData, MaterialType } from "../components/static-data/data";
 const CardMaterial = () => {
   const cardData: MaterialType[] = MaterialData;
   return (
-    <Box>
+    <Box id={"services"}>
       <Box
         display="flex"
         justifyContent="center"
@@ -42,9 +42,11 @@ const CardMaterial = () => {
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "flex-start",
+                      minHeight: "200px",
                     }}
                   >
-                    {card.icon}
+                    <Box py={2}>{card.icon}</Box>
+
                     <Typography
                       gutterBottom
                       variant="h2"

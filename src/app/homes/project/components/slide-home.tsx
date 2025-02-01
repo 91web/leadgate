@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 
 import { keyframes } from "@mui/system";
 import { SliderData, SliderType } from "./static-data/data";
+import { useRouter } from "next/navigation";
 
 const images: SliderType[] = SliderData;
 
@@ -52,6 +53,7 @@ const overlayFadeOut = keyframes`
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
+  const router = useRouter();
 
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -181,6 +183,9 @@ const HeroSlider = () => {
               backgroundColor: "darkgoldenrod",
             },
             //textTransform: "none",
+          }}
+          onClick={() => {
+            router.push("/homes/project/1");
           }}
         >
           {images[currentSlide].buttonText}

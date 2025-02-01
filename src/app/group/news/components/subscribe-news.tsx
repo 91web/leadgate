@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
@@ -12,6 +12,11 @@ import Image from "next/image";
 import Onament from "../../../../assets/svg/ornament.svg";
 
 const NewsletterSubscription = () => {
+   const [email, setEmail] = useState<string>("");
+
+   const handleSubscribe = () => {
+     console.log(email);
+   };
   return (
     <Box height={450}>
       <Container>
@@ -75,6 +80,7 @@ const NewsletterSubscription = () => {
               variant="outlined"
               placeholder="youremail123@gmail.com"
               fullWidth
+              onChange={(e) => setEmail(e.target.value)}
               slotProps={{
                 input: {
                   startAdornment: (
@@ -104,6 +110,7 @@ const NewsletterSubscription = () => {
             {/* Subscribe Button */}
             <Button
               variant="contained"
+              onClick={handleSubscribe}
               sx={{
                 backgroundColor: "#AE883B",
                 color: "#fff",
@@ -130,7 +137,7 @@ const NewsletterSubscription = () => {
           display: { xs: "none", md: "flex" },
           justifyContent: "flex-end",
           alignItems: "flex-end",
-          position: "absolute", // Position it absolutely
+          position: "absolute", 
           right: 0,
           bottom: 0,
           width: "100%",

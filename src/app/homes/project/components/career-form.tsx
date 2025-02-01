@@ -10,6 +10,8 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
 import Paper from "@mui/material/Paper";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
 
 export default function CareerForm() {
   return (
@@ -25,17 +27,12 @@ export default function CareerForm() {
         >
           <Paper
             elevation={2}
-            sx={{
-              maxWidth: "700px", // Adjust width as needed
-              width: "100%",
-              p: 4,
-              borderRadius: 2,
-              textAlign: "center",
-            }}
+            sx={{ maxWidth: "700px", width: "100%", p: 4, borderRadius: 2 }}
           >
             <Typography
               variant="h4"
               gutterBottom
+              textAlign={"center"}
               sx={{
                 fontFamily: "Lora",
                 fontWeight: "medium",
@@ -50,76 +47,39 @@ export default function CareerForm() {
             <Box component="form">
               <Grid2 container spacing={2}>
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    First Name
-                  </Typography>
-                  <TextField fullWidth label="First name" variant="outlined" />
+                  <FormControl fullWidth>
+                    <FormLabel>First Name</FormLabel>
+                    <TextField fullWidth variant="outlined" />
+                  </FormControl>
                 </Grid2>
+
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Last Name
-                  </Typography>
-                  <TextField fullWidth label="Last name" variant="outlined" />
+                  <FormControl fullWidth>
+                    <FormLabel>Last Name</FormLabel>
+                    <TextField fullWidth variant="outlined" />
+                  </FormControl>
                 </Grid2>
+
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Email
-                  </Typography>
-                  <TextField
-                    fullWidth
-                    label="@gmail.com"
-                    type="email"
-                    variant="outlined"
-                  />
+                  <FormControl fullWidth>
+                    <FormLabel>Email</FormLabel>
+                    <TextField fullWidth type="email" variant="outlined" />
+                  </FormControl>
                 </Grid2>
+
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Phone Number
-                  </Typography>
-                  <TextField
-                    fullWidth
-                    label="Phone number"
-                    variant="outlined"
-                    slotProps={{
-                      input: {
+                  <FormControl fullWidth>
+                    <FormLabel>Phone Number</FormLabel>
+                    <TextField
+                      fullWidth
+                      variant="outlined"
+                      name="phoneNumber"
+                      InputProps={{
                         startAdornment: (
                           <InputAdornment position="start">
                             <Select
-                              defaultValue="NG"
-                              variant="standard"
-                              sx={{ mr: 1 }}
+                              variant="outlined"
+                              sx={{ mr: 1, "& fieldset": { border: "none" } }}
                             >
                               <MenuItem value="NG">NG</MenuItem>
                               <MenuItem value="US">US</MenuItem>
@@ -127,55 +87,45 @@ export default function CareerForm() {
                             </Select>
                           </InputAdornment>
                         ),
-                      },
-                    }}
-                  />
+                      }}
+                    />
+                  </FormControl>
                 </Grid2>
 
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Property of Interest
-                  </Typography>
-                  <Select fullWidth label="Property of interest" variant="outlined">
-                    <MenuItem value="Apartment">Apartment</MenuItem>
-                    <MenuItem value="House">House</MenuItem>
-                    <MenuItem value="Land">Land</MenuItem>
-                  </Select>
+                  <FormControl fullWidth>
+                    <FormLabel>Property of Interest</FormLabel>
+                    <Select fullWidth variant="outlined">
+                      <MenuItem value="Apartment">Apartment</MenuItem>
+                      <MenuItem value="House">House</MenuItem>
+                      <MenuItem value="Land">Land</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid2>
+
                 <Grid2 size={{ xs: 12, md: 6 }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Inter",
-                      color: "#344054",
-                      mb: 1,
-                      fontSize: "16px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Payment Plan
-                  </Typography>
-                  <Select fullWidth label="Payment Plan" variant="outlined">
-                    <MenuItem value="3 Months">3 Months</MenuItem>
-                    <MenuItem value="6 Months">6 Months</MenuItem>
-                    <MenuItem value="12 Months">12 Months</MenuItem>
-                  </Select>
+                  <FormControl fullWidth>
+                    <FormLabel>Payment Plan</FormLabel>
+                    <Select fullWidth variant="outlined">
+                      <MenuItem value="3 Months">3 Months</MenuItem>
+                      <MenuItem value="6 Months">6 Months</MenuItem>
+                      <MenuItem value="12 Months">12 Months</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid2>
-              
+
                 <Grid2 size={12} sx={{ textAlign: "left" }}>
                   <FormControlLabel
                     control={<Checkbox />}
                     label="You agree to our friendly privacy policy."
                   />
                 </Grid2>
-                <Grid2 size={12}>
+                <Box
+                  width={1}
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Button
                     fullWidth
                     variant="contained"
@@ -189,7 +139,7 @@ export default function CareerForm() {
                   >
                     Send Message
                   </Button>
-                </Grid2>
+                </Box>
               </Grid2>
             </Box>
           </Paper>
