@@ -14,6 +14,19 @@ import { GroupDrawerComponent } from "./components/group.drawer";
 import Toolbar from "@mui/material/Toolbar";
 import { LAppFooter } from "./components/footer";
 import LGroupLogo from "@/assets/img/LeadgateHomesLogo.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Homes",
+  description:
+    "Leadgate Group is a prominent group of companies centered around construction, real estate and pharmaceuticals.",
+  openGraph: {
+    title: "Homes - Leadgate Group",
+    description:
+      "Leadgate Group is a prominent group of companies centered around construction, real estate and pharmaceuticals.",
+    images: ["/assets/img/LeadgateHomewhite.png"],
+  },
+};
 
 const drawerWidth = 240;
 

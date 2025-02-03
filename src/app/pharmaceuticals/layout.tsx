@@ -14,7 +14,20 @@ import { GroupDrawerComponent } from "../group/components/group.drawer";
 import LPharmLogo from "@/assets/img/Leadgate Pharmaceuticals Logo.png";
 import { LAppFooter } from "../group/components/footer";
 import Toolbar from "@mui/material/Toolbar";
+import { Metadata } from "next";
 const drawerWidth = 240;
+
+export const metadata: Metadata = {
+  title: "Pharmaceuticals",
+  description:
+    "Leadgate Pharmaceuticals, we are committed to improving health outcomes by ensuring access to high-quality pharmaceutical products",
+  openGraph: {
+    title: "Pharmaceuticals - Leadgate Group",
+    description:
+      "Leadgate Pharmaceuticals, we are committed to improving health outcomes by ensuring access to high-quality pharmaceutical products.",
+    images: ["/assets/img/Leadgate Pharmaceuticals Logo.png"],
+  },
+};
 
 const AppPharmacyLayout = ({
   children, // will be a page or nested layout
@@ -141,11 +154,7 @@ const AppPharmacyLayout = ({
         handleNavClick={handleNavClick}
         drawerWidth={drawerWidth}
       />
-      <Box
-        height={{ xs: "100vh", md: "92vh" }}
-        overflow={"auto"}
-        component={"main"}
-      >
+      <Box height={"100vh"} overflow={"auto"} component={"main"}>
         <Toolbar sx={{ height: "6vh" }} />
         {children}
         <LAppFooter footerData={LPharmFooter} />

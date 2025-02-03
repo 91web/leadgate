@@ -16,7 +16,10 @@ import DynamicFavicon from "./components/dynamicFavicon";
 // });
 
 export const metadata: Metadata = {
-  title: "Leadgate Group",
+  title: {
+    template: "%s | Leadgate Group",
+    default: "Leadgate Group",
+  },
   description:
     "Leadgate Group is a prominent group of companies centered around construction, real estate and pharmaceuticals.",
 };
