@@ -3,6 +3,7 @@ import "./themes/globals.css";
 import "@fontsource/lora";
 import "@fontsource/inter";
 import { Metadata } from "next";
+import DynamicFavicon from "./components/dynamicFavicon";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
         // className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning
       >
+        <DynamicFavicon />
         {children}
       </body>
     </html>

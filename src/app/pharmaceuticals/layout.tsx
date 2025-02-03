@@ -13,6 +13,7 @@ import { GroupAppBarComponent } from "../group/components/group.appbar";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import LPharmLogo from "@/assets/img/Leadgate Pharmaceuticals Logo.png";
 import { LAppFooter } from "../group/components/footer";
+import Toolbar from "@mui/material/Toolbar";
 const drawerWidth = 240;
 
 const AppPharmacyLayout = ({
@@ -141,10 +142,11 @@ const AppPharmacyLayout = ({
         drawerWidth={drawerWidth}
       />
       <Box
-        height={{ xs: "94vh", md: "92vh" }}
+        height={{ xs: "100vh", md: "92vh" }}
         overflow={"auto"}
         component={"main"}
       >
+        <Toolbar sx={{ height: "6vh" }} />
         {children}
         <LAppFooter footerData={LPharmFooter} />
       </Box>
