@@ -34,15 +34,10 @@ import Select from "@mui/material/Select";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Dialog from "@mui/material/Dialog";
-import Grid from "@mui/material/Grid";
-import RadioGroup from "@mui/material/RadioGroup";
-import Radio from "@mui/material/Radio";
 import useTheme from "@mui/material/styles/useTheme";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
-import DialogActions from "@mui/material/DialogActions";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
@@ -102,7 +97,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
 
@@ -359,9 +354,13 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     }}
                     variant="contained"
                     onClick={() => {
-                      pathname.split("/")[1] === "construction"
-                        ? router.push(`#contact`)
-                        : router.push(`/${pathname.split("/")[1]}/contact-us`);
+                      const segment = pathname.split("/")[1];
+                      const isConstructionPath = segment === "construction";
+                      const targetPath = isConstructionPath
+                        ? "#contact"
+                        : `/${segment}/contact-us`;
+
+                      router.push(targetPath);
                     }}
                   >
                     <>

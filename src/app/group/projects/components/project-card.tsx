@@ -10,9 +10,8 @@ import Button from "@mui/material/Button";
 
 import { ProjectType, ProjectData } from "./static-data/data";
 
-const projects: ProjectType[] = ProjectData;
-
 const ProjectCards = () => {
+  const projects: ProjectType[] = ProjectData;
   return (
     <Box sx={{ py: { xs: 0, md: 2 } }}>
       <Grid2 container spacing={2}>

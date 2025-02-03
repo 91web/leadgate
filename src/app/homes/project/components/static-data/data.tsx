@@ -4,9 +4,6 @@ import Slide2 from "../../../../../assets/img/project-home.png";
 import Slide3 from "../../../../../assets/img/project-home.png";
 import Slide4 from "../../../../../assets/img/project-home.png";
 
-
-
-
 /// Home Image
 
 import HomeImage1 from "../../../../../assets/img/home-image1.png";
@@ -14,34 +11,16 @@ import HomeImage2 from "../../../../../assets/img/home-image2.png";
 import HomeImage3 from "../../../../../assets/img/home-image3.png";
 import HomeImage4 from "../../../../../assets/img/home-image4.png";
 
-
-
-
-
-
-
-
 //images for  Property
 import Property1 from "../../../../../assets/img/property1.png";
 import Property2 from "../../../../../assets/img/property1.png";
 import Property3 from "../../../../../assets/img/property1.png";
-
-
-
-
-
-
-
-
-
 
 //Homepage Group Data
 
 import Division1 from "../../../../../assets/img/home-division1.png";
 import Division2 from "../../../../../assets/img/home-division2.png";
 import Division3 from "../../../../../assets/img/home-division3.png";
-
-
 
 //feature Project Data
 import Feature1 from "../../../../../assets/img/project-gallery2.png";
@@ -57,14 +36,12 @@ import Feature8 from "../../../../../assets/img/project-gallery9.png";
 //import TestAvatar1 from "../../../../../assets/img/test-avatar1.png";
 ///import TestAvatar2 from "../../../../../assets/img/test-avatar2.png";
 
-
-
 //datatype images for home page
 export interface SliderType {
   id: string;
   src: string;
- title: string;
- subtitle: string;
+  title: string;
+  subtitle: string;
   description: string;
   buttonText: string;
 }
@@ -113,7 +90,7 @@ export interface PropertyType {
   description: string;
 }
 
-export const Propertyata: PropertyType[] = [
+export const PropertyData: PropertyType[] = [
   {
     id: "1",
     title: "Real Estate Division",
@@ -137,19 +114,11 @@ export const Propertyata: PropertyType[] = [
   },
 ];
 
-
-
-
-
-
-
-
 //Group Lead Gate
 export interface HomePageType {
   id: string;
   description: string;
   image: string;
-
 }
 
 export const HomePageData: HomePageType[] = [
@@ -165,8 +134,7 @@ export const HomePageData: HomePageType[] = [
   },
   {
     id: "3",
-    description:
-      "Florida Homes",
+    description: "Florida Homes",
     image: Division3.src,
   },
 ];
@@ -248,26 +216,26 @@ export interface HomeType {
 }
 
 // Group Lead Gate home Project Data
-export const  HomeData:HomeType[] = [
- {
-  id: '1',
-  image: HomeImage1.src,
-  title:'Home page 3'
- },
- {
-  id: '2',
-  image: HomeImage2.src,
-  title:'Home page 4'
- },
+export const HomeData: HomeType[] = [
+  {
+    id: "1",
+    image: HomeImage1.src,
+    title: "Home page 3",
+  },
+  {
+    id: "2",
+    image: HomeImage2.src,
+    title: "Home page 4",
+  },
 
- {
-  id: '3',
-  image: HomeImage3.src,
-  title:'Home page 5'
- },
- {
-  id: '4',
-  image: HomeImage4.src,
-  title:'Home page 5'
- },
-]
+  {
+    id: "3",
+    image: HomeImage3.src,
+    title: "Home page 5",
+  },
+  {
+    id: "4",
+    image: HomeImage4.src,
+    title: "Home page 5",
+  },
+];

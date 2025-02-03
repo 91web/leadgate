@@ -4,13 +4,13 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Grid2";
-
-import { ProjectData, ProjectType } from "../static-data/data";
-
-// Sample images with content for overlays
-const projects: ProjectType[] = ProjectData;
+import {
+  ProjectData,
+  ProjectType,
+} from "@/app/group/components/static-data/data";
 
 const FeatureProjects = () => {
+  const projects: ProjectType[] = ProjectData;
   return (
     <Box sx={{ py: { xs: 4, md: 8 } }}>
       {/* Header Section */}
