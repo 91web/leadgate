@@ -3,9 +3,7 @@ import React from "react";
 import ContactSection from "./components/contact-cover";
 import Box from "@mui/material/Box";
 import ContactForm from "./components/contact-form";
-import ContactMap from "../../../assets/img/contactus-map1.png";
 import Divider from "@mui/material/Divider";
-import Image from "next/image";
 
 const ContactUsPage = () => {
   return (

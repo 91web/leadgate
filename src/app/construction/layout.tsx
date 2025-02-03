@@ -1,27 +1,22 @@
 "use client";
 import Box from "@mui/material/Box";
 import { GroupAppBarComponent } from "../homes/components/group.appbar";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
-// import { useRouter } from "next/navigation";
 import LGroupLogo from "@/assets/img/constructionLogo.png";
-import { ConstructionNavData, LGroupFooter, LGroupNavData, NavDataType } from "../homes/components/static-data/data";
-import { useColorScheme, useTheme } from "@mui/material/styles";
+import { ConstructionNavData, LGroupFooter, NavDataType } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import { LAppFooter } from "../group/components/footer";
 const drawerWidth = 240;
 
 const AppConstructionLayout = ({
-  children, // will be a page or nested layout
+  children, 
 }: {
   children: React.ReactNode;
 }) => {
   // const router = useRouter();
-  const theme = useTheme();
     const [openDrawer, setOpenDrawer] = useState(false);
     const [navState, setNavState] = useState(ConstructionNavData);
-    const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   const handleNavClick = (pageNav: NavDataType) => {
     // console.log(pageNav);
     const newNavState = navState.map((nav) => {

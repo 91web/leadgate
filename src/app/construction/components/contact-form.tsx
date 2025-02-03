@@ -35,7 +35,7 @@ export default function ContactForm() {
    const target = event.target as HTMLInputElement;
    const { name, value, type } = target;
 
-   setFormData((prev: any) => ({
+   setFormData((prev) => ({
      ...prev,
      [name]: type === "checkbox" ? target.checked : value,
    }));
@@ -43,7 +43,7 @@ export default function ContactForm() {
 
   // Handle select change
  const handleSelectChange = (event: SelectChangeEvent<string>) => {
-   setFormData((prev: any) => ({
+   setFormData((prev) => ({
      ...prev,
      countryCode: event.target.value,
    }));

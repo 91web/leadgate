@@ -3,8 +3,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid2 from "@mui/material/Grid2";
-import ServiceHero1 from "../../../assets/img/map-home.png";
-import Image from "next/image";
 
 const MapCard = () => {
   return (

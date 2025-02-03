@@ -9,7 +9,6 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
-import ContactHero2 from "../../../../assets/img/partner-home-form.png";
 
 
 export default function ContactForm() {
