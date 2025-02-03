@@ -1,18 +1,23 @@
-
-  const details = [
-    { label: "Price from", value: "NGN 900,000,000" },
-    { label: "Location", value: "KATEMPE" },
-    { label: "Apartment From", value: "4 BEDROOM" },
-    { label: "Property Type", value: "RESIDENTIAL" },
-    { label: "25 Units Available", value: "LIMITED SLOTS" },
-  ]
+const details = [
+  { label: "Price from", value: "NGN 900,000,000" },
+  { label: "Location", value: "KATEMPE" },
+  { label: "Apartment From", value: "4 BEDROOM" },
+  { label: "Property Type", value: "RESIDENTIAL" },
+  { label: "25 Units Available", value: "LIMITED SLOTS" },
+];
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid2";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import PartnerHero1 from "../../../../assets/img/partner-home-cover.png";
+import IconButton from "@mui/material/IconButton";
 
 export default function PartnerSection() {
   return (
@@ -45,7 +50,7 @@ export default function PartnerSection() {
           position: "relative",
           zIndex: 2,
           textAlign: "center",
-          mt: { xs: -4, md: -50 }, // Move it upward on small screens
+          mt: 20,
         }}
       >
         <Typography
@@ -85,12 +90,89 @@ export default function PartnerSection() {
       >
         <Container maxWidth="lg">
           <Box sx={{ flexGrow: 1, p: 2, bgcolor: "#FCF7EB" }}>
-            <Grid container spacing={2}>
+            {/* Swiper for Small Screens */}
+            <Box
+              sx={{
+                display: { xs: "block", md: "none" },
+                position: "relative",
+              }}
+            >
+              <Swiper
+                modules={[Navigation]}
+                slidesPerView={1} // Only one per slide
+                centeredSlides={true} // Centers the item
+                spaceBetween={10}
+                navigation={{
+                  nextEl: ".next-btn",
+                  prevEl: ".prev-btn",
+                }}
+              >
+                {details.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <Box sx={{ textAlign: "center", py: 2 }}>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          color: "#7A7A7A",
+                          fontFamily: "medium",
+                          fontSize: "24px",
+                        }}
+                      >
+                        {item.value}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: "#000",
+                          fontFamily: "'Inter'",
+                          fontSize: "13px",
+                        }}
+                      >
+                        {item.label}
+                      </Typography>
+                    </Box>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              {/* Navigation Buttons */}
+              <IconButton
+                className="prev-btn"
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: 10,
+                  zIndex: 10,
+                  bgcolor: "white",
+                  ":hover": { bgcolor: "#ddd" },
+                }}
+              >
+                <ArrowBackIosIcon />
+              </IconButton>
+              <IconButton
+                className="next-btn"
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  right: 10,
+                  zIndex: 10,
+                  bgcolor: "white",
+                  ":hover": { bgcolor: "#ddd" },
+                }}
+              >
+                <ArrowForwardIosIcon />
+              </IconButton>
+            </Box>
+
+            {/* Grid for Larger Screens */}
+            <Grid
+              container
+              // spacing={}
+              sx={{ display: { xs: "none", md: "flex" } }}
+            >
               {details.map((item, index) => (
-                <Grid
-                  size={{ xs: 6, md: 2.4 }}
+                <Box
                   key={index}
-                  sx={{ textAlign: "center", py: 1 }}
+                  sx={{ justifyContent: "space-between", py: 1, mx: 4 }}
                 >
                   <Typography
                     variant="h3"
@@ -98,7 +180,6 @@ export default function PartnerSection() {
                       color: "#7A7A7A",
                       fontFamily: "medium",
                       fontSize: "24px",
-                      fontWeight: "regular",
                     }}
                   >
                     {item.value}
@@ -109,12 +190,11 @@ export default function PartnerSection() {
                       color: "#000",
                       fontFamily: "'Inter'",
                       fontSize: "13px",
-                      fontWeight: "regular",
                     }}
                   >
                     {item.label}
                   </Typography>
-                </Grid>
+                </Box>
               ))}
             </Grid>
           </Box>

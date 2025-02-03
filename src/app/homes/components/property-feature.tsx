@@ -103,7 +103,6 @@ const PropertyCards = () => {
                   image={property.image}
                   alt={property.title}
                 />
-
                 {/* Content */}
                 <CardContent>
                   <Typography

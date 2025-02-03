@@ -6,17 +6,17 @@ import LGroupLogo from "@/assets/img/constructionLogo.png";
 import { ConstructionNavData, LGroupFooter, NavDataType } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import { LAppFooter } from "../group/components/footer";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Constructions",
-  description: "Leading construction services and projects by Leadgate Group",
-  openGraph: {
-    title: "Constructions - Leadgate Group",
-    description: "Leading construction services and projects by Leadgate Group",
-    images: ["/assets/img/constructionLogoWhite.jpg"],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Constructions",
+//   description: "Leading construction services and projects by Leadgate Group",
+//   openGraph: {
+//     title: "Constructions - Leadgate Group",
+//     description: "Leading construction services and projects by Leadgate Group",
+//     images: ["/assets/img/constructionLogoWhite.jpg"],
+//   },
+// };
 
 const drawerWidth = 240;
 
