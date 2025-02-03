@@ -30,7 +30,7 @@ export default function ContactSection() {
       }}
     >
       <Container
-        maxWidth="sm"
+        maxWidth="lg"
         sx={{
           position: "relative",
           zIndex: 2,
@@ -50,7 +50,7 @@ export default function ContactSection() {
           Contact us
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           sx={{
             color: "white",
             fontFamily: "'Inter'",

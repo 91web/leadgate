@@ -12,7 +12,7 @@ import { ArticleType, ArticleData } from "./static-data/data";
 
 const articles: ArticleType[] = ArticleData;
 
-const ProjectCards = () => {
+const ArticleCards = () => {
   return (
     <Box sx={{ flexGrow: 1, p: 2, my: 5 }}>
       <Grid2 container spacing={3}>
@@ -98,4 +98,4 @@ const ProjectCards = () => {
   );
 };
 
-export default ProjectCards;
+export default ArticleCards;

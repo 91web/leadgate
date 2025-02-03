@@ -30,7 +30,7 @@ export default function NewsCover() {
       }}
     >
       <Container
-        maxWidth="sm"
+        maxWidth="lg"
         sx={{
           position: "relative",
           zIndex: 2,
@@ -50,7 +50,7 @@ export default function NewsCover() {
           Latest News
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           sx={{
             color: "#D0D5DD",
             fontFamily: "inter",

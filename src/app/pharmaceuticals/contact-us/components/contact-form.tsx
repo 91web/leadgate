@@ -225,7 +225,7 @@ export default function ContactForm() {
                 Our friendly team would love to hear from you.
               </Typography>
 
-              <Box component="form" sx={{}}>
+              <Box component="form" >
                 <Grid2 container spacing={2}>
                   <Grid2 size={{ xs: 12, md: 6 }}>
                     <Typography

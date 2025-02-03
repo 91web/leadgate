@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 
 import { keyframes } from "@mui/system";
 import { SliderData, SliderType } from "../static-data/data";
+import { useRouter } from "next/navigation";
 
 const images: SliderType[] = SliderData;
 
@@ -52,7 +53,7 @@ const overlayFadeOut = keyframes`
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-
+  const router = useRouter();
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -60,6 +61,22 @@ const HeroSlider = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleNavigate = (path:string) => {
+    switch (path) {
+      case "Explore Now":
+        router.push('/group/about-us')
+        break;
+    case "Discover More":
+        router.push('/group/projects')
+        break;
+        case "Join Us":
+        router.push('/group/contact-us')
+        break;
+      default:
+        break;
+    }
+  }
 
   return (
     <Box
@@ -134,7 +151,7 @@ const HeroSlider = () => {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             mb: 2,
             fontSize: { xs: "36px", md: "40px" },
@@ -167,8 +184,9 @@ const HeroSlider = () => {
             },
             textTransform: "none",
           }}
+          onClick={(e) =>handleNavigate(images[currentSlide].buttonText)}
         >
-          {images[currentSlide].buttonText}
+          {images[currentSlide].buttonText} 
         </Button>
       </Box>
 

@@ -13,26 +13,26 @@ import TestBg2 from "../../assets/img/bg-testimonial2.png";
 import TestimonialHero from "./components/group-home/avatar-hero";
 
 const AppGroup = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
+  const isMobile = useMediaQuery("(max-width:900px)");
   return (
     <Box sx={{ backgroundColor: "#F9F5FF" }}>
-      <HeroSlider />
-      <Container maxWidth="lg">
-        <CoreDivisions />
+    <HeroSlider />
+    <Container maxWidth="lg" sx={{ py: { xs: 4, md: 5 } }}>
+      <CoreDivisions />
+    </Container>
+    <Box sx={{ backgroundColor: "#fff" }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 5, md: 10 } }}>
+        <DreamGroup />
       </Container>
-      <Box sx={{ backgroundColor: "#fff" }}>
-        <Container>
-          <DreamGroup />
-        </Container>
-      </Box>
-      <Box>
-        <Container maxWidth="lg">
-          <FeatureProject />
-        </Container>
-      </Box>
-      <Box>
-        <BuildingHero />
-      </Box>
+    </Box>
+    <Box>
+      <Container maxWidth="lg">
+        <FeatureProject />
+      </Container>
+    </Box>
+    <Box>
+      <BuildingHero />
+    </Box>
       <Box py={5} bgcolor={"#fff"}>
         <Box
           sx={{

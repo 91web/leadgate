@@ -80,7 +80,7 @@ const AboutUsPharma = () => {
           Values we Hold at Leadgate Pharmacy & Store
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           sx={{
             fontWeight: "regular",
             mb: 1,

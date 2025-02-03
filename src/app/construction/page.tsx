@@ -31,7 +31,7 @@ const AppConstruction = () => {
 
       <Box sx={{ width: "100%", bgcolor: "#EAECF0", textAlign: "center" }}>
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             color: "#344054",
             fontSize: "18px",

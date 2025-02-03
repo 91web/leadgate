@@ -8,7 +8,11 @@ import AboutGrid from "./about-grid";
 
 const AboutHero = () => {
   return (
-    <Container maxWidth="lg" sx={{ my: { xs: "none", md: 10 } }}>
+    <Container
+      maxWidth="lg"
+      sx={{ my: { xs: "none", md: 10 } }}
+      id={"about"}
+    >
       <Grid2 container spacing={2}>
         <Grid2 size={{ xs: 12, md: 7 }} my={8}>
           <Box>

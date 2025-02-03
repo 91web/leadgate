@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+
 import { keyframes } from "@mui/system";
-import { SliderData, SliderType } from "./static-data/data";
+import { SliderData, SliderType } from "../static-data/data";
+import { useRouter } from "next/navigation";
 
 const images: SliderType[] = SliderData;
 
@@ -48,9 +51,9 @@ const overlayFadeOut = keyframes`
   }
 `;
 
-const EstateSlider = () => {
+const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-
+  const router = useRouter();
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -59,13 +62,29 @@ const EstateSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleNavigate = (path:string) => {
+    switch (path) {
+      case "Explore Now":
+        router.push('/group/about-us')
+        break;
+    case "Discover More":
+        router.push('/group/projects')
+        break;
+        case "Join Us":
+        router.push('/group/contact-us')
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <Box
       sx={{
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "500px", // Adjust for desktop view
+        height: "650px",
         backgroundColor: "#000", // Set background to black
         animation: `${fadeBackground} 6s ease`, // Apply fade effect to background
       }}
@@ -82,7 +101,7 @@ const EstateSlider = () => {
             opacity: index === currentSlide ? 1 : 0,
             animation:
               index === currentSlide
-                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` // Image slide-in + zoom out and in
+                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` 
                 : "none",
           }}
         >
@@ -97,7 +116,7 @@ const EstateSlider = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 1, // Ensure image is always visible
+              opacity: 1, 
             }}
           />
 
@@ -109,10 +128,10 @@ const EstateSlider = () => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent dark overlay
+              backgroundColor: "rgba(0, 0, 0, 0.5)", 
               animation:
                 index === currentSlide
-                  ? `${overlayFadeOut} 2s ease` // Apply overlay fade-out effect when sliding in
+                  ? `${overlayFadeOut} 2s ease` 
                   : "none",
             }}
           />
@@ -132,11 +151,11 @@ const EstateSlider = () => {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h2"
           sx={{
             mb: 2,
             fontSize: { xs: "36px", md: "40px" },
-            fontFamily: "lora",
+            fontFamily: "'Lora'", // add Lora to the App
             fontWeight: "regular",
           }}
         >
@@ -147,9 +166,10 @@ const EstateSlider = () => {
           sx={{
             mb: 2,
             fontSize: "17px",
-            fontFamily: "inter",
+            fontFamily: "'Inter'", //add inter to the app
             fontWeight: "regular",
             color: "#D0D5DD",
+            lineHeight: "130%",
           }}
         >
           {images[currentSlide].description}
@@ -164,8 +184,9 @@ const EstateSlider = () => {
             },
             textTransform: "none",
           }}
+          onClick={(e) =>handleNavigate(images[currentSlide].buttonText)}
         >
-          {images[currentSlide].buttonText}
+          {images[currentSlide].buttonText} 
         </Button>
       </Box>
 
@@ -202,4 +223,4 @@ const EstateSlider = () => {
   );
 };
 
-export default EstateSlider;
+export default HeroSlider;
