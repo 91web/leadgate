@@ -3,6 +3,7 @@ import "./themes/globals.css";
 import "@fontsource/lora";
 import "@fontsource/inter";
 import { Metadata } from "next";
+import DynamicFavicon from "./components/dynamicFavicon";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -15,7 +16,10 @@ import { Metadata } from "next";
 // });
 
 export const metadata: Metadata = {
-  title: "Leadgate Group",
+  title: {
+    template: "%s | Leadgate Group",
+    default: "Leadgate Group",
+  },
   description:
     "Leadgate Group is a prominent group of companies centered around construction, real estate and pharmaceuticals.",
 };
@@ -31,6 +35,7 @@ export default function RootLayout({
         // className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning
       >
+        <DynamicFavicon />
         {children}
       </body>
     </html>

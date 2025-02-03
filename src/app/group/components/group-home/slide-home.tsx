@@ -62,21 +62,21 @@ const HeroSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleNavigate = (path:string) => {
+  const handleNavigate = (path: string) => {
     switch (path) {
       case "Explore Now":
-        router.push('/group/about-us')
+        router.push("/group/about-us");
         break;
-    case "Discover More":
-        router.push('/group/projects')
+      case "Discover More":
+        router.push("/group/projects");
         break;
-        case "Join Us":
-        router.push('/group/contact-us')
+      case "Join Us":
+        router.push("/group/contact-us");
         break;
       default:
         break;
     }
-  }
+  };
 
   return (
     <Box
@@ -186,7 +186,7 @@ const HeroSlider = () => {
           }}
           onClick={() =>handleNavigate(images[currentSlide].buttonText)}
         >
-          {images[currentSlide].buttonText} 
+          {images[currentSlide].buttonText}
         </Button>
       </Box>
 

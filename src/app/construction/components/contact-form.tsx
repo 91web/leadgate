@@ -16,7 +16,6 @@ import FormLabel from "@mui/material/FormLabel";
 import { useState } from "react";
 import { SelectChangeEvent } from "@mui/material";
 
-
 export default function ContactForm() {
   // State to store form data
   const [formData, setFormData] = useState({
@@ -29,11 +28,11 @@ export default function ContactForm() {
     agreeToPolicy: false,
   });
 
- const handleChange = (
-   event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
- ) => {
-   const target = event.target as HTMLInputElement;
-   const { name, value, type } = target;
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const target = event.target as HTMLInputElement;
+    const { name, value, type } = target;
 
    setFormData((prev) => ({
      ...prev,
@@ -52,7 +51,6 @@ export default function ContactForm() {
   // Handle form submission
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-
   };
 
   return (
@@ -227,4 +225,3 @@ export default function ContactForm() {
     </Container>
   );
 }
-

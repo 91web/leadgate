@@ -8,13 +8,15 @@ import Button from "@mui/material/Button";
 
 import Grid2 from "@mui/material/Grid2";
 import Image from "next/image";
-import { HomePageData, HomePageType } from "../static-data/data";
-
-const divisions: HomePageType[] = HomePageData;
+import {
+  HomePageData,
+  HomePageType,
+} from "@/app/group/components/static-data/data";
 
 const Divisions = () => {
+  const divisions: HomePageType[] = HomePageData;
   return (
-    <Box >
+    <Box>
       {/* Cards Section */}
       <Grid2 container spacing={4} direction="column" alignItems="center">
         {divisions.map((division, index) => (

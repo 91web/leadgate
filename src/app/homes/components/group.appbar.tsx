@@ -96,7 +96,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
 
@@ -353,9 +353,13 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     }}
                     variant="contained"
                     onClick={() => {
-                      pathname.split("/")[1] === "construction"
-                        ? router.push(`#contact`)
-                        : router.push(`/${pathname.split("/")[1]}/contact-us`);
+                      const segment = pathname.split("/")[1];
+                      const isConstructionPath = segment === "construction";
+                      const targetPath = isConstructionPath
+                        ? "#contact"
+                        : `/${segment}/contact-us`;
+
+                      router.push(targetPath);
                     }}
                   >
                     <>

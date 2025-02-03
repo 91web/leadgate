@@ -18,9 +18,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { TestimonialData, TestimonialType } from "../static-data/data";
 import TestBg3 from "../../../../assets/svg/bg-testimonial3.svg";
 import Image from "next/image";
+import {
+  TestimonialData,
+  TestimonialType,
+} from "@/app/group/components/static-data/data";
 
 const theme = createTheme({
   typography: {
@@ -37,9 +40,8 @@ const theme = createTheme({
   },
 });
 
-const testimonials: TestimonialType[] = TestimonialData;
-
-const TestimonialHero: React.FC = () => {
+export const TestimonialHero: React.FC = () => {
+  const testimonials: TestimonialType[] = TestimonialData;
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
@@ -194,7 +196,7 @@ const TestimonialHero: React.FC = () => {
                   <NavigationButtons />
                 </Box>
               )}
-              <Box width={{ xs: 350,sm:500, md:900, lg: 1500 }} p={2}>
+              <Box width={{ xs: 350, sm: 500, md: 900, lg: 1500 }} p={2}>
                 <Swiper
                   modules={[Navigation, Pagination, Autoplay]}
                   spaceBetween={24}
@@ -294,5 +296,3 @@ const TestimonialHero: React.FC = () => {
     </ThemeProvider>
   );
 };
-
-export default TestimonialHero;

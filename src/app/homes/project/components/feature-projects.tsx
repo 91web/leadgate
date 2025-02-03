@@ -9,9 +9,9 @@ import Image from "next/image";
 import { ProjectData, ProjectType } from "./static-data/data";
 
 // Sample images with content for overlays
-const projects: ProjectType[] = ProjectData;
 
 const FeatureProjects = () => {
+  const projects: ProjectType[] = ProjectData;
   return (
     <Box sx={{ py: { xs: 4, md: 8 } }}>
       {/* Header Section */}

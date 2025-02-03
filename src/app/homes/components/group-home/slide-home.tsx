@@ -62,21 +62,21 @@ const HeroSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleNavigate = (path:string) => {
+  const handleNavigate = (path: string) => {
     switch (path) {
       case "Explore Now":
-        router.push('/group/about-us')
+        router.push("/group/about-us");
         break;
-    case "Discover More":
-        router.push('/group/projects')
+      case "Discover More":
+        router.push("/group/projects");
         break;
-        case "Join Us":
-        router.push('/group/contact-us')
+      case "Join Us":
+        router.push("/group/contact-us");
         break;
       default:
         break;
     }
-  }
+  };
 
   return (
     <Box
@@ -101,7 +101,7 @@ const HeroSlider = () => {
             opacity: index === currentSlide ? 1 : 0,
             animation:
               index === currentSlide
-                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease` 
+                ? `${slideIn} 1s ease, ${zoomOutIn} 3s 1s ease`
                 : "none",
           }}
         >
@@ -116,7 +116,7 @@ const HeroSlider = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 1, 
+              opacity: 1,
             }}
           />
 
@@ -128,11 +128,9 @@ const HeroSlider = () => {
               left: 0,
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.5)", 
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
               animation:
-                index === currentSlide
-                  ? `${overlayFadeOut} 2s ease` 
-                  : "none",
+                index === currentSlide ? `${overlayFadeOut} 2s ease` : "none",
             }}
           />
         </Box>
@@ -186,7 +184,7 @@ const HeroSlider = () => {
           }}
           onClick={() =>handleNavigate(images[currentSlide].buttonText)}
         >
-          {images[currentSlide].buttonText} 
+          {images[currentSlide].buttonText}
         </Button>
       </Box>
 

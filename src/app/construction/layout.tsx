@@ -6,6 +6,18 @@ import LGroupLogo from "@/assets/img/constructionLogo.png";
 import { ConstructionNavData, LGroupFooter, NavDataType } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import { LAppFooter } from "../group/components/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Constructions",
+  description: "Leading construction services and projects by Leadgate Group",
+  openGraph: {
+    title: "Constructions - Leadgate Group",
+    description: "Leading construction services and projects by Leadgate Group",
+    images: ["/assets/img/constructionLogoWhite.jpg"],
+  },
+};
+
 const drawerWidth = 240;
 
 const AppConstructionLayout = ({
@@ -47,13 +59,13 @@ const AppConstructionLayout = ({
     setNavState(newNavState);
   };
 
-  const scrollToTop = () => {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 8);
-    }
-  };
+  // const scrollToTop = () => {
+  //   const c = document.documentElement.scrollTop || document.body.scrollTop;
+  //   if (c > 0) {
+  //     window.requestAnimationFrame(scrollToTop);
+  //     window.scrollTo(0, c - c / 8);
+  //   }
+  // };
   return (
     <Box position={"relative"}>
       <GroupAppBarComponent
@@ -71,7 +83,7 @@ const AppConstructionLayout = ({
         drawerWidth={drawerWidth}
       />
       <Box>{children}</Box>
-      <LAppFooter footerData={LGroupFooter}  />
+      <LAppFooter footerData={LGroupFooter} />
     </Box>
   );
 };
