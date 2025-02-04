@@ -9,13 +9,14 @@ import { SvgIcon } from "@mui/material";
 
 interface LAppFooterProps {
   footerData: LFooterType[];
+  marginB?: number;
 }
 
 export const LAppFooter: FC<LAppFooterProps> = (props) => {
-  const { footerData } = props;
+  const { footerData, marginB } = props;
 
   return (
-    <Box bgcolor={"#1D2939"} py={{ xs: 4, md: 6 }}>
+    <Box bgcolor={"#1D2939"} py={{ xs: 4, md: 6 }} mb={marginB}>
       <Container maxWidth={"lg"}>
         <Box>
           <Grid2 container component={"div"} spacing={2}>
