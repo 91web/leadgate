@@ -10,6 +10,7 @@ import {
 } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import { LAppFooter } from "../group/components/footer";
+import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
 
@@ -75,7 +76,10 @@ const AppConstructionsLayout = ({
         handleNavClick={handleNavClick}
         drawerWidth={drawerWidth}
       />
-      <Box>{children}</Box>
+      <Box>
+        <Toolbar sx={{ height: 152 }} />
+        {children}
+      </Box>
       <LAppFooter footerData={LGroupFooter} />
     </Box>
   );
