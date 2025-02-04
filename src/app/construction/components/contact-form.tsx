@@ -34,19 +34,19 @@ export default function ContactForm() {
     const target = event.target as HTMLInputElement;
     const { name, value, type } = target;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? target.checked : value,
-    }));
-  };
+   setFormData((prev) => ({
+     ...prev,
+     [name]: type === "checkbox" ? target.checked : value,
+   }));
+ };
 
   // Handle select change
-  const handleSelectChange = (event: SelectChangeEvent<string>) => {
-    setFormData((prev) => ({
-      ...prev,
-      countryCode: event.target.value,
-    }));
-  };
+ const handleSelectChange = (event: SelectChangeEvent<string>) => {
+   setFormData((prev) => ({
+     ...prev,
+     countryCode: event.target.value,
+   }));
+ };
 
   // Handle form submission
   const handleSubmit = (event: React.FormEvent) => {

@@ -2,39 +2,33 @@
 import Box from "@mui/material/Box";
 import { GroupAppBarComponent } from "../homes/components/group.appbar";
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
 import LGroupLogo from "@/assets/img/constructionLogo.png";
-import {
-  ConstructionNavData,
-  LGroupFooter,
-  NavDataType,
-} from "../homes/components/static-data/data";
+import { ConstructionNavData, LGroupFooter, NavDataType } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
 import { LAppFooter } from "../group/components/footer";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Constructions",
-  description: "Leading construction services and projects by Leadgate Group",
-  openGraph: {
-    title: "Constructions - Leadgate Group",
-    description: "Leading construction services and projects by Leadgate Group",
-    images: ["/assets/img/constructionLogoWhite.jpg"],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Constructions",
+//   description: "Leading construction services and projects by Leadgate Group",
+//   openGraph: {
+//     title: "Constructions - Leadgate Group",
+//     description: "Leading construction services and projects by Leadgate Group",
+//     images: ["/assets/img/constructionLogoWhite.jpg"],
+//   },
+// };
 
 const drawerWidth = 240;
 
 const AppConstructionLayout = ({
-  children, // will be a page or nested layout
+  children, 
 }: {
   children: React.ReactNode;
 }) => {
   // const router = useRouter();
-  // const theme = useTheme();
-  const [openDrawer, setOpenDrawer] = useState(false);
-  const [navState, setNavState] = useState(ConstructionNavData);
-  // const matches = useMediaQuery(theme.breakpoints.down("sm"));
+    const [openDrawer, setOpenDrawer] = useState(false);
+    const [navState, setNavState] = useState(ConstructionNavData);
+
   const handleNavClick = (pageNav: NavDataType) => {
     // console.log(pageNav);
     const newNavState = navState.map((nav) => {

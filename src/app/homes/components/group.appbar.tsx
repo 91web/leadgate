@@ -27,7 +27,6 @@ import ArrowOut from "@/assets/svg/arrow-square-out.svg";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import Grid2 from "@mui/material/Grid2";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import Select from "@mui/material/Select";
@@ -506,137 +505,147 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
         aria-labelledby="responsive-dialog-title"
       >
         <DialogContent>
-          <DialogContentText>
+          <DialogContentText component="div">
             <Box>
               <Box py={{ xs: 5, md: 5 }}>
                 <Container maxWidth="lg">
                   <Box mx={"5%"}>
-                    <Grid2 container spacing={4}>
+                    <Box display="flex">
                       <Typography
+                        fontWeight={'bold'}
+                        fontSize={'30px'}
+                        mb={3}
                         sx={{
-                          fontFamily: "lora",
-                          fontWeight: "bold",
-                          fontSize: "24px",
-                          mb: 2,
+                          whiteSpace: "nowrap", 
                         }}
                       >
                         Become a Developer
                       </Typography>
+                    </Box>
 
-                      {/* Form Section */}
-                      <Box component="form" sx={{ mt: 4 }}>
-                        <Grid2 container spacing={2}>
-                          <Grid2 size={{ xs: 12, md: 6 }}>
-                            <FormControl fullWidth>
-                              <FormLabel>First Name</FormLabel>
-                              <TextField
-                                name="firstName"
-                                onChange={handleChange}
-                                fullWidth
-                                placeholder="First name"
-                                variant="outlined"
-                              />
-                            </FormControl>
-                          </Grid2>
-                          <Grid2 size={{ xs: 12, md: 6 }}>
-                            <FormControl fullWidth>
-                              <FormLabel>Last Name</FormLabel>
-                              <TextField
-                                fullWidth
-                                name="lastName"
-                                onChange={handleChange}
-                                placeholder="Last name"
-                                variant="outlined"
-                              />
-                            </FormControl>
-                          </Grid2>
-                          <Grid2 size={{ xs: 12, md: 6 }}>
-                            <FormControl fullWidth>
-                              <FormLabel>Email</FormLabel>
-                              <TextField
-                                name="email"
-                                onChange={handleChange}
-                                fullWidth
-                                placeholder="@gmail.com"
-                                variant="outlined"
-                                type="email"
-                              />
-                            </FormControl>
-                          </Grid2>
-                          <Grid2 size={{ xs: 12, md: 6 }}>
-                            <FormControl fullWidth>
-                              <FormLabel>Phone Number</FormLabel>
-                              <TextField
-                                fullWidth
-                                name="phoneNumber"
-                                onChange={handleChange}
-                                variant="outlined"
-                                slotProps={{
-                                  input: {
-                                    startAdornment: (
-                                      <InputAdornment position="start">
-                                        <Select
-                                          defaultValue="NG"
-                                          variant="outlined"
-                                          sx={{
-                                            mr: 1,
-                                            "& fieldset": {
-                                              border: "none",
-                                            },
-                                          }}
-                                        >
-                                          <MenuItem value="NG">NG</MenuItem>
-                                          <MenuItem value="US">US</MenuItem>
-                                          <MenuItem value="UK">UK</MenuItem>
-                                        </Select>
-                                      </InputAdornment>
-                                    ),
-                                  },
-                                }}
-                              />
-                            </FormControl>
-                          </Grid2>
-                          <Grid2 size={12}>
-                            <FormControl fullWidth>
-                              <FormLabel>Message</FormLabel>
-                              <TextField
-                                onChange={handleChange}
-                                fullWidth
-                                multiline
-                                rows={4}
-                                variant="outlined"
-                              />
-                            </FormControl>
-                          </Grid2>
-                          <Grid2 size={12} sx={{ textAlign: "left" }}>
-                            <FormControlLabel
-                              control={
-                                <Checkbox
-                                  name="agree"
-                                  onChange={handleCheckboxChange}
-                                />
-                              }
-                              label="You agree to our friendly privacy policy."
-                            />
-                          </Grid2>
-                          <Grid2 size={12}>
-                            <Button
-                              fullWidth
-                              variant="contained"
-                              size="large"
-                              onClick={handleSubmit}
-                              sx={{
-                                textTransform: "none",
-                                bgcolor: "#AE883B",
-                                "&:hover": { bgcolor: "#965F2A" },
-                              }}
-                            >
-                              Send Message
-                            </Button>
-                          </Grid2>
-                        </Grid2>
+                    <Box
+                      component="form"
+                      noValidate
+                      autoComplete="off"
+                      sx={{ maxWidth: 500, mx: "auto" }}
+                    >
+                      <Box display="flex" gap={2} mb={2}>
+                        <FormControl fullWidth>
+                          <FormLabel>First Name</FormLabel>
+                          <TextField
+                            name="firstName"
+                            onChange={handleChange}
+                            placeholder="First Name"
+                            variant="outlined"
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderRadius: "15px",
+                              },
+                            }}
+                          />
+                        </FormControl>
+
+                        <FormControl fullWidth>
+                          <FormLabel>Last Name</FormLabel>
+                          <TextField
+                            name="lastName"
+                            onChange={handleChange}
+                            placeholder="Last Name"
+                            variant="outlined"
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderRadius: "15px",
+                              },
+                            }}
+                          />
+                        </FormControl>
                       </Box>
-                    </Grid2>
+
+                      <Box mb={2}>
+                        <FormControl fullWidth>
+                          <FormLabel>Email</FormLabel>
+                          <TextField
+                            type="email"
+                            name="email"
+                            onChange={handleChange}
+                            placeholder="Email Address"
+                            variant="outlined"
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderRadius: "15px",
+                              },
+                            }}
+                          />
+                        </FormControl>
+                      </Box>
+
+                      <Box mb={2}>
+                        <FormControl fullWidth>
+                          <FormLabel>Phone Number</FormLabel>
+                          <TextField
+                            fullWidth
+                            name="phoneNumber"
+                            onChange={handleChange}
+                            variant="outlined"
+                            sx={{
+                              "& .MuiOutlinedInput-root": {
+                                borderRadius: "15px",
+                              },
+                            }}
+                            slotProps={{
+                              input: {
+                                startAdornment: (
+                                  <InputAdornment position="start">
+                                    <Select
+                                      defaultValue="NG"
+                                      variant="outlined"
+                                      sx={{
+                                        mr: 1,
+                                        "& fieldset": {
+                                          border: "none",
+                                        },
+                                      }}
+                                    >
+                                      <MenuItem value="NG">NG</MenuItem>
+                                      <MenuItem value="US">US</MenuItem>
+                                      <MenuItem value="UK">UK</MenuItem>
+                                    </Select>
+                                  </InputAdornment>
+                                ),
+                              },
+                            }}
+                          />
+                        </FormControl>
+                      </Box>
+
+                      <Box mb={2}>
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              name="agree"
+                              onChange={handleCheckboxChange}
+                            />
+                          }
+                          label="You agree to our friendly privacy policy."
+                        />
+                      </Box>
+
+                      <Box mt={2}>
+                        <Button
+                          fullWidth
+                          variant="contained"
+                          size="large"
+                          onClick={handleSubmit}
+                          sx={{
+                            textTransform: "none",
+                            bgcolor: "#AE883B",
+                            "&:hover": { bgcolor: "#965F2A" },
+                          }}
+                        >
+                          Send Message
+                        </Button>
+                      </Box>
+                    </Box>
                   </Box>
                 </Container>
               </Box>

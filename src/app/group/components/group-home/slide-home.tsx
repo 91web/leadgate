@@ -184,7 +184,7 @@ const HeroSlider = () => {
             },
             textTransform: "none",
           }}
-          onClick={() => handleNavigate(images[currentSlide].buttonText)}
+          onClick={() =>handleNavigate(images[currentSlide].buttonText)}
         >
           {images[currentSlide].buttonText}
         </Button>

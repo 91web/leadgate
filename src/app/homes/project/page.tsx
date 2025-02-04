@@ -10,6 +10,7 @@ import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
 import TestBg2 from "../../../assets/img/bg-testimonial2.png";
 import TestimonialHero from "../../group/components/group-home/avatar-hero";
 import CareerForm from "./components/career-form";
+
 const AppHome = () => {
   const isMobile = useMediaQuery("(max-width:900px)");
   return (
