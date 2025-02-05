@@ -85,14 +85,13 @@ export default function PharmaEvent() {
       </Container>
       <Box
         sx={{
-          position: "fixed",
-          bottom: 0,
+          position: "absolute",
+          bottom: 20, // Adjust to fine-tune position relative to the banner
           left: 0,
           right: 0,
           bgcolor: "#fff",
           zIndex: 2,
           py: 3,
-          mb: 10,
           display: { xs: "none", md: "block" },
         }}
       >

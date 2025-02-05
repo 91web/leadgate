@@ -14,12 +14,12 @@ import Onament from "../../../assets/svg/ornament.svg";
 
 const SubscriptionPharma = () => {
   return (
-    <Box height={450}>
+    <Box height={450} sx={{ position: "relative" }}>
       <Container>
         <Box
           sx={{
             background: {
-              xs: "linear-gradient(to bottom, #1D2939 70%, #F2F4F7 30%)", // Half navy, half white vertically on mobile
+              xs: "linear-gradient(to bottom, #1D2939 70%, #F2F4F7 30%)",
               md: "#1D2939",
             },
             color: "#fff",
@@ -28,26 +28,23 @@ const SubscriptionPharma = () => {
             textAlign: "center",
           }}
         >
-          {/* Heading */}
           <Typography
             variant="h5"
             sx={{
               fontFamily: "Lora",
               fontWeight: "medium",
               fontSize: { xs: "24px", md: "30px" },
-              mb: 2, // Margin bottom
+              mb: 2,
             }}
           >
             Interested in Partnering with us?
           </Typography>
-
-          {/* Subtext */}
           <Typography
             variant="body1"
             sx={{
               fontFamily: "Inter,",
-              color: "#FAFAFA", // Light gray text
-              mb: 4, // Margin bottom
+              color: "#FAFAFA",
+              mb: 4,
               fontWeight: "regular",
               opacity: 0.7,
               fontSize: { xs: "15px", sm: "17px" },
@@ -55,14 +52,12 @@ const SubscriptionPharma = () => {
           >
             Join over 100+ partners making a difference.
           </Typography>
-
-          {/* Subscription Form */}
           <Box
             sx={{
-              maxWidth: "600px", // Limit max width
-              mx: "auto", // Center align horizontally
+              maxWidth: "600px",
+              mx: "auto",
               display: "flex",
-              flexDirection: { xs: "column", md: "row" }, // Column for mobile, row for desktop
+              flexDirection: { xs: "column", md: "row" },
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
               borderRadius: "8px",
@@ -70,7 +65,6 @@ const SubscriptionPharma = () => {
               overflow: "hidden",
             }}
           >
-            {/* Email Input */}
             <TextField
               variant="outlined"
               placeholder="youremail123@gmail.com"
@@ -90,18 +84,15 @@ const SubscriptionPharma = () => {
                 },
               }}
               sx={{
-                flex: 1, // Allow input to take available space
+                flex: 1,
                 "& .MuiOutlinedInput-root": {
                   border: "2px",
                 },
                 "& .MuiInputBase-root": {
-                  //borderRadius: 0,
                   padding: "10px 16px",
                 },
               }}
             />
-
-            {/* Subscribe Button */}
             <Button
               variant="contained"
               sx={{
@@ -125,15 +116,16 @@ const SubscriptionPharma = () => {
           </Box>
         </Box>
       </Container>
+
+      {/* Ornament Image Positioned at Bottom-Right of the Section */}
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
           justifyContent: "flex-end",
           alignItems: "flex-end",
-          position: "absolute", // Position it absolutely
+          position: "absolute", // Absolute to keep it inside the section
           right: 0,
           bottom: 0,
-          width: "100%",
         }}
       >
         <Image
