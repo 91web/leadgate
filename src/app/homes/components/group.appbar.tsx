@@ -96,7 +96,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   };
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = event.target;
 
@@ -401,7 +401,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-start",
-                  top: "20%",
+                  top: "22%",
                   right: "20%",
                   borderRadius: "10px",
                 },
@@ -454,7 +454,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-start",
-                  top: "20%",
+                  top: "22%",
                   right: "20%",
                   borderRadius: "10px",
                 },
@@ -503,20 +503,28 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
         open={openDeveloperModal}
         onClose={setDeveloperModal}
         aria-labelledby="responsive-dialog-title"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          pt: "120px",
+          pb: { xs: "120px", md: "14px" },
+          mx:{xs:"8px", md:"0px"}
+        }}
       >
         <DialogContent>
           <DialogContentText component="div">
             <Box>
-              <Box py={{ xs: 5, md: 5 }}>
+              <Box py={{ xs: 5, md: 1 }}>
                 <Container maxWidth="lg">
                   <Box mx={"5%"}>
                     <Box display="flex">
                       <Typography
-                        fontWeight={'bold'}
-                        fontSize={'30px'}
+                        fontWeight={"bold"}
+                        fontSize={"30px"}
                         mb={3}
                         sx={{
-                          whiteSpace: "nowrap", 
+                          whiteSpace: "nowrap",
                         }}
                       >
                         Become a Developer
