@@ -62,7 +62,7 @@ const MapCard = () => {
                   fontFamily: "'Inter'",
                   fontWeight: "medium",
                   borderRadius: 2,
-                  width: "30%",
+                  width: "20%",
                   fontSize: { xs: "14px", md: "17px" },
                   textTransform: "none",
                   "&:hover": {
