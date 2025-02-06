@@ -94,16 +94,12 @@ const AppHomes = () => {
                     sx={{ marginLeft: "-10px", zIndex: 1 }}
                   />
                 </Box>
-
-                {/* Right Side - Buttons */}
                 <Box display="flex" flexDirection="column" gap={1}>
                   <Box display="flex" gap={1} mb={1}>
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "#F8E6C0",
-                        border: "2px solid white",
-                        opacity: "50%",
+                        bgcolor: "rgba(248, 230, 192, 0.5)", 
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
@@ -114,9 +110,7 @@ const AppHomes = () => {
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "#F8E6C0",
-                        border: "2px solid white",
-                        opacity: "50%",
+                        bgcolor: "rgba(248, 230, 192, 0.5)",
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
@@ -127,9 +121,7 @@ const AppHomes = () => {
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "#F8E6C0",
-                        border: "2px solid white",
-                        opacity: "50%",
+                        bgcolor: "rgba(248, 230, 192, 0.5)",
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
@@ -138,14 +130,13 @@ const AppHomes = () => {
                       Interior
                     </Button>
                   </Box>
+
                   <Box display="flex" gap={2} justifyContent="center">
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "#F8E6C0",
-                        border: "2px solid white",
+                        bgcolor: "rgba(248, 230, 192, 0.5)",
                         color: "white",
-                        opacity: "50%",
                         borderRadius: "17px",
                         px: "20px",
                       }}
@@ -155,9 +146,7 @@ const AppHomes = () => {
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "#F8E6C0",
-                        border: "2px solid white",
-                        opacity: "50%",
+                        bgcolor: "rgba(248, 230, 192, 0.5)",
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",

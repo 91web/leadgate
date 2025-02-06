@@ -96,12 +96,12 @@ const TestimonialHero: React.FC = () => {
                 size={{ xs: 12, md: 2 }}
                 sx={{
                   display: { xs: "none", lg: "block" },
-                  // zIndex: 1,
-                  // pl: 2,
-                  //height: "100%",
-                  // width:"20%",
-                  // boxSizing: "border-box",
-                  // ml: { md: 2 }, // Added margin to the left grid
+                  zIndex: 1,
+                  pl: 2,
+                  height: "100%",
+                  width:"20%",
+                  boxSizing: "border-box",
+                  ml: { md: 2 }, // Added margin to the left grid
                 }}
               >
                 <Box>
@@ -194,10 +194,10 @@ const TestimonialHero: React.FC = () => {
                   <NavigationButtons />
                 </Box>
               )}
-              <Box width={{ xs: 350,sm:500, md:900, lg: 1500 }} p={2}>
+              <Box width={{ xs: 300, sm: 400, md: 800, lg: 1000 }} p={2}>
                 <Swiper
                   modules={[Navigation, Pagination, Autoplay]}
-                  spaceBetween={24}
+                  spaceBetween={12} // reduced from 24
                   slidesPerView={1}
                   onSwiper={setSwiper}
                   pagination={{ clickable: true, el: null }}

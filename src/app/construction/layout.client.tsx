@@ -5,7 +5,7 @@ import { useState } from "react";
 import LGroupLogo from "@/assets/img/constructionLogo.png";
 import {
   ConstructionNavData,
-  LGroupFooter,
+  LConstructionFooter,
   NavDataType,
 } from "../homes/components/static-data/data";
 import { GroupDrawerComponent } from "../group/components/group.drawer";
@@ -80,7 +80,7 @@ const AppConstructionsLayout = ({
         <Toolbar sx={{ height: 152 }} />
         {children}
       </Box>
-      <LAppFooter footerData={LGroupFooter} />
+      <LAppFooter footerData={LConstructionFooter} />
     </Box>
   );
 };

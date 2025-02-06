@@ -98,24 +98,7 @@ const MapCard = () => {
                 my: 3,
               }}
             >
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#6B8F24",
-                  color: "#ffffff",
-                  fontFamily: "'Inter'",
-                  fontWeight: "medium",
-                  justifyContent: { xs: "center", md: "flex-start" },
-                  borderRadius: 8,
-                  fontSize: { xs: "14px", md: "17px" },
-                  textTransform: "none",
-                  "&:hover": {
-                    backgroundColor: "#7A9F3C",
-                  },
-                }}
-              >
-                Chat with a Pharmacist
-              </Button>
+             
             </Box>
           </Box>
         </Grid2>
