@@ -52,7 +52,7 @@ export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
     >
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
-        <List sx={{ pt: 2 }}>
+        <List sx={{ pt: 7 }}>
           {navState.map((page, i) => (
             <Fragment key={page.id}>
               <Link

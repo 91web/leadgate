@@ -91,7 +91,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           <Toolbar sx={{ py: { md: 1 }, px: { xs: 0 } }}>
             <Box pt={1}>
               <Image
-                height={60}
+                height={40}
                 src={logo}
                 alt={"LeadGate Logo"}
                 priority={true}

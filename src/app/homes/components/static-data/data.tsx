@@ -13,7 +13,7 @@ import Property3 from "../../../../assets/img/property1.png";
 import { StaticImageData } from "next/image";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
-import GroupLogoWhite from "../../../../assets/img/LeadgateHomewhite.png";
+import GroupLogoWhite from "../../../../assets/img/constructionLogoWhite.png";
 
 //datatype images for home page
 export interface SliderType {

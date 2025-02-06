@@ -9,7 +9,7 @@ export default function ServiceCover() {
     <Box
       sx={{
         position: "relative",
-        height: "650px",
+        height: { xs: "450px", md: "650px" },
         width: "100%",
         display: "flex",
         alignItems: "center",
