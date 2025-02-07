@@ -52,14 +52,21 @@ export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
     >
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
-        <List sx={{ pt: 7 }}>
+        <List
+          sx={{
+            pt:
+              pathname === "/construction"
+                ? 7
+                : pathname === "/pharmaceuticals"
+                ? 5
+                : 2,
+          }}
+        >
           {navState.map((page, i) => (
             <Fragment key={page.id}>
               <Link
                 href={
-                  !page.subNav
-                    ? (`/${pathname.split("/")[1]}${page.url}` as string)
-                    : ""
+                  !page.subNav ? `/${pathname.split("/")[1]}${page.url}` : ""
                 }
               >
                 <ListItem
@@ -83,16 +90,17 @@ export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
                         {page.name}
                       </Typography>
                     </ListItemText>
-                    {page.subNav && page.subNav?.length > 0 && (
+                    {page.subNav && page.subNav.length > 0 && (
                       <>{page.openSub ? <ArrowDropUp /> : <ArrowDropDown />}</>
                     )}
                   </ListItemButton>
                 </ListItem>
               </Link>
+
               <Collapse in={page.openSub} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   {page.subNav?.map((subPage) => (
-                    <Link key={subPage.id} href={`${subPage.url}` as string}>
+                    <Link key={subPage.id} href={subPage.url}>
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemText>
                           <Typography fontSize={"0.9rem"} color={"#344054"}>
@@ -104,6 +112,7 @@ export const GroupDrawerComponent: FC<LGroupDrawerComponentProps> = (props) => {
                   ))}
                 </List>
               </Collapse>
+
               {i !== navState.length - 1 && <Divider variant="middle" />}
             </Fragment>
           ))}

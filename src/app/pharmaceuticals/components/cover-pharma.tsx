@@ -5,8 +5,7 @@ import Button from "@mui/material/Button";
 
 import PharmaHero1 from "../../../assets/img/pharmaceuticals-hero1.png";
 import PharmaHero2 from "../../../assets/img/pharmaceuticals-hero2.png";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 
 export default function PharmaEvent() {
   return (
@@ -83,60 +82,6 @@ export default function PharmaEvent() {
           </Button>
         </Box>
       </Container>
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 20, // Adjust to fine-tune position relative to the banner
-          left: 0,
-          right: 0,
-          bgcolor: "#fff",
-          zIndex: 2,
-          py: 3,
-          display: { xs: "none", md: "block" },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", sm: "row" },
-            gap: 2,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Button
-            variant="outlined"
-            sx={{
-              backgroundColor: "#fff",
-              color: "#475467",
-              borderColor: "#6B8F24",
-              "&:hover": {
-                backgroundColor: "#E0E0E0",
-              },
-              textTransform: "none",
-              width: { xs: "150px", sm: "200px" },
-              px: 1,
-            }}
-          >
-            <LocationOnIcon /> Locate our Store
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#6B8F24",
-              color: "#fff",
-              "&:hover": {
-                backgroundColor: "#556B2F",
-              },
-              textTransform: "none",
-              width: { xs: "150px", sm: "200px" },
-              px: 1,
-            }}
-          >
-            <WhatsAppIcon /> Chat on Whatsapp
-          </Button>
-        </Box>
-      </Box>
     </Box>
   );
 }

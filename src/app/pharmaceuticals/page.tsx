@@ -165,8 +165,6 @@ const AppPharmacy = () => {
           </Button>
         </Box>
       </Box>
-
-      <Box></Box>
       <Box pb={"30px"}>
         <Container maxWidth="lg">
           <Box py={"35px"}>

@@ -37,8 +37,8 @@ const AppGroup = () => {
         <Box
           sx={{
             backgroundImage: isMobile
-              ? `url(${TestBg1.src})` //  the mobile image
-              : `url(${TestBg2.src})`, // the desktop image
+              ? `url(${TestBg1.src})` 
+              : `url(${TestBg2.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             minHeight: { xs: "50vh", md: "100vh" },

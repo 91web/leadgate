@@ -13,7 +13,8 @@ import Property3 from "../../../../assets/img/property1.png";
 import { StaticImageData } from "next/image";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
-import GroupLogoWhite from "../../../../assets/img/constructionLogoWhite.png";
+import GroupLogoWhite from "../../../../assets/img/LeadgateHomewhite.png";
+import ConstructionLogoWhite from "../../../../assets/img/constructionLogoWhite.png";
 
 //datatype images for home page
 export interface SliderType {
@@ -297,4 +298,135 @@ export const ConstructionNavData: NavDataType[] = [
     url: "/#services",
   },
   
+];
+export const LConstructionFooter: LFooterType[] = [
+  {
+    id: "logoSection",
+    logo: ConstructionLogoWhite,
+    logoUrl: "/group",
+    description:
+      "Leadgate Group is a prominent group of companies centered around construction, real estate and pharmaceuticals.",
+  },
+  {
+    id: "quickLinks",
+    title: "Quick Navigation Links",
+    navs: [
+      {
+        id: "home",
+        name: "Leadgate Group",
+        icon: null,
+        active: false,
+        url: "/group",
+      },
+      {
+        id: "contact-us",
+        name: "Contact Us",
+        icon: null,
+        active: false,
+        url: "/group/contact-us",
+      },
+    ],
+  },
+  {
+    id: "company",
+    title: "Company",
+    navs: [
+      {
+        id: "about-us",
+        name: "About Us",
+        icon: null,
+        active: false,
+        url: "/group/about-us",
+      },
+      {
+        id: "projects",
+        name: "Projects",
+        icon: null,
+        active: false,
+        url: "/group/projects",
+      },
+      {
+        id: "news",
+        name: "News",
+        icon: null,
+        active: false,
+        url: "/group/news",
+      },
+      {
+        id: "partners",
+        name: "Partners",
+        icon: null,
+        active: false,
+        url: "/group/partners",
+      },
+      {
+        id: "career",
+        name: "Career",
+        icon: null,
+        active: false,
+        url: "/group/career",
+      },
+    ],
+  },
+  {
+    id: "legal",
+    title: "Legal",
+    navs: [
+      {
+        id: "terms",
+        name: "Terms",
+        icon: null,
+        active: false,
+        url: "/group/terms",
+      },
+      {
+        id: "privacyPolicy",
+        name: "Privacy Policy",
+        icon: null,
+        active: false,
+        url: "/group/privacy-policy",
+      },
+      {
+        id: "copyrite",
+        name: "Copyrite Notice",
+        icon: null,
+        active: false,
+        url: "/group/copyrite",
+      },
+    ],
+  },
+  {
+    id: "socials",
+    title: "",
+    socials: [
+      {
+        id: "fb",
+        name: "Facebook",
+        icon: Facebook,
+        url: "",
+      },
+      {
+        id: "insta",
+        name: "Instagram",
+        icon: Instagram,
+        url: "",
+      },
+      {
+        id: "youtube",
+        name: "Youtube",
+        icon: YouTube,
+        url: "",
+      },
+      {
+        id: "x",
+        name: "X",
+        icon: X,
+        url: "",
+      },
+    ],
+    phone: "+234 909 935 2438",
+    email: "leadgateconstructions@gmail.com",
+    address:
+      "Suite M206/ M207, Second Floor, Middle Block, Millemenium Builders' Plaza, Plot 251 Herbert Macaulay Way, Central Business District, Abuja, FCT, Nigeria",
+  },
 ];
