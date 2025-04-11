@@ -48,17 +48,6 @@ export default function CoverHero() {
         >
           Our Story
         </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#D0D5DD",
-            fontFamily: "inter",
-            fontSize: { xs: "14px", md: "16px" },
-            fontWeight: "regular",
-          }}
-        >
-          Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id.
-        </Typography>
       </Container>
     </Box>
   );

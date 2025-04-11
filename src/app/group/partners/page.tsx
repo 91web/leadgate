@@ -64,7 +64,7 @@ const PartnerShipPage = () => {
             }}
           >
             {/* Text Section */}
-            <Box sx={{ mb: { xs: 2, md: 0 } }}>
+            <Box sx={{ mb: { xs: 2, md: 0 }, width: { xs: "100%", md: "60%" } }}>
               <Typography
                 variant="h6"
                 sx={{
@@ -75,7 +75,7 @@ const PartnerShipPage = () => {
                   width: "100%",
                 }}
               >
-                Interested in partnering with us
+                Join us in Shaping the Future
               </Typography>
               <Typography
                 variant="body2"
@@ -86,7 +86,9 @@ const PartnerShipPage = () => {
                   fontSize: { xs: "14px", md: "17px" },
                 }}
               >
-                Join over 100+ Partners
+                Whether you are looking to invest, collaborate, or grow your
+                business with us, Leadgate Groups offers a partnership that is
+                built on trust, excellence, and shared success
               </Typography>
             </Box>
 

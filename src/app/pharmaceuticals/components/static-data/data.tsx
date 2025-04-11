@@ -236,53 +236,41 @@ export interface PharmaDivisionType {
 export const PharmaDivision: PharmaDivisionType[] = [
   {
     id: "1",
-    title: "Retail Pharmacy and Supermarket Services",
+    title: "Prescription Drugs",
     image: PharmaHero4.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-         Viverra magna habitant blandit lectus integer pulvinar dui est.  
-        blandit lectus integer pulvinar dui est.`,
+    description: `At LeadGate, we provide a comprehensive range of prescription medications tailored to meet your healthcare needs.`,
   },
 
   {
     id: "2",
-    title: "Over-the-counter (OTC) Medications ",
+    title: "Over-the-counter (OTC) Medications  ",
     image: PharmaHero5.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-            Viverra magna habitant blandit lectus integer pulvinar dui est.  
-           blandit lectus integer pulvinar dui est.`,
+    description: ` From pain relief to cold remedies, we offer a broad selection of OTC medications designed to address everyday health concerns.`,
   },
   {
     id: "3",
     title: "Nutritional supplements",
     image: PharmaHero6.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-                Viverra magna habitant blandit lectus integer pulvinar dui est.  
-               blandit lectus integer pulvinar dui est.`,
+    description: `From pain relief to cold remedies, we offer a broad selection of OTC medications designed to address everyday health concerns.`,
   },
   {
     id: "4",
     title: "Health Screening and immunization",
     image: PharmaHero4.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-                    Viverra magna habitant blandit lectus integer pulvinar dui est.  
-                   blandit lectus integer pulvinar dui est.`,
+    description: ` Stay proactive about your health with our health screening and immunization services.`,
   },
 
   {
     id: "5",
     title: " Medical Supplies and Equipment",
     image: PharmaHero6.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-                    Viverra magna habitant blandit lectus integer pulvinar dui est.  
-                   blandit lectus integer pulvinar dui est.`,
+    description: `We stock a wide array of medical supplies and equipment, including mobility aids, wound care products, and monitoring devices.`,
   },
   {
     id: "6",
     title: "Personalized Diet / Meal Planning",
     image: PharmaHero5.src,
-    description: `Lorem ipsum dolor sit amet consectetur.
-                        Viverra magna habitant blandit lectus integer pulvinar dui est.  
-                       blandit lectus integer pulvinar dui est.`,
+    description: `Achieve your health goals with our personalized diet and meal planning services`,
   },
 ];
 

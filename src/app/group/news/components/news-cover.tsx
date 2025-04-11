@@ -59,7 +59,7 @@ export default function NewsCover() {
           }}
         >
           Lorem ipsum dolor, Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-          dolor. Lorem ipsum dolor, Lorem ipsum dolor Lorem.
+          dolor Lorem.
         </Typography>
       </Container>
     </Box>

@@ -451,6 +451,21 @@ export default function JobListings() {
           </Grid>
         </Stack>
       </Container>
+      <Box my={4} alignItems="center" textAlign="center">
+        <Button
+          variant="contained"
+          size="large"
+          sx={{
+            textTransform: "none",
+            bgcolor: "#6B8F24",
+            "&:hover": { bgcolor: "#4C6F1C" },
+            fontSize: "16px",
+            width: "240px",
+          }}
+        >
+          Join Our Talent Network
+        </Button>
+      </Box>
     </Box>
   );
 }

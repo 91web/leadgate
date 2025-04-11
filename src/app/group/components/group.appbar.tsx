@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import {
   Dispatch,
   FC,
-  MouseEvent,
   Fragment,
   SetStateAction,
   useState,
@@ -17,13 +16,16 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@/assets/svg/tabler_menu.svg";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import ArrowDropUp from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "@mui/material/Button";
 import ArrowOut from "@/assets/svg/arrow-square-out.svg";
+import Popper from "@mui/material/Popper";
+import Paper from "@mui/material/Paper";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 
 interface LGroupAppBarComponentProps {
   openDrawer: boolean;
@@ -32,19 +34,54 @@ interface LGroupAppBarComponentProps {
   eleBar: number;
   logo: StaticImageData;
 }
+
 export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   const { openDrawer, setOpenDrawer, navState, logo } = props;
   const pathname = usePathname();
   const router = useRouter();
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [showHomeNav, setShowHomeNav] = useState(false);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+  const [popperOpen, setPopperOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [selectedPage, setSelectedPage] = useState<NavDataType | null>(null);
+
+  // Toggle Popper
+  const handlePopperOpen = (
+    event: React.MouseEvent<HTMLElement>,
+    page: NavDataType
+  ) => {
+    if (anchorEl === event.currentTarget && popperOpen) {
+      handlePopperClose(); // toggle off
+    } else {
+      setAnchorEl(event.currentTarget);
+      setSelectedPage(page);
+      setPopperOpen(true);
+    }
   };
-  const handleClose = () => {
+
+  // Close Popper
+  const handlePopperClose = () => {
+    setPopperOpen(false);
     setAnchorEl(null);
   };
+
+  // Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const popperElement = document.getElementById("nav-popper");
+      if (
+        popperElement &&
+        !popperElement.contains(event.target as Node) &&
+        anchorEl &&
+        !anchorEl.contains(event.target as Node)
+      ) {
+        handlePopperClose();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [anchorEl]);
 
   useEffect(() => {
     if (!pathname.split("/").includes("group")) {
@@ -67,7 +104,15 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
         {showHomeNav && (
           <Box sx={{ bgcolor: "#101828" }}>
             <Container maxWidth={"lg"}>
-              <Toolbar sx={{ bgcolor: "#101828", alignItems: "self-end" }}>
+              <Toolbar
+                sx={{
+                  bgcolor: "#101828",
+                  alignItems: "self-end",
+                  minHeight: { xs: 0, md: "auto" },
+                  py: { xs: 0, md: 1 },
+                  px: 0,
+                }}
+              >
                 <Box flexGrow={1} />
                 <Box
                   component={"a"}
@@ -88,7 +133,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           </Box>
         )}
         <Container maxWidth={"lg"}>
-          <Toolbar sx={{ py: { md: 1 }, px: { xs: 0 } }}>
+          <Toolbar>
             <Box pt={1}>
               <Image
                 height={40}
@@ -111,7 +156,13 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                   <Box key={page.id} py={1.5}>
                     {page.subNav ? (
                       <>
-                        <Link href={""} onClick={handleClick}>
+                        <Link
+                          href={""}
+                          onClick={(e) => {
+                            e.preventDefault(); // prevent anchor navigation
+                            handlePopperOpen(e, page);
+                          }}
+                        >
                           <Typography
                             sx={{
                               mx: 2,
@@ -127,80 +178,19 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                             <span style={{ marginTop: "3px" }}>
                               {page?.name}
                             </span>
-                            {page.subNav && page.subNav?.length > 0 && (
-                              <>{open ? <ArrowDropUp /> : <ArrowDropDown />}</>
+                            {page.subNav?.length > 0 && (
+                              <>
+                                {anchorEl &&
+                                selectedPage?.id === page.id &&
+                                popperOpen ? (
+                                  <ArrowDropUp />
+                                ) : (
+                                  <ArrowDropDown />
+                                )}
+                              </>
                             )}
                           </Typography>
                         </Link>
-                        <Menu
-                          anchorEl={anchorEl}
-                          id="our-core-divisions-menu"
-                          open={open}
-                          onClose={handleClose}
-                          onClick={handleClose}
-                          slotProps={{
-                            paper: {
-                              elevation: 0,
-                              sx: {
-                                overflow: "visible",
-                                // filter:
-                                //   "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                                mt: 2.5,
-                                "& .MuiAvatar-root": {
-                                  width: 32,
-                                  height: 32,
-                                  ml: -0.5,
-                                  mr: 1,
-                                },
-                                "&::before": {
-                                  content: '""',
-                                  display: "block",
-                                  position: "absolute",
-                                  top: 0,
-                                  right: 14,
-                                  width: 10,
-                                  height: 10,
-                                  bgcolor: "background.paper",
-                                  transform: "translateY(-50%) rotate(45deg)",
-                                  zIndex: 0,
-                                },
-                              },
-                            },
-                          }}
-                          transformOrigin={{
-                            horizontal: "right",
-                            vertical: "top",
-                          }}
-                          anchorOrigin={{
-                            horizontal: "right",
-                            vertical: "bottom",
-                          }}
-                        >
-                          {page.subNav.map((subPage) => (
-                            <MenuItem
-                              key={subPage.id}
-                              onClick={() => {
-                                window.document.location.href = `${subPage.url}`;
-                              }}
-                              sx={{
-                                bgcolor: "none",
-                              }}
-                            >
-                              <Typography
-                                sx={{
-                                  mx: 2,
-                                  textTransform: "capitalize",
-                                }}
-                                lineHeight={1.2}
-                                color={"#344054"}
-                                fontWeight={page.active ? 600 : "normal"}
-                                fontSize={"0.9rem"}
-                              >
-                                {subPage?.name}
-                              </Typography>
-                            </MenuItem>
-                          ))}
-                        </Menu>
                       </>
                     ) : (
                       <Fragment key={page?.id}>
@@ -245,9 +235,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                               {page?.name}
                             </Typography>
                           </Link>
-                        ) : (
-                          <></>
-                        )}
+                        ) : null}
                       </Fragment>
                     )}
                   </Box>
@@ -259,8 +247,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     sx={{
                       borderRadius: "8px",
                       textTransform: "capitalize",
-                      px: 4,
-                      py: 1.5,
+                      p: 1,
                       fontSize: "1rem",
                       bgcolor: pathname.split("/").includes("pharmaceuticals")
                         ? "#6B8F24"
@@ -272,11 +259,9 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                       router.push(`/${pathname.split("/")[1]}/contact-us`)
                     }
                   >
-                    <>
-                      {pathname.split("/").includes("pharmaceuticals")
-                        ? "Contact Us"
-                        : "Get in touch"}
-                    </>
+                    {pathname.split("/").includes("pharmaceuticals")
+                      ? "Contact Us"
+                      : "Get in touch"}
                   </Button>
                 </Box>
               )}
@@ -300,6 +285,70 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           </Toolbar>
         </Container>
       </AppBar>
+
+      {/* Popper for Sub-Navigation */}
+      <Popper
+        id="nav-popper"
+        open={popperOpen}
+        anchorEl={anchorEl}
+        placement="bottom-start"
+        sx={{
+          zIndex: 1,
+          width: "200px",
+          marginTop: "8px",
+        }}
+        modifiers={[
+          {
+            name: "offset",
+            options: {
+              offset: [0, 25],
+            },
+          },
+        ]}
+      >
+        <Paper
+          elevation={2}
+          sx={{
+            width: "100%",
+            borderRadius: "8px",
+            overflow: "hidden",
+          }}
+        >
+          <List>
+            {selectedPage?.subNav?.map((subPage) => (
+              <ListItem
+                key={subPage.id}
+                sx={{
+                  py: 1,
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "rgba(0, 0, 0, 0.04)",
+                  },
+                }}
+                onClick={() => {
+                  window.location.href = `${subPage.url}`;
+                  handlePopperClose();
+                }}
+              >
+                <ListItemText
+                  primary={
+                    <Typography
+                      sx={{
+                        textTransform: "capitalize",
+                        color: "#344054",
+                        fontWeight: selectedPage?.active ? 600 : "normal",
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      {subPage?.name}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Paper>
+      </Popper>
     </Box>
   );
 };

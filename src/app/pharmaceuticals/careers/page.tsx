@@ -6,10 +6,12 @@ import ContactForm from "./components/career-form";
 import Divider from "@mui/material/Divider";
 import JobListings from "./components/job-list";
 import WorkFeatures from "./components/work-feature";
+import ActionButtons from "../components/action-button";
 const Career = () => {
   return (
     <Box>
       <CareerCover />
+           <ActionButtons />
       <Box sx={{ bgcolor: "#F2F4F7" }}>
         <JobListings />
       </Box>

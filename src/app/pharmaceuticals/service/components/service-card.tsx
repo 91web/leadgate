@@ -28,6 +28,7 @@ const ServiceCard = () => {
                 my: 2,
                 textAlign: { xs: "center", md: "left" },
                 fontSize: { xs: "24px", md: "30px" },
+                width: { xs: "100%", md: "80%" },
               }}
             >
               Quality Prescription Medications, Safely Delivered to Your Door.
@@ -42,6 +43,7 @@ const ServiceCard = () => {
                 fontSize: "16px",
                 textAlign: { xs: "center", md: "left" },
                 fontWeight: "regular",
+                width: { xs: "100%", md: "80%" },
               }}
             >
               Your health is our priority—experience convenient, trusted service

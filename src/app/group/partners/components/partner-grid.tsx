@@ -49,8 +49,8 @@ export default function PartnerGrid() {
             color: "#344054",
           }}
         >
-          Lorem ipsum dolor sit amet consectetur. Facilisis imperdiet tristique
-          augue porta fusce sed fermentum ipsum tincidunt.
+          We believe so much in the power of collaboration and long-term
+          relationships.
         </Typography>
 
         <Container maxWidth="md">

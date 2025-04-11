@@ -89,18 +89,29 @@ const PartnerCard = () => {
                 fontWeight: "regular",
               }}
             >
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. blandit lectus integer
-              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
-              magna habitant blandit lectus integer pulvinar dui est. blandit
-              lectus integer pulvinar dui est.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. blandit lectus integer
-              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
-              magna habitant blandit lectus integer pulvinar dui est. blandit
-              lectus integer pulvinar dui est.
+              <ol style={{ paddingLeft: "20px", margin: 0,  }}>
+                <li>
+                  <strong>A Multi-Industry Impact: </strong> With expertise in
+                  Pharmaceuticals, Real Estate, and Construction, we create
+                  innovative solutions that transform communities. By partnering
+                  with us, you gain access to diverse industries with vast
+                  growth opportunities.
+                </li>
+                <li>
+                  <strong> Commitment to Excellence: </strong> We uphold the
+                  highest standards—from medical advancements to luxury real
+                  estate and world-class infrastructure. Our partners benefit
+                  from our unwavering dedication to quality, innovation, and
+                  precision.
+                </li>
+                <li>
+                  <strong> Strong Market Presence & Growth Potential: </strong>{" "}
+                  Leadgate Groups is a rapidly expanding company with a strong
+                  reputation in our sectors. We offer partners a trusted
+                  platform to scale their businesses, enter new markets, and
+                  drive mutual success.
+                </li>
+              </ol>
             </Typography>
             <Box
               sx={{

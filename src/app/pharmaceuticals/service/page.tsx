@@ -6,13 +6,13 @@ import ServiceCover from "./components/service-cover";
 import ServiceHero from "./components/service-hero";
 import ServiceCard from "./components/service-card";
 import ServiceGrid from "./components/service-grid";
+import ActionButtons from "../components/action-button";
 
 const ServicePharma = () => {
   return (
     <Box>
-      <Box>
-        <ServiceCover />
-      </Box>
+      <ServiceCover />
+      <ActionButtons />
       <Box mb={5}>
         <Container maxWidth="lg">
           <Box
@@ -32,21 +32,6 @@ const ServicePharma = () => {
               }}
             >
               Our Services
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: "16px",
-                fontFamily: "inter",
-                fontWeight: "regular",
-                color: "#475467",
-                px: { sx: 2, md: 0 },
-                my: 2,
-                width: { sx: "100%", md: "45%" },
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est.
             </Typography>
           </Box>
 

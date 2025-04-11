@@ -10,6 +10,7 @@ import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
 import TestBg2 from "../../../assets/img/bg-testimonial2.png";
 import TestimonialHero from "../../group/components/group-home/avatar-hero";
 import CareerForm from "./components/career-form";
+import TestimonialSlider from "@/app/group/components/group-home/testimonial-slide";
 
 const AppHome = () => {
   const isMobile = useMediaQuery("(max-width:900px)");
@@ -24,23 +25,9 @@ const AppHome = () => {
           <FeatureProject />
         </Container>
       </Box>
-      <Box py={5} bgcolor={"#fff"}>
-        <Box
-          sx={{
-            backgroundImage: isMobile
-              ? `url(${TestBg1.src})`
-              : `url(${TestBg2.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: { xs: "50vh", md: "100vh" },
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <TestimonialHero />
-        </Box>
-      </Box>
+
+      <TestimonialSlider />
+
       <Box bgcolor={"#F2F4F7"}>
         <Box>
           <CareerForm />

@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid2 from "@mui/material/Grid2";
@@ -10,7 +12,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
 import CareerHero2 from "../../../assets/img/form-home-event.png";
-import { useState } from "react";
+
 
 export default function CareerForm() {
   const [formDetails, setFormDetails] = useState({
@@ -126,7 +128,7 @@ export default function CareerForm() {
                         variant="outlined"
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, md: 12 }}>
+                    <Grid2 size={12}>
                       <Typography
                         sx={{
                           fontFamily: "inter",
@@ -149,7 +151,7 @@ export default function CareerForm() {
                         type="email"
                       />
                     </Grid2>
-                    <Grid2 size={{ xs: 12, md: 12 }}>
+                    <Grid2 size={12}>
                       <Typography
                         sx={{
                           fontFamily: "inter",

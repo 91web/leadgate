@@ -77,7 +77,7 @@ const AppConstructionsLayout = ({
         drawerWidth={drawerWidth}
       />
       <Box>
-        <Toolbar sx={{ height: 152 }} />
+        <Toolbar />
         {children}
       </Box>
       <LAppFooter footerData={LConstructionFooter} />

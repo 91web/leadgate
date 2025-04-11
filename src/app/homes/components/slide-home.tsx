@@ -131,6 +131,7 @@ const EstateSlider = () => {
           color: "#fff", // Make the content text color white
           opacity: 1, // Full opacity for the content
           animation: `${slideIn} 1s ease`, // Apply slide-in animation to content
+          width: { xs: "100%", md: "40%" },
         }}
       >
         <Typography

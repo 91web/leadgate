@@ -1,12 +1,14 @@
 //group slide images for contructions estate page
-import { JSX } from "react";
-import Slide1 from "../../../../assets/img/construction-slide1.png";
-import Slide2 from "../../../../assets/img/construction-slide1.png";
-import Slide3 from "../../../../assets/img/construction-slide1.png";
-import Slide4 from "../../../../assets/img/construction-slide1.png";
 
-//Card material Icon
-import HomeIcon from "@mui/icons-material/Home";
+import Slide1 from "../../../../assets/img/construction-slide1.png";
+
+//group slide images for contructions estate page
+import IconC1 from "../../../../assets/svg/construction1.svg";
+import IconC2 from "../../../../assets/svg/construction2.svg";
+import IconC3 from "../../../../assets/svg/construction3.svg";
+import IconC4 from "../../../../assets/svg/construction4.svg";
+import IconC5 from "../../../../assets/svg/construction5.svg";
+import IconC6 from "../../../../assets/svg/construction6.svg";
 
 //datatype images for contructions
 export interface SliderType {
@@ -24,41 +26,24 @@ export const SliderData: SliderType[] = [
     title:
       "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. Eget consectetur habitant felis egestas molestie amet cras dignissim.",
+      "We blend precision, innovation, and durability to create structures that inspire and stand the test of time. From residential and commercial projects to large-scale infrastructure, we prioritize quality, sustainability, and architectural excellence.",
     buttonText: "Get a Quotations",
   },
-
   {
     id: "2",
-    src: Slide2.src,
-    title: "Building dreams, elevating health",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est.
-        Eget consectetur habitant felis egestas molestie amet cras dignissim.`,
-    buttonText: "Get a Quatation",
-  },
-  {
-    id: "3",
-    src: Slide3.src,
+    src: Slide1.src,
     title:
       "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
-    description: "Pellentesque habitant morbi tristique senectus.",
+    description:
+      "We blend precision, innovation, and durability to create structures that inspire and stand the test of time. From residential and commercial projects to large-scale infrastructure, we prioritize quality, sustainability, and architectural excellence.",
     buttonText: "Get a Quotations",
-  },
-  {
-    id: "4",
-    src: Slide4.src,
-    title:
-      "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est.
-      Eget consectetur habitant felis egestas molestie amet cras dignissim.`,
-    buttonText: "Get a Quatation",
   },
 ];
 
 //Data material card Table
 export interface MaterialType {
   id: string;
-  icon: JSX.Element;
+  src: string;
   title: string;
   description: string;
 }
@@ -66,44 +51,44 @@ export interface MaterialType {
 export const MaterialData: MaterialType[] = [
   {
     id: "1",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC1.src,
+    title: "Design and planning",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo volutpat nulla at.",
+      "Leadgate home Ltd. Offer comprehensive design and planning services as part of our commitment to delivering exceptional construction solutions.",
   },
   {
     id: "2",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC2.src,
+    title: "Construction",
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Leadgate Homes Ltd. Is your trusted partner for all your construction needs. With expertise in building construction, road construction, bridge construction, and more.",
   },
   {
     id: "3",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC3.src,
+    title: "Landscaping & Exterior Design",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+      "Custom landscape designs; Our skilled team of landscape architects and designers collaborate closely with you to bring your vision to life.",
   },
   {
     id: "4",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC4.src,
+    title: "Property Management",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+      "Leadgate Homes Ltd. Offers comprehensive property management services, providing property owners with professional and reliable solutions to maximize the value and potential of their real estate investments.",
   },
   {
     id: "5",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC5.src,
+    title: "Renovation and Remodeling",
     description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+      "Leadgate Homes Ltd. Is your trusted partner for renovation and remodeling projects, breathing new life into existing spaces and transforming them according to your vision.",
   },
   {
     id: "6",
-    icon: <HomeIcon />,
-    title: "Consultancy Services",
+    src: IconC6.src,
+    title: "Tailored Transformation",
     description:
-      "Mollit anim id est laborum. Consectetur adipiscing elit, sed do eiusmod tempor.",
+      "Whether you’re looking to revitalize a single room or renovate an entire property, our skilled team of designers and craftsmen will work closely with you to understand your goals and preferences.",
   },
 ];

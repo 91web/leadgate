@@ -7,10 +7,10 @@ import Division2 from "../../../../assets/img/division2.png";
 import Division3 from "../../../../assets/img/division3.png";
 
 //group slide images for central home page
-import Slide1 from "../../../../assets/img/hero-slide1.png";
-import Slide2 from "../../../../assets/img/hero-slide1.png";
-import Slide3 from "../../../../assets/img/hero-slide1.png";
-import Slide4 from "../../../../assets/img/hero-slide1.png";
+import Slide1 from "../../../../assets/img/hero-home1.png";
+import Slide2 from "../../../../assets/img/hero-home2.png";
+import Slide3 from "../../../../assets/img/hero-home3.png";
+import Slide4 from "../../../../assets/img/hero-home4.png";
 
 //feature Project Data
 import Feature1 from "../../../../assets/img/feature-project1.png";
@@ -128,32 +128,38 @@ export const SliderData: SliderType[] = [
   {
     id: "1",
     src: Slide1.src,
-    title: "Innovating for a better future",
-    description: "Pellentesque habitant morbi tristique senectus.",
-    buttonText: "Explore Now",
+    title: "Building Dreams, Elevating Health, and Creating Lasting Value",
+    description:
+      "At LeadGate, we are building dreams through innovative construction, elevating health with groundbreaking pharmaceuticals, and creating lasting value by shaping sustainable solutions that inspire, heal, and endure for generations.",
+    buttonText: "Learn More",
   },
 
   {
     id: "2",
     src: Slide2.src,
-    title: "Building dreams, elevating health",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    buttonText: "Discover More",
+    title:
+      "Creating Lasting Value by Transforming Real Estates into Meaningful Investments",
+    description:
+      "At LeadGate, we are committed to creating lasting value by transforming real estates into meaningful investments that empower communities and enhance lives.",
+    buttonText: "Get a Quatations",
   },
   {
     id: "3",
     src: Slide3.src,
-    title: "Innovating for a better future",
-    description: "Pellentesque habitant morbi tristique senectus.",
+    title:
+      "Building Dreams with Precision, Crafting Constructions that Inspire and Endure",
+    description:
+      "At LeadGate, we are building dreams with precision, crafting constructions that inspire and endure, and shaping a future where every structure tells a story of excellence and innovation.",
     buttonText: "Explore Now",
   },
   {
     id: "4",
     src: Slide4.src,
-    title: "Empowering communities worldwide",
+    title:
+      "Elevating Health through Pioneering Innovation and Compassionate Care",
     description:
-      "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-    buttonText: "Join Us",
+      "At LeadGate, we are elevating health through pioneering innovation and compassionate care, and shaping a future where every life is enriched by our commitment to excellence and well-being.",
+    buttonText: "Get a Consultation",
   },
 ];
 
@@ -172,7 +178,7 @@ export const HomePageData: HomePageType[] = [
     id: "1",
     title: "Real Estate Division",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+      "Leadgates Homes Ltd. Is a highly esteemed construction company based in Nigeria. With a strong reputation for excellence, integrity and quality, we have established ourselves as a prominent player in the construction industry. Our comprehensive range of services encompasses building construction, road construction, bridge construction, renovation, and remodeling all real estate investment.",
     image: Division1.src,
     link: "Get more information",
     lineSvg: Line1,
@@ -181,7 +187,7 @@ export const HomePageData: HomePageType[] = [
     id: "2",
     title: "Construction Division",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+      "Leadgate construction is a prominent construction company based in Nigeria, specializing in a wide range of construction projects. With a strong commitment to excellence and proven track record, we have earned a reputation as a trusted and reliable partner in the construction industry.",
     image: Division2.src,
     link: "Get more information",
     lineSvg: Line2,
@@ -190,7 +196,7 @@ export const HomePageData: HomePageType[] = [
     id: "3",
     title: "Pharmaceuticals Division",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui est.",
+      "At Leadgate Pharmaceuticals, we are committed to improving health outcomes by ensuring access to high-quality pharmaceutical products. We partner with reputable manufacturers and distributors to bring safe, effective, and affordable medicines to individuals, healthcare providers, and institutions. Our focus spans across importation, distribution, and retail, enabling us to bridge the gap between global pharmaceutical innovations and local healthcare needs",
     image: Division3.src,
     link: "Get more information",
     lineSvg: Line3,
@@ -265,34 +271,26 @@ export interface TestimonialType {
 export const TestimonialData: TestimonialType[] = [
   {
     id: "1",
-    name: "Esther Hills",
-    title: "Lead Intranet Technician",
+    name: "David A",
+    title: "Real Estate Investor",
     feedback:
-      "Omnis totam molestiae delectus nemo alias nesciunt harum et. Nobis dolorum excepturi quod vel. Sunt est qui ab non dolores repellat rem impedit dolores. Ut ea rerum cum eum.",
+      "Leadgate Group exceeded my expectations! Their real estate division helped me secure a prime investment property with ease, and the entire process was seamless. Their professionalism and commitment to quality are unmatched. Highly recommended!",
     avatar: TestAvatar1.src,
   },
   {
     id: "2", // Added an 'id' field to the second object for consistency
-    name: "Ethel Johnston",
-    title: "Human Directives Director",
+    name: "Olivia M",
+    title: "Pharmacist",
     feedback:
-      "Fuga et debitis numquam omnis sed explicabo rerum harum sint enim quia est. Odit blanditiis iusto adipisci corrupti explicabo. Qui non omnis cum eo aut aut dolor aut.",
+      "As a pharmacist, I rely on quality medications for my customers. Leadgate Pharmaceuticals provides highly effective and affordable drugs, ensuring my customers receive the best healthcare solutions",
     avatar: TestAvatar2.src,
   },
   {
     id: "3", // Added an 'id' field to the second object for consistency
-    name: "Ethel Johnston",
-    title: "Human Directives Director",
+    name: "Angela K",
+    title: "Home owner",
     feedback:
-      "Fuga et debitis numquam omnis sed explicabo rerum harum sint enim quia est. Odit blanditiis iusto adipisci corrupti explicabo. Qui non omnis cum eo aut aut dolor aut.",
-    avatar: TestAvatar2.src,
-  },
-  {
-    id: "4", // Added an 'id' field to the second object for consistency
-    name: "Ethel Johnston",
-    title: "Human Directives Director",
-    feedback:
-      "Fuga et debitis numquam omnis sed explicabo rerum harum sint enim quia est. Odit blanditiis iusto adipisci corrupti explicabo. Qui non omnis cum eo aut aut dolor aut.",
+      "I bought my first home through Leadgate Real Estate, and the experience was fantastic. Their team guided me every step of the way, ensuring I got a beautiful home within my budget. I couldn't be happier",
     avatar: TestAvatar2.src,
   },
 ];

@@ -144,7 +144,7 @@ const AppPharmacyLayout = ({
       <Box height={"100vh"} overflow={"auto"} component={"main"}>
         <Toolbar sx={{ height: "6vh" }} />
         {children}
-        <LAppFooter marginB={8} footerData={LPharmFooter} />
+        <LAppFooter marginB={0} footerData={LPharmFooter} />
       </Box>
     </Box>
   );

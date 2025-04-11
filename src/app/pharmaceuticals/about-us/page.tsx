@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import DataGrid from "./component/card-data";
 import ContactForm from "./component/contact-form";
 import MissionCard from "./component/mission-card";
+import ActionButtons from "../components/action-button";
 
 const AboutUsPharma = () => {
   return (
@@ -17,6 +18,7 @@ const AboutUsPharma = () => {
       <Box>
         <CoverHero />
       </Box>
+           <ActionButtons />
       <Box
         sx={{
           backgroundImage: { xs: "none", md: `url(${BgImage1.src})` },

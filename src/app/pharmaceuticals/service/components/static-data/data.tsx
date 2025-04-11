@@ -15,6 +15,7 @@ export interface ServiceType {
   image: string;
   description: string;
   buttonText: string;
+  slug: string;
 }
 
 export const ServiceData: ServiceType[] = [
@@ -27,6 +28,7 @@ export const ServiceData: ServiceType[] = [
       each healthcare provider, ensuring availability.`,
     image: Service1.src,
     buttonText: "Explore our range of products",
+    slug: "service-one",
   },
   {
     id: "2",
@@ -38,6 +40,7 @@ export const ServiceData: ServiceType[] = [
       ensuring availability and continuity of care.`,
     image: Service2.src,
     buttonText: "Hospital and Institutional Supply",
+    slug: "service-two",
   },
   {
     id: "3",
@@ -48,6 +51,7 @@ export const ServiceData: ServiceType[] = [
        each healthcare provider, ensuring availability.`,
     image: Service3.src,
     buttonText: "Get Pharmaceutical Quote",
+    slug: "service-three",
   },
 ];
 

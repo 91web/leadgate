@@ -10,6 +10,9 @@ import ServiceCards from "./components/service-card";
 import PharmaCards from "./components/pharma-division";
 import InstagramHero from "./components/insta-hero";
 import SubscriptionPharma from "./components/subscribe-pharma";
+import ActionButtons from "./components/action-button";
+
+
 const AppPharmacy = () => {
   return (
     <Box>
@@ -66,6 +69,9 @@ const AppPharmacy = () => {
             </Button>
           </Box>
         </Box>
+        {          /* Action buttons for larger screens */}
+        <ActionButtons />
+        
         <Box pb={10}>
           <Container maxWidth="lg">
             <Box
@@ -82,24 +88,10 @@ const AppPharmacy = () => {
                   fontWeight: "medium",
                   color: "#101828",
                   px: { sx: 2, md: 0 },
-                  // mt: { sx: 2, md: 5 },
+                   my: { sx: 4, md: 6 },
                 }}
               >
                 Our Services
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "16px",
-                  fontFamily: "inter",
-                  fontWeight: "regular",
-                  color: "#475467",
-                  px: { sx: 2, md: 0 },
-                  mb: 5,
-                  width: { sx: "100%", md: "45%" },
-                }}
-              >
-                Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-                blandit lectus integer pulvinar dui est.
               </Typography>
             </Box>
 

@@ -4,6 +4,9 @@ import Typography from "@mui/material/Typography";
 import Grid2 from "@mui/material/Grid2";
 import Container from "@mui/material/Container";
 import { MaterialData, MaterialType } from "../components/static-data/data";
+import Image from "next/image";
+
+
 
 const CardMaterial = () => {
   const cardData: MaterialType[] = MaterialData;
@@ -42,10 +45,17 @@ const CardMaterial = () => {
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "flex-start",
-                      minHeight: "200px",
+                      minHeight: "300px",
                     }}
                   >
-                    <Box py={2}>{card.icon}</Box>
+                    <Box p={2}>
+                      <Image
+                        src={card.src}
+                        alt={card.title}
+                        width={40}
+                        height={40}
+                      />
+                    </Box>
 
                     <Typography
                       gutterBottom

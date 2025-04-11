@@ -5,24 +5,26 @@ import EstateSlider from "./components/slide-home";
 import PropertyCards from "./components/property-feature";
 //import AvatarButton from "./components/avatar";
 import EventBg from "../../assets/img/event-bg.png";
-import TestimonialHero from "../group/components/group-home/avatar-hero";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import TestBg1 from "../../assets/img/bg-testimonial1.jpg";
-import TestBg2 from "../../assets/img/bg-testimonial2.png";
 import ContactForm from "./components/contact-form";
 import MapCard from "./components/map-card";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
+import TestimonialSlider from "../group/components/group-home/testimonial-slide";
+import InstaGramEvent from "./components/instagram-img";
+import Avatar1 from "../../assets/img/avatar1.png";
+import Avatar2 from "../../assets/img/avatar2.png";
+import Avatar3 from "../../assets/img/avatar3.png";
+import Avatar4 from "../../assets/img/avatar4.png";
 
 const AppHomes = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <Box>
-      <Box>
-        <EstateSlider />
-      </Box>
+      <EstateSlider />
+
       <Box py={3}>
         <Container maxWidth="lg">
           <PropertyCards />
@@ -80,17 +82,17 @@ const AppHomes = () => {
               >
                 {/* Left Side - Avatars */}
                 <Box display="flex">
-                  <Avatar src="/avatar1.jpg" sx={{ zIndex: 3 }} />
+                  <Avatar src={Avatar1.src} sx={{ zIndex: 3 }} />
                   <Avatar
-                    src="/avatar2.jpg"
+                    src={Avatar2.src}
                     sx={{ marginLeft: "-10px", zIndex: 2 }}
                   />
                   <Avatar
-                    src="/avatar3.jpg"
+                    src={Avatar3.src}
                     sx={{ marginLeft: "-10px", zIndex: 1 }}
                   />
                   <Avatar
-                    src="/avatar3.jpg"
+                    src={Avatar4.src}
                     sx={{ marginLeft: "-10px", zIndex: 1 }}
                   />
                 </Box>
@@ -99,10 +101,11 @@ const AppHomes = () => {
                     <Button
                       variant="contained"
                       sx={{
-                        bgcolor: "rgba(248, 230, 192, 0.5)", 
+                        bgcolor: "rgba(248, 230, 192, 0.5)",
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Home
@@ -114,6 +117,7 @@ const AppHomes = () => {
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Shortlet
@@ -125,6 +129,7 @@ const AppHomes = () => {
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Interior
@@ -139,6 +144,7 @@ const AppHomes = () => {
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Furniture
@@ -150,6 +156,7 @@ const AppHomes = () => {
                         color: "white",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Home
@@ -170,17 +177,17 @@ const AppHomes = () => {
                 pt={30}
                 ml={1.5}
               >
-                <Avatar src="/avatar1.jpg" sx={{ zIndex: 3 }} />
+                <Avatar src={Avatar1.src} sx={{ zIndex: 3 }} />
                 <Avatar
-                  src="/avatar2.jpg"
+                  src={Avatar2.src}
                   sx={{ marginLeft: "-10px", zIndex: 2 }}
                 />
                 <Avatar
-                  src="/avatar3.jpg"
+                  src={Avatar3.src}
                   sx={{ marginLeft: "-10px", zIndex: 1 }}
                 />
                 <Avatar
-                  src="/avatar3.jpg"
+                  src={Avatar4.src}
                   sx={{ marginLeft: "-10px", zIndex: 1 }}
                 />
               </Box>
@@ -240,6 +247,7 @@ const AppHomes = () => {
                         fontWeight: "bold",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Home
@@ -254,6 +262,7 @@ const AppHomes = () => {
                         fontWeight: "bold",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Shortlet
@@ -271,6 +280,7 @@ const AppHomes = () => {
                         fontWeight: "bold",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Interior
@@ -285,6 +295,7 @@ const AppHomes = () => {
                         fontWeight: "bold",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Furniture
@@ -303,6 +314,7 @@ const AppHomes = () => {
                         fontWeight: "bold",
                         borderRadius: "17px",
                         px: "20px",
+                        textTransform: "none",
                       }}
                     >
                       Home
@@ -315,29 +327,14 @@ const AppHomes = () => {
         </Container>
       </Box>
 
-      <Box>
-        <Container maxWidth="lg">
-          <MapCard />
-        </Container>
-      </Box>
+      <Container maxWidth="lg">
+        <MapCard />
+      </Container>
+
       <Divider />
-      <Box py={5} bgcolor={"#fff"}>
-        <Box
-          sx={{
-            backgroundImage: isMobile
-              ? `url(${TestBg1.src})`
-              : `url(${TestBg2.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: { xs: "50vh", md: "100vh" },
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <TestimonialHero />
-        </Box>
-      </Box>
+      <TestimonialSlider />
+      <InstaGramEvent />
+
       <Box py={{ xs: 5, md: 8 }}>
         <ContactForm />
       </Box>

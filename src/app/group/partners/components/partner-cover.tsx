@@ -66,8 +66,8 @@ export default function PartnerHero() {
               width: { xs: "100%", md: "40%" },
             }}
           >
-            We collaborate with leading industry partners to drive excellence in
-            real estate, construction, and pharmaceuticals.
+            At Leadgate Groups, we recognize that success is built on strong
+            partnerships
           </Typography>
           <Box>
             <List>
@@ -83,7 +83,7 @@ export default function PartnerHero() {
                     fontFamily: "inter",
                   }}
                 >
-                  Lorem ipsum dolor sit amet consectetur.
+                  Collaborating for Excellence
                 </Typography>
               </ListItem>
               <ListItem>
@@ -98,7 +98,37 @@ export default function PartnerHero() {
                     fontFamily: "inter",
                   }}
                 >
-                  Lorem ipsum dolor sit amet consectetur.
+                  A Shared Commitment to Innovation
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon style={{ color: "white" }} />
+                </ListItemIcon>
+                <Typography
+                  sx={{
+                    fontSize: "17px",
+                    color: "#fff",
+                    fontWeight: "regular",
+                    fontFamily: "inter",
+                  }}
+                >
+                  Integrity & Trust
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CheckCircleIcon style={{ color: "white" }} />
+                </ListItemIcon>
+                <Typography
+                  sx={{
+                    fontSize: "17px",
+                    color: "#fff",
+                    fontWeight: "regular",
+                    fontFamily: "inter",
+                  }}
+                >
+                  Growing Together
                 </Typography>
               </ListItem>
             </List>
@@ -128,7 +158,7 @@ export default function PartnerHero() {
           >
             Learn More
           </Button>
-          <Button
+       {  /* <Button
             variant="outlined"
             sx={{
               backgroundColor: "transparent",
@@ -143,7 +173,7 @@ export default function PartnerHero() {
             }}
           >
             Book Demo
-          </Button>
+          </Button>*/}
         </Box>
       </Container>
     </Box>

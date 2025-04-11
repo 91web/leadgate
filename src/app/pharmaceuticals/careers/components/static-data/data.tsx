@@ -25,42 +25,41 @@ export const WorkData: WorkType[] = [
     src: WLogo1.src,
     title: "Networking and Relationships",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+      " At LeadGate Pharmaceutical, you’ll join a vibrant community of professionals who are passionate about making a difference in healthcare.",
   },
   {
     id: "2",
     src: WLogo2.src,
     title: "Collaboration & Personal Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+    description: "We believe in the power of teamwork and continuous learning.",
   },
   {
     id: "3",
     src: WLogo3.src,
     title: "Global Opportunities",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+      "As a part of a forward-thinking pharmaceutical company, you’ll have the chance to engage with a global network of professionals and projects.",
   },
   {
     id: "4",
     src: WLogo4.src,
     title: "Innovation and Technology",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+      " Lead Gate Pharmaceutical is at the forefront of innovation, embracing cutting-edge technology to revolutionize healthcare solutions.",
   },
   {
     id: "5",
     src: WLogo5.src,
     title: "Competitive Compensation",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+      "We recognize and reward the dedication and hard work of our team.",
   },
   {
     id: "6",
     src: WLogo6.src,
     title: "Market Demand & Stability",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer.",
+      "The pharmaceutical industry is a cornerstone of global healthcare, with steady growth and demand.",
   },
 ];
 
@@ -77,18 +76,18 @@ export interface JobType {
 export const JobData: JobType[] = [
   {
     id: "1",
-    title: "Project Manager",
+    title: "Dispatch Rider",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. blandit lectus integer pulvinar dui est.",
+      "Join us as a Dispatch Rider and play a vital role in our operations. You’ll ensure the safe and timely delivery of goods, supplies, and personnel while maintaining the highest standards of professionalism on the road.",
     location: "Abuja",
     type: "Full Time",
     src: JLogo1.src,
   },
   {
     id: "2",
-    title: "Front Desk Officer",
+    title: "Social Media Manager",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. blandit lectus integer pulvinar dui est.",
+      "Are you a creative storyteller with a passion for digital engagement? As our Social Media Manager, you’ll lead our online presence, crafting compelling content, engaging with our audience, and driving brand awareness across platforms.",
     location: "Abuja",
     type: "Full Time",
     src: JLogo2.src,
@@ -97,27 +96,10 @@ export const JobData: JobType[] = [
     id: "3",
     title: "Driver",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. blandit lectus integer pulvinar dui est.",
+      "Are you a creative storyteller with a passion for digital engagement? As our Social Media Manager, you’ll lead our online presence, crafting compelling content, engaging with our audience, and driving brand awareness across platforms.",
     location: "Abuja",
     type: "Full Time",
     src: JLogo3.src,
   },
-  {
-    id: "4",
-    title: "Social Media Manager",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. blandit lectus integer pulvinar dui est.",
-    location: "Abuja",
-    type: "Full Time",
-    src: JLogo4.src,
-  },
-  {
-    id: "5",
-    title: "Media Lead Consultant",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit lectus integer pulvinar dui est. blandit lectus integer pulvinar dui est.",
-    location: "Abuja",
-    type: "Full Time",
-    src: JLogo5.src,
-  },
+ 
 ];

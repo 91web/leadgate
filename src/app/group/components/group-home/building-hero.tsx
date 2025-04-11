@@ -15,9 +15,10 @@ const BuildingHero = () => {
   }
 
   return (
-  <Box  sx={{ bgcolor: "#fff" }} >
+    <Box sx={{ bgcolor: "#fff" }}>
       {/* Hero Section */}
-      <Box py={3}
+      <Box
+        py={3}
         sx={{
           height: "426px",
           backgroundImage: `url(${TestHero1.src})`,
@@ -39,7 +40,7 @@ const BuildingHero = () => {
             fontFamily: "Lora",
             mb: 2,
             fontSize: { xs: "24px", md: "30px", maxWidth: "600px" },
-            color:'#fff'
+            color: "#fff",
           }}
         >
           We are passionate about building Dreams, Elevating Health and Creating
@@ -53,12 +54,11 @@ const BuildingHero = () => {
             mb: 3,
             fontWeight: "regular",
             color: "#ada6a6",
-            px:2
+            px: 2,
           }}
         >
-          Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant blandit
-          lectus integer pulvinar dui est. Blandit lectus integer pulvinar dui
-          est. Lorem ipsum dolor sit amet consectetur.
+          At Lead Gate Group, we believe in dreaming big, acting with purpose,
+          and making a meaningful difference in every life we touch.
         </Typography>
         <Button
           variant="contained"

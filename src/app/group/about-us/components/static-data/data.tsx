@@ -40,34 +40,18 @@ export interface ValueType {
 export const ValueData: ValueType[] = [
   {
     id: "01",
-    title: "Our Mission",
+    title: "Excellence",
     descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
+      "Excellence is the benchmark for everything we do. We uphold the highest standards of quality, innovation, and precision across all our divisions. From cutting-edge medical advancements to architectural masterpieces and robust infrastructure, we consistently push boundaries to deliver superior results.",
   },
   {
     id: "02",
-    title: "Our Vision",
+    title: "Customer Satisfaction",
     descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
+      "At Leadgate Groups, our customers are at the heart of everything we do. We listen, innovate, and strive to exceed expectations by delivering tailored solutions that align with their needs. Whether it's delivering life-saving pharmaceuticals, constructing world-class infrastructure, or developing dream homes, we are dedicated to ensuring an unparalleled customer experience.",
   },
-  {
-    id: "03",
-    title: "Our Vision",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
-  },
-  {
-    id: "04",
-    title: "Our Vision",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
-  },
-  {
-    id: "05",
-    title: "Our Vision",
-    descriptions:
-      "Lorem ipsum dolor sit amet consectetur. Duis semper vitae sapien id. Odio vestibulum urna auctor cursus. Et semper pellentesque dui fermentum mauris varius. Sagittis cras urna amet pulvinar facilisis massa diam.",
-  },
+
+
 ];
 
 //Group Lead Gate

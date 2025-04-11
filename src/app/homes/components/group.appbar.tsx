@@ -1,13 +1,6 @@
-import Box from "@mui/material/Box";
-import {
-  Dispatch,
-  FC,
-  MouseEvent,
-  Fragment,
-  SetStateAction,
-  useState,
-  useEffect,
-} from "react";
+"use client";
+
+import React, { Dispatch, FC, MouseEvent, Fragment, SetStateAction, useState, useEffect } from "react";
 import { NavDataType } from "./static-data/data";
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
@@ -26,7 +19,6 @@ import Button from "@mui/material/Button";
 import ArrowOut from "@/assets/svg/arrow-square-out.svg";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import Drawer from "@mui/material/Drawer";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import Select from "@mui/material/Select";
@@ -39,6 +31,11 @@ import DialogContent from "@mui/material/DialogContent/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import Popper from "@mui/material/Popper";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Paper from "@mui/material/Paper";
+import Close from "@mui/icons-material/Close";
+import Box from "@mui/material/Box";
 
 interface LGroupAppBarComponentProps {
   openDrawer: boolean;
@@ -47,17 +44,19 @@ interface LGroupAppBarComponentProps {
   eleBar: number;
   logo: StaticImageData;
 }
+
 export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   const { openDrawer, setOpenDrawer, navState, logo } = props;
-  const [openProjectModal, setOpenProjectModal] = useState<boolean>(false);
-  const [openPartnerModal, setOpenPartnerModal] = useState<boolean>(false);
   const [openDeveloperModal, setOpenDeveloperModal] = useState<boolean>(false);
-  const pathname = usePathname();
-  const router = useRouter();
+  const [projectAnchorEl, setProjectAnchorEl] = useState<null | HTMLElement>(null);
+  const [partnerAnchorEl, setPartnerAnchorEl] = useState<null | HTMLElement>(null);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [showHomeNav, setShowHomeNav] = useState(false);
-  const open = Boolean(anchorEl);
+  const pathname = usePathname();
+  const router = useRouter();
   const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
   const [formDetails, setFormDetails] = useState({
     firstName: "",
     lastName: "",
@@ -66,12 +65,27 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
     message: "",
     agree: false,
   });
-  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const open = Boolean(anchorEl);
+  const projectOpen = Boolean(projectAnchorEl);
+  const partnerOpen = Boolean(partnerAnchorEl);
+
   const handleClick = (event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const handleProjectClick = (event: MouseEvent<HTMLElement>) => {
+    setProjectAnchorEl(event.currentTarget);
+  };
+
+  const handlePartnerClick = (event: MouseEvent<HTMLElement>) => {
+    setPartnerAnchorEl(event.currentTarget);
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
+    setProjectAnchorEl(null);
+    setPartnerAnchorEl(null);
   };
 
   useEffect(() => {
@@ -82,24 +96,12 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
     }
   }, [pathname]);
 
-  const togglePartnerModal = () => {
-    setOpenPartnerModal(!openPartnerModal);
-    setOpenPartnerModal(!openPartnerModal);
-  };
-  const toggleProjectModal = () => {
-    setOpenProjectModal(!openProjectModal);
-  };
-
   const setDeveloperModal = () => {
-    setOpenPartnerModal(!openPartnerModal);
     setOpenDeveloperModal(!openDeveloperModal);
   };
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
-
     setFormDetails((prevDetails) => ({
       ...prevDetails,
       [name]: value,
@@ -108,7 +110,6 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-
     setFormDetails((prevDetails) => ({
       ...prevDetails,
       [name]: checked,
@@ -118,6 +119,18 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
   const handleSubmit = () => {
     console.log(formDetails);
   };
+
+  const projectItems = [
+    { name: "Ornate", url: "/homes/project/1/Ornate" }, // ID "1" for Ornate
+    { name: "Lead City", url: "/homes/project/2/Leadcity" }, // ID "2" for leadcity
+    { name: "Emerald", url: "/homes/project/3/Emerald" }, // ID "3" for emerald
+  ];
+
+  const partnerItems = [
+    { name: "Become a Developer", action: setDeveloperModal },
+    { name: "Become a Realtor", action: setDeveloperModal },
+    { name: "Become an Investor", action: setDeveloperModal },
+  ];
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -132,31 +145,29 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
         {showHomeNav && (
           <Box sx={{ bgcolor: "#101828" }}>
             <Container maxWidth={"lg"}>
-              <Toolbar sx={{ bgcolor: "#101828", alignItems: "self-end" }}>
+              <Toolbar
+                sx={{
+                  bgcolor: "#101828",
+                  alignItems: "self-end",
+                  minHeight: { xs: 0, md: "auto" },
+                  py: { xs: 0, md: 1 },
+                  px: 0,
+                }}
+              >
                 <Box flexGrow={1} />
-                <Box
-                  component={"a"}
-                  href="/group"
-                  display={"flex"}
-                  gap={1}
-                  pb={1}
-                >
+                <Box component={"a"} href="/group" display={"flex"} gap={1} pb={1}>
                   <Typography>Go to Leadgate Groups</Typography>
-                  <Image
-                    src={ArrowOut}
-                    alt={"arrow out"}
-                    style={{ margin: "2px 0px" }}
-                  />
+                  <Image src={ArrowOut} alt={"arrow out"} style={{ margin: "2px 0px" }} />
                 </Box>
               </Toolbar>
             </Container>
           </Box>
         )}
         <Container maxWidth={"lg"}>
-          <Toolbar sx={{ py: { md: 1 }, px: { xs: 0 } }}>
+          <Toolbar>
             <Box pt={1}>
               <Image
-                height={60}
+                height={40}
                 src={logo}
                 alt={"LeadGate Logo"}
                 priority={true}
@@ -167,10 +178,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
               />
             </Box>
             <Box flexGrow={1} />
-            <Box
-              sx={{ display: { xs: "none", md: "flex" } }}
-              justifyContent={"end"}
-            >
+            <Box sx={{ display: { xs: "none", md: "flex" } }} justifyContent={"end"}>
               {navState &&
                 navState.map((page) => (
                   <Box key={page.id} py={1.5}>
@@ -189,12 +197,8 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                             display={"flex"}
                             flexDirection={"row"}
                           >
-                            <span style={{ marginTop: "3px" }}>
-                              {page?.name}
-                            </span>
-                            {page.subNav && page.subNav?.length > 0 && (
-                              <>{open ? <ArrowDropUp /> : <ArrowDropDown />}</>
-                            )}
+                            <span style={{ marginTop: "3px" }}>{page?.name}</span>
+                            {page.subNav && page.subNav?.length > 0 && <>{open ? <ArrowDropUp /> : <ArrowDropDown />}</>}
                           </Typography>
                         </Link>
                         <Menu
@@ -208,8 +212,6 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                               elevation: 0,
                               sx: {
                                 overflow: "visible",
-                                // filter:
-                                //   "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
                                 mt: 2.5,
                                 "& .MuiAvatar-root": {
                                   width: 32,
@@ -269,34 +271,26 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                       </>
                     ) : (
                       <Fragment key={page?.id}>
-                        {pathname.split("/")[1] !== "group" &&
-                        page.name !== "Contact Us" ? (
-                          <Link
+                        {pathname.split("/")[1] !== "group" && page.name !== "Contact Us" ? (
+                          <Box
+                            sx={{
+                              mx: 2,
+                              cursor: "pointer",
+                              display: "flex",
+                              alignItems: "center",
+                            }}
                             onClick={(e) => {
                               if (page.name === "Projects") {
-                                toggleProjectModal();
-                                e.preventDefault();
+                                handleProjectClick(e);
                               } else if (page.name === "Partners") {
-                                togglePartnerModal();
-                                e.preventDefault();
+                                handlePartnerClick(e);
                               } else {
-                                window.location.href = `/${
-                                  pathname.split("/")[1]
-                                }${page.url}`;
+                                window.location.href = `/${pathname.split("/")[1]}${page.url}`;
                               }
                             }}
-                            href={
-                              page.name === "Projects"
-                                ? "#"
-                                : `/${pathname.split("/")[1]}${page.url}`
-                            }
                           >
                             <Typography
-                              sx={{
-                                mx: 2,
-                                textTransform: "capitalize",
-                              }}
-                              marginTop={"3px"}
+                              textTransform="capitalize"
                               lineHeight={1.2}
                               color={"#344054"}
                               fontWeight={page.active ? 600 : "normal"}
@@ -304,7 +298,28 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                             >
                               {page?.name}
                             </Typography>
-                          </Link>
+                            {(page.name === "Projects" || page.name === "Partners") && (
+                              <Box
+                                sx={{
+                                  ml: 0.5,
+                                  display: "flex",
+                                  color: "#344054",
+                                }}
+                              >
+                                {page.name === "Projects" ? (
+                                  projectOpen ? (
+                                    <ArrowDropUp />
+                                  ) : (
+                                    <ArrowDropDown />
+                                  )
+                                ) : partnerOpen ? (
+                                  <ArrowDropUp />
+                                ) : (
+                                  <ArrowDropDown />
+                                )}
+                              </Box>
+                            )}
+                          </Box>
                         ) : pathname.split("/")[1] === "group" ? (
                           <Link
                             href={
@@ -334,6 +349,119 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     )}
                   </Box>
                 ))}
+
+              {/* Project Popper */}
+              <Popper
+                open={projectOpen}
+                anchorEl={projectAnchorEl}
+                placement="bottom-start"
+                sx={{
+                  zIndex: 1300,
+                  mt: 1,
+                  '&[data-popper-placement*="bottom"]': {
+                    marginTop: "8px",
+                  },
+                }}
+                modifiers={[
+                  {
+                    name: "offset",
+                    options: {
+                      offset: [0, 25],
+                    },
+                  },
+                ]}
+              >
+                <ClickAwayListener onClickAway={handleClose}>
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      minWidth: 150,
+                      borderRadius: "8px",
+                      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <List disablePadding>
+                      {projectItems.map((item, index) => (
+                        <Fragment key={item.name}>
+                          <MenuItem
+                            onClick={() => {
+                              router.push(item.url);
+                              handleClose();
+                            }}
+                            sx={{
+                              p: 1,
+                              "&:hover": {
+                                backgroundColor: "#f5f5f5",
+                              },
+                            }}
+                          >
+                            <Typography>{item.name}</Typography>
+                          </MenuItem>
+                          {index < projectItems.length - 1 && <Divider sx={{ my: 0 }} />}
+                        </Fragment>
+                      ))}
+                    </List>
+                  </Paper>
+                </ClickAwayListener>
+              </Popper>
+
+              {/* Partner Popper */}
+              <Popper
+                open={partnerOpen}
+                anchorEl={partnerAnchorEl}
+                placement="bottom-start"
+                sx={{
+                  zIndex: 1300,
+                  mt: 1,
+                  '&[data-popper-placement*="bottom"]': {
+                    marginTop: "8px",
+                  },
+                }}
+                modifiers={[
+                  {
+                    name: "offset",
+                    options: {
+                      offset: [0, 25],
+                    },
+                  },
+                ]}
+              >
+                <ClickAwayListener onClickAway={handleClose}>
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      minWidth: 200,
+                      borderRadius: "8px",
+                      boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <List disablePadding>
+                      {partnerItems.map((item, index) => (
+                        <Fragment key={item.name}>
+                          <MenuItem
+                            onClick={() => {
+                              item.action();
+                              handleClose();
+                            }}
+                            sx={{
+                              p: 1.5,
+                              "&:hover": {
+                                backgroundColor: "#f5f5f5",
+                              },
+                            }}
+                          >
+                            <Typography>{item.name}</Typography>
+                          </MenuItem>
+                          {index < partnerItems.length - 1 && <Divider sx={{ my: 0 }} />}
+                        </Fragment>
+                      ))}
+                    </List>
+                  </Paper>
+                </ClickAwayListener>
+              </Popper>
+
               {showHomeNav && (
                 <Box display={{ xs: "none", md: "block" }}>
                   <Button
@@ -341,12 +469,10 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     sx={{
                       borderRadius: "8px",
                       textTransform: "capitalize",
-                      px: 4,
-                      py: 1.5,
+                      p: 1,
                       fontSize: "1rem",
                       bgcolor:
-                        pathname.split("/").includes("homes") ||
-                        pathname.split("/").includes("construction")
+                        pathname.split("/").includes("homes") || pathname.split("/").includes("construction")
                           ? "#AE883B"
                           : "",
                       color: "#ffff",
@@ -355,9 +481,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                     onClick={() => {
                       const segment = pathname.split("/")[1];
                       const isConstructionPath = segment === "construction";
-                      const targetPath = isConstructionPath
-                        ? "#contact"
-                        : `/${segment}/contact-us`;
+                      const targetPath = isConstructionPath ? "#contact" : `/${segment}/contact-us`;
 
                       router.push(targetPath);
                     }}
@@ -386,118 +510,11 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
                 <Image src={MenuIcon} alt={"menu"} />
               </IconButton>
             </Box>
-            <Drawer
-              anchor="right"
-              open={openProjectModal}
-              onClose={toggleProjectModal}
-              ModalProps={{
-                BackdropProps: { style: { backgroundColor: "transparent" } },
-              }}
-              sx={{
-                zIndex: 2000,
-                "& .MuiDrawer-paper": {
-                  height: "auto",
-                  width: "20%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  top: "22%",
-                  right: "20%",
-                  borderRadius: "10px",
-                },
-              }}
-            >
-              <Box>
-                <List>
-                  <Box display="flex" flexDirection="column" gap={2} p={2}>
-                    <Box>
-                      <Box>
-                        <Link href="/homes/project" color="inherit">
-                          <Typography>Ornate</Typography>
-                        </Link>
-                      </Box>
-                      <Divider />
-                      <Box mt={2}>
-                        <Link href="/homes/project" color="inherit">
-                          <Typography>Campari</Typography>
-                        </Link>
-                      </Box>
-                      <Divider />
-                      <Box mt={2}>
-                        <Link href="/homes/project" color="inherit">
-                          <Typography>Valentino</Typography>
-                        </Link>
-                      </Box>
-                      <Divider />
-                      <Box mt={2}>
-                        <Link href="/homes/project" color="inherit">
-                          <Typography>Florida</Typography>
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Box>
-                </List>
-              </Box>
-            </Drawer>
-            <Drawer
-              anchor="right"
-              open={openPartnerModal}
-              onClose={togglePartnerModal}
-              ModalProps={{
-                BackdropProps: { style: { backgroundColor: "transparent" } },
-              }}
-              sx={{
-                zIndex: 2000,
-                "& .MuiDrawer-paper": {
-                  height: "auto",
-                  width: "20%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  top: "22%",
-                  right: "20%",
-                  borderRadius: "10px",
-                },
-              }}
-            >
-              <Box>
-                <List>
-                  <Box display="flex" flexDirection="column" gap={2} p={2}>
-                    <Box>
-                      <Box>
-                        <Button
-                          onClick={setDeveloperModal}
-                          sx={{ color: "#000" }}
-                        >
-                          Become a Developer
-                        </Button>
-                      </Box>
-                      <Divider />
-                      <Box mt={2}>
-                        <Button
-                          onClick={setDeveloperModal}
-                          sx={{ color: "#000" }}
-                        >
-                          Become a Realtor
-                        </Button>
-                      </Box>
-                      <Divider />
-                      <Box mt={2}>
-                        <Button
-                          onClick={setDeveloperModal}
-                          sx={{ color: "#000" }}
-                        >
-                          Become an Inventor
-                        </Button>
-                      </Box>
-                    </Box>
-                  </Box>
-                </List>
-              </Box>
-            </Drawer>
           </Toolbar>
         </Container>
       </AppBar>
+
+      {/* Developer Dialog */}
       <Dialog
         fullScreen={fullScreen}
         open={openDeveloperModal}
@@ -507,9 +524,9 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          pt: "120px",
+          pt: "150px",
           pb: { xs: "120px", md: "14px" },
-          mx:{xs:"8px", md:"0px"}
+          mx: { xs: "8px", md: "0px" },
         }}
       >
         <DialogContent>
@@ -518,25 +535,16 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
               <Box py={{ xs: 5, md: 1 }}>
                 <Container maxWidth="lg">
                   <Box mx={"5%"}>
-                    <Box display="flex">
-                      <Typography
-                        fontWeight={"bold"}
-                        fontSize={"30px"}
-                        mb={3}
-                        sx={{
-                          whiteSpace: "nowrap",
-                        }}
-                      >
+                    <Box display="flex" justifyContent="space-between" alignItems="center">
+                      <Typography fontWeight={"bold"} fontSize={"30px"} mb={3} sx={{ whiteSpace: "nowrap" }}>
                         Become a Developer
                       </Typography>
+                      <IconButton onClick={setDeveloperModal} sx={{ color: "#000" }}>
+                        <Close />
+                      </IconButton>
                     </Box>
 
-                    <Box
-                      component="form"
-                      noValidate
-                      autoComplete="off"
-                      sx={{ maxWidth: 500, mx: "auto" }}
-                    >
+                    <Box component="form" noValidate autoComplete="off" sx={{ maxWidth: 500, mx: "auto" }}>
                       <Box display="flex" gap={2} mb={2}>
                         <FormControl fullWidth>
                           <FormLabel>First Name</FormLabel>
@@ -628,12 +636,7 @@ export const GroupAppBarComponent: FC<LGroupAppBarComponentProps> = (props) => {
 
                       <Box mb={2}>
                         <FormControlLabel
-                          control={
-                            <Checkbox
-                              name="agree"
-                              onChange={handleCheckboxChange}
-                            />
-                          }
+                          control={<Checkbox name="agree" onChange={handleCheckboxChange} />}
                           label="You agree to our friendly privacy policy."
                         />
                       </Box>

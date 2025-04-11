@@ -84,7 +84,7 @@ const HeroSlider = () => {
         position: "relative",
         overflow: "hidden",
         width: "100%",
-        height: "650px",
+        height: "670px",
         backgroundColor: "#000", // Set background to black
         animation: `${fadeBackground} 6s ease`, // Apply fade effect to background
       }}
@@ -148,6 +148,7 @@ const HeroSlider = () => {
           color: "#fff", // Make the content text color white
           opacity: 1, // Full opacity for the content
           animation: `${slideIn} 1s ease`, // Apply slide-in animation to content
+          width: { xs: "100%", md: "40%" }, // Adjust width for smaller screens
         }}
       >
         <Typography
@@ -157,6 +158,7 @@ const HeroSlider = () => {
             fontSize: { xs: "36px", md: "40px" },
             fontFamily: "'Lora'", // add Lora to the App
             fontWeight: "regular",
+            lineHeight: "130%",
           }}
         >
           {images[currentSlide].title}
@@ -169,7 +171,7 @@ const HeroSlider = () => {
             fontFamily: "'Inter'", //add inter to the app
             fontWeight: "regular",
             color: "#D0D5DD",
-            lineHeight: "130%",
+            lineHeight: "140%",
           }}
         >
           {images[currentSlide].description}
@@ -184,7 +186,7 @@ const HeroSlider = () => {
             },
             textTransform: "none",
           }}
-          onClick={() =>handleNavigate(images[currentSlide].buttonText)}
+          onClick={() => handleNavigate(images[currentSlide].buttonText)}
         >
           {images[currentSlide].buttonText}
         </Button>

@@ -49,17 +49,6 @@ export default function ContactSection() {
         >
           We are excited to have you join us
         </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#D0D5DD",
-            fontFamily: "'Inter'",
-            fontSize: { xs: "14px", md: "16px" },
-            fontWeight: "regular",
-          }}
-        >
-          We love to hear from you. Please leave us a message.
-        </Typography>
       </Container>
     </Box>
   );

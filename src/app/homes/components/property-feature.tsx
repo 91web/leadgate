@@ -37,7 +37,7 @@ const PropertyCards = () => {
                 mb: 2,
               }}
             >
-              Best Properties
+              Our Services
             </Typography>
             <Typography
               variant="body1"
@@ -48,11 +48,10 @@ const PropertyCards = () => {
                 lineHeight: "120%",
                 fontFamily: "regular",
                 mb: 2,
-                width: { xs: "100%", md: "55%" },
+              //  width: { xs: "100%", md: "55%" },
               }}
             >
-              Lorem ipsum dolor sit amet consectetur. Integer euismod molestie
-              tortor non laoreet tristique maecenas mauris.Best Properties
+              What we Offer to our Clients
             </Typography>
           </Box>
 
@@ -68,7 +67,6 @@ const PropertyCards = () => {
                 borderRadius: 2,
                 px: 3,
                 // my: { xs: 2, md: 0 },
-
                 // width: { xs: "80%", md: "auto" },
                 marginX: 2,
                 "&:hover": {

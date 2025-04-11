@@ -76,7 +76,6 @@ const AppHomesLayout = ({
   }, [count, pathname]);
 
   const handleNavClick = (pageNav: NavDataType) => {
-    // console.log(pageNav);
     const newNavState = navState.map((nav) => {
       if (nav?.subNav) {
         const _nav: NavDataType = {
@@ -127,7 +126,13 @@ const AppHomesLayout = ({
   if (!hydrated) return null;
 
   return (
-    <Box position={"relative"}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh", // Ensure the container takes at least the full viewport height
+      }}
+    >
       <GroupAppBarComponent
         logo={LGroupLogo}
         openDrawer={openDrawer}
@@ -142,15 +147,17 @@ const AppHomesLayout = ({
         handleNavClick={handleNavClick}
         drawerWidth={drawerWidth}
       />
-      <Toolbar sx={{ height: { xs: "inherit", md: 81 } }} />
+      <Toolbar />
       <Box
-        height={{ xs: "94vh", md: "92vh" }}
-        // overflow={"auto"}
         component={"main"}
+        sx={{
+          flexGrow: 1, // Ensure the main content takes up the remaining space
+          overflow: "auto", // Allow scrolling if content overflows
+        }}
       >
         {children}
-        <LAppFooter footerData={LGroupFooter} />
       </Box>
+      <LAppFooter footerData={LGroupFooter} />
     </Box>
   );
 };

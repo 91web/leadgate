@@ -78,31 +78,89 @@ const DreamGroup = () => {
             </Box>
 
             {/* Description and Button */}
-            <Typography
-              variant="body1"
-              sx={{
-                fontFamily: "inter",
-                color: "#6D6D6D",
-                lineHeight: 1.8,
-                mb: 3,
-                fontSize: "16px",
-                textAlign: "left",
-                fontWeight: "regular",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. blandit lectus integer
-              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
-              magna habitant blandit lectus integer pulvinar dui est. blandit
-              lectus integer pulvinar dui est.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est. blandit lectus integer
-              pulvinar dui est. Lorem ipsum dolor sit amet consectetur. Viverra
-              magna habitant blandit lectus integer pulvinar dui est. blandit
-              lectus integer pulvinar dui est.
-            </Typography>
+            <Box>
+              <Box>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontFamily: "inter",
+                    color: "#6D6D6D",
+                    lineHeight: 1.8,
+                    my: 2,
+                    fontSize: "16px",
+                    textAlign: "left",
+                    fontWeight: "regular",
+                  }}
+                >
+                  At Lead Gate Group, our purpose transcends industries; we are
+                  committed to transforming lives, fostering innovation, and
+                  creating a legacy of excellence.
+                </Typography>
+              </Box>
+              <Box sx={{ my: 2 }}>
+                <ul style={{ margin: 0, paddingLeft: "20px" }}>
+                  <li>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontFamily: "Inter",
+                        color: "#6D6D6D",
+                        lineHeight: 1.8,
+                        fontSize: "16px",
+                        textAlign: "left",
+                        fontWeight: "regular",
+                      }}
+                    >
+                      <strong>Building Dreams:</strong> We bring visions to life
+                      by constructing spaces and homes that inspire, endure, and
+                      transform communities. From groundbreaking infrastructure
+                      to thoughtfully designed homes, we turn aspirations into
+                      tangible realities.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontFamily: "Inter",
+                        color: "#6D6D6D",
+                        lineHeight: 1.8,
+                        fontSize: "16px",
+                        textAlign: "left",
+                        fontWeight: "regular",
+                      }}
+                    >
+                      <strong>Elevating Health:</strong> Health is the
+                      foundation of a thriving society, and through Lead Gate
+                      Pharmaceuticals, we deliver innovative, patient-focused
+                      solutions that improve lives. By prioritizing excellence
+                      in healthcare, we aim to elevate the standard of
+                      well-being globally.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontFamily: "Inter",
+                        color: "#6D6D6D",
+                        lineHeight: 1.8,
+                        fontSize: "16px",
+                        textAlign: "left",
+                        fontWeight: "regular",
+                      }}
+                    >
+                      <strong>Creating Lasting Value:</strong> Our mission is
+                      rooted in sustainability and long-term impact. Across all
+                      our ventures in construction, homes, and pharmaceuticals,
+                      we are driven by the desire to create value that benefits
+                      individuals, families, and society for generations to
+                      come.
+                    </Typography>
+                  </li>
+                </ul>
+              </Box>
+            </Box>
             <Box
               sx={{
                 display: "flex",

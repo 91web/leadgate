@@ -49,18 +49,6 @@ export default function ServiceCover() {
         >
           Our Services
         </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            color: "#D0D5DD",
-            fontFamily: "inter",
-            fontSize: { xs: "14px", md: "16px" },
-            fontWeight: "regular",
-          }}
-        >
-          Lorem ipsum dolor, Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum
-          dolor. Lorem ipsum dolor, Lorem ipsum dolor Lorem.
-        </Typography>
       </Container>
     </Box>
   );

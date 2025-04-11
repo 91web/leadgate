@@ -99,7 +99,7 @@ const TestimonialHero: React.FC = () => {
                   zIndex: 1,
                   pl: 2,
                   height: "100%",
-                  width:"20%",
+                  width: "20%",
                   boxSizing: "border-box",
                   ml: { md: 2 }, // Added margin to the left grid
                 }}
@@ -233,13 +233,14 @@ const TestimonialHero: React.FC = () => {
                           }}
                         >
                           <CardHeader
-                            avatar={
-                              <Avatar
-                                src={testimonial.avatar}
-                                alt={testimonial.name}
-                                sx={{ width: 70, height: 70 }}
-                              />
-                            }
+                            /*  avatar={
+                        <Avatar
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                          sx={{ width: 70, height: 70 }}
+                        />
+                      } */
+
                             title={
                               <Typography
                                 variant="subtitle1"

@@ -25,48 +25,42 @@ export const DtaCard: DtaCardType[] = [
   {
     id: "1",
     title: "Excellence and Quality",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-         Lorem ipsum dolor sit amet consectetur.`,
+    description: `At LeadGate, we uphold excellence and quality as the cornerstone of everything we do.`,
     image1: Vector1.src,
     image2: Vector11.src,
   },
   {
     id: "2",
-    title: "Customer Focus",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-        Lorem ipsum dolor sit amet consectetur.`,
+    title: "Patient Centered Care",
+    description: `Our patients are at the heart of our mission. We believe that personalized care is the key to better health outcomes.`,
     image1: Vector2.src,
     image2: Vector22.src,
   },
   {
     id: "3",
-    title: "Innovation",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-         Lorem ipsum dolor sit amet consectetur.`,
+    title: "Love and Integrity",
+    description: `At LeadGate, we operate with love and integrity as our guiding principles.`,
     image1: Vector3.src,
     image2: Vector33.src,
   },
   {
     id: "4",
-    title: "Integrity",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-        Lorem ipsum dolor sit amet consectetur.`,
+    title: "Dedication and Service",
+    description: `Our team is driven by a deep sense of purpose and an unwavering commitment to serve.`,
     image1: Vector4.src,
     image2: Vector44.src,
   },
   {
     id: "5",
-    title: "Teamwork",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-        Lorem ipsum dolor sit amet consectetur.`,
+    title: "Innovation & Leadership",
+    description: `In a constantly evolving industry, Lead Gate leads the way with groundbreaking innovations and forward-thinking solutions.`,
     image1: Vector5.src,
     image2: Vector55.src,
   },
   {
     id: "6",
-    title: "Sustainability",
-    description: `Lorem ipsum dolor sit amet consectetur. Viverra magna habitant.
-        Lorem ipsum dolor sit amet consectetur.`,
+    title: "Loyalty & Dependability",
+    description: ` Loyalty and dependability define who we are. Our customers and partners can rely on us to deliver consistent, high-quality care and solutions.`,
     image1: Vector6.src,
     image2: Vector66.src,
   },

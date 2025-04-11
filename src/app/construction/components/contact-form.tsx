@@ -10,7 +10,7 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
 
-import ContactHero2 from "../../../assets/img/contactus-hero3.png";
+import ContactHero2 from "../../../assets/img/construction-form.png";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { useState } from "react";

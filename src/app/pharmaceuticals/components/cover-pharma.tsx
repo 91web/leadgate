@@ -12,7 +12,7 @@ export default function PharmaEvent() {
     <Box
       sx={{
         position: "relative",
-        height: { xs: "450px", md: "650px" },
+        height: { xs: "450px", md: "850px" },
         width: "100%",
         display: "flex",
         alignItems: "center",
@@ -78,7 +78,7 @@ export default function PharmaEvent() {
               width: { xs: "150px", sm: "200px" },
             }}
           >
-            Get a Quotation
+            Get a Consultation
           </Button>
         </Box>
       </Container>

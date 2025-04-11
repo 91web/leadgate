@@ -1,8 +1,7 @@
 //group slide images for home page
-import Slide1 from "../../../../assets/img/home-slide1.png";
+import Slide1 from "../../../../assets/img/ghome-slide1.png";
 import Slide2 from "../../../../assets/img/home-slide1.png";
-import Slide3 from "../../../../assets/img/home-slide1.png";
-import Slide4 from "../../../../assets/img/home-slide1.png";
+
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
 
 
@@ -30,31 +29,18 @@ export const SliderData: SliderType[] = [
     id: "1",
     src: Slide1.src,
     title: "Transforming Real Estates into Meaningful Investments",
-    description: "lorem  pufdbdjvk dvndkjvdsv nbbsvbj .",
+    description:
+      "At Leadgate Real Estate, we go beyond property development—we create valuable, long-term investments that enhance lifestyles and generate lasting returns.",
     buttonText: "See Property",
   },
 
   {
     id: "2",
-    src: Slide2.src,
-    title: "Building dreams, elevating health",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    buttonText: "Discover More",
-  },
-  {
-    id: "3",
-    src: Slide3.src,
-    title: "Innovating for a better future",
-    description: "Pellentesque habitant morbi tristique senectus.",
-    buttonText: "Explore Now",
-  },
-  {
-    id: "4",
-    src: Slide4.src,
-    title: "Empowering communities worldwide",
+    src: Slide1.src,
+    title: "Transforming Real Estates into Meaningful Investments",
     description:
-      "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-    buttonText: "Join Us",
+      "At Leadgate Real Estate, we go beyond property development—we create valuable, long-term investments that enhance lifestyles and generate lasting returns.",
+    buttonText: "See Property",
   },
 ];
 
@@ -99,25 +85,23 @@ export const PropertyData: PropertyType[] = [
     id: "1",
     title: "Real Estate Division",
     description:
-      "Lorem ipsum dolor sit amet. Viverra magna habitant blandit lectus integer",
+      "We provide expert consultation to guide you in making informed decisions about your home and property needs. Whether you're planning a new project, renovation, or investment, our team offers professional advice tailored to your vision.",
     image: Property1.src,
-  
   },
   {
     id: "2",
     title: "Construction Division",
     description:
-      "Lorem ipsum dolor sit amet. Viverra magna habitant blandit lectus integer.",
+      "Our architectural design services bring your vision to life with innovative and functional designs. We create aesthetically pleasing, structurally sound, and sustainable spaces that align with modern trends and your personal or business needs.",
     image: Property2.src,
   },
   {
     id: "3",
     title: "Pharmaceuticals Division",
     description:
-      "Lorem ipsum dolor sit amet. Viverra magna habitant blandit lectus integer.",
+      "Leadgate Home specializes in high-quality construction services, from residential to commercial buildings. We manage projects from start to finish, ensuring durability, precision, and adherence to the highest industry standards.",
     image: Property3.src,
   },
-
 ];
 
 export const LGroupFooter: LFooterType[] = [
@@ -430,3 +414,8 @@ export const LConstructionFooter: LFooterType[] = [
       "Suite M206/ M207, Second Floor, Middle Block, Millemenium Builders' Plaza, Plot 251 Herbert Macaulay Way, Central Business District, Abuja, FCT, Nigeria",
   },
 ];
+
+
+
+
+//data for project Home Pages 

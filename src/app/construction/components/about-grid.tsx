@@ -35,8 +35,8 @@ const AboutGrid = () => {
               width: { xs: "100%", md: "70%" },
             }}
           >
-            Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo volutpat
-            nulla at.
+            Leadgate construction is a prominent construction company based in
+            Nigeria, specializing in a wide range of construction projects.
           </Typography>
         </Box>
         <Grid2 container spacing={2}>
@@ -70,8 +70,9 @@ const AboutGrid = () => {
                     fontWeight: "regular",
                   }}
                 >
-                  Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-                  volutpat nulla at.
+                  Our vision is to be the premier construction company in
+                  Nigeria, renowned for our commitment to excellence,
+                  innovation, and sustainable practices.
                 </Typography>
               </Box>
             </Grid2>
@@ -110,8 +111,9 @@ const AboutGrid = () => {
                     fontWeight: "regular",
                   }}
                 >
-                  Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-                  volutpat nulla at.
+                  Our mission is to deliver unparalleled construction solutions
+                  with a steadfast commitment to quality, innovation, and client
+                  satisfaction.
                 </Typography>
               </Box>
             </Grid2>
@@ -145,8 +147,9 @@ const AboutGrid = () => {
                   fontWeight: "regular",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-                volutpat nulla at.
+                At Leadgate Construction, we believe that a strong foundation
+                isn’t just about concrete and steel—it’s about the values that
+                shape our work and relationships.
               </Typography>
             </Box>
           </Grid2>

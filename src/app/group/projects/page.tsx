@@ -10,25 +10,17 @@ import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
 import TestBg2 from "../../../assets/img/bg-testimonial2.png";
 import ServiceCard from "./components/service-card";
 import ProjectCard from "./components/project-card";
-import TestimonialHero from "../components/group-home/avatar-hero";
+import TestimonialSlider from "../components/group-home/testimonial-slide";
+import ProjectService from "./components/service-project";
 
 const ProjectsPage: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <Box>
+      <ProjectCover />
+
       <Box>
-        <ProjectCover />
-      </Box>
-      <Box>
-        <Box
-          sx={{
-            textAlign: "center",
-            //  py: 4, // Add padding top and bottom
-            //   px: 2, // Add padding for smaller devices
-            // maxWidth: "800px",
-            // margin: "0 auto", // Center the box horizontally
-          }}
-        >
+        <Box textAlign={"center"} mb={3}>
           {/* Title */}
           <Typography
             variant="h4"
@@ -37,7 +29,7 @@ const ProjectsPage: React.FC = () => {
               fontFamily: "Lora",
               color: "#1D2939",
               fontSize: { xs: "26px", md: "30px" },
-              mt: { xs: 5, md: 10 },
+              mt: { xs: 5, md: 8 },
               p: 2,
             }}
           >
@@ -45,7 +37,11 @@ const ProjectsPage: React.FC = () => {
           </Typography>
 
           {/* Description */}
-          <Box>
+          <Box
+            width={{ xs: "100%", md: "55%" }}
+            textAlign={"center"}
+            sx={{ margin: "0 auto" }}
+          >
             <Typography
               variant="body1"
               sx={{
@@ -57,14 +53,15 @@ const ProjectsPage: React.FC = () => {
                 p: 2,
               }}
             >
-              Lorem ipsum dolor sit amet consectetur. Arcu nulla ut justo
-              <br /> volutpat nulla at. Porttitor pellentesque diam urna aliquet
-              in ut.
+              At Leadgate Group, we specialize in Real Estate, Pharmaceuticals,
+              and Construction, delivering excellence, innovation, and quality
+              in every project. Our commitment is to transform lives, build
+              lasting value, and create a better future.
             </Typography>
           </Box>
         </Box>
         <Container>
-          <ServiceCard />
+          <ProjectService />
         </Container>
         <Box
           sx={{
@@ -145,22 +142,8 @@ const ProjectsPage: React.FC = () => {
           </Container>
         </Box>
       </Box>
-      <Box py={5} bgcolor={"#fff"}>
-        <Box
-          sx={{
-            backgroundImage: isMobile
-              ? `url(${TestBg1.src})` //  the mobile image
-              : `url(${TestBg2.src})`, // the desktop image
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: { xs: "50vh", md: "100vh" },
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <TestimonialHero />
-        </Box>
+      <Box>
+        <TestimonialSlider />
       </Box>
     </Box>
   );

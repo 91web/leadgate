@@ -21,19 +21,22 @@ const CoreDivisions = () => {
                 textAlign: { xs: "center", md: "left" },
               }}
             >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontFamily: "Lora",
-                  fontWeight: "medium",
-                  color: "#101828",
-                  //py: 5,
-                  fontSize: { xs: "24px", md: "30px" },
-                }}
-              >
-                Our Core Divisions at{" "}
+              <Box py={1}>
+                <Typography
+                  component="span"
+                  variant="h2"
+                  sx={{
+                    fontFamily: "Lora",
+                    fontWeight: "medium",
+                    color: "#101828",
+                    //py: 5,
+                    fontSize: { xs: "24px", md: "30px" },
+                  }}
+                >
+                  Our Core Divisions at{" "}
                 </Typography>
                 <Typography
+                  component="span"
                   variant="h2"
                   sx={{
                     color: "#AE883B",
@@ -45,7 +48,7 @@ const CoreDivisions = () => {
                 >
                   Leadgate Group
                 </Typography>
-  
+              </Box>
               <Typography
                 variant="body1"
                 sx={{
@@ -55,8 +58,8 @@ const CoreDivisions = () => {
                   fontWeight: "regular",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur. Vivamus magna habitant
-                blandit lectus integer pulvinar dui est.
+                We look to bring the best in the field of Real Estate,
+                Pharmaceuticals and Construction t our clients.
               </Typography>
             </Box>
           </Grid2>

@@ -35,18 +35,7 @@ export default function WorkFeatures() {
         >
           Why work at Leadgate Pharmaceuticals
         </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            fontFamily: "'Inter'",
-            fontSize: { xs: "14px", md: "16px" },
-            fontWeight: "regular",
-            color: "#475467",
-          }}
-        >
-          Lorem ipsum dolor sit amet consectetur. Viverra magna habitant blandit
-          lectus integer.
-        </Typography>
+      
       </Box>
       <Box py={9}>
         <Container maxWidth="lg">
