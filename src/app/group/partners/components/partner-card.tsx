@@ -77,8 +77,9 @@ const PartnerCard = () => {
             </Box>
 
             {/* Description and Button */}
+            <Box>
             <Typography
-              variant="body1"
+            component={"div"}
               sx={{
                 fontFamily: "inter",
                 color: "#6D6D6D",
@@ -113,6 +114,7 @@ const PartnerCard = () => {
                 </li>
               </ol>
             </Typography>
+            </Box>
             <Box
               sx={{
                 display: "flex",
