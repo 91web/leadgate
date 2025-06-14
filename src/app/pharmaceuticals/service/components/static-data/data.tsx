@@ -2,11 +2,13 @@
 import Service1 from "../../../../../assets/img/service1.png";
 import Service2 from "../../../../../assets/img/service2.png";
 import Service3 from "../../../../../assets/img/service3.png";
+import Service4 from "../../../../../assets/img/service4.png";
+import Service5 from "../../../../../assets/img/service5.png";
 
 //images for service Grid
 import HeroGrid1 from "../../../../../assets/img/hero-grid1.png";
-import HeroGrid2 from "../../../../../assets/img/hero-grid1.png";
-import HeroGrid3 from "../../../../../assets/img/hero-grid1.png";
+import HeroGrid2 from "../../../../../assets/img/hero-grid2.png";
+import HeroGrid3 from "../../../../../assets/img/hero-grid3.png";
 
 //datatype images for services  estate page
 export interface ServiceType {
@@ -21,37 +23,43 @@ export interface ServiceType {
 export const ServiceData: ServiceType[] = [
   {
     id: "1",
-    title: "Retail Pharmacy and Supermarket Services Division",
-    description: `At our retail outlets, we offer more than medications – 
-      we provide everyday essentials 
-      through our supermarket services, making us a one-stop shop for health and household needs. 
-      each healthcare provider, ensuring availability.`,
+    title: "Community Pharmacy",
+    description: `Our Community Pharmacy lies at the heart of what we do—providing accessible, reliable, and compassionate pharmaceutical care to the communities we serve. We dispense prescription medications with precision and provide detailed counseling to ensure proper use and adherence. `,
     image: Service1.src,
-    buttonText: "Explore our range of products",
+    buttonText: "Visit Our Pharmacy",
     slug: "service-one",
   },
   {
     id: "2",
-    title: "Hospital and Institutional Supply",
-    description: `We collaborate with hospitals, clinics, 
-      and healthcare institutions to provide customized pharmaceutical
-       supply solutions. Our dedicated team ensures seamless logistics
-      to meet the unique needs of each healthcare provider,
-      ensuring availability and continuity of care.`,
+    title: "Skin Care Consultation",
+    description: `Whether you’re dealing with acne, hyperpigmentation, sensitivity, or signs of aging, our trained consultants provide personalized assessments. We understand that skin health is a key part of overall wellness. Our Skin Care Consultation offer quality services to you.`,
     image: Service2.src,
-    buttonText: "Hospital and Institutional Supply",
+    buttonText: "Book a Skin Consultation",
     slug: "service-two",
   },
   {
     id: "3",
-    title: "Regulatory Compliance and Quality Assurance ",
-    description: `At our retail outlets, we offer more than medications – 
-      we provide everyday essentials through our supermarket services, 
-      making us a one-stop shop for health and household needs.
-       each healthcare provider, ensuring availability.`,
+    title: "Supermarket Services",
+    description: `LeadGate’s Supermarket Services are designed to provide customers with a one-stop destination for both health and household essentials. We stock a carefully curated selection of groceries, baby care items, toiletries, cleaning supplies, beverages, and stationeries.`,
     image: Service3.src,
-    buttonText: "Get Pharmaceutical Quote",
+    buttonText: "Shop with Us Today",
     slug: "service-three",
+  },
+  {
+    id: "4",
+    title: "Health Checks",
+    description: `We promote preventive healthcare through our in-store Health Check services. These include screenings for blood pressure, blood sugar levels, cholesterol, body mass index (BMI), and other vital health indicators. Our trained staff provides quick, accurate assessments and health advice based on your results.`,
+    image: Service4.src,
+    buttonText: "Schedule a Health Check",
+    slug: "service-four",
+  },
+  {
+    id: "5",
+    title: "Hospital and Institutional Supply",
+    description: `LeadGate is a trusted supplier of pharmaceutical products, medical consumables, and equipment to hospitals, clinics, schools, and corporate institutions. We ensure the timely and consistent delivery of high-quality, regulatory-compliant supplies that support smooth healthcare delivery.`,
+    image: Service5.src,
+    buttonText: "Request a Supply Quote",
+    slug: "service-five",
   },
 ];
 

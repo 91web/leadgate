@@ -35,9 +35,9 @@ const ServicePharma = () => {
             </Typography>
           </Box>
 
-          <Box>
+          
             <ServiceHero />
-          </Box>
+          
           <Box py={{ xs: 4, md: 5 }}>
             <ServiceCard />
           </Box>

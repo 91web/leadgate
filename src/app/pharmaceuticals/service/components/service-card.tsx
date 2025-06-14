@@ -62,7 +62,7 @@ const ServiceCard = () => {
                   color: "#ffffff",
                   fontFamily: "'Inter'",
                   fontWeight: "medium",
-                  borderRadius: 8,
+                  borderRadius: 2,
                   fontSize: { xs: "14px", md: "17px" },
                   textTransform: "none",
                   "&:hover": {

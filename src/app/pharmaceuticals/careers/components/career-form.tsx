@@ -9,16 +9,16 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputAdornment from "@mui/material/InputAdornment";
-import { Phone } from "@mui/icons-material";
+//import { Phone } from "@mui/icons-material";
 import CareerHero2 from "../../../../assets/img/form-career-hero.png";
-import MarkunreadIcon from "@mui/icons-material/Markunread";
-import FmdGoodIcon from "@mui/icons-material/FmdGood";
+//import MarkunreadIcon from "@mui/icons-material/Markunread";
+//import FmdGoodIcon from "@mui/icons-material/FmdGood";
 
 export default function CareerForm() {
   return (
-    <Box py={{xs:5, md:10}}>
-    <Container maxWidth="lg">
-      {/* Contact Info Cards */}
+    <Box py={{ xs: 5, md: 10 }}>
+      <Container maxWidth="lg">
+        {/* Contact Info Cards 
       <Box sx={{ my: { xs: 0, md: 9 } }}>
         <Grid2 container spacing={4}>
           <Grid2 size={{ xs: 12, md: 4 }}>
@@ -180,203 +180,203 @@ export default function CareerForm() {
           </Grid2>
         </Grid2>
       </Box>
-
-      {/* Contact Form Section */}
-      <Box mx={"5%"}>
-        <Grid2 container spacing={4}>
-          <Grid2 size={{ xs: 12, md: 5 }}>
-            <Box>
-              <Box
-                component="img"
-                src={CareerHero2.src}
-                alt="Contact team"
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: 2,
-                  display: { xs: "none", md: "flex" },
-                }}
-              />
-            </Box>
-          </Grid2>
-
-          <Grid2 size={{ xs: 12, md: 6 }}>
-            <Box sx={{ textAlign: "center", ml: { xs: 0, md: 8 } }}>
-              <Typography
-                variant="h4"
-                gutterBottom
-                sx={{
-                  fontFamily: "lora",
-                  fontWeight: "medium",
-                  fontSize: "24px",
-                }}
-              >
-                Want to make further enquiries?
-              </Typography>
-              <Typography
-                variant="h4"
-                gutterBottom
-                sx={{
-                  fontFamily: "inter",
-                  color: "#344054",
-                  fontWeight: "regular",
-                  fontSize: "16px",
-                }}
-              >
-                Our friendly team would love to hear from you.
-              </Typography>
-
-              <Box component="form" >
-                <Grid2 container spacing={2}>
-                  <Grid2 size={{ xs: 12, md: 6 }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "inter",
-                        color: "#344054",
-                        lineHeight: 1.8,
-                        mb: 1,
-                        fontSize: "16px",
-                        textAlign: "left",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      First Name
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      label="First name"
-                      placeholder="First name"
-                      variant="outlined"
-                    />
-                  </Grid2>
-                  <Grid2 size={{ xs: 12, md: 6 }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "inter",
-                        color: "#344054",
-                        lineHeight: 1.8,
-                        mb: 1,
-                        fontSize: "16px",
-                        textAlign: "left",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      Last Name
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      label="Last name"
-                      placeholder="Last name"
-                      variant="outlined"
-                    />
-                  </Grid2>
-                  <Grid2 size={{ xs: 12, md: 6 }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "inter",
-                        color: "#344054",
-                        lineHeight: 1.8,
-                        mb: 1,
-                        fontSize: "16px",
-                        textAlign: "left",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      Email
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      label="Email"
-                      placeholder="@gmail.com"
-                      variant="outlined"
-                      type="email"
-                    />
-                  </Grid2>
-                  <Grid2 size={{ xs: 12, md: 6 }}>
-                    <Typography
-                      sx={{
-                        fontFamily: "inter",
-                        color: "#344054",
-                        lineHeight: 1.8,
-                        mb: 1,
-                        fontSize: "16px",
-                        textAlign: "left",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      Phone Number
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      label="Phone number"
-                      variant="outlined"
-                      slotProps={{
-                        input: {
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Select
-                                defaultValue="NG"
-                                variant="standard"
-                                sx={{ mr: 1 }}
-                              >
-                                <MenuItem value="NG">NG</MenuItem>
-                                <MenuItem value="US">US</MenuItem>
-                                <MenuItem value="UK">UK</MenuItem>
-                              </Select>
-                            </InputAdornment>
-                          ),
-                        },
-                      }}
-                    />
-                  </Grid2>
-                  <Grid2 size={12}>
-                    <Typography
-                      sx={{
-                        fontFamily: "inter",
-                        color: "#344054",
-                        lineHeight: 1.8,
-                        mb: 1,
-                        fontSize: "16px",
-                        textAlign: "left",
-                        fontWeight: "regular",
-                      }}
-                    >
-                      Message
-                    </Typography>
-                    <TextField
-                      fullWidth
-                      multiline
-                      rows={3}
-                      variant="outlined"
-                    />
-                  </Grid2>
-                  <Grid2 size={12} sx={{ textAlign: "left" }}>
-                    <FormControlLabel
-                      control={<Checkbox />}
-                      label="You agree to our friendly privacy policy."
-                    />
-                  </Grid2>
-                  <Grid2 size={12}>
-                    <Button
-                      fullWidth
-                      variant="contained"
-                      size="large"
-                      sx={{
-                        textTransform: "none",
-                        bgcolor: "#6B8F24",
-                        "&:hover": { bgcolor: "#4C6F1C" },
-                      }}
-                    >
-                      Send Message
-                    </Button>
-                  </Grid2>
-                </Grid2>
+*/}
+        {/* Contact Form Section */}
+        <Box mx={"5%"}>
+          <Grid2 container spacing={4}>
+            <Grid2 size={{ xs: 12, md: 5 }}>
+              <Box>
+                <Box
+                  component="img"
+                  src={CareerHero2.src}
+                  alt="Contact team"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: 2,
+                    display: { xs: "none", md: "flex" },
+                  }}
+                />
               </Box>
-            </Box>
+            </Grid2>
+
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box sx={{ textAlign: "center", ml: { xs: 0, md: 8 } }}>
+                <Typography
+                  variant="h4"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "lora",
+                    fontWeight: "medium",
+                    fontSize: "24px",
+                  }}
+                >
+                  Want to make further enquiries?
+                </Typography>
+                <Typography
+                  variant="h4"
+                  gutterBottom
+                  sx={{
+                    fontFamily: "inter",
+                    color: "#344054",
+                    fontWeight: "regular",
+                    fontSize: "16px",
+                  }}
+                >
+                  Our friendly team would love to hear from you.
+                </Typography>
+
+                <Box component="form">
+                  <Grid2 container spacing={2}>
+                    <Grid2 size={{ xs: 12, md: 6 }}>
+                      <Typography
+                        sx={{
+                          fontFamily: "inter",
+                          color: "#344054",
+                          lineHeight: 1.8,
+                          mb: 1,
+                          fontSize: "16px",
+                          textAlign: "left",
+                          fontWeight: "regular",
+                        }}
+                      >
+                        First Name
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        label="First name"
+                        placeholder="First name"
+                        variant="outlined"
+                      />
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, md: 6 }}>
+                      <Typography
+                        sx={{
+                          fontFamily: "inter",
+                          color: "#344054",
+                          lineHeight: 1.8,
+                          mb: 1,
+                          fontSize: "16px",
+                          textAlign: "left",
+                          fontWeight: "regular",
+                        }}
+                      >
+                        Last Name
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        label="Last name"
+                        placeholder="Last name"
+                        variant="outlined"
+                      />
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, md: 6 }}>
+                      <Typography
+                        sx={{
+                          fontFamily: "inter",
+                          color: "#344054",
+                          lineHeight: 1.8,
+                          mb: 1,
+                          fontSize: "16px",
+                          textAlign: "left",
+                          fontWeight: "regular",
+                        }}
+                      >
+                        Email
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        label="Email"
+                        placeholder="@gmail.com"
+                        variant="outlined"
+                        type="email"
+                      />
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, md: 6 }}>
+                      <Typography
+                        sx={{
+                          fontFamily: "inter",
+                          color: "#344054",
+                          lineHeight: 1.8,
+                          mb: 1,
+                          fontSize: "16px",
+                          textAlign: "left",
+                          fontWeight: "regular",
+                        }}
+                      >
+                        Phone Number
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        label="Phone number"
+                        variant="outlined"
+                        slotProps={{
+                          input: {
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                <Select
+                                  defaultValue="NG"
+                                  variant="standard"
+                                  sx={{ mr: 1 }}
+                                >
+                                  <MenuItem value="NG">NG</MenuItem>
+                                  <MenuItem value="US">US</MenuItem>
+                                  <MenuItem value="UK">UK</MenuItem>
+                                </Select>
+                              </InputAdornment>
+                            ),
+                          },
+                        }}
+                      />
+                    </Grid2>
+                    <Grid2 size={12}>
+                      <Typography
+                        sx={{
+                          fontFamily: "inter",
+                          color: "#344054",
+                          lineHeight: 1.8,
+                          mb: 1,
+                          fontSize: "16px",
+                          textAlign: "left",
+                          fontWeight: "regular",
+                        }}
+                      >
+                        Message
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        multiline
+                        rows={3}
+                        variant="outlined"
+                      />
+                    </Grid2>
+                    <Grid2 size={12} sx={{ textAlign: "left" }}>
+                      <FormControlLabel
+                        control={<Checkbox />}
+                        label="You agree to our friendly privacy policy."
+                      />
+                    </Grid2>
+                    <Grid2 size={12}>
+                      <Button
+                        fullWidth
+                        variant="contained"
+                        size="large"
+                        sx={{
+                          textTransform: "none",
+                          bgcolor: "#6B8F24",
+                          "&:hover": { bgcolor: "#4C6F1C" },
+                        }}
+                      >
+                        Send Message
+                      </Button>
+                    </Grid2>
+                  </Grid2>
+                </Box>
+              </Box>
+            </Grid2>
           </Grid2>
-        </Grid2>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
     </Box>
   );
 }

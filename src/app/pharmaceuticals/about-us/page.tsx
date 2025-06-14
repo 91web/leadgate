@@ -15,10 +15,9 @@ import ActionButtons from "../components/action-button";
 const AboutUsPharma = () => {
   return (
     <Box>
-      <Box>
-        <CoverHero />
-      </Box>
-           <ActionButtons />
+      <CoverHero />
+
+      <ActionButtons />
       <Box
         sx={{
           backgroundImage: { xs: "none", md: `url(${BgImage1.src})` },
@@ -58,10 +57,7 @@ const AboutUsPharma = () => {
       <Box
         py={"30px"}
         sx={{
-          backgroundImage: `
-     linear-gradient(to top, white, rgba(255, 255, 255, 0.1)), 
-     url(${BgImage2.src})
-   `,
+          backgroundImage: `linear-gradient(to top, white, rgba(255, 255, 255, 0.1)), url(${BgImage2.src})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -72,7 +68,7 @@ const AboutUsPharma = () => {
           variant="h6"
           sx={{
             fontWeight: "medium",
-            mb: 1,
+            mt: 5,
             color: "#344054",
             fontSize: { xs: "24px", md: "30px" },
             fontFamily: "lora",

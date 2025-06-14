@@ -87,22 +87,6 @@ export default function JobListings() {
               Unlock your True Potential and Discover a World of Opportunities
               in the Medical Area
             </Typography>
-            <Typography
-              variant="body2"
-              sx={{
-                fontFamily: "inter",
-                color: "#475467",
-                mb: 1,
-                fontSize: { xs: "14px", md: "16px" },
-                textAlign: "center",
-                fontWeight: "regular",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur. Viverra magna habitant
-              blandit lectus integer pulvinar dui est.
-            </Typography>
           </Stack>
 
           {/* Categories */}

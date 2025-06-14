@@ -4,9 +4,22 @@ import PharmaHero2 from "../../../../assets/img/pharmaceuticals-hero4.png";
 import PharmaHero3 from "../../../../assets/img/pharmaceuticals-hero10.png";
 //data for Pharma Data Division
 
-import PharmaHero4 from "../../../../assets/img/pharmaceuticals-hero6.png";
-import PharmaHero5 from "../../../../assets/img/pharmaceuticals-hero7.png";
-import PharmaHero6 from "../../../../assets/img/pharmaceuticals-hero8.png";
+import PharmaCommunity1 from "../../../../assets/img/pharma-community1.png";
+import PharmaCommunity2 from "../../../../assets/img/pharma-community2.png";
+import PharmaCommunity3 from "../../../../assets/img/pharma-community3.png";
+import PharmaCommunity4 from "../../../../assets/img/pharma-community4.png";
+import PharmaCommunity5 from "../../../../assets/img/pharma-community5.png";
+import PharmaCommunity6 from "../../../../assets/img/pharma-community6.png";
+
+
+// servive slide Pharmaceutical
+import PharmaSlide1 from "../../../../assets/img/p-service-slide1.png";
+import PharmaSlide2 from "../../../../assets/img/p-service-slide2.png";
+import PharmaSlide3 from "../../../../assets/img/p-service-slide3.png";
+import PharmaSlide4 from "../../../../assets/img/p-service-slide4.png";
+
+
+
 //Instagram Hero D=Image
 import InstagramHero1 from "../../../../assets/img/instagram-hero1.png";
 import InstagramHero2 from "../../../../assets/img/instagram-hero2.png";
@@ -15,6 +28,11 @@ import InstagramHero4 from "../../../../assets/img/instagram-hero4.png";
 import InstagramHero5 from "../../../../assets/img/instagram-hero5.png";
 import InstagramHero6 from "../../../../assets/img/instagram-hero6.png";
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
+
+
+
+
+
 
 import PharmLogoWhite from "@/assets/img/Leadgate Pharmaceutical White.png";
 import { LFooterType } from "@/app/group/components/static-data/data";
@@ -236,41 +254,41 @@ export interface PharmaDivisionType {
 export const PharmaDivision: PharmaDivisionType[] = [
   {
     id: "1",
-    title: "Prescription Drugs",
-    image: PharmaHero4.src,
-    description: `At LeadGate, we provide a comprehensive range of prescription medications tailored to meet your healthcare needs.`,
+    title: "Over-the-counter (OTC) Medications ",
+    image: PharmaCommunity1.src,
+    description: `Access a variety of non-prescription medications for common ailments like pain relief, cold, allergies, and more.`,
   },
 
   {
     id: "2",
-    title: "Over-the-counter (OTC) Medications  ",
-    image: PharmaHero5.src,
-    description: ` From pain relief to cold remedies, we offer a broad selection of OTC medications designed to address everyday health concerns.`,
+    title: "Prescription Drugs",
+    image: PharmaCommunity2.src,
+    description: `We provide a wide range of prescription medications, dispensed accurately and efficiently to support your treatment plans.`,
   },
   {
     id: "3",
-    title: "Nutritional supplements",
-    image: PharmaHero6.src,
-    description: `From pain relief to cold remedies, we offer a broad selection of OTC medications designed to address everyday health concerns.`,
+    title: "Cosmetics",
+    image: PharmaCommunity3.src,
+    description: `Shop from our curated selection of trusted cosmetic products to enhance your skincare and beauty routines.s`,
   },
   {
     id: "4",
-    title: "Health Screening and immunization",
-    image: PharmaHero4.src,
-    description: ` Stay proactive about your health with our health screening and immunization services.`,
+    title: "Groceries",
+    image: PharmaCommunity4.src,
+    description: `Our supermarket section offers a convenient variety of food items and household groceries for daily living.`,
   },
 
   {
     id: "5",
-    title: " Medical Supplies and Equipment",
-    image: PharmaHero6.src,
+    title: "Child Care Products",
+    image: PharmaCommunity5.src,
     description: `We stock a wide array of medical supplies and equipment, including mobility aids, wound care products, and monitoring devices.`,
   },
   {
     id: "6",
-    title: "Personalized Diet / Meal Planning",
-    image: PharmaHero5.src,
-    description: `Achieve your health goals with our personalized diet and meal planning services`,
+    title: "Health Screening and Immunization",
+    image: PharmaCommunity6.src,
+    description: `We offer basic health checks, diagnostic services, and routine immunizations to help you stay healthy and informed`,
   },
 ];
 
@@ -302,14 +320,50 @@ export const InstagHero: InstagHeroType[] = [
     image: InstagramHero4.src,
     alt: "Instagram Hero 4",
   },
+];
+
+
+
+
+
+
+
+
+
+
+
+// datatype for pharma slide service
+export interface PharmaSlideType {
+  id: string;
+  title: string;
+  src: string;
+  description: string;
+
+}
+
+export const PharmaSlide: PharmaSlideType[] = [
   {
-    id: "5",
-    image: InstagramHero5.src,
-    alt: "Instagram Hero 5",
+    id: "1",
+    src: PharmaSlide1.src,
+    title: "Supermarket Services",
+    description: "At our retain outlet we offer more than medications ",
   },
   {
-    id: "6",
-    image: InstagramHero6.src,
-    alt: "Instagram Hero 6",
+    id: "2",
+    src: PharmaSlide2.src,
+    title: "Health Check",
+    description: "At our retain outlet we offer more than medications ",
+  }, 
+  {
+    id: "3",
+    src: PharmaSlide3.src,
+    title: "Hospital and Institutional Supply",
+    description: "At our retain outlet we offer more than medications ",
+  },
+  {
+    id: "4",
+    src: PharmaSlide4.src,
+    title: "Regulatory Compliance and Quality Assurance",
+    description: "At our retain outlet we offer more than medications ",
   },
 ];

@@ -11,21 +11,18 @@ const Career = () => {
   return (
     <Box>
       <CareerCover />
-           <ActionButtons />
+      <ActionButtons />
       <Box sx={{ bgcolor: "#F2F4F7" }}>
         <JobListings />
       </Box>
 
-      <Box>
-        <WorkFeatures />
-      </Box>
+      <WorkFeatures />
+
       <Box sx={{ pb: { xs: 5, md: 0 } }}>
         <Divider />
       </Box>
 
-      <Box>
-        <ContactForm />
-      </Box>
+      <ContactForm />
     </Box>
   );
 };

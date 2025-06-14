@@ -17,7 +17,14 @@ const ServiceHero = () => {
     <Box sx={{ py: 4 }}>
       <Grid2 container spacing={2}>
         {services.map((service, index) => (
-          <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+          <Grid2
+            size={{
+              xs: 12,
+              sm: 6,
+              md: index < 3 ? 4 : 6,
+            }}
+            key={index}
+          >
             {/* Link to the dynamic service page */}
             <Link
               href={`/pharmaceuticals/service/${service.id}/${service.title}`}
