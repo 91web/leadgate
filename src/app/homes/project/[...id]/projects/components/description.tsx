@@ -22,7 +22,7 @@ interface PartnerCardProps {
 const PartnerCard: React.FC<PartnerCardProps> = ({
   title,
   description,
-  description2,
+ // description2,
   brochureButtonLabel,
   demoButtonLabel,
   imageSrc,

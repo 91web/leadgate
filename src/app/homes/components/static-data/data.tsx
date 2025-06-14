@@ -1,6 +1,6 @@
 //group slide images for home page
 import Slide1 from "../../../../assets/img/ghome-slide1.png";
-import Slide2 from "../../../../assets/img/home-slide1.png";
+//import Slide2 from "../../../../assets/img/home-slide1.png";
 
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
 

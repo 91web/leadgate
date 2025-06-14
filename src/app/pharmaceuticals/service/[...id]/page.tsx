@@ -30,7 +30,7 @@ const DynamicServicePage = () => {
         <ServiceComponent />
       ) : (
         <Typography variant="h6" color="error">
-          Service not found for ID: "{idParam}"
+          Service not found for ID: &quot;{idParam}&quot;
         </Typography>
       )}
     </Box>

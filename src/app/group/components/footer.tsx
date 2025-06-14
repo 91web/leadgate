@@ -8,9 +8,7 @@ import { LFooterType } from "./static-data/data";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { SvgIcon } from "@mui/material";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import Button from "@mui/material/Button";
+
 
 interface LAppFooterProps {
   footerData: LFooterType[];

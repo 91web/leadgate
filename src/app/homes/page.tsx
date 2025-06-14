@@ -5,7 +5,7 @@ import EstateSlider from "./components/slide-home";
 import PropertyCards from "./components/property-feature";
 //import AvatarButton from "./components/avatar";
 import EventBg from "../../assets/img/event-bg.png";
-import useMediaQuery from "@mui/material/useMediaQuery";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 import ContactForm from "./components/contact-form";
 import MapCard from "./components/map-card";
 import Divider from "@mui/material/Divider";
@@ -20,7 +20,7 @@ import Avatar3 from "../../assets/img/avatar3.png";
 import Avatar4 from "../../assets/img/avatar4.png";
 
 const AppHomes = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  //const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <Box>
       <EstateSlider />

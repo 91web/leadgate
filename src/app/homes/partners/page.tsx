@@ -36,7 +36,9 @@ const PartnerPage = () => {
       </Box>
       <Box>
         <Container maxWidth={"lg"}>
-          <PropertyCard />
+          <PropertyCard imageSrc={""} imageAlt={""} title={""} description={""} highlightsTitle={""} highlights={[]} buttonLabel={""} onButtonClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
         </Container>
       </Box>
       <Box my={{ xs: 5, md: 8 }}>

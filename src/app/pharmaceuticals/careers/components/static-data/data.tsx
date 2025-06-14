@@ -8,8 +8,8 @@ import WLogo6 from "../../../../../assets/img/work-logo6.png";
 import JLogo1 from "../../../../../assets/img/icon-career1.png";
 import JLogo2 from "../../../../../assets/img/icon-career2.png";
 import JLogo3 from "../../../../../assets/img/icon-career3.png";
-import JLogo4 from "../../../../../assets/img/icon-career4.png";
-import JLogo5 from "../../../../../assets/img/icon-career5.png";
+//import JLogo4 from "../../../../../assets/img/icon-career4.png";
+//import JLogo5 from "../../../../../assets/img/icon-career5.png";
 
 // datatype for pharma
 export interface WorkType {

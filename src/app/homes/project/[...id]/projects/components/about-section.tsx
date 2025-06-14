@@ -27,8 +27,8 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
   secondaryButtonText = "Play Demo",
   onPrimaryClick,
   onSecondaryClick,
-  imageWidth = 452,
-  imageHeight = 600,
+ // imageWidth = 452,
+  //imageHeight = 600,
   textAlign = { xs: "center", md: "left" },
   backgroundColor = "transparent",
 }) => {

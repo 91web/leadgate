@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import Avatar from "@mui/material/Avatar";
 import Grid2 from "@mui/material/Grid2";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

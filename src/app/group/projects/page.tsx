@@ -5,16 +5,16 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import ProjectCover from "./components/project-cover";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
-import TestBg2 from "../../../assets/img/bg-testimonial2.png";
-import ServiceCard from "./components/service-card";
+//import useMediaQuery from "@mui/material/useMediaQuery";
+//import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
+//import TestBg2 from "../../../assets/img/bg-testimonial2.png";
+//import ServiceCard from "./components/service-card";
 import ProjectCard from "./components/project-card";
 import TestimonialSlider from "../components/group-home/testimonial-slide";
 import ProjectService from "./components/service-project";
 
 const ProjectsPage: React.FC = () => {
-  const isMobile = useMediaQuery("(max-width:600px)");
+ // const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <Box>
       <ProjectCover />

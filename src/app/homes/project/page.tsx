@@ -5,15 +5,12 @@ import HeroSlider from "./components/slide-home";
 import Container from "@mui/material/Container";
 import CoreDivisions from "./components/core-division";
 import FeatureProject from "./components/feature-projects";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import TestBg1 from "../../../assets/img/bg-testimonial1.jpg";
-import TestBg2 from "../../../assets/img/bg-testimonial2.png";
-import TestimonialHero from "../../group/components/group-home/avatar-hero";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 import CareerForm from "./components/career-form";
 import TestimonialSlider from "@/app/group/components/group-home/testimonial-slide";
 
 const AppHome = () => {
-  const isMobile = useMediaQuery("(max-width:900px)");
+ // const isMobile = useMediaQuery("(max-width:900px)");
   return (
     <Box>
       <HeroSlider />

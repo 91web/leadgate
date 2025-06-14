@@ -28,7 +28,7 @@ const DynamicServicePage = () => {
         <ServiceComponent />
       ) : (
         <Typography variant="h6" color="error">
-          Page not found for ID: "{idParam}"
+          Page not found for ID: &quot;{idParam}&quot;
         </Typography>
       )}
     </Box>

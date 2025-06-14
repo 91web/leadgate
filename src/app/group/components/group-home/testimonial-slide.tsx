@@ -2,12 +2,11 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
-import Grid2 from "@mui/material/Grid2";
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
-import Avatar from "@mui/material/Avatar";
+
 import { TestimonialData, TestimonialType } from "../static-data/data";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
@@ -15,11 +14,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
-import Container from "@mui/material/Container";
+
 import IconButton from "@mui/material/IconButton";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import PreIcon from "../../../assets/img/slide-icon2.png";
+
 import TestimonialBg1 from "../../../../assets/img/testimonial-bg1.png";
 import TestimonialBg2 from "../../../../assets/img/testimonial-bg2.png";
 
@@ -162,7 +161,7 @@ const TestimonialSlider = () => {
                       backgroundColor: "#fff",
                       padding: { xs: "10px", md: "20px" },
                       zIndex: 1, // Ensure it's above the background
-                   //   position: "absolute", // Position the card relative to the parent box
+                      //   position: "absolute", // Position the card relative to the parent box
                       top: "-50px",
                     }}
                   >
@@ -196,14 +195,12 @@ const TestimonialSlider = () => {
                     />
                     <CardContent sx={{ flexGrow: 1, overflow: "hidden" }}>
                       <Typography
-                     
                         sx={{
                           color: "text.primary",
                           lineHeight: "140%",
                           fontWeight: "regular",
                           fontFamily: "inter",
                           fontSize: 16,
-                        
                         }}
                       >
                         {testimonial.feedback}

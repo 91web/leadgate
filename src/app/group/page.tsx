@@ -7,12 +7,12 @@ import CoreDivisions from "./components/group-home/core-division";
 import DreamGroup from "./components/group-home/dream-group";
 import BuildingHero from "./components/group-home/building-hero";
 import FeatureProject from "./components/group-home/feature-projects";
-import useMediaQuery from "@mui/material/useMediaQuery";
+//import useMediaQuery from "@mui/material/useMediaQuery";
 import TestimonialSlider from "./components/group-home/testimonial-slide";
 
 
 const AppGroup = () => {
-  const isMobile = useMediaQuery("(max-width:900px)");
+//  const isMobile = useMediaQuery("(max-width:900px)");
   return (
     <Box sx={{ backgroundColor: "#F9F5FF" }}>
       <HeroSlider />

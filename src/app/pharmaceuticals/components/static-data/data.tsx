@@ -25,8 +25,8 @@ import InstagramHero1 from "../../../../assets/img/instagram-hero1.png";
 import InstagramHero2 from "../../../../assets/img/instagram-hero2.png";
 import InstagramHero3 from "../../../../assets/img/instagram-hero3.png";
 import InstagramHero4 from "../../../../assets/img/instagram-hero4.png";
-import InstagramHero5 from "../../../../assets/img/instagram-hero5.png";
-import InstagramHero6 from "../../../../assets/img/instagram-hero6.png";
+//import InstagramHero5 from "../../../../assets/img/instagram-hero5.png";
+//import InstagramHero6 from "../../../../assets/img/instagram-hero6.png";
 import { Facebook, Instagram, X, YouTube } from "@mui/icons-material";
 
 
